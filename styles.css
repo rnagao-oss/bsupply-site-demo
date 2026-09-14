@@ -1,33 +1,5 @@
 /* Layout adapted from https://sun-asterisk.com/; source: _spec/ref/style.css; brand assets, colors, decoration and motion replaced. */
-@font-face {
-  font-family: "YakuHanJP";
-  font-style: normal;
-  font-weight: 400;
-  src: url("./assets/fonts/yakuhanjp/YakuHanJP-Regular.woff2") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "YakuHanJP";
-  font-style: normal;
-  font-weight: 500;
-  src: url("./assets/fonts/yakuhanjp/YakuHanJP-Medium.woff2") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "YakuHanJP";
-  font-style: normal;
-  font-weight: 700;
-  src: url("./assets/fonts/yakuhanjp/YakuHanJP-Bold.woff2") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "YakuHanJP";
-  font-style: normal;
-  font-weight: 900;
-  src: url("./assets/fonts/yakuhanjp/YakuHanJP-Black.woff2") format("woff2");
-  font-display: swap;
-}
-:root{--en:"Hanken Grotesk",sans-serif;--jp:"YakuHanJP","Noto Sans JP",sans-serif;--bg:#fff;--bg-soft:#f6f6f6;--ink:#000;--gray:#777;--line:#e5e5e5;--ease:linear}
+:root{--en:"Instrument Sans",sans-serif;--jp:"Noto Sans JP",sans-serif;--bg:#fff;--bg-soft:#f6f6f6;--ink:#000;--gray:#777;--line:#e5e5e5;--ease:linear}
 .slick-slider{position:relative;display:block;box-sizing:border-box;-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;touch-action:pan-y;-webkit-tap-highlight-color:rgba(0,0,0,0);}
 .slick-list{position:relative;overflow:hidden;display:block;margin:0;padding:0;}
 .slick-list:focus{outline:none;}
@@ -6860,7 +6832,7 @@ body:not(#index) .l-main.bs-job { padding-top:55px; }
 .bs-job .job-note { margin-top:32px; }
 .bs-job .job-back { display:block; margin:0 auto 76px; width:87.8%; font-size:16px; line-height:28px; }
 /* B supply content and common navigation. */
-:root{--bg:#fff;--ink:#000;--en:"Hanken Grotesk",sans-serif;--jp:"YakuHanJP","Noto Sans JP",sans-serif}
+:root{--bg:#fff;--ink:#000;--en:"Instrument Sans",sans-serif;--jp:"Noto Sans JP",sans-serif}
 body{color:#000;background:#fff;font-family:var(--jp);font-size:14px;font-weight:400;overflow-x:visible}
 h1,h2,h3,p{margin:0}
 a{color:inherit}
