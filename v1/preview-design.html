@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta name="robots" content="noindex,nofollow"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>デザイン案プレビュー（承認用・未実装）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./styles.css?v=v1-20260915" />
+<style>
+  body { background: #fff; }
+  .pv-head {
+    padding: 4rem clamp(1.6rem, 5.5vw, 5.5rem) 1rem;
+  }
+  .pv-head h1 { font-weight: 900; font-size: 1.4rem; letter-spacing: 0.06em; }
+  .pv-head p { margin-top: 0.6rem; color: var(--gray); font-size: 0.85rem; }
+  .opt-label {
+    margin: clamp(4rem, 8vw, 7rem) 0 2.4rem;
+    display: flex; align-items: center; gap: 1rem;
+    font-family: var(--en), var(--jp);
+    font-weight: 700; font-size: 0.8rem; letter-spacing: 0.2em;
+  }
+  .opt-label b {
+    background: var(--ink); color: #fff;
+    padding: 0.35rem 0.9rem; letter-spacing: 0.14em;
+    font-weight: 700; font-size: 0.78rem;
+  }
+  .opt-label span { color: var(--gray); font-weight: 500; letter-spacing: 0.08em; }
+  .divider { border: 0; border-top: 1px solid var(--ink); margin-top: clamp(4rem, 8vw, 7rem); }
+
+  /* ── P-A 誌面型・交互プルクオート ── */
+  .pq { position: relative; max-width: 46rem; margin: 0 0 clamp(4.5rem, 8vw, 7rem); }
+  .pq.pq-r { margin-left: auto; }
+  .pq-no {
+    position: absolute; top: -3.2rem; left: -0.6rem; z-index: -1;
+    font-family: var(--en); font-weight: 700;
+    font-size: clamp(5rem, 9vw, 8rem); line-height: 1;
+    color: transparent; -webkit-text-stroke: 1px #e0dfda;
+  }
+  .pq h3 {
+    font-weight: 900;
+    font-size: clamp(1.8rem, 3.6vw, 3rem);
+    line-height: 1.65; letter-spacing: 0.04em;
+  }
+  .pq h3::after { content: ""; display: block; width: 3rem; height: 2px; background: var(--ink); margin-top: 1.5rem; }
+  .pq p { margin-top: 1.4rem; color: var(--gray); font-size: 0.95rem; line-height: 2.2; max-width: 34rem; }
+
+  /* ── P-B ステートメント・プレート3面 ── */
+  .plates { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.4rem, 3vw, 2.6rem); }
+  .plate { border-top: 3px solid var(--ink); padding-top: 1.7rem; }
+  .plate i {
+    display: block; font-style: normal;
+    font-family: var(--en); font-weight: 700; font-size: 2.2rem; line-height: 1;
+    color: transparent; -webkit-text-stroke: 1px #cfcec9;
+    margin-bottom: 1.3rem;
+  }
+  .plate h3 { font-weight: 900; font-size: clamp(1.2rem, 1.8vw, 1.5rem); line-height: 1.9; letter-spacing: 0.04em; }
+  .plate p { margin-top: 1rem; color: var(--gray); font-size: 0.87rem; line-height: 2.1; }
+  @media (max-width: 860px) { .plates { grid-template-columns: 1fr; } }
+
+  /* ── M-A 誌面インデックス（罫線なし2カラム） ── */
+  .idx-label { font-family: var(--en), var(--jp); font-weight: 600; font-size: 0.72rem; letter-spacing: 0.22em; color: var(--gray-2); margin-bottom: 2rem; }
+  .idx { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 clamp(3rem, 6vw, 6rem); }
+  .idx-item { display: flex; align-items: baseline; gap: 1rem; padding: 0.85rem 0; }
+  .idx-no { font-family: var(--en); font-weight: 600; font-size: 0.72rem; letter-spacing: 0.1em; color: var(--gray-2); }
+  .idx-t { font-size: 0.95rem; font-weight: 600; letter-spacing: 0.03em; }
+  .idx-i { font-size: 0.72rem; color: var(--gray-2); letter-spacing: 0.04em; margin-left: auto; white-space: nowrap; }
+  @media (max-width: 760px) { .idx { grid-template-columns: 1fr; } }
+
+  /* ── M-B タイポグラフィック・ティッカー ── */
+  .tick-wrap { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 2rem 0; display: flex; flex-direction: column; gap: 1.6rem;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
+  .tick { overflow: hidden; }
+  .tick-track { display: flex; gap: 4.5rem; width: max-content; animation: tk 46s linear infinite; white-space: nowrap; }
+  .tick.rev .tick-track { animation-direction: reverse; animation-duration: 54s; }
+  .tick-wrap:hover .tick-track { animation-play-state: paused; }
+  @keyframes tk { to { transform: translateX(-50%); } }
+  .tick-track span { font-size: 1.1rem; font-weight: 600; letter-spacing: 0.04em; color: var(--ink-70); }
+  .tick-track em { font-style: normal; color: var(--gray-2); font-size: 0.78rem; margin-left: 0.9rem; }
+</style>
+</head>
+<body class="subpage">
+<div class="pv-head">
+  <h1>デザイン案プレビュー（承認用）</h1>
+  <p>本体サイトは未変更です。各セクション、A / B のどちらか（または修正指示）をお選びください。</p>
+</div>
+
+<main class="section" style="padding-top:0">
+
+  <!-- ═══ PERSPECTIVE 案 ═══ -->
+  <div class="opt-label"><b>P-A</b>PERSPECTIVE ── 誌面型・交互プルクオート<span>雑誌の見開きのように左右交互。番号は背景に沈むアウトライン</span></div>
+
+  <article class="pq">
+    <span class="pq-no">01</span>
+    <h3>「正しい戦略」より、<br>「動く戦略」。</h3>
+    <p>完璧な分析よりも、現場が明日から動ける設計のほうが、企業を遠くまで運ぶと考えています。</p>
+  </article>
+  <article class="pq pq-r">
+    <span class="pq-no">02</span>
+    <h3>数字は、経営者を<br>孤独から救う。</h3>
+    <p>感覚の議論は人を分断しますが、正しく設計された数字は、組織の目線を揃えます。</p>
+  </article>
+  <article class="pq">
+    <span class="pq-no">03</span>
+    <h3>買収は、<br>成立した日が初日。</h3>
+    <p>M&amp;Aの価値は契約書の中ではなく、統合後の日々のオペレーションの中でつくられると考えています。</p>
+  </article>
+
+  <hr class="divider" />
+
+  <div class="opt-label"><b>P-B</b>PERSPECTIVE ── ステートメント・プレート3面<span>太い黒罫から始まる3枚の面。横並びで一望</span></div>
+
+  <div class="plates">
+    <div class="plate">
+      <i>01</i>
+      <h3>「正しい戦略」より、「動く戦略」。</h3>
+      <p>完璧な分析よりも、現場が明日から動ける設計のほうが、企業を遠くまで運ぶと考えています。</p>
+    </div>
+    <div class="plate">
+      <i>02</i>
+      <h3>数字は、経営者を孤独から救う。</h3>
+      <p>感覚の議論は人を分断しますが、正しく設計された数字は、組織の目線を揃えます。</p>
+    </div>
+    <div class="plate">
+      <i>03</i>
+      <h3>買収は、成立した日が初日。</h3>
+      <p>M&amp;Aの価値は契約書の中ではなく、統合後の日々のオペレーションの中でつくられると考えています。</p>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- ═══ AND MORE 案 ═══ -->
+  <div class="opt-label"><b>M-A</b>AND MORE ── 誌面インデックス<span>罫線を全廃した2カラムの索引。アニュアルレポートの目次の作法</span></div>
+
+  <p class="idx-label">AND MORE ── そのほかの支援</p>
+  <div class="idx">
+    <div class="idx-item"><span class="idx-no">07</span><span class="idx-t">M&amp;A仲介企業の営業戦略策定</span><span class="idx-i">M&amp;A仲介</span></div>
+    <div class="idx-item"><span class="idx-no">08</span><span class="idx-t">土木IT企業のSaaS事業戦略</span><span class="idx-i">土木IT</span></div>
+    <div class="idx-item"><span class="idx-no">09</span><span class="idx-t">土木IT企業の管理会計基盤構築</span><span class="idx-i">土木IT</span></div>
+    <div class="idx-item"><span class="idx-no">10</span><span class="idx-t">マッチングアプリ企業の事業戦略</span><span class="idx-i">マッチングアプリ</span></div>
+    <div class="idx-item"><span class="idx-no">11</span><span class="idx-t">BtoB SaaS企業のGrowth戦略</span><span class="idx-i">SaaS</span></div>
+    <div class="idx-item"><span class="idx-no">12</span><span class="idx-t">DX支援企業の新規事業戦略</span><span class="idx-i">DX支援</span></div>
+    <div class="idx-item"><span class="idx-no">13</span><span class="idx-t">半導体企業の営業戦略</span><span class="idx-i">半導体製造</span></div>
+    <div class="idx-item"><span class="idx-no">14</span><span class="idx-t">フェムテック企業のマーケティング戦略</span><span class="idx-i">フェムテック</span></div>
+    <div class="idx-item"><span class="idx-no">15</span><span class="idx-t">フェムテック企業のアライアンス戦略</span><span class="idx-i">フェムテック</span></div>
+    <div class="idx-item"><span class="idx-no">16</span><span class="idx-t">医療コンサルティング会社の事業戦略</span><span class="idx-i">医療コンサルティング</span></div>
+  </div>
+
+  <hr class="divider" />
+
+  <div class="opt-label"><b>M-B</b>AND MORE ── タイポグラフィック・ティッカー<span>10件の案件名が静かに流れる2段の帯。ホバーで停止</span></div>
+
+  <div class="tick-wrap">
+    <div class="tick">
+      <div class="tick-track">
+        <span>M&amp;A仲介企業の営業戦略策定<em>M&amp;A仲介</em></span>
+        <span>土木IT企業のSaaS事業戦略<em>土木IT</em></span>
+        <span>土木IT企業の管理会計基盤構築<em>土木IT</em></span>
+        <span>マッチングアプリ企業の事業戦略<em>マッチングアプリ</em></span>
+        <span>BtoB SaaS企業のGrowth戦略<em>SaaS</em></span>
+        <span>M&amp;A仲介企業の営業戦略策定<em>M&amp;A仲介</em></span>
+        <span>土木IT企業のSaaS事業戦略<em>土木IT</em></span>
+        <span>土木IT企業の管理会計基盤構築<em>土木IT</em></span>
+        <span>マッチングアプリ企業の事業戦略<em>マッチングアプリ</em></span>
+        <span>BtoB SaaS企業のGrowth戦略<em>SaaS</em></span>
+      </div>
+    </div>
+    <div class="tick rev">
+      <div class="tick-track">
+        <span>DX支援企業の新規事業戦略<em>DX支援</em></span>
+        <span>半導体企業の営業戦略<em>半導体製造</em></span>
+        <span>フェムテック企業のマーケティング戦略<em>フェムテック</em></span>
+        <span>フェムテック企業のアライアンス戦略<em>フェムテック</em></span>
+        <span>医療コンサルティング会社の事業戦略<em>医療コンサルティング</em></span>
+        <span>DX支援企業の新規事業戦略<em>DX支援</em></span>
+        <span>半導体企業の営業戦略<em>半導体製造</em></span>
+        <span>フェムテック企業のマーケティング戦略<em>フェムテック</em></span>
+        <span>フェムテック企業のアライアンス戦略<em>フェムテック</em></span>
+        <span>医療コンサルティング会社の事業戦略<em>医療コンサルティング</em></span>
+      </div>
+    </div>
+  </div>
+
+  <div style="height:6rem"></div>
+</main>
+</body>
+</html>

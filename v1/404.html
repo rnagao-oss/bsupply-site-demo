@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html data-root="." lang="ja">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ページが見つかりません ｜ 株式会社B supply</title>
+<meta content="noindex" name="robots"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;family=Noto+Sans+JP:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="./assets/img/logo.png" rel="icon" type="image/png"/>
+<link href="./styles.css?v=v1-20260915" rel="stylesheet"/>
+<script>
+/* 旧サイト（WordPress）URLからのリダイレクト */
+(function () {
+  var p = location.pathname;
+  var en = p.slice(0, 4) === '/en/';
+  var path = en ? p.slice(3) : p;
+  var last = path.split('/').pop();
+  if (last.indexOf('.') !== -1) return; /* 新形式（拡張子付き）URLは404を表示 */
+  var root = en ? '/en/' : '/';
+  var rules = [
+    [/^\/(company|about|profile|corporate|gaiyou|outline)/i, 'company.html'],
+    [/^\/(contact|inquiry|otoiawase)/i, 'contact.html'],
+    [/^\/(recruit|career|jobs?|saiyo)/i, 'recruit.html'],
+    [/^\/(service|consult)/i, 'consulting.html'],
+    [/^\/(manufactur|factory|leather|craft)/i, 'manufacturing.html'],
+  ];
+  for (var i = 0; i < rules.length; i++) {
+    if (rules[i][0].test(path)) { location.replace(root + rules[i][1]); return; }
+  }
+  location.replace(root);
+})();
+</script>
+</head>
+<body class="subpage">
+<div aria-hidden="true" class="progress"><i id="progressBar"></i></div>
+<canvas aria-hidden="true" class="ambient-dots" id="ambientDots"></canvas>
+<header class="site-header" id="siteHeader">
+<a class="brand" href="./"><img alt="" class="brand-mark" src="./assets/img/logo.png"/>B supply</a>
+<nav>
+<a href="./">トップ</a>
+<a href="./consulting.html">コンサルティング</a>
+<a href="./manufacturing.html">事業投資・承継</a>
+<a href="./recruit.html">採用</a>
+<a href="./company.html">会社情報</a>
+<a class="nav-cta" href="./contact.html">お問い合わせ</a>
+</nav>
+<button aria-label="メニュー" class="menu-btn" id="menuBtn" type="button"><i></i><i></i></button>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+<nav>
+<a href="./">トップ</a>
+<a href="./consulting.html">コンサルティング</a>
+<a href="./manufacturing.html">事業投資・承継</a>
+<a href="./recruit.html">採用</a>
+<a href="./company.html">会社情報</a>
+<a href="./contact.html">お問い合わせ</a>
+</nav>
+</div>
+<main>
+<section class="thanks-hero" data-scene="dark">
+<div aria-hidden="true" class="kinetic sm" data-speed="0.5">404 NOT FOUND</div>
+<div class="th-core">
+<p class="th-label">404</p>
+<h1 class="th-title">ページが<br/>見つかりません</h1>
+<p class="th-sub">URLが変更されたか、削除された可能性があります。</p>
+<a class="th-back" href="./">トップへ戻る<i>→</i></a>
+</div>
+</section>
+</main>
+<script defer="" src="./app.js?v=20260916"></script>
+</body>
+</html>
