@@ -2774,3 +2774,6 @@ body.menu-open .brand-mark { filter: none; }
 .fin-mail em { font-size: 0.9em; }
 .fin-mail:hover em { transform: translateX(0.3em); }
 .fin-note { margin-top: 1.2rem; }
+.tr-block .sec-title { margin-bottom: clamp(1.6rem, 3vw, 2.6rem); }
+.tr-block .sec-title { font-size: clamp(1.4rem, 2.6vw, 2rem); }
+.tr-tag { background: none; border: 0; border-radius: 0; padding: 0; color: var(--gray); font-size: 0.8rem; letter-spacing: 0.02em; }
