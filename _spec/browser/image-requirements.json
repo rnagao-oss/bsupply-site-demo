@@ -1,0 +1,860 @@
+[
+  {
+    "page": "service-marketing-sales.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "service-marketing-sales.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "service-marketing-sales.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "service-marketing-sales.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "case-06.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "case-06.html",
+    "classes": "ph ",
+    "ratio": "1024:588",
+    "requirement": "支援事例のメイン画像"
+  },
+  {
+    "page": "case-06.html",
+    "classes": "ph ",
+    "ratio": "1024:330",
+    "requirement": "支援内容を説明する図版"
+  },
+  {
+    "page": "case-10.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "case-10.html",
+    "classes": "ph ",
+    "ratio": "1024:588",
+    "requirement": "支援事例のメイン画像"
+  },
+  {
+    "page": "case-10.html",
+    "classes": "ph ",
+    "ratio": "1024:330",
+    "requirement": "支援内容を説明する図版"
+  },
+  {
+    "page": "recruit.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "recruit.html",
+    "classes": "ph ",
+    "ratio": "16:9",
+    "requirement": "B supplyの事業と働く風景"
+  },
+  {
+    "page": "recruit.html",
+    "classes": "ph ",
+    "ratio": "16:9",
+    "requirement": "コンサルティング事業の仕事風景"
+  },
+  {
+    "page": "recruit.html",
+    "classes": "ph ",
+    "ratio": "16:9",
+    "requirement": "自己勘定投資事業の仕事風景"
+  },
+  {
+    "page": "recruit.html",
+    "classes": "ph ",
+    "ratio": "16:9",
+    "requirement": "革製造事業の仕事風景"
+  },
+  {
+    "page": "recruit.html",
+    "classes": "ph ",
+    "ratio": "560:315",
+    "requirement": "Business Designerの仕事風景"
+  },
+  {
+    "page": "recruit.html",
+    "classes": "ph ",
+    "ratio": "560:315",
+    "requirement": "Directorの仕事風景"
+  },
+  {
+    "page": "recruit.html",
+    "classes": "ph ",
+    "ratio": "560:315",
+    "requirement": "投資フロントメンバーの仕事風景"
+  },
+  {
+    "page": "recruit.html",
+    "classes": "ph ",
+    "ratio": "560:315",
+    "requirement": "革職人の仕事風景"
+  },
+  {
+    "page": "recruit.html",
+    "classes": "ph ",
+    "ratio": "560:315",
+    "requirement": "生産管理の仕事風景"
+  },
+  {
+    "page": "recruit.html",
+    "classes": "ph ",
+    "ratio": "560:315",
+    "requirement": "マーケティングの仕事風景"
+  },
+  {
+    "page": "recruit.html",
+    "classes": "ph ",
+    "ratio": "560:315",
+    "requirement": "検品・裁断スタッフ（パート社員）の仕事風景"
+  },
+  {
+    "page": "index.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "index.html",
+    "classes": "ph bs-business-diagram",
+    "ratio": "800:632.77",
+    "requirement": "3事業をつなぐ事業紹介図"
+  },
+  {
+    "page": "index.html",
+    "classes": "p-top-service__image ph",
+    "ratio": "275:264.34375",
+    "requirement": "コンサルティング事業の紹介画像"
+  },
+  {
+    "page": "index.html",
+    "classes": "p-top-service__image ph",
+    "ratio": "275:264.34375",
+    "requirement": "自己勘定投資と革製造事業の紹介画像"
+  },
+  {
+    "page": "index.html",
+    "classes": "c-worksCard__img ph",
+    "ratio": "31:40",
+    "requirement": "大手IT企業のM&A戦略策定・BDD支援の事例画像"
+  },
+  {
+    "page": "index.html",
+    "classes": "c-worksCard__img ph",
+    "ratio": "31:40",
+    "requirement": "M&A仲介企業の営業戦略策定の事例画像"
+  },
+  {
+    "page": "index.html",
+    "classes": "c-worksCard__img ph",
+    "ratio": "31:40",
+    "requirement": "大手広告代理店の生成AI市場調査の事例画像"
+  },
+  {
+    "page": "index.html",
+    "classes": "c-worksCard__img ph",
+    "ratio": "31:40",
+    "requirement": "土木IT企業のSaaS事業戦略の事例画像"
+  },
+  {
+    "page": "index.html",
+    "classes": "c-worksCard__img ph",
+    "ratio": "31:40",
+    "requirement": "土木IT企業の管理会計基盤構築の事例画像"
+  },
+  {
+    "page": "index.html",
+    "classes": "c-worksCard__img ph",
+    "ratio": "31:40",
+    "requirement": "土木IT企業のM&Aロールアップ戦略の事例画像"
+  },
+  {
+    "page": "index.html",
+    "classes": "c-worksCard__img ph",
+    "ratio": "31:40",
+    "requirement": "老舗フルーツ店の新規事業戦略の事例画像"
+  },
+  {
+    "page": "index.html",
+    "classes": "c-worksCard__img ph",
+    "ratio": "31:40",
+    "requirement": "マッチングアプリ企業の事業戦略の事例画像"
+  },
+  {
+    "page": "index.html",
+    "classes": "c-worksCard__img ph",
+    "ratio": "31:40",
+    "requirement": "物流会社の事業再生戦略の事例画像"
+  },
+  {
+    "page": "index.html",
+    "classes": "c-worksCard__img ph",
+    "ratio": "31:40",
+    "requirement": "BtoB SaaS企業のGrowth戦略の事例画像"
+  },
+  {
+    "page": "index.html",
+    "classes": "c-worksCard__img ph",
+    "ratio": "31:40",
+    "requirement": "DX支援企業の新規事業戦略の事例画像"
+  },
+  {
+    "page": "index.html",
+    "classes": "c-worksCard__img ph",
+    "ratio": "31:40",
+    "requirement": "半導体企業の営業戦略の事例画像"
+  },
+  {
+    "page": "index.html",
+    "classes": "c-worksCard__img ph",
+    "ratio": "31:40",
+    "requirement": "フェムテック企業のマーケティング戦略の事例画像"
+  },
+  {
+    "page": "index.html",
+    "classes": "c-worksCard__img ph",
+    "ratio": "31:40",
+    "requirement": "フェムテック企業のアライアンス戦略の事例画像"
+  },
+  {
+    "page": "index.html",
+    "classes": "c-worksCard__img ph",
+    "ratio": "31:40",
+    "requirement": "医療コンサルティング会社の事業戦略の事例画像"
+  },
+  {
+    "page": "index.html",
+    "classes": "c-worksCard__img ph",
+    "ratio": "31:40",
+    "requirement": "化学メーカーの採用戦略の事例画像"
+  },
+  {
+    "page": "index.html",
+    "classes": "p-top-career__bg ph",
+    "ratio": "1440:500",
+    "requirement": "仕事の様子が伝わる採用画像"
+  },
+  {
+    "page": "job-inspection-cutting.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "job-inspection-cutting.html",
+    "classes": "ph ",
+    "ratio": "1440:300",
+    "requirement": "募集職種の仕事風景"
+  },
+  {
+    "page": "case-11.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "case-11.html",
+    "classes": "ph ",
+    "ratio": "1024:588",
+    "requirement": "支援事例のメイン画像"
+  },
+  {
+    "page": "case-11.html",
+    "classes": "ph ",
+    "ratio": "1024:330",
+    "requirement": "支援内容を説明する図版"
+  },
+  {
+    "page": "case-07.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "case-07.html",
+    "classes": "ph ",
+    "ratio": "1024:588",
+    "requirement": "支援事例のメイン画像"
+  },
+  {
+    "page": "case-07.html",
+    "classes": "ph ",
+    "ratio": "1024:330",
+    "requirement": "支援内容を説明する図版"
+  },
+  {
+    "page": "contact.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "service-new-business.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "service-new-business.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "service-new-business.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "service-new-business.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "manufacturing.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "manufacturing.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "manufacturing.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "manufacturing.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "job-business-designer.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "job-business-designer.html",
+    "classes": "ph ",
+    "ratio": "1440:300",
+    "requirement": "募集職種の仕事風景"
+  },
+  {
+    "page": "service-digital-strategy.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "service-digital-strategy.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "service-digital-strategy.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "service-digital-strategy.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "apply.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "job-director.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "job-director.html",
+    "classes": "ph ",
+    "ratio": "1440:300",
+    "requirement": "募集職種の仕事風景"
+  },
+  {
+    "page": "case-16.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "case-16.html",
+    "classes": "ph ",
+    "ratio": "1024:588",
+    "requirement": "支援事例のメイン画像"
+  },
+  {
+    "page": "case-16.html",
+    "classes": "ph ",
+    "ratio": "1024:330",
+    "requirement": "支援内容を説明する図版"
+  },
+  {
+    "page": "job-craftsman.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "job-craftsman.html",
+    "classes": "ph ",
+    "ratio": "1440:300",
+    "requirement": "募集職種の仕事風景"
+  },
+  {
+    "page": "404.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "case-01.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "case-01.html",
+    "classes": "ph ",
+    "ratio": "1024:588",
+    "requirement": "支援事例のメイン画像"
+  },
+  {
+    "page": "case-01.html",
+    "classes": "ph ",
+    "ratio": "1024:330",
+    "requirement": "支援内容を説明する図版"
+  },
+  {
+    "page": "case-14.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "case-14.html",
+    "classes": "ph ",
+    "ratio": "1024:588",
+    "requirement": "支援事例のメイン画像"
+  },
+  {
+    "page": "case-14.html",
+    "classes": "ph ",
+    "ratio": "1024:330",
+    "requirement": "支援内容を説明する図版"
+  },
+  {
+    "page": "case-02.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "case-02.html",
+    "classes": "ph ",
+    "ratio": "1024:588",
+    "requirement": "支援事例のメイン画像"
+  },
+  {
+    "page": "case-02.html",
+    "classes": "ph ",
+    "ratio": "1024:330",
+    "requirement": "支援内容を説明する図版"
+  },
+  {
+    "page": "consulting.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "consulting.html",
+    "classes": "ph bs-service-flow",
+    "ratio": "1000:479.8",
+    "requirement": "コンサルティングから投資・事業経営へつながる事業フローの図版"
+  },
+  {
+    "page": "consulting.html",
+    "classes": "ph p-ce__top__image",
+    "ratio": "382:367.19",
+    "requirement": "コンサルティング事業の紹介画像"
+  },
+  {
+    "page": "consulting.html",
+    "classes": "ph bs-service-flow",
+    "ratio": "1000:479.8",
+    "requirement": "戦略策定から現場実行までの支援領域図"
+  },
+  {
+    "page": "consulting.html",
+    "classes": "ph p-ce__about__img",
+    "ratio": "1:1",
+    "requirement": "コンサルティングの支援姿勢を示す画像"
+  },
+  {
+    "page": "consulting.html",
+    "classes": "ph p-ce__about__img",
+    "ratio": "1:1",
+    "requirement": "コンサルティングの支援姿勢を示す画像"
+  },
+  {
+    "page": "service-growth-strategy.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "service-growth-strategy.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "service-growth-strategy.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "service-growth-strategy.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "service-m-and-a.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "service-m-and-a.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "service-m-and-a.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "service-m-and-a.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "job-production-manager.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "job-production-manager.html",
+    "classes": "ph ",
+    "ratio": "1440:300",
+    "requirement": "募集職種の仕事風景"
+  },
+  {
+    "page": "case-03.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "case-03.html",
+    "classes": "ph ",
+    "ratio": "1024:588",
+    "requirement": "支援事例のメイン画像"
+  },
+  {
+    "page": "case-03.html",
+    "classes": "ph ",
+    "ratio": "1024:330",
+    "requirement": "支援内容を説明する図版"
+  },
+  {
+    "page": "job-investment-front.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "job-investment-front.html",
+    "classes": "ph ",
+    "ratio": "1440:300",
+    "requirement": "募集職種の仕事風景"
+  },
+  {
+    "page": "case-15.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "case-15.html",
+    "classes": "ph ",
+    "ratio": "1024:588",
+    "requirement": "支援事例のメイン画像"
+  },
+  {
+    "page": "case-15.html",
+    "classes": "ph ",
+    "ratio": "1024:330",
+    "requirement": "支援内容を説明する図版"
+  },
+  {
+    "page": "thanks.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "service-digital-design.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "service-digital-design.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "service-digital-design.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "service-digital-design.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "service-operation.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "service-operation.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "service-operation.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "service-operation.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "service-options.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "case-12.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "case-12.html",
+    "classes": "ph ",
+    "ratio": "1024:588",
+    "requirement": "支援事例のメイン画像"
+  },
+  {
+    "page": "case-12.html",
+    "classes": "ph ",
+    "ratio": "1024:330",
+    "requirement": "支援内容を説明する図版"
+  },
+  {
+    "page": "company.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "service-hr-strategy.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "service-hr-strategy.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "service-hr-strategy.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "service-hr-strategy.html",
+    "classes": "ph ",
+    "ratio": "1:1",
+    "requirement": "支援内容の説明画像"
+  },
+  {
+    "page": "case-04.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "case-04.html",
+    "classes": "ph ",
+    "ratio": "1024:588",
+    "requirement": "支援事例のメイン画像"
+  },
+  {
+    "page": "case-04.html",
+    "classes": "ph ",
+    "ratio": "1024:330",
+    "requirement": "支援内容を説明する図版"
+  },
+  {
+    "page": "job-marketing.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "job-marketing.html",
+    "classes": "ph ",
+    "ratio": "1440:300",
+    "requirement": "募集職種の仕事風景"
+  },
+  {
+    "page": "case-08.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "case-08.html",
+    "classes": "ph ",
+    "ratio": "1024:588",
+    "requirement": "支援事例のメイン画像"
+  },
+  {
+    "page": "case-08.html",
+    "classes": "ph ",
+    "ratio": "1024:330",
+    "requirement": "支援内容を説明する図版"
+  },
+  {
+    "page": "case-09.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "case-09.html",
+    "classes": "ph ",
+    "ratio": "1024:588",
+    "requirement": "支援事例のメイン画像"
+  },
+  {
+    "page": "case-09.html",
+    "classes": "ph ",
+    "ratio": "1024:330",
+    "requirement": "支援内容を説明する図版"
+  },
+  {
+    "page": "case-05.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "case-05.html",
+    "classes": "ph ",
+    "ratio": "1024:588",
+    "requirement": "支援事例のメイン画像"
+  },
+  {
+    "page": "case-05.html",
+    "classes": "ph ",
+    "ratio": "1024:330",
+    "requirement": "支援内容を説明する図版"
+  },
+  {
+    "page": "case-13.html",
+    "classes": "ph",
+    "ratio": "1:1",
+    "requirement": "事業紹介画像"
+  },
+  {
+    "page": "case-13.html",
+    "classes": "ph ",
+    "ratio": "1024:588",
+    "requirement": "支援事例のメイン画像"
+  },
+  {
+    "page": "case-13.html",
+    "classes": "ph ",
+    "ratio": "1024:330",
+    "requirement": "支援内容を説明する図版"
+  }
+]

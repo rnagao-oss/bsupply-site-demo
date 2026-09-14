@@ -1,0 +1,1581 @@
+[
+  {
+    "page": "company.html",
+    "reference_family": "company",
+    "reference_url": "https://sun-asterisk.com/about/",
+    "pairs": [
+      {
+        "reference_selector": ".p-about-top",
+        "local_selector": ".p-about-top",
+        "metrics": [
+          "x",
+          "y",
+          "width",
+          "height",
+          "paddingBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-about-top__title",
+        "local_selector": ".p-about-top__title",
+        "metrics": [
+          "x",
+          "y",
+          "fontSize"
+        ]
+      },
+      {
+        "reference_selector": ".p-about-top__head",
+        "local_selector": ".p-about-top__head",
+        "metrics": [
+          "x",
+          "y",
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-about-top--contents",
+        "local_selector": ".p-about-top--contents",
+        "metrics": [
+          "paddingLeft"
+        ]
+      },
+      {
+        "reference_selector": ".p-about-vision",
+        "local_selector": ".p-about-vision",
+        "metrics": [
+          "paddingTop",
+          "paddingLeft",
+          "paddingRight",
+          "paddingBottom"
+        ]
+      },
+      {
+        "reference_selector": ".c-aboutTitle__title",
+        "local_selector": ".c-aboutTitle__title",
+        "metrics": [
+          "fontSize",
+          "lineHeight",
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-about-vision__desc",
+        "local_selector": ".p-about-vision__desc",
+        "metrics": [
+          "fontSize",
+          "lineHeight",
+          "marginTop",
+          "width"
+        ]
+      },
+      {
+        "reference_selector": ".p-about-mission",
+        "local_selector": ".p-about-mission",
+        "metrics": [
+          "paddingTop",
+          "paddingBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-about-company__body",
+        "local_selector": ".p-about-company__body",
+        "metrics": [
+          "width",
+          "paddingTop",
+          "paddingBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-about-statement__inner",
+        "local_selector": ".p-about-statement__inner",
+        "metrics": [
+          "width",
+          "paddingTop",
+          "paddingBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-about-statement__text",
+        "local_selector": ".p-about-statement__text",
+        "metrics": [
+          "fontSize",
+          "lineHeight",
+          "marginBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-about-fixed__item p",
+        "local_selector": ".p-about-fixed__item p",
+        "metrics": [
+          "height",
+          "paddingTop",
+          "fontSize",
+          "lineHeight"
+        ],
+        "widths": [
+          1024,
+          1440
+        ],
+        "note": "The mobile reference hides the fixed navigation on the initial screen."
+      }
+    ]
+  },
+  {
+    "page": "consulting.html",
+    "reference_family": "consulting",
+    "reference_url": "https://sun-asterisk.com/service/",
+    "pairs": [
+      {
+        "reference_selector": ".p-service-top",
+        "local_selector": ".p-service-top",
+        "metrics": [
+          "y",
+          "paddingBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-service-top__inner",
+        "local_selector": ".p-service-top__inner",
+        "metrics": [
+          "x",
+          "width"
+        ]
+      },
+      {
+        "reference_selector": ".p-service-top__title",
+        "local_selector": ".p-service-top__title",
+        "metrics": [
+          "y",
+          "fontSize"
+        ]
+      },
+      {
+        "reference_selector": ".p-service-top__calc",
+        "local_selector": ".p-service-top__calc",
+        "metrics": [
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-service-top__calc-top",
+        "local_selector": ".p-service-top__calc-top",
+        "metrics": [
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".p-service-top__desc",
+        "local_selector": ".p-service-top__desc",
+        "metrics": [
+          "fontSize",
+          "lineHeight",
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-service-top__flow",
+        "local_selector": ".p-service-top__flow",
+        "metrics": [
+          "width",
+          "height",
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-service-contents__tab",
+        "local_selector": ".p-service-contents__tab",
+        "metrics": [
+          "height",
+          "paddingTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-ce__top",
+        "local_selector": ".p-ce__top",
+        "metrics": [
+          "width",
+          "paddingBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-ce__top__title",
+        "local_selector": ".p-ce__top__title",
+        "metrics": [
+          "fontSize",
+          "lineHeight",
+          "marginBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-ce__about-inner",
+        "local_selector": ".p-ce__about-inner",
+        "metrics": [
+          "width",
+          "paddingTop",
+          "paddingBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-ce__about__img",
+        "local_selector": ".p-ce__about__img",
+        "metrics": [
+          "width",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".p-ce__about__desc",
+        "local_selector": ".p-ce__about__desc",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-ce__service__inner",
+        "local_selector": ".p-ce__service__inner",
+        "metrics": [
+          "width",
+          "paddingTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-ce__service__title",
+        "local_selector": ".p-ce__service__title",
+        "metrics": [
+          "fontSize"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "service-digital-design.html",
+    "reference_family": "service-reference",
+    "reference_url": "https://sun-asterisk.com/service/engineering-capability/",
+    "pairs": [
+      {
+        "reference_selector": ".p-capability-top__inner",
+        "local_selector": ".p-capability-top__inner",
+        "metrics": [
+          "x",
+          "y",
+          "width"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__title",
+        "local_selector": ".p-capability-top__title",
+        "metrics": [
+          "fontSize"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc",
+        "local_selector": ".p-capability-top__calc",
+        "metrics": [
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc-top span",
+        "local_selector": ".p-capability-top__calc-top span",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc-bottom",
+        "local_selector": ".p-capability-top__calc-bottom",
+        "metrics": [
+          "marginBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__desc",
+        "local_selector": ".p-capability-top__desc",
+        "metrics": [
+          "fontSize",
+          "lineHeight",
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__feature",
+        "local_selector": ".p-capability-top__feature",
+        "metrics": [
+          "columns",
+          "width"
+        ]
+      },
+      {
+        "reference_selector": ".c-featureItem__inner",
+        "local_selector": ".c-featureItem__inner",
+        "metrics": [
+          "width",
+          "height",
+          "paddingTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-main__inner",
+        "local_selector": ".p-capability-main__inner",
+        "metrics": [
+          "width",
+          "paddingTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-main__title",
+        "local_selector": ".p-capability-main__title",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-feature__box",
+        "local_selector": ".p-capability-feature__box",
+        "metrics": [
+          "width",
+          "paddingTop",
+          "paddingLeft",
+          "paddingRight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-feature__desc",
+        "local_selector": ".p-capability-feature__desc",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "service-digital-strategy.html",
+    "reference_family": "service-reference",
+    "reference_url": "https://sun-asterisk.com/service/engineering-capability/",
+    "pairs": [
+      {
+        "reference_selector": ".p-capability-top__inner",
+        "local_selector": ".p-capability-top__inner",
+        "metrics": [
+          "x",
+          "y",
+          "width"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__title",
+        "local_selector": ".p-capability-top__title",
+        "metrics": [
+          "fontSize"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc",
+        "local_selector": ".p-capability-top__calc",
+        "metrics": [
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc-top span",
+        "local_selector": ".p-capability-top__calc-top span",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc-bottom",
+        "local_selector": ".p-capability-top__calc-bottom",
+        "metrics": [
+          "marginBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__desc",
+        "local_selector": ".p-capability-top__desc",
+        "metrics": [
+          "fontSize",
+          "lineHeight",
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__feature",
+        "local_selector": ".p-capability-top__feature",
+        "metrics": [
+          "columns",
+          "width"
+        ]
+      },
+      {
+        "reference_selector": ".c-featureItem__inner",
+        "local_selector": ".c-featureItem__inner",
+        "metrics": [
+          "width",
+          "height",
+          "paddingTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-main__inner",
+        "local_selector": ".p-capability-main__inner",
+        "metrics": [
+          "width",
+          "paddingTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-main__title",
+        "local_selector": ".p-capability-main__title",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-feature__box",
+        "local_selector": ".p-capability-feature__box",
+        "metrics": [
+          "width",
+          "paddingTop",
+          "paddingLeft",
+          "paddingRight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-feature__desc",
+        "local_selector": ".p-capability-feature__desc",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "service-growth-strategy.html",
+    "reference_family": "service-reference",
+    "reference_url": "https://sun-asterisk.com/service/engineering-capability/",
+    "pairs": [
+      {
+        "reference_selector": ".p-capability-top__inner",
+        "local_selector": ".p-capability-top__inner",
+        "metrics": [
+          "x",
+          "y",
+          "width"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__title",
+        "local_selector": ".p-capability-top__title",
+        "metrics": [
+          "fontSize"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc",
+        "local_selector": ".p-capability-top__calc",
+        "metrics": [
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc-top span",
+        "local_selector": ".p-capability-top__calc-top span",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc-bottom",
+        "local_selector": ".p-capability-top__calc-bottom",
+        "metrics": [
+          "marginBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__desc",
+        "local_selector": ".p-capability-top__desc",
+        "metrics": [
+          "fontSize",
+          "lineHeight",
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__feature",
+        "local_selector": ".p-capability-top__feature",
+        "metrics": [
+          "columns",
+          "width"
+        ]
+      },
+      {
+        "reference_selector": ".c-featureItem__inner",
+        "local_selector": ".c-featureItem__inner",
+        "metrics": [
+          "width",
+          "height",
+          "paddingTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-main__inner",
+        "local_selector": ".p-capability-main__inner",
+        "metrics": [
+          "width",
+          "paddingTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-main__title",
+        "local_selector": ".p-capability-main__title",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-feature__box",
+        "local_selector": ".p-capability-feature__box",
+        "metrics": [
+          "width",
+          "paddingTop",
+          "paddingLeft",
+          "paddingRight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-feature__desc",
+        "local_selector": ".p-capability-feature__desc",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "service-hr-strategy.html",
+    "reference_family": "service-reference",
+    "reference_url": "https://sun-asterisk.com/service/engineering-capability/",
+    "pairs": [
+      {
+        "reference_selector": ".p-capability-top__inner",
+        "local_selector": ".p-capability-top__inner",
+        "metrics": [
+          "x",
+          "y",
+          "width"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__title",
+        "local_selector": ".p-capability-top__title",
+        "metrics": [
+          "fontSize"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc",
+        "local_selector": ".p-capability-top__calc",
+        "metrics": [
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc-top span",
+        "local_selector": ".p-capability-top__calc-top span",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc-bottom",
+        "local_selector": ".p-capability-top__calc-bottom",
+        "metrics": [
+          "marginBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__desc",
+        "local_selector": ".p-capability-top__desc",
+        "metrics": [
+          "fontSize",
+          "lineHeight",
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__feature",
+        "local_selector": ".p-capability-top__feature",
+        "metrics": [
+          "columns",
+          "width"
+        ]
+      },
+      {
+        "reference_selector": ".c-featureItem__inner",
+        "local_selector": ".c-featureItem__inner",
+        "metrics": [
+          "width",
+          "height",
+          "paddingTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-main__inner",
+        "local_selector": ".p-capability-main__inner",
+        "metrics": [
+          "width",
+          "paddingTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-main__title",
+        "local_selector": ".p-capability-main__title",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-feature__box",
+        "local_selector": ".p-capability-feature__box",
+        "metrics": [
+          "width",
+          "paddingTop",
+          "paddingLeft",
+          "paddingRight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-feature__desc",
+        "local_selector": ".p-capability-feature__desc",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "service-m-and-a.html",
+    "reference_family": "service-reference",
+    "reference_url": "https://sun-asterisk.com/service/engineering-capability/",
+    "pairs": [
+      {
+        "reference_selector": ".p-capability-top__inner",
+        "local_selector": ".p-capability-top__inner",
+        "metrics": [
+          "x",
+          "y",
+          "width"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__title",
+        "local_selector": ".p-capability-top__title",
+        "metrics": [
+          "fontSize"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc",
+        "local_selector": ".p-capability-top__calc",
+        "metrics": [
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc-top span",
+        "local_selector": ".p-capability-top__calc-top span",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc-bottom",
+        "local_selector": ".p-capability-top__calc-bottom",
+        "metrics": [
+          "marginBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__desc",
+        "local_selector": ".p-capability-top__desc",
+        "metrics": [
+          "fontSize",
+          "lineHeight",
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__feature",
+        "local_selector": ".p-capability-top__feature",
+        "metrics": [
+          "columns",
+          "width"
+        ]
+      },
+      {
+        "reference_selector": ".c-featureItem__inner",
+        "local_selector": ".c-featureItem__inner",
+        "metrics": [
+          "width",
+          "height",
+          "paddingTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-main__inner",
+        "local_selector": ".p-capability-main__inner",
+        "metrics": [
+          "width",
+          "paddingTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-main__title",
+        "local_selector": ".p-capability-main__title",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-feature__box",
+        "local_selector": ".p-capability-feature__box",
+        "metrics": [
+          "width",
+          "paddingTop",
+          "paddingLeft",
+          "paddingRight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-feature__desc",
+        "local_selector": ".p-capability-feature__desc",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "service-marketing-sales.html",
+    "reference_family": "service-reference",
+    "reference_url": "https://sun-asterisk.com/service/engineering-capability/",
+    "pairs": [
+      {
+        "reference_selector": ".p-capability-top__inner",
+        "local_selector": ".p-capability-top__inner",
+        "metrics": [
+          "x",
+          "y",
+          "width"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__title",
+        "local_selector": ".p-capability-top__title",
+        "metrics": [
+          "fontSize"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc",
+        "local_selector": ".p-capability-top__calc",
+        "metrics": [
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc-top span",
+        "local_selector": ".p-capability-top__calc-top span",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc-bottom",
+        "local_selector": ".p-capability-top__calc-bottom",
+        "metrics": [
+          "marginBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__desc",
+        "local_selector": ".p-capability-top__desc",
+        "metrics": [
+          "fontSize",
+          "lineHeight",
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__feature",
+        "local_selector": ".p-capability-top__feature",
+        "metrics": [
+          "columns",
+          "width"
+        ]
+      },
+      {
+        "reference_selector": ".c-featureItem__inner",
+        "local_selector": ".c-featureItem__inner",
+        "metrics": [
+          "width",
+          "height",
+          "paddingTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-main__inner",
+        "local_selector": ".p-capability-main__inner",
+        "metrics": [
+          "width",
+          "paddingTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-main__title",
+        "local_selector": ".p-capability-main__title",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-feature__box",
+        "local_selector": ".p-capability-feature__box",
+        "metrics": [
+          "width",
+          "paddingTop",
+          "paddingLeft",
+          "paddingRight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-feature__desc",
+        "local_selector": ".p-capability-feature__desc",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "service-new-business.html",
+    "reference_family": "service-reference",
+    "reference_url": "https://sun-asterisk.com/service/engineering-capability/",
+    "pairs": [
+      {
+        "reference_selector": ".p-capability-top__inner",
+        "local_selector": ".p-capability-top__inner",
+        "metrics": [
+          "x",
+          "y",
+          "width"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__title",
+        "local_selector": ".p-capability-top__title",
+        "metrics": [
+          "fontSize"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc",
+        "local_selector": ".p-capability-top__calc",
+        "metrics": [
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc-top span",
+        "local_selector": ".p-capability-top__calc-top span",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc-bottom",
+        "local_selector": ".p-capability-top__calc-bottom",
+        "metrics": [
+          "marginBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__desc",
+        "local_selector": ".p-capability-top__desc",
+        "metrics": [
+          "fontSize",
+          "lineHeight",
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__feature",
+        "local_selector": ".p-capability-top__feature",
+        "metrics": [
+          "columns",
+          "width"
+        ]
+      },
+      {
+        "reference_selector": ".c-featureItem__inner",
+        "local_selector": ".c-featureItem__inner",
+        "metrics": [
+          "width",
+          "height",
+          "paddingTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-main__inner",
+        "local_selector": ".p-capability-main__inner",
+        "metrics": [
+          "width",
+          "paddingTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-main__title",
+        "local_selector": ".p-capability-main__title",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-feature__box",
+        "local_selector": ".p-capability-feature__box",
+        "metrics": [
+          "width",
+          "paddingTop",
+          "paddingLeft",
+          "paddingRight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-feature__desc",
+        "local_selector": ".p-capability-feature__desc",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "service-operation.html",
+    "reference_family": "service-reference",
+    "reference_url": "https://sun-asterisk.com/service/engineering-capability/",
+    "pairs": [
+      {
+        "reference_selector": ".p-capability-top__inner",
+        "local_selector": ".p-capability-top__inner",
+        "metrics": [
+          "x",
+          "y",
+          "width"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__title",
+        "local_selector": ".p-capability-top__title",
+        "metrics": [
+          "fontSize"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc",
+        "local_selector": ".p-capability-top__calc",
+        "metrics": [
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc-top span",
+        "local_selector": ".p-capability-top__calc-top span",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc-bottom",
+        "local_selector": ".p-capability-top__calc-bottom",
+        "metrics": [
+          "marginBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__desc",
+        "local_selector": ".p-capability-top__desc",
+        "metrics": [
+          "fontSize",
+          "lineHeight",
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__feature",
+        "local_selector": ".p-capability-top__feature",
+        "metrics": [
+          "columns",
+          "width"
+        ]
+      },
+      {
+        "reference_selector": ".c-featureItem__inner",
+        "local_selector": ".c-featureItem__inner",
+        "metrics": [
+          "width",
+          "height",
+          "paddingTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-main__inner",
+        "local_selector": ".p-capability-main__inner",
+        "metrics": [
+          "width",
+          "paddingTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-main__title",
+        "local_selector": ".p-capability-main__title",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-feature__box",
+        "local_selector": ".p-capability-feature__box",
+        "metrics": [
+          "width",
+          "paddingTop",
+          "paddingLeft",
+          "paddingRight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-feature__desc",
+        "local_selector": ".p-capability-feature__desc",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "manufacturing.html",
+    "reference_family": "service-reference",
+    "reference_url": "https://sun-asterisk.com/service/engineering-capability/",
+    "pairs": [
+      {
+        "reference_selector": ".p-capability-top__inner",
+        "local_selector": ".p-capability-top__inner",
+        "metrics": [
+          "x",
+          "y",
+          "width"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__title",
+        "local_selector": ".p-capability-top__title",
+        "metrics": [
+          "fontSize"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc",
+        "local_selector": ".p-capability-top__calc",
+        "metrics": [
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc-top span",
+        "local_selector": ".p-capability-top__calc-top span",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__calc-bottom",
+        "local_selector": ".p-capability-top__calc-bottom",
+        "metrics": [
+          "marginBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__desc",
+        "local_selector": ".p-capability-top__desc",
+        "metrics": [
+          "fontSize",
+          "lineHeight",
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-top__feature",
+        "local_selector": ".p-capability-top__feature",
+        "metrics": [
+          "columns",
+          "width"
+        ]
+      },
+      {
+        "reference_selector": ".c-featureItem__inner",
+        "local_selector": ".c-featureItem__inner",
+        "metrics": [
+          "width",
+          "height",
+          "paddingTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-main__inner",
+        "local_selector": ".p-capability-main__inner",
+        "metrics": [
+          "width",
+          "paddingTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-main__title",
+        "local_selector": ".p-capability-main__title",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-feature__box",
+        "local_selector": ".p-capability-feature__box",
+        "metrics": [
+          "width",
+          "paddingTop",
+          "paddingLeft",
+          "paddingRight"
+        ]
+      },
+      {
+        "reference_selector": ".p-capability-feature__desc",
+        "local_selector": ".p-capability-feature__desc",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "contact.html",
+    "reference_family": "contact",
+    "reference_url": "https://sun-asterisk.com/contact/",
+    "pairs": [
+      {
+        "reference_selector": ".p-contact-top__inner",
+        "local_selector": ".p-contact-top__inner",
+        "metrics": [
+          "x",
+          "y",
+          "width"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-top__title",
+        "local_selector": ".p-contact-top__title",
+        "metrics": [
+          "fontSize"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-top__calc",
+        "local_selector": ".p-contact-top__calc",
+        "metrics": [
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-top__calc-top",
+        "local_selector": ".p-contact-top__calc-top",
+        "metrics": [
+          "height",
+          "marginBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-top__calc-top span",
+        "local_selector": ".p-contact-top__calc-top span",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-top__calc-bottom span",
+        "local_selector": ".p-contact-top__calc-bottom span",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-form",
+        "local_selector": ".p-contact-form",
+        "metrics": [
+          "paddingTop",
+          "paddingBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-form__inner",
+        "local_selector": ".p-contact-form__inner",
+        "metrics": [
+          "width",
+          "paddingTop",
+          "paddingLeft",
+          "paddingRight",
+          "paddingBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-form__title",
+        "local_selector": ".p-contact-form__title",
+        "metrics": [
+          "fontSize",
+          "lineHeight",
+          "marginBottom"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "thanks.html",
+    "reference_family": "contact",
+    "reference_url": "https://sun-asterisk.com/contact/",
+    "pairs": [
+      {
+        "reference_selector": ".p-contact-top__inner",
+        "local_selector": ".p-contact-top__inner",
+        "metrics": [
+          "x",
+          "y",
+          "width"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-top__title",
+        "local_selector": ".p-contact-top__title",
+        "metrics": [
+          "fontSize"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-top__calc",
+        "local_selector": ".p-contact-top__calc",
+        "metrics": [
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-top__calc-top",
+        "local_selector": ".p-contact-top__calc-top",
+        "metrics": [
+          "height",
+          "marginBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-top__calc-top span",
+        "local_selector": ".p-contact-top__calc-top span",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-top__calc-bottom span",
+        "local_selector": ".p-contact-top__calc-bottom span",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-form",
+        "local_selector": ".p-contact-form",
+        "metrics": [
+          "paddingTop",
+          "paddingBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-form__inner",
+        "local_selector": ".p-contact-form__inner",
+        "metrics": [
+          "width",
+          "paddingTop",
+          "paddingLeft",
+          "paddingRight",
+          "paddingBottom"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "404.html",
+    "reference_family": "contact",
+    "reference_url": "https://sun-asterisk.com/contact/",
+    "pairs": [
+      {
+        "reference_selector": ".p-contact-top__inner",
+        "local_selector": ".p-contact-top__inner",
+        "metrics": [
+          "x",
+          "y",
+          "width"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-top__title",
+        "local_selector": ".p-contact-top__title",
+        "metrics": [
+          "fontSize"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-top__calc",
+        "local_selector": ".p-contact-top__calc",
+        "metrics": [
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-top__calc-top",
+        "local_selector": ".p-contact-top__calc-top",
+        "metrics": [
+          "height",
+          "marginBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-top__calc-top span",
+        "local_selector": ".p-contact-top__calc-top span",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-top__calc-bottom span",
+        "local_selector": ".p-contact-top__calc-bottom span",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-form",
+        "local_selector": ".p-contact-form",
+        "metrics": [
+          "paddingTop",
+          "paddingBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-form__inner",
+        "local_selector": ".p-contact-form__inner",
+        "metrics": [
+          "width",
+          "paddingTop",
+          "paddingLeft",
+          "paddingRight",
+          "paddingBottom"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "apply.html",
+    "reference_family": "contact",
+    "reference_url": "https://sun-asterisk.com/contact/",
+    "pairs": [
+      {
+        "reference_selector": ".p-contact-top__inner",
+        "local_selector": ".p-contact-top__inner",
+        "metrics": [
+          "x",
+          "y",
+          "width"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-top__title",
+        "local_selector": ".p-contact-top__title",
+        "metrics": [
+          "fontSize"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-top__calc",
+        "local_selector": ".p-contact-top__calc",
+        "metrics": [
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-top__calc-top",
+        "local_selector": ".p-contact-top__calc-top",
+        "metrics": [
+          "height",
+          "marginBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-top__calc-top span",
+        "local_selector": ".p-contact-top__calc-top span",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-top__calc-bottom span",
+        "local_selector": ".p-contact-top__calc-bottom span",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-form",
+        "local_selector": ".p-contact-form",
+        "metrics": [
+          "paddingTop",
+          "paddingBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-form__inner",
+        "local_selector": ".p-contact-form__inner",
+        "metrics": [
+          "width",
+          "paddingTop",
+          "paddingLeft",
+          "paddingRight",
+          "paddingBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-form__title",
+        "local_selector": ".p-contact-form__title",
+        "metrics": [
+          "fontSize",
+          "lineHeight",
+          "marginBottom"
+        ]
+      }
+    ]
+  },
+  {
+    "page": "service-options.html",
+    "reference_family": "contact",
+    "reference_url": "https://sun-asterisk.com/contact/",
+    "pairs": [
+      {
+        "reference_selector": ".p-contact-top__inner",
+        "local_selector": ".p-contact-top__inner",
+        "metrics": [
+          "x",
+          "y",
+          "width"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-top__title",
+        "local_selector": ".p-contact-top__title",
+        "metrics": [
+          "fontSize"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-top__calc",
+        "local_selector": ".p-contact-top__calc",
+        "metrics": [
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-top__calc-top",
+        "local_selector": ".p-contact-top__calc-top",
+        "metrics": [
+          "height",
+          "marginBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-top__calc-top span",
+        "local_selector": ".p-contact-top__calc-top span",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-top__calc-bottom span",
+        "local_selector": ".p-contact-top__calc-bottom span",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-form",
+        "local_selector": ".p-contact-form",
+        "metrics": [
+          "paddingTop",
+          "paddingBottom"
+        ]
+      },
+      {
+        "reference_selector": ".p-contact-form__inner",
+        "local_selector": ".p-contact-form__inner",
+        "metrics": [
+          "width",
+          "paddingTop",
+          "paddingLeft",
+          "paddingRight",
+          "paddingBottom"
+        ]
+      }
+    ]
+  }
+]

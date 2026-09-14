@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "YakuHanJP";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/yakuhanjp/YakuHanJP-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "YakuHanJP";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./assets/fonts/yakuhanjp/YakuHanJP-Medium.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "YakuHanJP";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/fonts/yakuhanjp/YakuHanJP-Bold.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "YakuHanJP";
+  font-style: normal;
+  font-weight: 900;
+  src: url("./assets/fonts/yakuhanjp/YakuHanJP-Black.woff2") format("woff2");
+  font-display: swap;
+}

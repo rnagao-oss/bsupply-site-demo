@@ -1,0 +1,130 @@
+[
+  {
+    "page": "company.html",
+    "inline_scripts_equal": true,
+    "raw_forms_equal": true,
+    "hidden_inputs_equal": true,
+    "main_count": 1,
+    "h1_count": 1
+  },
+  {
+    "page": "consulting.html",
+    "inline_scripts_equal": true,
+    "raw_forms_equal": true,
+    "hidden_inputs_equal": true,
+    "main_count": 1,
+    "h1_count": 1
+  },
+  {
+    "page": "service-digital-design.html",
+    "inline_scripts_equal": true,
+    "raw_forms_equal": true,
+    "hidden_inputs_equal": true,
+    "main_count": 1,
+    "h1_count": 1
+  },
+  {
+    "page": "service-digital-strategy.html",
+    "inline_scripts_equal": true,
+    "raw_forms_equal": true,
+    "hidden_inputs_equal": true,
+    "main_count": 1,
+    "h1_count": 1
+  },
+  {
+    "page": "service-growth-strategy.html",
+    "inline_scripts_equal": true,
+    "raw_forms_equal": true,
+    "hidden_inputs_equal": true,
+    "main_count": 1,
+    "h1_count": 1
+  },
+  {
+    "page": "service-hr-strategy.html",
+    "inline_scripts_equal": true,
+    "raw_forms_equal": true,
+    "hidden_inputs_equal": true,
+    "main_count": 1,
+    "h1_count": 1
+  },
+  {
+    "page": "service-m-and-a.html",
+    "inline_scripts_equal": true,
+    "raw_forms_equal": true,
+    "hidden_inputs_equal": true,
+    "main_count": 1,
+    "h1_count": 1
+  },
+  {
+    "page": "service-marketing-sales.html",
+    "inline_scripts_equal": true,
+    "raw_forms_equal": true,
+    "hidden_inputs_equal": true,
+    "main_count": 1,
+    "h1_count": 1
+  },
+  {
+    "page": "service-new-business.html",
+    "inline_scripts_equal": true,
+    "raw_forms_equal": true,
+    "hidden_inputs_equal": true,
+    "main_count": 1,
+    "h1_count": 1
+  },
+  {
+    "page": "service-operation.html",
+    "inline_scripts_equal": true,
+    "raw_forms_equal": true,
+    "hidden_inputs_equal": true,
+    "main_count": 1,
+    "h1_count": 1
+  },
+  {
+    "page": "manufacturing.html",
+    "inline_scripts_equal": true,
+    "raw_forms_equal": true,
+    "hidden_inputs_equal": true,
+    "main_count": 1,
+    "h1_count": 1
+  },
+  {
+    "page": "contact.html",
+    "inline_scripts_equal": true,
+    "raw_forms_equal": true,
+    "hidden_inputs_equal": true,
+    "main_count": 1,
+    "h1_count": 1
+  },
+  {
+    "page": "thanks.html",
+    "inline_scripts_equal": true,
+    "raw_forms_equal": true,
+    "hidden_inputs_equal": true,
+    "main_count": 1,
+    "h1_count": 1
+  },
+  {
+    "page": "404.html",
+    "inline_scripts_equal": true,
+    "raw_forms_equal": true,
+    "hidden_inputs_equal": true,
+    "main_count": 1,
+    "h1_count": 1
+  },
+  {
+    "page": "apply.html",
+    "inline_scripts_equal": true,
+    "raw_forms_equal": true,
+    "hidden_inputs_equal": true,
+    "main_count": 1,
+    "h1_count": 1
+  },
+  {
+    "page": "service-options.html",
+    "inline_scripts_equal": true,
+    "raw_forms_equal": true,
+    "hidden_inputs_equal": true,
+    "main_count": 1,
+    "h1_count": 1
+  }
+]

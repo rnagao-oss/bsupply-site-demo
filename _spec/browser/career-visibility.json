@@ -1,0 +1,118 @@
+[
+  {
+    "width": 375,
+    "elements": [
+      {
+        "cls": "p-top-career__title title-en",
+        "height": 22,
+        "offsetTop": 47,
+        "inside": true
+      },
+      {
+        "cls": "p-top-career__copy",
+        "height": 180,
+        "offsetTop": 72,
+        "inside": true
+      },
+      {
+        "cls": "p-top-career__message",
+        "height": 0,
+        "offsetTop": -252.578125,
+        "inside": true
+      },
+      {
+        "cls": "bs-button",
+        "height": 50,
+        "offsetTop": 294,
+        "inside": true
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "elements": [
+      {
+        "cls": "p-top-career__title title-en",
+        "height": 22,
+        "offsetTop": 47,
+        "inside": true
+      },
+      {
+        "cls": "p-top-career__copy",
+        "height": 180,
+        "offsetTop": 72,
+        "inside": true
+      },
+      {
+        "cls": "p-top-career__message",
+        "height": 0,
+        "offsetTop": -252.1875,
+        "inside": true
+      },
+      {
+        "cls": "bs-button",
+        "height": 50,
+        "offsetTop": 294,
+        "inside": true
+      }
+    ]
+  },
+  {
+    "width": 1024,
+    "elements": [
+      {
+        "cls": "p-top-career__title title-en",
+        "height": 22,
+        "offsetTop": 93,
+        "inside": true
+      },
+      {
+        "cls": "p-top-career__copy",
+        "height": 78,
+        "offsetTop": 147,
+        "inside": true
+      },
+      {
+        "cls": "p-top-career__message",
+        "height": 60,
+        "offsetTop": 241,
+        "inside": true
+      },
+      {
+        "cls": "bs-button",
+        "height": 80,
+        "offsetTop": 356,
+        "inside": true
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "elements": [
+      {
+        "cls": "p-top-career__title title-en",
+        "height": 22,
+        "offsetTop": 93,
+        "inside": true
+      },
+      {
+        "cls": "p-top-career__copy",
+        "height": 78,
+        "offsetTop": 147,
+        "inside": true
+      },
+      {
+        "cls": "p-top-career__message",
+        "height": 60,
+        "offsetTop": 241,
+        "inside": true
+      },
+      {
+        "cls": "bs-button",
+        "height": 80,
+        "offsetTop": 356,
+        "inside": true
+      }
+    ]
+  }
+]

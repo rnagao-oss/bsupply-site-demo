@@ -1,0 +1,585 @@
+{
+  "pages": [
+    {
+      "page": "404.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "apply.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "case-01.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "case-02.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "case-03.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "case-04.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "case-05.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "case-06.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "case-07.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "case-08.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "case-09.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "case-10.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "case-11.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "case-12.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "case-13.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "case-14.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "case-15.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "case-16.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "company.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "consulting.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "contact.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "index.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "job-business-designer.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "job-craftsman.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "job-director.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "job-inspection-cutting.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "job-investment-front.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "job-marketing.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "job-production-manager.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "manufacturing.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "recruit.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "service-digital-design.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "service-digital-strategy.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "service-growth-strategy.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "service-hr-strategy.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "service-m-and-a.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "service-marketing-sales.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "service-new-business.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "service-operation.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "service-options.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    },
+    {
+      "page": "thanks.html",
+      "inline_scripts": true,
+      "hidden": true,
+      "forms": true,
+      "main": 1,
+      "h1": 1,
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "html_errors": [],
+      "video_count": 0,
+      "duplicate_ids": []
+    }
+  ],
+  "link_errors": [],
+  "sphere_block_unchanged": true,
+  "contact_block_unchanged": true,
+  "sphere_sha256": "2481c67fa870a54ba72f21d1070539904c40019e5babbb27c591e0273399e4cd",
+  "hero_text": "想いを紡ぎ、新たな価値を創る",
+  "robots_txt_unchanged": true,
+  "english_directory_absent": true
+}

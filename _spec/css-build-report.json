@@ -1,0 +1,33 @@
+{
+  "source": "_spec/ref/style.css",
+  "source_sha256": "19d5311e6be70f049d7bcf638858a805db5d620288788206aa3b39e537257ea7",
+  "generated": "styles.css",
+  "media_count": 1208,
+  "unique_media_conditions": 52,
+  "media_condition_counts_match_reference": true,
+  "empty_media_blocks_added": 0,
+  "preserved_original_font_faces": 4,
+  "sanitization_counts": {
+    "removed_at_charset": 1,
+    "removed_at_import": 1,
+    "color_tokens_normalized": 999,
+    "removed_at_font-face": 5,
+    "font_families_replaced": 105,
+    "decoration_declarations_neutralized": 8,
+    "radius_declarations_neutralized": 170,
+    "motion_declarations_neutralized": 1005,
+    "entrance_opacity_neutralized": 84,
+    "entrance_or_hover_transforms_neutralized": 232,
+    "removed_at_-webkit-keyframes": 16,
+    "removed_at_keyframes": 16,
+    "asset_or_gradient_tokens_removed": 47
+  },
+  "remaining_integration_notes": [
+    "Reference class names and structural markup are required for each layout rule to apply.",
+    "Reference modal and navigation visibility states remain; the rewritten application controls these states.",
+    "Geometric transforms used for centering and positioning remain. Entrance, hover, animation and transition motion are disabled.",
+    "All original media blocks retain actual source selectors and declarations. Some selectors belong to reference pages excluded by the B supply content mapping; they remain unused, not fake breakpoint padding.",
+    "Reference body weight is replaced with 400. English heading weights remain for geometry; page-specific Japanese heading weights can be supplied by the final stylesheet integration.",
+    "Supplemental CSS must be merged into existing media blocks when responsive rules are required, without adding media blocks."
+  ]
+}

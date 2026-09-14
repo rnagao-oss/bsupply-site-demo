@@ -1,0 +1,12 @@
+[
+  {
+    "requested": "company",
+    "url": "https://sun-asterisk.com/company/",
+    "status": 404
+  },
+  {
+    "requested": "career",
+    "url": "https://sun-asterisk.com/career/",
+    "status": 404
+  }
+]

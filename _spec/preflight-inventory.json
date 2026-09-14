@@ -1,0 +1,358 @@
+{
+  "python": "3.14.6",
+  "playwright": "1.61.0",
+  "pages": [
+    {
+      "page": "404.html",
+      "robots": [
+        "noindex"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "apply.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [
+        {
+          "id": "apForm",
+          "action": "https://api.web3forms.com/submit",
+          "method": "POST"
+        }
+      ],
+      "hidden_input_names": [
+        "access_key",
+        "subject",
+        "redirect",
+        "from_name"
+      ]
+    },
+    {
+      "page": "case-01.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "case-02.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "case-03.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "case-04.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "case-05.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "case-06.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "case-07.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "case-08.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "case-09.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "case-10.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "case-11.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "case-12.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "case-13.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "case-14.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "case-15.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "case-16.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "company.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "consulting.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "contact.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [
+        {
+          "action": "https://formsubmit.co/r.nagao@b--supply.com",
+          "method": "POST",
+          "enctype": "multipart/form-data"
+        }
+      ],
+      "hidden_input_names": [
+        "_subject",
+        "_captcha",
+        "_next",
+        "_template"
+      ]
+    },
+    {
+      "page": "index.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "job-business-designer.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "job-craftsman.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "job-director.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "job-inspection-cutting.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "job-investment-front.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "job-marketing.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "job-production-manager.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "manufacturing.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "recruit.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "service-digital-design.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "service-digital-strategy.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "service-growth-strategy.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "service-hr-strategy.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "service-m-and-a.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "service-marketing-sales.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "service-new-business.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "service-operation.html",
+      "robots": [
+        "noindex,nofollow"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "service-options.html",
+      "robots": [
+        "noindex"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    },
+    {
+      "page": "thanks.html",
+      "robots": [
+        "noindex"
+      ],
+      "forms": [],
+      "hidden_input_names": []
+    }
+  ],
+  "english_pages": 39,
+  "robots_txt": "User-agent: *\nDisallow: /\n"
+}

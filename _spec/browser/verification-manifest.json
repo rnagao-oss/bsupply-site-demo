@@ -1,0 +1,264 @@
+{
+  "finalized_at": "2026-09-14T17:21:07.427872+00:00",
+  "source_sha256": {
+    "404.html": "badc07150ed041bc73599593267349894bb0bc03fac497eced5e2c0ce0605791",
+    "apply.html": "b3cf026c843e8eb8426fe9de4f5ba95301063dcb94f0a1073130f2116d8d7ff8",
+    "case-01.html": "f6a123576b459a90a3c9a6f21f32d9a4debe942bd722dcd3d76b4b084f64e263",
+    "case-02.html": "fc5bc17d15705d5627dbaae6f999e59279c5cc2255f448cb34964dcd05298243",
+    "case-03.html": "012ba60d8897907511539af6f1824fb0030b0bd2a870c4a11196114f39cfdcd8",
+    "case-04.html": "5c9cddfe64990fb789c1980076b0d57a8cc1c4cab19d9904f638ca80aec1e07f",
+    "case-05.html": "e99ffff409ff1dd79d157a7a12be29b7532ee891f88ee3a45a0ea081488450c2",
+    "case-06.html": "75e8d26aa25d8144554f79b96e44973f921d00f6f8af2d58f4af732513e6fba9",
+    "case-07.html": "f1c65fb87fcf177e8f28fb95a04ca85cd5b7cbb92b878f207a04ff015874e6cd",
+    "case-08.html": "2efa14cfc3a94732641d570899828fdd766b5760524bcc14aa0787314426fd92",
+    "case-09.html": "5bba6b1a9cabf0d7663530c0baea048ceaf97e9d00d7051aace4a1d4a24ac109",
+    "case-10.html": "04a3a1cb3f45736e960ed7057ad37605a08dc0544935f0b4288c68c178aafe94",
+    "case-11.html": "df18190abf64eda4102355257972e3992926bc935fcb4c3cbca54ec6f47a7d42",
+    "case-12.html": "9a1ceb483989e3031c1167a53e8f6db7ab20590065c780d9207002bea65627d2",
+    "case-13.html": "671dc4773bafd1bee38379edbe2e1e94ab8e3432901cbd5bb6c206da260ac91c",
+    "case-14.html": "2e556f28f4c3510255579c7ed6f51c4c2af3b710ebac8e3f9181ca1d90c8c598",
+    "case-15.html": "44068cfe6d2552a1e921cebfb2ba381ac080cad557baba297548993d93c3778b",
+    "case-16.html": "840d7f6a9db35fe424d473b169b276749a0396a9a4961fbe533d975209bd30e7",
+    "company.html": "667dd8a9b53e62a48838beeb71690d3c227919c995e57ca2ccc1067006ef751f",
+    "consulting.html": "3bb819d22a78148d133d0ecd3b6d7ae05f97020eec2e4d2b76f4de6804436572",
+    "contact.html": "e926c0166ff592866defce2f0d01f1fc03863457eb6e2936df81772e9888a4b1",
+    "index.html": "39e540a1a67752183603c800e3b7463909ad424a04cbe7fd720693f2855c4aeb",
+    "job-business-designer.html": "fa872b770cb8c42efbded1e83b31a14c5064dfb5e4b33ca9a7cdfe19dafa5689",
+    "job-craftsman.html": "07cc6bf66c460b49d7810793ceda567e63ec34717ea4783eb2434b618fcaba42",
+    "job-director.html": "2da7b90128d4c0f5d199f689ac853d15e9de6bf6e7162f187169c14ce7a35a8b",
+    "job-inspection-cutting.html": "2c2776e715889efe71e0e0b9b831e7b54e776d3801f6b052d3d9daa7de6f5206",
+    "job-investment-front.html": "6145e75c6eeb330cec7faadfa9e03ecdfb2e43c5bee66ba2a4da014111d4385e",
+    "job-marketing.html": "98acd14ce8b93800b80e2b8fdfebac008d4031d5dbebacbfd3bd2c7800062068",
+    "job-production-manager.html": "0bca442392d40992316142ebba6b9b705d3b086ae993c547419c284187813f89",
+    "manufacturing.html": "8c89544c4981ef1c3f1255a6fec25cf9ab141e4b3701510c2d6b788f0d500e81",
+    "recruit.html": "c57dab3716d6e3e64b02eea75fea6aed6e53e753336cb7ed2de976daa2ec2436",
+    "service-digital-design.html": "b57294e09de354398709c4db46d55e19d39d334baf4d57d5926efef8d6674486",
+    "service-digital-strategy.html": "fc3ab77985985be6fa78d3602ae7da624e86732bacc558ab87d8a56df6dc6d17",
+    "service-growth-strategy.html": "1e1cca08a161fd763177a2fa675085e4ffb765cfc3b4715654aa9c7efdfd13e6",
+    "service-hr-strategy.html": "88c5707d6282997391f8678dd494315f5cddabbe5af76a3505eebc3b95e15d83",
+    "service-m-and-a.html": "0bef5804e6d7dd011b7e71fca70369d774833b1058c3cb3c9db5e23e00498767",
+    "service-marketing-sales.html": "b46ec940ff6ff840cffc14026d45d110af37ac8630d9100e0e8cb5f3ba112aaa",
+    "service-new-business.html": "a719e97f2ba7b5e195be1ef72eb157239e29b158b3e2cb44c581d8c8099f17a5",
+    "service-operation.html": "7a5d533208cc5620d791959bcc116176af5015b4357d2167db9d3101db3ca3e5",
+    "service-options.html": "91f0eab9d088f43b71ad9f69f0497855822c1d8fc165a0f9b55ad7aa50ec56b4",
+    "thanks.html": "a7e29a5f7a1ee92ff537c76fdfdb335e8c7de994764a216d60941c7b1f5eb560",
+    "styles.css": "a73ce1980a729f48fc87767c2bd0ff0c701f8ea848f4481658991a8336d7b0c5",
+    "app.js": "4aad9aafb2a077537f1d3d3f3281b39c0c7ad36d32307d8b17b151c8852af4a9",
+    "robots.txt": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1",
+    "sitemap.xml": "b4736271ef6ca0e46e84024f8c65da0bc2f949d186447cdd6918929a06702041"
+  },
+  "screenshots": [
+    {
+      "path": "_verify/index-375.png",
+      "viewport_width": 375,
+      "image_width": 375,
+      "image_height": 8408,
+      "sha256": "399b253f76e998d9f5fc94385db7d7664b25f9a95be652d7ae23adf2075da868"
+    },
+    {
+      "path": "_verify/index-768.png",
+      "viewport_width": 768,
+      "image_width": 768,
+      "image_height": 7467,
+      "sha256": "b419f25a41641a2c074c324c375540e0509b691d7325c43c450671df5068343d"
+    },
+    {
+      "path": "_verify/index-1024.png",
+      "viewport_width": 1024,
+      "image_width": 1024,
+      "image_height": 11521,
+      "sha256": "73cf56ef6e24d55975cc49eb8187ee21cd86d67e06bcc953b7d4bee1b2fd81a5"
+    },
+    {
+      "path": "_verify/index-1440.png",
+      "viewport_width": 1440,
+      "image_width": 1440,
+      "image_height": 7971,
+      "sha256": "0bb07df8c66ae09c641ae1f32dec1f3793e6f24a61b25a41016db769974329e4"
+    },
+    {
+      "path": "_verify/company-375.png",
+      "viewport_width": 375,
+      "image_width": 375,
+      "image_height": 7281,
+      "sha256": "db3aaf1f7d8b0f6aecc5db6873214e57e42465063fb02e9555c6e93a7642e813"
+    },
+    {
+      "path": "_verify/company-768.png",
+      "viewport_width": 768,
+      "image_width": 768,
+      "image_height": 5830,
+      "sha256": "5e7fe673bd5d916b3f5d2344af18c0c151ad218f170eea08da5ab344795aba5f"
+    },
+    {
+      "path": "_verify/company-1024.png",
+      "viewport_width": 1024,
+      "image_width": 1024,
+      "image_height": 8026,
+      "sha256": "8051b1e146a42a5e5c51b81cac98ad75718b66ef34424e22997e42551ad75c15"
+    },
+    {
+      "path": "_verify/company-1440.png",
+      "viewport_width": 1440,
+      "image_width": 1440,
+      "image_height": 7366,
+      "sha256": "779cf833da1ca4651589a31050cac7adec3d3c8249154366ccd64c37241549dd"
+    },
+    {
+      "path": "_verify/consulting-375.png",
+      "viewport_width": 375,
+      "image_width": 375,
+      "image_height": 13898,
+      "sha256": "0c02d09078d29c361af96c56a2cff6b55712956250cb0c431531efee0874473f"
+    },
+    {
+      "path": "_verify/consulting-768.png",
+      "viewport_width": 768,
+      "image_width": 768,
+      "image_height": 12040,
+      "sha256": "13fa876ab179b9bc9a698fb09057efb9721eb8c7c76f8f41534636d7c9a8b88f"
+    },
+    {
+      "path": "_verify/consulting-1024.png",
+      "viewport_width": 1024,
+      "image_width": 1024,
+      "image_height": 10033,
+      "sha256": "09aa633d7ce7741778d0141432329a4ee889a75f7f9a117ed969580905eca8f2"
+    },
+    {
+      "path": "_verify/consulting-1440.png",
+      "viewport_width": 1440,
+      "image_width": 1440,
+      "image_height": 9961,
+      "sha256": "107a2984461e7323cfd2a9b6acd6e8e895f940571696abd1920be96a9f543d7e"
+    },
+    {
+      "path": "_verify/case-01-375.png",
+      "viewport_width": 375,
+      "image_width": 375,
+      "image_height": 4882,
+      "sha256": "afe34b11b6bd2c1b73bfe47b09d404f3498517fc142901d1386c623b1a4a5cfc"
+    },
+    {
+      "path": "_verify/case-01-768.png",
+      "viewport_width": 768,
+      "image_width": 768,
+      "image_height": 4582,
+      "sha256": "27d7ab02abe05b70ea27657b27a8afda810a5dc49fdcb82e7efc4c4b18dcd8f0"
+    },
+    {
+      "path": "_verify/case-01-1024.png",
+      "viewport_width": 1024,
+      "image_width": 1024,
+      "image_height": 3353,
+      "sha256": "e9a312a8a0b9eaa99136c027b20bdef78e8dbf4762714c259766e8e326a3e960"
+    },
+    {
+      "path": "_verify/case-01-1440.png",
+      "viewport_width": 1440,
+      "image_width": 1440,
+      "image_height": 3396,
+      "sha256": "4332293f182be2a95462b2d4324255fae8591241a6f09cb07e31b581e79504a9"
+    },
+    {
+      "path": "_verify/recruit-375.png",
+      "viewport_width": 375,
+      "image_width": 375,
+      "image_height": 9260,
+      "sha256": "11087b39ba408c9897f778547ed2d52caaa8a304959d735a10370ed775197078"
+    },
+    {
+      "path": "_verify/recruit-768.png",
+      "viewport_width": 768,
+      "image_width": 768,
+      "image_height": 10397,
+      "sha256": "72d4a9454ad598f8034f7066a61822d43aef2887f2634da7093bf874856150aa"
+    },
+    {
+      "path": "_verify/recruit-1024.png",
+      "viewport_width": 1024,
+      "image_width": 1024,
+      "image_height": 7418,
+      "sha256": "f3645159f5f03d9c899f612b10b7a2e0b471da6ac620675a7e6089e0462e0a29"
+    },
+    {
+      "path": "_verify/recruit-1440.png",
+      "viewport_width": 1440,
+      "image_width": 1440,
+      "image_height": 7555,
+      "sha256": "3d462fec83fe28fbf1f5fb925160a95396c1e8a36cd720b94d496b493fab1084"
+    },
+    {
+      "path": "_verify/job-craftsman-375.png",
+      "viewport_width": 375,
+      "image_width": 375,
+      "image_height": 8076,
+      "sha256": "4a50d498933740cb138b68c89fd5e2536d8dc44e7d226730e3a986ce9d131956"
+    },
+    {
+      "path": "_verify/job-craftsman-768.png",
+      "viewport_width": 768,
+      "image_width": 768,
+      "image_height": 7472,
+      "sha256": "692bfc6e086d0b900dbc40e7bea7df7ee281f6cccc9010b47c4859e08e6a3db6"
+    },
+    {
+      "path": "_verify/job-craftsman-1024.png",
+      "viewport_width": 1024,
+      "image_width": 1024,
+      "image_height": 7248,
+      "sha256": "1b12d0436a1992592fcb5f94e0b56af3aef847cd66c189ff01c43c9cee17b846"
+    },
+    {
+      "path": "_verify/job-craftsman-1440.png",
+      "viewport_width": 1440,
+      "image_width": 1440,
+      "image_height": 7084,
+      "sha256": "32962e59f140e2c16fe67caf84aa937345784e0d968ed9d7bbab401a7652186c"
+    },
+    {
+      "path": "_verify/contact-375.png",
+      "viewport_width": 375,
+      "image_width": 375,
+      "image_height": 2991,
+      "sha256": "ae5f0a7c9ea7e4284b60984ec77d5da60c9a35328c4c879bee530ebfc771de0d"
+    },
+    {
+      "path": "_verify/contact-768.png",
+      "viewport_width": 768,
+      "image_width": 768,
+      "image_height": 2844,
+      "sha256": "b48d0fe0605661159e29897dad20486ff5c419592a62808703aeb5a151e438cb"
+    },
+    {
+      "path": "_verify/contact-1024.png",
+      "viewport_width": 1024,
+      "image_width": 1024,
+      "image_height": 2792,
+      "sha256": "96aa0cf1fa92dff6239669d95c8084094d43f985b8dcda8fd70bcf8763f6560a"
+    },
+    {
+      "path": "_verify/contact-1440.png",
+      "viewport_width": 1440,
+      "image_width": 1440,
+      "image_height": 2824,
+      "sha256": "5c3e732b8d1aa8ae3648d130c77583a6cb2dfd0e9cbc2fecd86e740485b6ef24"
+    }
+  ],
+  "screenshot_files_committed": false,
+  "pages": 41,
+  "viewport_widths": [
+    375,
+    768,
+    1024,
+    1440
+  ],
+  "viewport_height": 900,
+  "node_check": "passed",
+  "html_check": "passed",
+  "layout_rows": 6616,
+  "layout_pass": 6584,
+  "layout_not_applicable": 32,
+  "overflow_checks": 164,
+  "overflow_failures": 0
+}

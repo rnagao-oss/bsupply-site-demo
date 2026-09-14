@@ -1,0 +1,424 @@
+[
+  {
+    "page": "index.html",
+    "reference_family": "index",
+    "reference_url": "https://sun-asterisk.com/",
+    "pairs": [
+      {
+        "reference_selector": ".p-top-mv",
+        "local_selector": ".p-top-mv",
+        "metrics": [
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".p-top-what",
+        "local_selector": ".p-top-what",
+        "metrics": [
+          "width",
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-top-what__title",
+        "local_selector": ".p-top-what__title",
+        "metrics": [
+          "x",
+          "width",
+          "height",
+          "fontSize"
+        ]
+      },
+      {
+        "reference_selector": ".p-top-what__contents",
+        "local_selector": ".p-top-what__contents",
+        "metrics": [
+          "width",
+          "height",
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-top-what__action",
+        "local_selector": ".p-top-what__action",
+        "metrics": [
+          "width",
+          "height",
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-top-what__action__desc",
+        "local_selector": ".p-top-what__action__desc",
+        "metrics": [
+          "fontSize",
+          "lineHeight",
+          "width",
+          "inkHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-top-service",
+        "local_selector": ".p-top-service",
+        "metrics": [
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-top-service__box",
+        "local_selector": ".p-top-service__box",
+        "metrics": [
+          "width",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".p-top-service__title",
+        "local_selector": ".p-top-service__title",
+        "metrics": [
+          "fontSize",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".p-top-service__image",
+        "local_selector": ".p-top-service__image",
+        "metrics": [
+          "width",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".p-top-service__link",
+        "local_selector": ".p-top-service__link",
+        "metrics": [
+          "fontSize",
+          "lineHeight"
+        ]
+      },
+      {
+        "reference_selector": ".p-top-works",
+        "local_selector": ".p-top-works",
+        "metrics": [
+          "width",
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-top-works__body",
+        "local_selector": ".p-top-works__body",
+        "metrics": [
+          "width",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".p-top-works__head__title",
+        "local_selector": ".p-top-works__head__title",
+        "metrics": [
+          "fontSize",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard",
+        "local_selector": ".c-worksCard",
+        "metrics": [
+          "width",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard__img",
+        "local_selector": ".c-worksCard__img",
+        "metrics": [
+          "width",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard__desc",
+        "local_selector": ".c-worksCard__desc",
+        "metrics": [
+          "fontSize",
+          "lineHeight",
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard__company",
+        "local_selector": ".c-worksCard__company",
+        "metrics": [
+          "fontSize",
+          "lineHeight",
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-top-career",
+        "local_selector": ".p-top-career",
+        "metrics": [
+          "width",
+          "height",
+          "paddingTop",
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".p-top-career__title",
+        "local_selector": ".p-top-career__title",
+        "metrics": [
+          "fontSize",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".p-top-career__copy",
+        "local_selector": ".p-top-career__copy",
+        "metrics": [
+          "fontSize",
+          "inkHeight",
+          "marginTop"
+        ]
+      },
+      {
+        "reference_selector": ".l-footer",
+        "local_selector": ".l-footer",
+        "metrics": [
+          "width",
+          "paddingTop",
+          "paddingBottom"
+        ]
+      },
+      {
+        "reference_selector": ".l-footer__inner",
+        "local_selector": ".l-footer__inner",
+        "metrics": [
+          "width"
+        ]
+      },
+      {
+        "reference_selector": ".l-footer__box",
+        "local_selector": ".l-footer__box",
+        "metrics": [
+          "width",
+          "marginBottom"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard:nth-child(1) .c-worksCard__desc",
+        "local_selector": ".c-worksCard:nth-child(1) .c-worksCard__desc",
+        "metrics": [
+          "inkHeight",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard:nth-child(1) .c-worksCard__company",
+        "local_selector": ".c-worksCard:nth-child(1) .c-worksCard__company",
+        "metrics": [
+          "inkHeight",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard:nth-child(2) .c-worksCard__desc",
+        "local_selector": ".c-worksCard:nth-child(2) .c-worksCard__desc",
+        "metrics": [
+          "inkHeight",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard:nth-child(2) .c-worksCard__company",
+        "local_selector": ".c-worksCard:nth-child(2) .c-worksCard__company",
+        "metrics": [
+          "inkHeight",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard:nth-child(3) .c-worksCard__desc",
+        "local_selector": ".c-worksCard:nth-child(3) .c-worksCard__desc",
+        "metrics": [
+          "inkHeight",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard:nth-child(3) .c-worksCard__company",
+        "local_selector": ".c-worksCard:nth-child(3) .c-worksCard__company",
+        "metrics": [
+          "inkHeight",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard:nth-child(4) .c-worksCard__desc",
+        "local_selector": ".c-worksCard:nth-child(4) .c-worksCard__desc",
+        "metrics": [
+          "inkHeight",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard:nth-child(4) .c-worksCard__company",
+        "local_selector": ".c-worksCard:nth-child(4) .c-worksCard__company",
+        "metrics": [
+          "inkHeight",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard:nth-child(5) .c-worksCard__desc",
+        "local_selector": ".c-worksCard:nth-child(5) .c-worksCard__desc",
+        "metrics": [
+          "inkHeight",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard:nth-child(5) .c-worksCard__company",
+        "local_selector": ".c-worksCard:nth-child(5) .c-worksCard__company",
+        "metrics": [
+          "inkHeight",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard:nth-child(6) .c-worksCard__desc",
+        "local_selector": ".c-worksCard:nth-child(6) .c-worksCard__desc",
+        "metrics": [
+          "inkHeight",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard:nth-child(6) .c-worksCard__company",
+        "local_selector": ".c-worksCard:nth-child(6) .c-worksCard__company",
+        "metrics": [
+          "inkHeight",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard:nth-child(7) .c-worksCard__desc",
+        "local_selector": ".c-worksCard:nth-child(7) .c-worksCard__desc",
+        "metrics": [
+          "inkHeight",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard:nth-child(7) .c-worksCard__company",
+        "local_selector": ".c-worksCard:nth-child(7) .c-worksCard__company",
+        "metrics": [
+          "inkHeight",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard:nth-child(8) .c-worksCard__desc",
+        "local_selector": ".c-worksCard:nth-child(8) .c-worksCard__desc",
+        "metrics": [
+          "inkHeight",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard:nth-child(8) .c-worksCard__company",
+        "local_selector": ".c-worksCard:nth-child(8) .c-worksCard__company",
+        "metrics": [
+          "inkHeight",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard:nth-child(9) .c-worksCard__desc",
+        "local_selector": ".c-worksCard:nth-child(9) .c-worksCard__desc",
+        "metrics": [
+          "inkHeight",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard:nth-child(9) .c-worksCard__company",
+        "local_selector": ".c-worksCard:nth-child(9) .c-worksCard__company",
+        "metrics": [
+          "inkHeight",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard:nth-child(10) .c-worksCard__desc",
+        "local_selector": ".c-worksCard:nth-child(10) .c-worksCard__desc",
+        "metrics": [
+          "inkHeight",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard:nth-child(10) .c-worksCard__company",
+        "local_selector": ".c-worksCard:nth-child(10) .c-worksCard__company",
+        "metrics": [
+          "inkHeight",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard:nth-child(11) .c-worksCard__desc",
+        "local_selector": ".c-worksCard:nth-child(11) .c-worksCard__desc",
+        "metrics": [
+          "inkHeight",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard:nth-child(11) .c-worksCard__company",
+        "local_selector": ".c-worksCard:nth-child(11) .c-worksCard__company",
+        "metrics": [
+          "inkHeight",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard:nth-child(12) .c-worksCard__desc",
+        "local_selector": ".c-worksCard:nth-child(12) .c-worksCard__desc",
+        "metrics": [
+          "inkHeight",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".c-worksCard:nth-child(12) .c-worksCard__company",
+        "local_selector": ".c-worksCard:nth-child(12) .c-worksCard__company",
+        "metrics": [
+          "inkHeight",
+          "height"
+        ]
+      },
+      {
+        "reference_selector": ".p-top-what__about.is-back svg",
+        "local_selector": ".p-top-what__about.bs-business-copy",
+        "metrics": [
+          "inkHeight"
+        ],
+        "widths": [
+          1024,
+          1440
+        ]
+      },
+      {
+        "reference_selector": ".p-top-what__bottom.u-hideMedium svg",
+        "local_selector": ".p-top-what__bottom.bs-business-copy",
+        "metrics": [
+          "inkHeight"
+        ],
+        "widths": [
+          1024,
+          1440
+        ]
+      }
+    ]
+  }
+]
