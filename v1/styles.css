@@ -2790,3 +2790,8 @@ body.menu-open .brand-mark { filter: none; }
 .stat-t, .stat-suffix { font-size: 0.95rem; }
 .stat-n { font-size: 1.12rem; }
 .bp-card .bp-lead, .svc-card2 > p, .rs-card p, .adv p { max-width: 44em; }
+
+/* スマホ・タブレット（タッチ端末）ではスクロール出現アニメーションを使わない */
+@media (pointer: coarse), (max-width: 760px) {
+  .reveal-el, .char, .tok, .tl-item { opacity: 1 !important; transform: none !important; transition: none !important; animation: none !important; }
+}
