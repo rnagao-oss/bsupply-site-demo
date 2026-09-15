@@ -2777,3 +2777,16 @@ body.menu-open .brand-mark { filter: none; }
 .tr-block .sec-title { margin-bottom: clamp(1.6rem, 3vw, 2.6rem); }
 .tr-block .sec-title { font-size: clamp(1.4rem, 2.6vw, 2rem); }
 .tr-tag { background: none; border: 0; border-radius: 0; padding: 0; color: var(--gray); font-size: 0.8rem; letter-spacing: 0.02em; }
+
+/* v1: 本文サイズの引き上げ（元は0.8〜0.88rem＝13〜14px → 15〜16px） */
+.bp-card .bp-lead, .svc-card2 > p, .adv p, .rs-card p, .tl-item p, .sec-lede { font-size: 0.97rem; line-height: 2; }
+.sc-sol span { font-size: 0.92rem; line-height: 1.95; }
+.sc-sol b { font-size: 0.78rem; }
+.tag-theme, .tag-ind { font-size: 0.86rem; }
+.svc-card2 .sc-en { font-size: 0.74rem; }
+.bp-card h3, .rs-card h3, .adv h3 { font-size: 1.18rem; }
+.co-table dt { font-size: 0.92rem; }
+.co-table dd { font-size: 1.02rem; }
+.stat-t, .stat-suffix { font-size: 0.95rem; }
+.stat-n { font-size: 1.12rem; }
+.bp-card .bp-lead, .svc-card2 > p, .rs-card p, .adv p { max-width: 44em; }
