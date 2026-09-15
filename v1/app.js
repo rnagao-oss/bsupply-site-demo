@@ -7,7 +7,11 @@
   if (loader && matchMedia('(prefers-reduced-motion: reduce)').matches) {
     loader.remove();
     setTimeout(revealHeroTitle, 150);
+  } else if (loader && sessionStorage.getItem('bs-loaded')) {
+    loader.remove();
+    setTimeout(revealHeroTitle, 150);
   } else if (loader) {
+    try { sessionStorage.setItem('bs-loaded', '1'); } catch (e) {}
     const word = document.getElementById('ldWord');
     const chars = [...word.textContent].map((ch) => {
       const s = document.createElement('span');
