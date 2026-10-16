@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  <url>
+    <loc>https://bsupply.jp/bsupply-site-demo/v3/news/notice/2026-10-16-site-renewal/</loc>
+    <news:news>
+      <news:publication><news:name>株式会社B supply</news:name><news:language>ja</news:language></news:publication>
+      <news:publication_date>2026-10-16T10:00:00+09:00</news:publication_date>
+      <news:title>サイトをリニューアルしました</news:title>
+    </news:news>
+  </url>
+</urlset>

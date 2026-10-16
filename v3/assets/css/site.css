@@ -1,0 +1,815 @@
+/* B supply コーポレートサイト v3 ― site.css（I&CO 型レイアウト。1ファイル）
+   数値の出所: _spec/iandco-clone-spec.md（I&CO 実測 2026-10-16）。色は白・黒・#1c1c1c・#e5e5e5・#9a9a9a・#CC0000 のみ。
+   影・グラデーションは使わない。角丸はピル型ボタン（9999px）とラジオだけ。動きはフェーズ3（ここではホバーの色・下線だけ）。 */
+
+/* @fontface:start (fonts_build.py が生成。手で編集しない) */
+@font-face{font-family:"Noto Sans JP";font-style:normal;font-weight:400;font-display:swap;src:url("../fonts/sans-400-base.woff2") format("woff2");unicode-range:U+0020-007E, U+00A0-0109, U+010C-010F, U+0111-0113, U+0118-011D, U+0124-0125, U+0127, U+012A-012B, U+0134-0135, U+0139-013A, U+013D-013E, U+0141-0144, U+0147-0148, U+014B-014D, U+0150-0155, U+0158-0165, U+016A-0171, U+0179-017E, U+0193, U+01C2, U+01CD-01CE, U+01D0-01D2, U+01D4, U+01D6, U+01D8, U+01DA, U+01DC, U+01F8-01F9, U+01FD, U+0250-025A, U+025C, U+025E-0261, U+0264-0268, U+026C-0273, U+0275, U+0279-027B, U+027D-027E, U+0281-0284, U+0288-028E, U+0290-0292, U+0294-0295, U+0298, U+029D, U+02A1-02A2, U+02C7-02C8, U+02CC, U+02D0-02D1, U+02D8-02D9, U+02DB, U+02DD-02DE, U+02E5-02E9, U+0300-0304, U+0306, U+0308, U+030B-030C, U+030F, U+0318-031A, U+031C-0320, U+0324-0325, U+0329-032A, U+032C, U+032F-0330, U+0334, U+0339-033D, U+0361, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+0401, U+0410-044F, U+0451, U+1E3E-1E3F, U+1F70-1F73, U+2010-2027, U+2030-205E, U+20AC, U+2103, U+210F, U+2113, U+2116, U+2121-2122, U+2127, U+212B, U+2135, U+2153-2155, U+2160-216B, U+2170-217B, U+2190-2199, U+21C4, U+21D2, U+21D4, U+21E6-21E9, U+2200, U+2202-2203, U+2205, U+2207-2209, U+220B, U+2212-2213, U+221A, U+221D-2220, U+2225-222C, U+222E, U+2234-2235, U+223D, U+2243, U+2245, U+2248, U+2252, U+2260-2262, U+2266-2267, U+226A-226B, U+2276-2277, U+2282-2287, U+228A-228B, U+2295-2297, U+22A5, U+22BF, U+22DA-22DB, U+2305-2306, U+2312, U+2318, U+23BE-23CC, U+23CE, U+2423, U+2460-2473, U+24D0-24E9, U+24EB-24FE, U+2500-2503, U+250C, U+250F-2510, U+2513-2514, U+2517-2518, U+251B-251D, U+2520, U+2523-2525, U+2528, U+252B-252C, U+252F-2530, U+2533-2534, U+2537-2538, U+253B-253C, U+253F, U+2542, U+254B, U+25A0-25A1, U+25B1-25B3, U+25B6-25B7, U+25BC-25BD, U+25C0-25C1, U+25C6-25C7, U+25C9, U+25CB, U+25CE-25D3, U+25E6, U+25EF, U+2600-2603, U+2605-2606, U+260E, U+2616-2617, U+261E, U+2640, U+2642, U+2660-266F, U+2713, U+2756, U+2776-277F, U+2934-2935, U+2985-2986, U+29BF, U+29FA-29FB, U+3000-303F, U+3041-30FF, U+31F0-31FF, U+3231-3232, U+3239, U+3251-325F, U+32A4-32A8, U+32B1-32BF, U+32D0-32E3, U+32E5, U+32E9, U+32EC-32ED, U+32FA, U+3303, U+330D, U+3314, U+3318, U+3322-3323, U+3326-3327, U+332B, U+3336, U+333B, U+3349-334A, U+334D, U+3351, U+3357, U+337B-337E, U+338E-338F, U+339C-339E, U+33A1, U+33C4, U+33CB, U+33CD, U+4EDD, U+FE45-FE46, U+FF01-FF5E, U+FF61-FF9F, U+FFE0-FFE6}
+@font-face{font-family:"Noto Sans JP";font-style:normal;font-weight:400;font-display:swap;src:url("../fonts/sans-400-jis2-rest.woff2") format("woff2");unicode-range:U+4E10-9FA0}
+@font-face{font-family:"Noto Sans JP";font-style:normal;font-weight:400;font-display:swap;src:url("../fonts/sans-400-jis1-rest.woff2") format("woff2");unicode-range:U+4E03-9F8D}
+@font-face{font-family:"Noto Sans JP";font-style:normal;font-weight:400;font-display:swap;src:url("../fonts/sans-400-used.woff2") format("woff2");unicode-range:U+4E00-4E01, U+4E07, U+4E09-4E0B, U+4E0D-4E0E, U+4E16, U+4E18, U+4E21, U+4E26, U+4E2D, U+4E38, U+4E3B, U+4E4F, U+4E57, U+4E71, U+4E86, U+4E88-4E89, U+4E8B-4E8C, U+4E92, U+4EA4, U+4EAC, U+4EBA, U+4ECA-4ECB, U+4ED5-4ED6, U+4ED8, U+4EE3-4EE5, U+4EEE, U+4EF2, U+4EF6, U+4EFB, U+4F01, U+4F0A, U+4F11, U+4F1A, U+4F1D, U+4F34, U+4F38, U+4F4D-4F4F, U+4F53, U+4F55, U+4F59, U+4F5C, U+4F7F, U+4F8B, U+4F9B, U+4F9D, U+4FA1, U+4FBF, U+4FC2-4FC3, U+4FDD, U+4FE1, U+4FEE-4FEF, U+500B, U+5019, U+5024, U+505C, U+5074, U+5099, U+50CD, U+50CF, U+512A, U+5143, U+5148, U+514D, U+5165, U+5168, U+516C, U+5171, U+5177-5178, U+5185-5186, U+518D, U+5192, U+5199, U+51FA, U+5206-5207, U+5217, U+521D, U+5224-5225, U+5229, U+5236, U+523B, U+524A, U+524D, U+5264, U+5272, U+5275, U+529B, U+529F-52A0, U+52A9, U+52B9, U+52D5, U+52D8-52D9, U+52DD, U+52DF, U+52E4, U+5305, U+5316-5317, U+5320, U+533A-533B, U+5341, U+5343, U+534A, U+5352, U+5354, U+5358, U+535A, U+5370-5371, U+5373-5374, U+5378, U+539A, U+539F, U+53BB, U+53C2, U+53CA, U+53CC-53CE, U+53D6-53D7, U+53E3, U+53EF-53F0, U+53F2-53F3, U+53F7, U+5404, U+5408, U+540C-540D, U+5411, U+5426, U+542B, U+544A, U+5468, U+547D, U+548C, U+54C1, U+54E1, U+5506, U+5546, U+554F, U+5584, U+55B6, U+565B, U+5674, U+56DE, U+56E0, U+56E3, U+56F0, U+56F2-56F3, U+56FA, U+56FD, U+571F, U+5727-5728, U+5730, U+5747, U+578B, U+57DF, U+57F7, U+57F9-57FA, U+5831, U+5834, U+5883, U+5897, U+58A8, U+58C1, U+58EB, U+58F0, U+58F2, U+5909, U+5916, U+591A, U+5927, U+592A, U+592E, U+5931, U+5951, U+5965, U+5973, U+59A5, U+59CB, U+59D4, U+59FF, U+5B50, U+5B57-5B58, U+5B66, U+5B88-5B89, U+5B8C, U+5B9A-5B9B, U+5B9F, U+5BA2, U+5BB9, U+5BBF, U+5BC4, U+5BCC, U+5BE7, U+5BFE, U+5C02, U+5C06, U+5C0A, U+5C0E-5C0F, U+5C11, U+5C3E, U+5C40, U+5C4A, U+5C55, U+5C5E, U+5C64-5C65, U+5C71, U+5C90, U+5CF6, U+5DE5-5DE6, U+5DEE, U+5DF1, U+5DFB, U+5E02-5E03, U+5E0C, U+5E2F, U+5E38, U+5E45, U+5E73-5E74, U+5E78, U+5E83, U+5E95, U+5E97, U+5E9C, U+5EA6, U+5EAB, U+5EC3, U+5EF6, U+5EFA, U+5F0F, U+5F15, U+5F37, U+5F53, U+5F62, U+5F71, U+5F79, U+5F85, U+5F8B-5F8C, U+5F90, U+5F93, U+5F97, U+5FA1, U+5FAA, U+5FAE, U+5FB4, U+5FB9, U+5FC3, U+5FC5, U+5FD7, U+5FDC, U+601D, U+6025, U+6027, U+6075, U+60A9-60AA, U+60C5, U+60DC, U+60F3, U+610F, U+611B, U+611F, U+614B, U+6210, U+6226, U+623B, U+623F-6240, U+624B, U+6253, U+6271, U+627F-6280, U+628A, U+6295, U+629C, U+629E, U+62B1, U+62BC-62BD, U+62C5, U+62D3, U+62E0-62E1, U+62EC, U+6301, U+6307, U+632F, U+6349, U+6357, U+636E, U+6383, U+6398, U+639B, U+63A1-63A2, U+63A5, U+63A7-63A8, U+63AA, U+63B2, U+63B4, U+63C3, U+63CF-63D0, U+63DB, U+63E1, U+63F4, U+643A, U+6442, U+646F, U+64A4, U+64AE, U+652F, U+6539, U+653E, U+6557, U+6559, U+6563, U+6570, U+6574, U+6577, U+6587, U+6599, U+65AD, U+65B0, U+65B9, U+65BD, U+65E2, U+65E5, U+65E7, U+65E9, U+6607, U+660E, U+6620, U+6627, U+6642, U+666E-666F, U+6687, U+66D6, U+66F4, U+66F8, U+66FF-6700, U+6708-6709, U+671B, U+671F, U+6728, U+672A-672C, U+673A, U+6750, U+675F, U+6761, U+6765, U+6771, U+6790, U+679A, U+679C, U+67A0, U+67F1, U+67FB, U+6804, U+6821, U+682A, U+6839, U+683C, U+6848, U+68B1, U+68DA, U+690D, U+691C, U+696D, U+6975, U+697D, U+6982, U+69CB, U+69D8, U+6A19, U+6A21, U+6A29-6A2A, U+6A5F, U+6B04, U+6B20-6B21, U+6B27, U+6B53, U+6B62-6B63, U+6B6A, U+6B73-6B74, U+6B8B, U+6BB5, U+6BCD, U+6BD4, U+6C0F, U+6C17, U+6C34, U+6C38, U+6C42, U+6C7A, U+6CBF, U+6CC1, U+6CD5, U+6CE8, U+6D17, U+6D25, U+6D3B, U+6D3E, U+6D41, U+6D77, U+6D88, U+6DF1, U+6DF7, U+6DFB, U+6E05, U+6E08-6E09, U+6E1B, U+6E21, U+6E29, U+6E2C, U+6E90, U+6E96, U+6F09, U+6F0F, U+6F22, U+7070, U+70B9, U+7121, U+7167, U+719F, U+71B1, U+7248, U+725B, U+7269, U+7279, U+727D, U+72B6, U+72C2, U+72D9, U+72EC, U+732E, U+7372, U+7387, U+73FE, U+7406, U+74A7, U+74B0, U+751F, U+7523, U+7528, U+7530-7531, U+7537, U+753A-753B, U+754C, U+7559, U+7565, U+756A, U+7570, U+7642, U+767A, U+767D, U+7684, U+76CA, U+76E4, U+76EE, U+76F4, U+76F8, U+7701, U+771F, U+773C, U+7740, U+77B0, U+77E2, U+77E5, U+77ED, U+7814, U+78BA, U+78E8, U+790E, U+793A, U+793E, U+795D, U+798F, U+79C0-79C1, U+79D1, U+79FB, U+7A0B, U+7A1C, U+7A2E, U+7A3F, U+7A4D, U+7A7A, U+7A93, U+7ACB, U+7AE0, U+7AF6, U+7B2C, U+7B49, U+7B4B, U+7B54, U+7B56, U+7B87, U+7B94, U+7B97, U+7BA1, U+7BC0, U+7BC4, U+7BC9, U+7C21, U+7C4D, U+7C92, U+7CBE, U+7CFB, U+7D04, U+7D0D, U+7D1B, U+7D20-7D22, U+7D30, U+7D39, U+7D42, U+7D44, U+7D4C, U+7D50, U+7D5E, U+7D61, U+7D66, U+7D71, U+7D75-7D76, U+7D99-7D9A, U+7DAD, U+7DCF, U+7DD2, U+7DDA, U+7DE0, U+7DE8, U+7DF4, U+7E01, U+7E1B, U+7E26, U+7E2B, U+7E2E, U+7E3E, U+7E54, U+7E70, U+7F6B, U+7F6E, U+7F72, U+7F8A, U+7FA9, U+7FFB, U+8001, U+8003, U+8005, U+8010, U+805E, U+8077, U+80A2, U+80B2, U+80CC, U+80FD, U+8108, U+8155, U+8170, U+81E8, U+81EA, U+81F3, U+8217, U+826F, U+8272, U+82F1, U+8377, U+843D, U+8449, U+85E4, U+884C, U+8853, U+8868, U+88C1, U+88C5, U+88CF, U+88DC, U+88FD, U+8907, U+8981, U+898B, U+898F, U+8996, U+899A, U+89A7, U+89AA, U+89B3, U+89E3, U+89E6, U+8A00, U+8A02, U+8A08, U+8A0E, U+8A17-8A18, U+8A2D, U+8A31, U+8A33-8A34, U+8A3C, U+8A55, U+8A66, U+8A70-8A73, U+8A87, U+8A8D, U+8A9E, U+8AA0, U+8AAC-8AAD, U+8AB0, U+8AB2, U+8ABF, U+8AC7, U+8ACB, U+8AD6, U+8AFE, U+8B00, U+8B1B, U+8B58, U+8B70, U+8B72, U+8C37, U+8C4A, U+8C5A, U+8C61, U+8CA0-8CA2, U+8CA9, U+8CAB-8CAC, U+8CB4, U+8CB7-8CB8, U+8CBB-8CBC, U+8CC7, U+8CEA, U+8D70, U+8D77, U+8D85, U+8D8A, U+8DB3, U+8DDD, U+8DEF, U+8DF5, U+8E0F, U+8E8D, U+8EAB, U+8ECA, U+8EE2, U+8EF8, U+8EFD, U+8F09, U+8F2A, U+8FBA, U+8FBC, U+8FCE, U+8FD1, U+8FEB, U+8FF0, U+8FF7, U+8FFD, U+9000-9001, U+9006, U+900F, U+9014, U+901A, U+901F-9020, U+9023, U+9031-9032, U+903C, U+9042, U+9045, U+9047, U+904B, U+904E, U+9053-9054, U+9063, U+9069, U+9078, U+907F, U+90CE, U+90E8, U+90ED, U+90F5, U+90FD, U+914D, U+916C, U+91CC-91CF, U+91D1, U+91DD, U+9280, U+9332, U+9577, U+9580, U+9589, U+958B, U+9593, U+95A2, U+962A, U+9632, U+964D, U+9650, U+9663-9664, U+967A, U+968E, U+969B, U+96A0, U+96A3, U+96C6-96C7, U+96D1, U+96E2-96E3, U+96FB, U+9700, U+9727, U+9759, U+975E, U+9762, U+9769, U+9784, U+97F3, U+97FF, U+9805-9806, U+9808, U+9810, U+9813, U+9818, U+982D, U+983B-983C, U+984C-984D, U+985E, U+9867, U+9905, U+99AC, U+99C6, U+9A13, U+9AD8, U+9B45, U+9E7F, U+9ED2, U+9F62}
+@font-face{font-family:"Noto Sans JP";font-style:normal;font-weight:500;font-display:swap;src:url("../fonts/sans-500-base.woff2") format("woff2");unicode-range:U+0020-007E, U+00A0-0109, U+010C-010F, U+0111-0113, U+0118-011D, U+0124-0125, U+0127, U+012A-012B, U+0134-0135, U+0139-013A, U+013D-013E, U+0141-0144, U+0147-0148, U+014B-014D, U+0150-0155, U+0158-0165, U+016A-0171, U+0179-017E, U+0193, U+01C2, U+01CD-01CE, U+01D0-01D2, U+01D4, U+01D6, U+01D8, U+01DA, U+01DC, U+01F8-01F9, U+01FD, U+0250-025A, U+025C, U+025E-0261, U+0264-0268, U+026C-0273, U+0275, U+0279-027B, U+027D-027E, U+0281-0284, U+0288-028E, U+0290-0292, U+0294-0295, U+0298, U+029D, U+02A1-02A2, U+02C7-02C8, U+02CC, U+02D0-02D1, U+02D8-02D9, U+02DB, U+02DD-02DE, U+02E5-02E9, U+0300-0304, U+0306, U+0308, U+030B-030C, U+030F, U+0318-031A, U+031C-0320, U+0324-0325, U+0329-032A, U+032C, U+032F-0330, U+0334, U+0339-033D, U+0361, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+0401, U+0410-044F, U+0451, U+1E3E-1E3F, U+1F70-1F73, U+2010-2027, U+2030-205E, U+20AC, U+2103, U+210F, U+2113, U+2116, U+2121-2122, U+2127, U+212B, U+2135, U+2153-2155, U+2160-216B, U+2170-217B, U+2190-2199, U+21C4, U+21D2, U+21D4, U+21E6-21E9, U+2200, U+2202-2203, U+2205, U+2207-2209, U+220B, U+2212-2213, U+221A, U+221D-2220, U+2225-222C, U+222E, U+2234-2235, U+223D, U+2243, U+2245, U+2248, U+2252, U+2260-2262, U+2266-2267, U+226A-226B, U+2276-2277, U+2282-2287, U+228A-228B, U+2295-2297, U+22A5, U+22BF, U+22DA-22DB, U+2305-2306, U+2312, U+2318, U+23BE-23CC, U+23CE, U+2423, U+2460-2473, U+24D0-24E9, U+24EB-24FE, U+2500-2503, U+250C, U+250F-2510, U+2513-2514, U+2517-2518, U+251B-251D, U+2520, U+2523-2525, U+2528, U+252B-252C, U+252F-2530, U+2533-2534, U+2537-2538, U+253B-253C, U+253F, U+2542, U+254B, U+25A0-25A1, U+25B1-25B3, U+25B6-25B7, U+25BC-25BD, U+25C0-25C1, U+25C6-25C7, U+25C9, U+25CB, U+25CE-25D3, U+25E6, U+25EF, U+2600-2603, U+2605-2606, U+260E, U+2616-2617, U+261E, U+2640, U+2642, U+2660-266F, U+2713, U+2756, U+2776-277F, U+2934-2935, U+2985-2986, U+29BF, U+29FA-29FB, U+3000-303F, U+3041-30FF, U+31F0-31FF, U+3231-3232, U+3239, U+3251-325F, U+32A4-32A8, U+32B1-32BF, U+32D0-32E3, U+32E5, U+32E9, U+32EC-32ED, U+32FA, U+3303, U+330D, U+3314, U+3318, U+3322-3323, U+3326-3327, U+332B, U+3336, U+333B, U+3349-334A, U+334D, U+3351, U+3357, U+337B-337E, U+338E-338F, U+339C-339E, U+33A1, U+33C4, U+33CB, U+33CD, U+4EDD, U+FE45-FE46, U+FF01-FF5E, U+FF61-FF9F, U+FFE0-FFE6}
+@font-face{font-family:"Noto Sans JP";font-style:normal;font-weight:500;font-display:swap;src:url("../fonts/sans-500-jis2-rest.woff2") format("woff2");unicode-range:U+4E10-9FA0}
+@font-face{font-family:"Noto Sans JP";font-style:normal;font-weight:500;font-display:swap;src:url("../fonts/sans-500-jis1-rest.woff2") format("woff2");unicode-range:U+4E03-9F8D}
+@font-face{font-family:"Noto Sans JP";font-style:normal;font-weight:500;font-display:swap;src:url("../fonts/sans-500-used.woff2") format("woff2");unicode-range:U+4E00-4E01, U+4E07, U+4E09-4E0B, U+4E0D-4E0E, U+4E16, U+4E18, U+4E21, U+4E26, U+4E2D, U+4E38, U+4E3B, U+4E4F, U+4E57, U+4E71, U+4E86, U+4E88-4E89, U+4E8B-4E8C, U+4E92, U+4EA4, U+4EAC, U+4EBA, U+4ECA-4ECB, U+4ED5-4ED6, U+4ED8, U+4EE3-4EE5, U+4EEE, U+4EF2, U+4EF6, U+4EFB, U+4F01, U+4F0A, U+4F11, U+4F1A, U+4F1D, U+4F34, U+4F38, U+4F4D-4F4F, U+4F53, U+4F55, U+4F59, U+4F5C, U+4F7F, U+4F8B, U+4F9B, U+4F9D, U+4FA1, U+4FBF, U+4FC2-4FC3, U+4FDD, U+4FE1, U+4FEE-4FEF, U+500B, U+5019, U+5024, U+505C, U+5074, U+5099, U+50CD, U+50CF, U+512A, U+5143, U+5148, U+514D, U+5165, U+5168, U+516C, U+5171, U+5177-5178, U+5185-5186, U+518D, U+5192, U+5199, U+51FA, U+5206-5207, U+5217, U+521D, U+5224-5225, U+5229, U+5236, U+523B, U+524A, U+524D, U+5264, U+5272, U+5275, U+529B, U+529F-52A0, U+52A9, U+52B9, U+52D5, U+52D8-52D9, U+52DD, U+52DF, U+52E4, U+5305, U+5316-5317, U+5320, U+533A-533B, U+5341, U+5343, U+534A, U+5352, U+5354, U+5358, U+535A, U+5370-5371, U+5373-5374, U+5378, U+539A, U+539F, U+53BB, U+53C2, U+53CA, U+53CC-53CE, U+53D6-53D7, U+53E3, U+53EF-53F0, U+53F2-53F3, U+53F7, U+5404, U+5408, U+540C-540D, U+5411, U+5426, U+542B, U+544A, U+5468, U+547D, U+548C, U+54C1, U+54E1, U+5506, U+5546, U+554F, U+5584, U+55B6, U+565B, U+5674, U+56DE, U+56E0, U+56E3, U+56F0, U+56F2-56F3, U+56FA, U+56FD, U+571F, U+5727-5728, U+5730, U+5747, U+578B, U+57DF, U+57F7, U+57F9-57FA, U+5831, U+5834, U+5883, U+5897, U+58A8, U+58C1, U+58EB, U+58F0, U+58F2, U+5909, U+5916, U+591A, U+5927, U+592A, U+592E, U+5931, U+5951, U+5965, U+5973, U+59A5, U+59CB, U+59D4, U+59FF, U+5B50, U+5B57-5B58, U+5B66, U+5B88-5B89, U+5B8C, U+5B9A-5B9B, U+5B9F, U+5BA2, U+5BB9, U+5BBF, U+5BC4, U+5BCC, U+5BE7, U+5BFE, U+5C02, U+5C06, U+5C0A, U+5C0E-5C0F, U+5C11, U+5C3E, U+5C40, U+5C4A, U+5C55, U+5C5E, U+5C64-5C65, U+5C71, U+5C90, U+5CF6, U+5DE5-5DE6, U+5DEE, U+5DF1, U+5DFB, U+5E02-5E03, U+5E0C, U+5E2F, U+5E38, U+5E45, U+5E73-5E74, U+5E78, U+5E83, U+5E95, U+5E97, U+5E9C, U+5EA6, U+5EAB, U+5EC3, U+5EF6, U+5EFA, U+5F0F, U+5F15, U+5F37, U+5F53, U+5F62, U+5F71, U+5F79, U+5F85, U+5F8B-5F8C, U+5F90, U+5F93, U+5F97, U+5FA1, U+5FAA, U+5FAE, U+5FB4, U+5FB9, U+5FC3, U+5FC5, U+5FD7, U+5FDC, U+601D, U+6025, U+6027, U+6075, U+60A9-60AA, U+60C5, U+60DC, U+60F3, U+610F, U+611B, U+611F, U+614B, U+6210, U+6226, U+623B, U+623F-6240, U+624B, U+6253, U+6271, U+627F-6280, U+628A, U+6295, U+629C, U+629E, U+62B1, U+62BC-62BD, U+62C5, U+62D3, U+62E0-62E1, U+62EC, U+6301, U+6307, U+632F, U+6349, U+6357, U+636E, U+6383, U+6398, U+639B, U+63A1-63A2, U+63A5, U+63A7-63A8, U+63AA, U+63B2, U+63B4, U+63C3, U+63CF-63D0, U+63DB, U+63E1, U+63F4, U+643A, U+6442, U+646F, U+64A4, U+64AE, U+652F, U+6539, U+653E, U+6557, U+6559, U+6563, U+6570, U+6574, U+6577, U+6587, U+6599, U+65AD, U+65B0, U+65B9, U+65BD, U+65E2, U+65E5, U+65E7, U+65E9, U+6607, U+660E, U+6620, U+6627, U+6642, U+666E-666F, U+6687, U+66D6, U+66F4, U+66F8, U+66FF-6700, U+6708-6709, U+671B, U+671F, U+6728, U+672A-672C, U+673A, U+6750, U+675F, U+6761, U+6765, U+6771, U+6790, U+679A, U+679C, U+67A0, U+67F1, U+67FB, U+6804, U+6821, U+682A, U+6839, U+683C, U+6848, U+68B1, U+68DA, U+690D, U+691C, U+696D, U+6975, U+697D, U+6982, U+69CB, U+69D8, U+6A19, U+6A21, U+6A29-6A2A, U+6A5F, U+6B04, U+6B20-6B21, U+6B27, U+6B53, U+6B62-6B63, U+6B6A, U+6B73-6B74, U+6B8B, U+6BB5, U+6BCD, U+6BD4, U+6C0F, U+6C17, U+6C34, U+6C38, U+6C42, U+6C7A, U+6CBF, U+6CC1, U+6CD5, U+6CE8, U+6D17, U+6D25, U+6D3B, U+6D3E, U+6D41, U+6D77, U+6D88, U+6DF1, U+6DF7, U+6DFB, U+6E05, U+6E08-6E09, U+6E1B, U+6E21, U+6E29, U+6E2C, U+6E90, U+6E96, U+6F09, U+6F0F, U+6F22, U+7070, U+70B9, U+7121, U+7167, U+719F, U+71B1, U+7248, U+725B, U+7269, U+7279, U+727D, U+72B6, U+72C2, U+72D9, U+72EC, U+732E, U+7372, U+7387, U+73FE, U+7406, U+74A7, U+74B0, U+751F, U+7523, U+7528, U+7530-7531, U+7537, U+753A-753B, U+754C, U+7559, U+7565, U+756A, U+7570, U+7642, U+767A, U+767D, U+7684, U+76CA, U+76E4, U+76EE, U+76F4, U+76F8, U+7701, U+771F, U+773C, U+7740, U+77B0, U+77E2, U+77E5, U+77ED, U+7814, U+78BA, U+78E8, U+790E, U+793A, U+793E, U+795D, U+798F, U+79C0-79C1, U+79D1, U+79FB, U+7A0B, U+7A1C, U+7A2E, U+7A3F, U+7A4D, U+7A7A, U+7A93, U+7ACB, U+7AE0, U+7AF6, U+7B2C, U+7B49, U+7B4B, U+7B54, U+7B56, U+7B87, U+7B94, U+7B97, U+7BA1, U+7BC0, U+7BC4, U+7BC9, U+7C21, U+7C4D, U+7C92, U+7CBE, U+7CFB, U+7D04, U+7D0D, U+7D1B, U+7D20-7D22, U+7D30, U+7D39, U+7D42, U+7D44, U+7D4C, U+7D50, U+7D5E, U+7D61, U+7D66, U+7D71, U+7D75-7D76, U+7D99-7D9A, U+7DAD, U+7DCF, U+7DD2, U+7DDA, U+7DE0, U+7DE8, U+7DF4, U+7E01, U+7E1B, U+7E26, U+7E2B, U+7E2E, U+7E3E, U+7E54, U+7E70, U+7F6B, U+7F6E, U+7F72, U+7F8A, U+7FA9, U+7FFB, U+8001, U+8003, U+8005, U+8010, U+805E, U+8077, U+80A2, U+80B2, U+80CC, U+80FD, U+8108, U+8155, U+8170, U+81E8, U+81EA, U+81F3, U+8217, U+826F, U+8272, U+82F1, U+8377, U+843D, U+8449, U+85E4, U+884C, U+8853, U+8868, U+88C1, U+88C5, U+88CF, U+88DC, U+88FD, U+8907, U+8981, U+898B, U+898F, U+8996, U+899A, U+89A7, U+89AA, U+89B3, U+89E3, U+89E6, U+8A00, U+8A02, U+8A08, U+8A0E, U+8A17-8A18, U+8A2D, U+8A31, U+8A33-8A34, U+8A3C, U+8A55, U+8A66, U+8A70-8A73, U+8A87, U+8A8D, U+8A9E, U+8AA0, U+8AAC-8AAD, U+8AB0, U+8AB2, U+8ABF, U+8AC7, U+8ACB, U+8AD6, U+8AFE, U+8B00, U+8B1B, U+8B58, U+8B70, U+8B72, U+8C37, U+8C4A, U+8C5A, U+8C61, U+8CA0-8CA2, U+8CA9, U+8CAB-8CAC, U+8CB4, U+8CB7-8CB8, U+8CBB-8CBC, U+8CC7, U+8CEA, U+8D70, U+8D77, U+8D85, U+8D8A, U+8DB3, U+8DDD, U+8DEF, U+8DF5, U+8E0F, U+8E8D, U+8EAB, U+8ECA, U+8EE2, U+8EF8, U+8EFD, U+8F09, U+8F2A, U+8FBA, U+8FBC, U+8FCE, U+8FD1, U+8FEB, U+8FF0, U+8FF7, U+8FFD, U+9000-9001, U+9006, U+900F, U+9014, U+901A, U+901F-9020, U+9023, U+9031-9032, U+903C, U+9042, U+9045, U+9047, U+904B, U+904E, U+9053-9054, U+9063, U+9069, U+9078, U+907F, U+90CE, U+90E8, U+90ED, U+90F5, U+90FD, U+914D, U+916C, U+91CC-91CF, U+91D1, U+91DD, U+9280, U+9332, U+9577, U+9580, U+9589, U+958B, U+9593, U+95A2, U+962A, U+9632, U+964D, U+9650, U+9663-9664, U+967A, U+968E, U+969B, U+96A0, U+96A3, U+96C6-96C7, U+96D1, U+96E2-96E3, U+96FB, U+9700, U+9727, U+9759, U+975E, U+9762, U+9769, U+9784, U+97F3, U+97FF, U+9805-9806, U+9808, U+9810, U+9813, U+9818, U+982D, U+983B-983C, U+984C-984D, U+985E, U+9867, U+9905, U+99AC, U+99C6, U+9A13, U+9AD8, U+9B45, U+9E7F, U+9ED2, U+9F62}
+@font-face{font-family:"Noto Sans JP";font-style:normal;font-weight:700;font-display:swap;src:url("../fonts/sans-700-base.woff2") format("woff2");unicode-range:U+0020-007E, U+00A0-0109, U+010C-010F, U+0111-0113, U+0118-011D, U+0124-0125, U+0127, U+012A-012B, U+0134-0135, U+0139-013A, U+013D-013E, U+0141-0144, U+0147-0148, U+014B-014D, U+0150-0155, U+0158-0165, U+016A-0171, U+0179-017E, U+0193, U+01C2, U+01CD-01CE, U+01D0-01D2, U+01D4, U+01D6, U+01D8, U+01DA, U+01DC, U+01F8-01F9, U+01FD, U+0250-025A, U+025C, U+025E-0261, U+0264-0268, U+026C-0273, U+0275, U+0279-027B, U+027D-027E, U+0281-0284, U+0288-028E, U+0290-0292, U+0294-0295, U+0298, U+029D, U+02A1-02A2, U+02C7-02C8, U+02CC, U+02D0-02D1, U+02D8-02D9, U+02DB, U+02DD-02DE, U+02E5-02E9, U+0300-0304, U+0306, U+0308, U+030B-030C, U+030F, U+0318-031A, U+031C-0320, U+0324-0325, U+0329-032A, U+032C, U+032F-0330, U+0334, U+0339-033D, U+0361, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+0401, U+0410-044F, U+0451, U+1E3E-1E3F, U+1F70-1F73, U+2010-2027, U+2030-205E, U+20AC, U+2103, U+210F, U+2113, U+2116, U+2121-2122, U+2127, U+212B, U+2135, U+2153-2155, U+2160-216B, U+2170-217B, U+2190-2199, U+21C4, U+21D2, U+21D4, U+21E6-21E9, U+2200, U+2202-2203, U+2205, U+2207-2209, U+220B, U+2212-2213, U+221A, U+221D-2220, U+2225-222C, U+222E, U+2234-2235, U+223D, U+2243, U+2245, U+2248, U+2252, U+2260-2262, U+2266-2267, U+226A-226B, U+2276-2277, U+2282-2287, U+228A-228B, U+2295-2297, U+22A5, U+22BF, U+22DA-22DB, U+2305-2306, U+2312, U+2318, U+23BE-23CC, U+23CE, U+2423, U+2460-2473, U+24D0-24E9, U+24EB-24FE, U+2500-2503, U+250C, U+250F-2510, U+2513-2514, U+2517-2518, U+251B-251D, U+2520, U+2523-2525, U+2528, U+252B-252C, U+252F-2530, U+2533-2534, U+2537-2538, U+253B-253C, U+253F, U+2542, U+254B, U+25A0-25A1, U+25B1-25B3, U+25B6-25B7, U+25BC-25BD, U+25C0-25C1, U+25C6-25C7, U+25C9, U+25CB, U+25CE-25D3, U+25E6, U+25EF, U+2600-2603, U+2605-2606, U+260E, U+2616-2617, U+261E, U+2640, U+2642, U+2660-266F, U+2713, U+2756, U+2776-277F, U+2934-2935, U+2985-2986, U+29BF, U+29FA-29FB, U+3000-303F, U+3041-30FF, U+31F0-31FF, U+3231-3232, U+3239, U+3251-325F, U+32A4-32A8, U+32B1-32BF, U+32D0-32E3, U+32E5, U+32E9, U+32EC-32ED, U+32FA, U+3303, U+330D, U+3314, U+3318, U+3322-3323, U+3326-3327, U+332B, U+3336, U+333B, U+3349-334A, U+334D, U+3351, U+3357, U+337B-337E, U+338E-338F, U+339C-339E, U+33A1, U+33C4, U+33CB, U+33CD, U+4EDD, U+FE45-FE46, U+FF01-FF5E, U+FF61-FF9F, U+FFE0-FFE6}
+@font-face{font-family:"Noto Sans JP";font-style:normal;font-weight:700;font-display:swap;src:url("../fonts/sans-700-jis2-rest.woff2") format("woff2");unicode-range:U+4E10-9FA0}
+@font-face{font-family:"Noto Sans JP";font-style:normal;font-weight:700;font-display:swap;src:url("../fonts/sans-700-jis1-rest.woff2") format("woff2");unicode-range:U+4E03-9F8D}
+@font-face{font-family:"Noto Sans JP";font-style:normal;font-weight:700;font-display:swap;src:url("../fonts/sans-700-used.woff2") format("woff2");unicode-range:U+4E00-4E01, U+4E07, U+4E09-4E0B, U+4E0D-4E0E, U+4E16, U+4E18, U+4E21, U+4E26, U+4E2D, U+4E38, U+4E3B, U+4E4F, U+4E57, U+4E71, U+4E86, U+4E88-4E89, U+4E8B-4E8C, U+4E92, U+4EA4, U+4EAC, U+4EBA, U+4ECA-4ECB, U+4ED5-4ED6, U+4ED8, U+4EE3-4EE5, U+4EEE, U+4EF2, U+4EF6, U+4EFB, U+4F01, U+4F0A, U+4F11, U+4F1A, U+4F1D, U+4F34, U+4F38, U+4F4D-4F4F, U+4F53, U+4F55, U+4F59, U+4F5C, U+4F7F, U+4F8B, U+4F9B, U+4F9D, U+4FA1, U+4FBF, U+4FC2-4FC3, U+4FDD, U+4FE1, U+4FEE-4FEF, U+500B, U+5019, U+5024, U+505C, U+5074, U+5099, U+50CD, U+50CF, U+512A, U+5143, U+5148, U+514D, U+5165, U+5168, U+516C, U+5171, U+5177-5178, U+5185-5186, U+518D, U+5192, U+5199, U+51FA, U+5206-5207, U+5217, U+521D, U+5224-5225, U+5229, U+5236, U+523B, U+524A, U+524D, U+5264, U+5272, U+5275, U+529B, U+529F-52A0, U+52A9, U+52B9, U+52D5, U+52D8-52D9, U+52DD, U+52DF, U+52E4, U+5305, U+5316-5317, U+5320, U+533A-533B, U+5341, U+5343, U+534A, U+5352, U+5354, U+5358, U+535A, U+5370-5371, U+5373-5374, U+5378, U+539A, U+539F, U+53BB, U+53C2, U+53CA, U+53CC-53CE, U+53D6-53D7, U+53E3, U+53EF-53F0, U+53F2-53F3, U+53F7, U+5404, U+5408, U+540C-540D, U+5411, U+5426, U+542B, U+544A, U+5468, U+547D, U+548C, U+54C1, U+54E1, U+5506, U+5546, U+554F, U+5584, U+55B6, U+565B, U+5674, U+56DE, U+56E0, U+56E3, U+56F0, U+56F2-56F3, U+56FA, U+56FD, U+571F, U+5727-5728, U+5730, U+5747, U+578B, U+57DF, U+57F7, U+57F9-57FA, U+5831, U+5834, U+5883, U+5897, U+58A8, U+58C1, U+58EB, U+58F0, U+58F2, U+5909, U+5916, U+591A, U+5927, U+592A, U+592E, U+5931, U+5951, U+5965, U+5973, U+59A5, U+59CB, U+59D4, U+59FF, U+5B50, U+5B57-5B58, U+5B66, U+5B88-5B89, U+5B8C, U+5B9A-5B9B, U+5B9F, U+5BA2, U+5BB9, U+5BBF, U+5BC4, U+5BCC, U+5BE7, U+5BFE, U+5C02, U+5C06, U+5C0A, U+5C0E-5C0F, U+5C11, U+5C3E, U+5C40, U+5C4A, U+5C55, U+5C5E, U+5C64-5C65, U+5C71, U+5C90, U+5CF6, U+5DE5-5DE6, U+5DEE, U+5DF1, U+5DFB, U+5E02-5E03, U+5E0C, U+5E2F, U+5E38, U+5E45, U+5E73-5E74, U+5E78, U+5E83, U+5E95, U+5E97, U+5E9C, U+5EA6, U+5EAB, U+5EC3, U+5EF6, U+5EFA, U+5F0F, U+5F15, U+5F37, U+5F53, U+5F62, U+5F71, U+5F79, U+5F85, U+5F8B-5F8C, U+5F90, U+5F93, U+5F97, U+5FA1, U+5FAA, U+5FAE, U+5FB4, U+5FB9, U+5FC3, U+5FC5, U+5FD7, U+5FDC, U+601D, U+6025, U+6027, U+6075, U+60A9-60AA, U+60C5, U+60DC, U+60F3, U+610F, U+611B, U+611F, U+614B, U+6210, U+6226, U+623B, U+623F-6240, U+624B, U+6253, U+6271, U+627F-6280, U+628A, U+6295, U+629C, U+629E, U+62B1, U+62BC-62BD, U+62C5, U+62D3, U+62E0-62E1, U+62EC, U+6301, U+6307, U+632F, U+6349, U+6357, U+636E, U+6383, U+6398, U+639B, U+63A1-63A2, U+63A5, U+63A7-63A8, U+63AA, U+63B2, U+63B4, U+63C3, U+63CF-63D0, U+63DB, U+63E1, U+63F4, U+643A, U+6442, U+646F, U+64A4, U+64AE, U+652F, U+6539, U+653E, U+6557, U+6559, U+6563, U+6570, U+6574, U+6577, U+6587, U+6599, U+65AD, U+65B0, U+65B9, U+65BD, U+65E2, U+65E5, U+65E7, U+65E9, U+6607, U+660E, U+6620, U+6627, U+6642, U+666E-666F, U+6687, U+66D6, U+66F4, U+66F8, U+66FF-6700, U+6708-6709, U+671B, U+671F, U+6728, U+672A-672C, U+673A, U+6750, U+675F, U+6761, U+6765, U+6771, U+6790, U+679A, U+679C, U+67A0, U+67F1, U+67FB, U+6804, U+6821, U+682A, U+6839, U+683C, U+6848, U+68B1, U+68DA, U+690D, U+691C, U+696D, U+6975, U+697D, U+6982, U+69CB, U+69D8, U+6A19, U+6A21, U+6A29-6A2A, U+6A5F, U+6B04, U+6B20-6B21, U+6B27, U+6B53, U+6B62-6B63, U+6B6A, U+6B73-6B74, U+6B8B, U+6BB5, U+6BCD, U+6BD4, U+6C0F, U+6C17, U+6C34, U+6C38, U+6C42, U+6C7A, U+6CBF, U+6CC1, U+6CD5, U+6CE8, U+6D17, U+6D25, U+6D3B, U+6D3E, U+6D41, U+6D77, U+6D88, U+6DF1, U+6DF7, U+6DFB, U+6E05, U+6E08-6E09, U+6E1B, U+6E21, U+6E29, U+6E2C, U+6E90, U+6E96, U+6F09, U+6F0F, U+6F22, U+7070, U+70B9, U+7121, U+7167, U+719F, U+71B1, U+7248, U+725B, U+7269, U+7279, U+727D, U+72B6, U+72C2, U+72D9, U+72EC, U+732E, U+7372, U+7387, U+73FE, U+7406, U+74A7, U+74B0, U+751F, U+7523, U+7528, U+7530-7531, U+7537, U+753A-753B, U+754C, U+7559, U+7565, U+756A, U+7570, U+7642, U+767A, U+767D, U+7684, U+76CA, U+76E4, U+76EE, U+76F4, U+76F8, U+7701, U+771F, U+773C, U+7740, U+77B0, U+77E2, U+77E5, U+77ED, U+7814, U+78BA, U+78E8, U+790E, U+793A, U+793E, U+795D, U+798F, U+79C0-79C1, U+79D1, U+79FB, U+7A0B, U+7A1C, U+7A2E, U+7A3F, U+7A4D, U+7A7A, U+7A93, U+7ACB, U+7AE0, U+7AF6, U+7B2C, U+7B49, U+7B4B, U+7B54, U+7B56, U+7B87, U+7B94, U+7B97, U+7BA1, U+7BC0, U+7BC4, U+7BC9, U+7C21, U+7C4D, U+7C92, U+7CBE, U+7CFB, U+7D04, U+7D0D, U+7D1B, U+7D20-7D22, U+7D30, U+7D39, U+7D42, U+7D44, U+7D4C, U+7D50, U+7D5E, U+7D61, U+7D66, U+7D71, U+7D75-7D76, U+7D99-7D9A, U+7DAD, U+7DCF, U+7DD2, U+7DDA, U+7DE0, U+7DE8, U+7DF4, U+7E01, U+7E1B, U+7E26, U+7E2B, U+7E2E, U+7E3E, U+7E54, U+7E70, U+7F6B, U+7F6E, U+7F72, U+7F8A, U+7FA9, U+7FFB, U+8001, U+8003, U+8005, U+8010, U+805E, U+8077, U+80A2, U+80B2, U+80CC, U+80FD, U+8108, U+8155, U+8170, U+81E8, U+81EA, U+81F3, U+8217, U+826F, U+8272, U+82F1, U+8377, U+843D, U+8449, U+85E4, U+884C, U+8853, U+8868, U+88C1, U+88C5, U+88CF, U+88DC, U+88FD, U+8907, U+8981, U+898B, U+898F, U+8996, U+899A, U+89A7, U+89AA, U+89B3, U+89E3, U+89E6, U+8A00, U+8A02, U+8A08, U+8A0E, U+8A17-8A18, U+8A2D, U+8A31, U+8A33-8A34, U+8A3C, U+8A55, U+8A66, U+8A70-8A73, U+8A87, U+8A8D, U+8A9E, U+8AA0, U+8AAC-8AAD, U+8AB0, U+8AB2, U+8ABF, U+8AC7, U+8ACB, U+8AD6, U+8AFE, U+8B00, U+8B1B, U+8B58, U+8B70, U+8B72, U+8C37, U+8C4A, U+8C5A, U+8C61, U+8CA0-8CA2, U+8CA9, U+8CAB-8CAC, U+8CB4, U+8CB7-8CB8, U+8CBB-8CBC, U+8CC7, U+8CEA, U+8D70, U+8D77, U+8D85, U+8D8A, U+8DB3, U+8DDD, U+8DEF, U+8DF5, U+8E0F, U+8E8D, U+8EAB, U+8ECA, U+8EE2, U+8EF8, U+8EFD, U+8F09, U+8F2A, U+8FBA, U+8FBC, U+8FCE, U+8FD1, U+8FEB, U+8FF0, U+8FF7, U+8FFD, U+9000-9001, U+9006, U+900F, U+9014, U+901A, U+901F-9020, U+9023, U+9031-9032, U+903C, U+9042, U+9045, U+9047, U+904B, U+904E, U+9053-9054, U+9063, U+9069, U+9078, U+907F, U+90CE, U+90E8, U+90ED, U+90F5, U+90FD, U+914D, U+916C, U+91CC-91CF, U+91D1, U+91DD, U+9280, U+9332, U+9577, U+9580, U+9589, U+958B, U+9593, U+95A2, U+962A, U+9632, U+964D, U+9650, U+9663-9664, U+967A, U+968E, U+969B, U+96A0, U+96A3, U+96C6-96C7, U+96D1, U+96E2-96E3, U+96FB, U+9700, U+9727, U+9759, U+975E, U+9762, U+9769, U+9784, U+97F3, U+97FF, U+9805-9806, U+9808, U+9810, U+9813, U+9818, U+982D, U+983B-983C, U+984C-984D, U+985E, U+9867, U+9905, U+99AC, U+99C6, U+9A13, U+9AD8, U+9B45, U+9E7F, U+9ED2, U+9F62}
+@font-face{font-family:"Instrument Sans";font-style:normal;font-weight:400;font-display:swap;src:url("../fonts/instrument-400-latin.woff2") format("woff2");unicode-range:U+0020-007E, U+00A0-00FF, U+2010-2027, U+2030-205E, U+20AC, U+2103, U+2116, U+2122, U+2190-2199}
+@font-face{font-family:"Instrument Sans";font-style:normal;font-weight:500;font-display:swap;src:url("../fonts/instrument-500-latin.woff2") format("woff2");unicode-range:U+0020-007E, U+00A0-00FF, U+2010-2027, U+2030-205E, U+20AC, U+2103, U+2116, U+2122, U+2190-2199}
+@font-face{font-family:"Source Serif 4";font-style:normal;font-weight:400;font-display:swap;src:url("../fonts/serif-400-latin.woff2") format("woff2");unicode-range:U+0020-007E, U+00A0-00FF, U+2010-2027, U+2030-205E, U+20AC, U+2103, U+2116, U+2122, U+2190-2199}
+@font-face{font-family:"Noto Serif JP";font-style:normal;font-weight:500;font-display:swap;src:url("../fonts/serif-jp-500-hero.woff2") format("woff2");unicode-range:U+308B, U+5275}
+@font-face{font-family:"Noto Sans JP Fallback";src:local("Hiragino Sans");size-adjust:100.0%;}
+@font-face{font-family:"Instrument Sans Fallback";src:local("Arial");size-adjust:101.4%;}
+@font-face{font-family:"Source Serif 4 Fallback";src:local("Times New Roman");size-adjust:104.7%;}
+/* @fontface:end */
+
+
+:root {
+  /* 色 */
+  --white: #fff;
+  --black: #000;
+  --ink: #1c1c1c;
+  --line: #e5e5e5;
+  --muted: #9a9a9a;
+  --error: #CC0000;
+
+  /* 書体 */
+  --font-sans: "Noto Sans JP", "Noto Sans JP Fallback", "Hiragino Sans", "Yu Gothic", sans-serif;
+  --font-latin: "Instrument Sans", "Instrument Sans Fallback", "Noto Sans JP", "Noto Sans JP Fallback", Arial, sans-serif;
+  --font-serif: "Source Serif 4", "Source Serif 4 Fallback", "Noto Sans JP", "Noto Sans JP Fallback", serif;
+  --font-serif-jp: "Source Serif 4", "Noto Serif JP", "Source Serif 4 Fallback", "Noto Sans JP", serif; /* ヒーローの1語だけ（Noto Serif JP は字数分のサブセット） */
+
+  /* コンテナ（≥1440: 1334＋左右53。以下は幅の3.5%＝1024で36・768で27・375で13） */
+  --container: 1340px;
+  --gutter: 50px;
+  --header-h: 96px;
+  --header-pad: 48px;
+
+  /* 文字階層（§2 実測。Desktop → Tablet／Phone は下のメディアクエリ） */
+  --fs-h: 48px;      --lh-h: 67.2px;       /* 英語セリフ見出し */
+  --fs-ja-h: 32px;   --lh-ja-h: 51.2px;    /* 和文見出し（Noto Sans JP 500） */
+  --fs-item: 20px;   --lh-item: 32px;      /* 項目名（サービス名） */
+  --fs-item-l: 24px; --lh-item-l: 36px;    /* 項目名（実績・フッター見出し） */
+  --fs-item-xl: 32px; --lh-item-xl: 51.2px; /* 番号・求人名 */
+  --fs-body: 18px;   --lh-body: 31.5px;    /* 本文 */
+  --fs-lead: 22px;   --lh-lead: 38.5px;    /* Contact／Careers 冒頭の文 */
+  --fs-xl: 32px;     --lh-xl: 41.6px; --lh-xl-num: 51.2px; /* About の項目名・氏名・番号 */
+  --fs-small: 14px;  --lh-small: 21px;     /* タグ・説明・メタ */
+  --fs-label: 12px;  --fs-nav: 13px;  --ls-label: 0.04em;  /* ラベル・ナビ・ボタン（大文字） */
+  --fs-fv: 36px;     --ls-fv: 0.2em;       /* FV のセリフ大文字（字間広め） */
+  --fs-hero: 48px;   --lh-hero: 72px;      /* ホーム: サンセリフ2行 */
+  --fs-hero-w: 80px; --lh-hero-w: 104px;   /* ホーム: セリフ1語 */
+  --measure: 640px;                        /* 本文・見出しの行長 */
+  --fs-logo: 20px; --fs-logo-f: 32px;      /* ヘッダー／フッターのワードマーク */
+  --fs-menu: 28px;  --lh-menu: 39.2px;     /* 全画面メニュー */
+  --fs-card: 24px;  --lh-card: 36px;       /* 事例カード題名 */
+  --fs-foot-h: 24px; --lh-foot-h: 36px;    /* フッター見出し */
+  --fs-news: 22px;  --lh-news: 35.2px;     /* ニュース題名 */
+  --fs-micro: 10px;                        /* コラージュの .ph 表記 */
+  --fs-tile: 48px; --fs-tile-s: 28px;       /* 文字のタイル: 大カード／小カード・Phone */
+  --fs-input: 18px;                        /* 入力欄（Phone は 16px でズーム防止） */
+  --fs-nf: 160px;                          /* 404 の数字 */
+  --fs-gnav: 14px;                         /* ヘッダーナビ・言語 */
+  --fs-tab: 16px;   --lh-tab: 20.8px;      /* 絞り込みタブ（Phone も同じ） */
+  --fs-view: 20px;  --lh-view: 32px;       /* View All（副リンク） */
+  --fs-foot-city: 24px;  --lh-foot-city: 31.2px;   /* フッター都市名（Phone も同じ） */
+  --fs-foot-nav: 16px;   --lh-foot-nav: 30.4px;    /* フッターナビ */
+  --fs-foot-legal: 14px; --lh-foot-legal: 26.6px;  /* Privacy Policy・Language */
+  --fs-btn: 16px;   --lh-btn: 20.8px;      /* ピル型ボタン（I&CO 実測。Phone 14／18.2） */
+  --fs-meta: 16px;  --lh-meta: 20.8px;     /* ニュースのカテゴリ・日付（Phone 12／15.6） */
+  --fs-src: 18px;   --lh-src: 28.8px;      /* ニュースの出所 */
+
+  /* 余白 */
+  --page-top: 100px;   /* ヘッダー下端 → ページ見出し */
+  --section: 240px;    /* セクション間 */
+  --s1: 8px; --s2: 16px; --s3: 24px; --s4: 32px; --s6: 48px; --s7: 56px; --s9: 72px; --s15: 120px;
+  /* 旧トークン（content の style="margin-top:var(--sp-N)" 用に残す） */
+  --sp-1: 8px; --sp-2: 16px; --sp-3: 24px; --sp-4: 32px; --sp-5: 40px; --sp-6: 48px; --sp-8: 64px; --sp-12: 96px; --sp-16: 128px;
+
+  /* 部品 */
+  --pill-h: 53px;
+  --pill-w: 180px;
+  --submit-h: 53px;   /* フォーム送信（I&CO は Phone も 108×53） */
+}
+@media (min-width: 1440px) {
+  .tpl-services { --container: 1334px; --gutter: 53px; }
+}
+@media (min-width: 1024px) and (max-width: 1439.98px) {
+  :root { --gutter: 3.5vw; }
+}
+@media (min-width: 810px) and (max-width: 1023.98px) {
+  :root {
+    --gutter: 3.5vw; --header-h: 80px; --header-pad: 24px;
+    --fs-h: 32px; --lh-h: 41.6px; --fs-ja-h: 22px; --lh-ja-h: 35.2px;
+    --fs-item: 14px; --lh-item: 23.1px; --fs-item-l: 20px; --lh-item-l: 30px; --fs-item-xl: 22px; --lh-item-xl: 39.6px;
+    --fs-body: 14px; --lh-body: 24.5px; --fs-small: 12px; --lh-small: 21px;
+    --fs-lead: 14px; --lh-lead: 24.5px; --fs-xl: 26px; --lh-xl: 39px; --lh-xl-num: 39px;
+    --fs-fv: 28px; --fs-hero: 36px; --lh-hero: 52px; --fs-hero-w: 56px; --lh-hero-w: 72px;
+    --page-top: 40px; --section: 160px; --pill-h: 50px; --pill-w: 165px;
+    --fs-logo-f: 24px; --fs-card: 26px; --lh-card: 39px; --fs-news: 24px; --lh-news: 36px; --fs-micro: 8px; --fs-input: 16px; --fs-nf: 96px; --fs-view: 16px; --lh-view: 25.6px;
+    --fs-btn: 14px; --lh-btn: 18.2px; --fs-meta: 12px; --lh-meta: 15.6px; --fs-src: 14px; --lh-src: 22.4px;
+  }
+}
+@media (max-width: 809.98px) {
+  :root {
+    --gutter: 3.5vw; --header-h: 80px; --header-pad: 24px;
+    --fs-h: 32px; --lh-h: 41.6px; --fs-ja-h: 22px; --lh-ja-h: 35.2px;
+    --fs-item: 14px; --lh-item: 23.1px; --fs-item-l: 20px; --lh-item-l: 30px; --fs-item-xl: 22px; --lh-item-xl: 39.6px;
+    --fs-body: 14px; --lh-body: 24.5px; --fs-small: 12px; --lh-small: 21px;
+    --fs-lead: 14px; --lh-lead: 24.5px; --fs-xl: 26px; --lh-xl: 39px; --lh-xl-num: 39px;
+    --fs-fv: 20px; --fs-hero: 28px; --lh-hero: 42px; --fs-hero-w: 42px; --lh-hero-w: 56px;
+    --page-top: 40px; --section: 160px; --pill-h: 50px; --pill-w: 165px;
+    --fs-logo-f: 24px; --fs-card: 26px; --lh-card: 39px; --fs-news: 24px; --lh-news: 36px; --fs-micro: 8px; --fs-input: 16px; --fs-nf: 96px; --fs-view: 16px; --lh-view: 25.6px;
+    --fs-btn: 14px; --lh-btn: 18.2px; --fs-meta: 12px; --lh-meta: 15.6px; --fs-src: 14px; --lh-src: 22.4px;
+  }
+}
+
+/* ---------- ページ遷移（現状維持） ---------- */
+@view-transition { navigation: auto; }
+::view-transition-old(root),
+::view-transition-new(root) { animation-duration: 0.3s; }
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition { navigation: none; }
+  ::view-transition-old(root),
+  ::view-transition-new(root) { animation: none; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+
+/* ---------- ベース ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-spacing-trim: trim-start; text-autospace: normal; }
+body {
+  margin: 0; background: var(--white); color: var(--ink);
+  font-family: var(--font-sans); font-size: var(--fs-body); line-height: var(--lh-body); font-weight: 400;
+  overflow-wrap: anywhere;
+}
+img, video { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
+a:hover { opacity: .6; }
+p, ul, ol, dl, figure, table, blockquote { margin: 0 0 var(--s3); }
+ul, ol { padding-left: 1.5em; }
+hr { border: 0; border-top: 1px solid var(--line); margin: var(--s6) 0; }
+button, input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--black); outline-offset: 2px; }
+.is-dark :focus-visible, .site-footer :focus-visible, .menu :focus-visible { outline-color: var(--white); }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip-link { position: absolute; left: var(--s2); top: -100px; background: var(--ink); color: var(--white); padding: var(--s1) var(--s2); z-index: 100; }
+.skip-link:focus { top: var(--s2); }
+.center { text-align: center; }
+[hidden] { display: none !important; }
+
+/* ---------- 文字階層 ---------- */
+h1, h2, h3, h4, h5, h6 { margin: 0; font-weight: 500; font-feature-settings: "palt"; }
+h2 { font-size: var(--fs-ja-h); line-height: var(--lh-ja-h); }
+h3, h4 { font-size: var(--fs-item); line-height: var(--lh-item); }
+.h-serif { display: block; font-family: var(--font-serif); font-weight: 400; font-size: var(--fs-h); line-height: var(--lh-h); letter-spacing: 0; font-feature-settings: normal; }
+.is-upper { text-transform: uppercase; }
+.h-ja { display: block; font-family: var(--font-sans); font-weight: 500; font-size: var(--fs-ja-h); line-height: var(--lh-ja-h); }
+.page-title { font-weight: 400; }
+.page-title-ja { display: block; margin-top: var(--s1); font-family: var(--font-sans); font-weight: 500; font-size: var(--fs-small); line-height: var(--lh-small); letter-spacing: var(--ls-label); }
+.lead, .body-text { font-size: var(--fs-body); line-height: var(--lh-body); max-width: var(--measure); }
+.lead, .statement.is-ja, .h-ja { word-break: auto-phrase; text-wrap: pretty; }
+.lead { margin-top: var(--s3); margin-bottom: 0; }
+.label, .eyebrow {
+  display: block; font-family: var(--font-latin); font-weight: 500; font-size: var(--fs-label); line-height: 1.6;
+  letter-spacing: var(--ls-label); text-transform: uppercase; color: var(--muted); margin: 0 0 12px;
+}
+.note, .caption { font-size: var(--fs-small); line-height: var(--lh-small); color: var(--muted); }
+.empty { font-size: var(--fs-body); line-height: var(--lh-body); color: var(--muted); }
+.serif { font-family: var(--font-serif); font-weight: 400; }
+.small { font-size: var(--fs-small); line-height: var(--lh-small); }
+.num { font-family: var(--font-latin); }
+
+/* ---------- レイアウト ---------- */
+.container { width: 100%; max-width: calc(var(--container) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
+main { display: block; padding-top: var(--header-h); }
+.has-dark-hero main { padding-top: 0; }
+.section { padding-block: calc(var(--section) / 2); }
+.section + .section { padding-top: 0; }
+.more-line { margin: var(--s6) 0 0; }
+.actions { display: flex; flex-wrap: wrap; gap: var(--s3); align-items: center; }
+
+/* ---------- 部品: ピル・下線リンク ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: auto; min-width: var(--pill-w); height: var(--pill-h); padding: 0 var(--s3); border: 0; border-radius: 9999px;
+  background: var(--ink); color: var(--white); cursor: pointer;
+  font-family: var(--font-latin); font-weight: 500; font-size: var(--fs-btn); line-height: var(--lh-btn); letter-spacing: var(--ls-label);
+  text-transform: uppercase; text-decoration: none; white-space: nowrap;
+}
+.btn:hover { opacity: .8; }
+.u-link, .more {
+  display: inline-flex; align-items: center; min-height: 32px; padding: 0; border: 0; background: none; cursor: pointer;
+  font-family: var(--font-latin); font-weight: 500; font-size: var(--fs-nav); line-height: 1.6; letter-spacing: var(--ls-label);
+  text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; color: inherit;
+}
+.more .arrow { margin-left: .4em; text-decoration: none; }
+.view-all { font-weight: 400; font-size: var(--fs-view); line-height: var(--lh-view); letter-spacing: 0; }
+
+/* ---------- 画像・プレースホルダー ---------- */
+.media { margin: 0; width: 100%; overflow: hidden; background: var(--line); }
+.media img { width: 100%; height: 100%; object-fit: cover; }
+.media.is-zoom img { transform: scale(var(--zoom)); transform-origin: var(--pos); }
+.ph {
+  position: relative; margin: 0; width: 100%; aspect-ratio: 16 / 9;
+  display: flex; align-items: center; justify-content: center; background: var(--line);
+}
+.ph[data-ratio="16:9"] { aspect-ratio: 16 / 9; }
+.ph[data-ratio="4:5"] { aspect-ratio: 4 / 5; }
+.ph[data-ratio="3:2"] { aspect-ratio: 3 / 2; }
+.ph[data-ratio="2:3"] { aspect-ratio: 2 / 3; }
+.ph[data-ratio="3:4"] { aspect-ratio: 3 / 4; }
+.ph[data-ratio="4:3"] { aspect-ratio: 4 / 3; }
+.ph[data-ratio="1:1"] { aspect-ratio: 1 / 1; }
+.ph[data-ratio="9:16"] { aspect-ratio: 9 / 16; }
+.ph[data-ratio="8:5"] { aspect-ratio: 8 / 5; }
+.is-demo .ph::before {
+  content: attr(data-ratio) " " attr(aria-label); padding: var(--s2); text-align: center;
+  font-family: var(--font-latin); font-size: var(--fs-label); line-height: 1.6; letter-spacing: var(--ls-label); color: var(--ink);
+}
+/* 文字のタイル（写真が無い位置。.ph の代わりに公開ページで使う）。地色 #1c1c1c */
+.tile {
+  --tile-pad: var(--s4);
+  position: relative; margin: 0; width: 100%; aspect-ratio: 16 / 9; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
+  padding: calc(var(--tile-pad) + 24px) var(--tile-pad); background: var(--ink); color: var(--white);
+}
+.tile[data-ratio="3:2"] { aspect-ratio: 3 / 2; }
+.tile[data-ratio="4:5"] { aspect-ratio: 4 / 5; }
+.tile[data-ratio="1:1"] { aspect-ratio: 1 / 1; }
+.tile.is-s { --fs-tile-cur: var(--fs-tile-s); }
+.tile-eyebrow, .tile-foot { position: absolute; left: var(--tile-pad); font-size: var(--fs-label); line-height: 1.6; color: var(--muted); }
+.tile-eyebrow { top: var(--tile-pad); font-family: var(--font-latin); font-weight: 500; letter-spacing: var(--ls-label); text-transform: uppercase; }
+.tile-foot { bottom: var(--tile-pad); font-family: var(--font-sans); }
+.tile-word { display: block; max-width: 100%; font-size: var(--fs-tile-cur, var(--fs-tile)); line-height: 1.25; word-break: auto-phrase; }
+.tile-word.is-serif { font-family: var(--font-serif); font-weight: 400; }
+.tile-word.is-ja { font-family: var(--font-sans); font-weight: 500; font-feature-settings: "palt"; }
+.tile-word.is-latin { font-family: var(--font-latin); font-weight: 400; }
+.tile.is-xl .tile-word { font-size: var(--fs-hero-w); line-height: var(--lh-hero-w); }
+.tile-list li { word-break: auto-phrase; }
+.tile-list { list-style: none; margin: 0; padding: 0; width: 100%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s3) var(--s6); font-family: var(--font-latin); font-size: var(--fs-item-l); line-height: var(--lh-item-l); }
+/* 番号付きの1行リスト（工程。写真が来るまで）。区切りは罫線だけ */
+.process-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.process-list li { display: grid; grid-template-columns: 120px minmax(0, 1fr); align-items: baseline; padding-block: var(--s3); border-bottom: 1px solid var(--line); }
+.process-num { font-family: var(--font-serif); font-weight: 400; font-size: var(--fs-item-l); line-height: var(--lh-item-l); color: var(--muted); }
+.process-name { font-family: var(--font-sans); font-weight: 500; font-size: var(--fs-item-l); line-height: var(--lh-item-l); }
+@media (max-width: 809.98px) { .process-list li { grid-template-columns: 56px minmax(0, 1fr); padding-block: var(--s2); } }
+@media (max-width: 809.98px) {
+  .tile { --tile-pad: var(--s2); --fs-tile-cur: var(--fs-tile-s); }
+  .tile-list { grid-template-columns: minmax(0, 1fr); gap: 4px; font-size: var(--fs-item); line-height: var(--lh-item); } /* 2列だと語の途中で折れるので1列 */
+  .tile:has(> .tile-list) { aspect-ratio: auto; }
+}
+/* 動画（無音・ループ）。動きを減らす設定では poster の画像だけを出す */
+.video { margin: 0; }
+.video-frame { position: relative; overflow: hidden; background: var(--ink); }
+.video-frame video, .video-frame .video-poster { width: 100%; height: 100%; object-fit: cover; }
+.video-poster { display: none; }
+.video-toggle { margin-top: var(--s1); }
+@media (prefers-reduced-motion: reduce) {
+  .video-frame video, .video-toggle { display: none; }
+  .video-poster { display: block; }
+}
+figure.photo { margin: 0; }
+figure.photo figcaption, .ph figcaption { margin-top: var(--s1); font-size: var(--fs-small); line-height: var(--lh-small); color: var(--muted); }
+
+/* ---------- ヘッダー（96px。ダークヒーロー上は白文字、スクロールで白背景） ---------- */
+.site-header { position: fixed; inset: 0 0 auto 0; height: var(--header-h); z-index: 50; background: var(--white); color: var(--ink); }
+.site-header.is-dark:not(.is-scrolled) { background: transparent; color: var(--white); }
+.site-header .bar { height: 100%; max-width: 1440px; margin-inline: auto; padding-inline: var(--header-pad); display: flex; align-items: center; justify-content: space-between; gap: var(--s3); }
+.brand { display: inline-flex; align-items: center; gap: 10px; height: 28px; text-decoration: none; font-family: var(--font-latin); font-weight: 500; font-size: var(--fs-logo); line-height: 28px; white-space: nowrap; }
+.brand img { width: 28px; height: 28px; }
+.brand:hover { opacity: 1; }
+.is-dark:not(.is-scrolled) .brand img, .site-footer .f-logo img, .menu-top .brand img { filter: invert(1); }
+.gnav { display: flex; align-items: center; gap: var(--s3); }
+.gnav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: var(--s3); }
+.gnav a, .lang-switch a {
+  display: inline-block; text-decoration: none; font-family: var(--font-latin); font-weight: 400; font-size: var(--fs-gnav);
+  line-height: 18px; letter-spacing: var(--ls-label); text-transform: uppercase;
+}
+.gnav a[aria-current] { font-weight: 500; }
+.lang-switch { display: flex; gap: 10px; margin: 0; }
+.lang-switch a { color: var(--muted); }
+.lang-switch a[aria-current] { color: inherit; }
+.menu-btn { display: none; width: 50px; height: 50px; padding: 0; border: 0; background: none; cursor: pointer; position: relative; }
+.menu-btn span, .menu-btn span::before { position: absolute; left: 13px; width: 24px; height: 1px; background: currentColor; content: ""; }
+.menu-btn span { top: 21px; }
+.menu-btn span::before { left: 0; top: 7px; }
+@media (max-width: 1023.98px) {
+  .gnav { display: none; }
+  .menu-btn { display: block; margin-right: -12px; }
+  .site-header .bar { padding-left: 24px; padding-right: 24px; }
+  .brand > span { display: none; }
+  .brand { height: 44px; min-width: 44px; }
+}
+/* 全画面メニュー（Tablet／Phone） */
+.menu { position: fixed; inset: 0; z-index: 60; background: var(--ink); color: var(--white); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--s4); padding: var(--header-h) var(--s3) var(--s6); overflow-y: auto; }
+.menu ul { list-style: none; margin: 0; padding: 0; text-align: center; }
+.menu li a { display: inline-flex; align-items: center; min-height: 55px; text-decoration: none; font-family: var(--font-latin); font-size: var(--fs-menu); line-height: var(--lh-menu); text-transform: uppercase; }
+.menu li a[aria-current] { text-decoration: underline; text-underline-offset: 8px; }
+.menu .lang-switch a { min-height: 44px; display: inline-flex; align-items: center; padding-inline: 4px; }
+body.menu-open { overflow: hidden; }
+body.menu-open .site-header { background: transparent; color: var(--white); z-index: 70; }
+body.menu-open .site-header .brand img { filter: invert(1); }
+body.menu-open .menu-btn span { transform: translateY(4px) rotate(45deg); }
+body.menu-open .menu-btn span::before { transform: translateY(-7px) rotate(-90deg); }
+
+/* ---------- ページ見出し ---------- */
+.page-head { padding-top: var(--page-top); }
+.page-head .lead { margin-top: var(--s3); }
+.article-head .eyebrow { display: flex; gap: var(--s3); align-items: baseline; }
+.article-head .eyebrow .label { margin: 0; }
+.article-head .eyebrow .label, .article-head time { font-family: var(--font-latin); font-weight: 500; font-size: var(--fs-meta); line-height: var(--lh-meta); letter-spacing: var(--ls-label); text-transform: none; color: var(--muted); }
+.article-head .h-ja, .article-head .h-serif { max-width: 960px; }
+.article-tags { display: flex; flex-wrap: wrap; gap: var(--s1); margin: var(--s3) 0 0; }
+
+/* ---------- お問い合わせ帯（I&CO Bottom。白地） ---------- */
+.cta-band { padding-block: 200px; }
+.cta-inner { display: grid; grid-template-columns: minmax(0, 644px) minmax(0, 644px); justify-content: space-between; align-items: center; gap: var(--s6); }
+.cta-text .lead { margin-top: var(--s3); }
+.cta-inner.is-single { grid-template-columns: minmax(0, 644px); justify-content: start; }
+.cta-text .actions { margin: var(--s7) 0 0; }
+.cta-sub { margin: var(--s3) 0 0; }
+.cta-media { max-width: 644px; justify-self: end; }
+@media (max-width: 1023.98px) {
+  .cta-band { padding-block: var(--s15); }
+  .cta-inner { grid-template-columns: minmax(0, 1fr); gap: var(--s9); }
+  .cta-media { order: -1; justify-self: center; max-width: 325px; }
+  .cta-text .actions { justify-content: center; margin-top: var(--s6); }
+  .cta-sub { text-align: center; }
+}
+
+/* ---------- フッター（#1c1c1c、上余白124） ---------- */
+.site-footer { background: var(--ink); color: var(--white); padding-block: 124px; font-family: var(--font-latin); }
+.site-footer a { color: var(--white); }
+.footer-inner { max-width: 1440px; margin-inline: auto; padding-inline: 50px; display: grid; grid-template-columns: minmax(0, 429px) minmax(0, 656px); justify-content: space-between; gap: var(--s6); }
+.f-logo { display: inline-flex; align-items: center; gap: 14px; height: 56px; text-decoration: none; font-weight: 500; font-size: var(--fs-logo-f); line-height: 1; margin-bottom: 33px; }
+.f-logo img { width: 56px; height: 56px; }
+.f-block + .f-block { margin-top: 33px; }
+.f-title { font-family: var(--font-latin); font-weight: 400; font-size: var(--fs-foot-h); line-height: var(--lh-foot-h); margin: 0 0 var(--s1); }
+.f-block p, .f-addr, .f-copy { font-family: var(--font-sans); font-size: var(--fs-label); line-height: 18px; margin: 0; }
+.f-block .u-link { margin-top: var(--s1); font-family: var(--font-sans); font-size: var(--fs-label); font-weight: 400; letter-spacing: 0; }
+.f-copy { margin-top: var(--s3); font-family: var(--font-latin); font-size: var(--fs-foot-legal); line-height: var(--lh-foot-legal); color: var(--muted); }
+.f-offices, .f-nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: var(--s3); }
+.f-city { font-family: var(--font-latin); font-weight: 400; font-size: var(--fs-foot-city); line-height: var(--lh-foot-city); margin: 0 0 var(--s3); }
+.f-nav { margin-top: 50px; }
+.f-nav ul { list-style: none; margin: 0; padding: 0; }
+.f-nav a { display: inline-flex; align-items: center; min-height: 34px; text-decoration: none; font-size: var(--fs-foot-nav); line-height: var(--lh-foot-nav); text-transform: uppercase; letter-spacing: 0; }
+.f-legal { margin-top: 12px !important; }
+.f-legal a { text-transform: none; font-size: var(--fs-foot-legal); line-height: var(--lh-foot-legal); letter-spacing: 0; }
+.f-lang { display: flex; align-items: center; gap: 10px; font-size: var(--fs-foot-legal); line-height: var(--lh-foot-legal); }
+.f-lang a { color: var(--muted); }
+.f-lang a[aria-current] { color: var(--white); }
+@media (min-width: 1024px) and (max-width: 1439.98px) {
+  .footer-inner { padding-inline: 3.5vw; grid-template-columns: minmax(0, 37.8%) minmax(0, 49%); }
+}
+@media (max-width: 1023.98px) {
+  .footer-inner { padding-inline: 4vw; grid-template-columns: minmax(0, 1fr); gap: var(--s9); }
+  .f-logo { height: 44px; }
+  .f-logo img { width: 40px; height: 40px; }
+  .f-offices { grid-template-columns: minmax(0, 1fr); gap: var(--s4); }
+  .f-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .f-nav a, .f-lang a, .f-block .u-link { min-height: 44px; }
+}
+
+/* ---------- ホーム ---------- */
+.hero { position: relative; height: 100svh; min-height: 560px; background: var(--ink); color: var(--white); overflow: hidden; }
+.hero-media { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero-media.ph { aspect-ratio: auto; background: var(--ink); }
+img.hero-media { filter: brightness(.5); }
+.hero-media.ph::before { color: var(--muted); }
+.hero-inner { position: relative; z-index: 1; padding-top: 30.5vh; }
+.hero-inner h1 { margin: 0 0 0 54px; font-weight: 400; font-feature-settings: normal; }
+.hero-line { display: block; font-family: var(--font-latin); font-weight: 400; font-size: var(--fs-hero); line-height: var(--lh-hero); }
+.hero-word { display: block; font-family: var(--font-serif-jp); font-weight: 400; font-size: var(--fs-hero-w); line-height: var(--lh-hero-w); }
+.hero-sub { margin: var(--s3) 0 0 54px; font-size: var(--fs-body); line-height: var(--lh-body); }
+/* 静止画のヒーロー: 写真（800×600）を原寸以下で文字の右に置く。拡大率は 1440 で 0.8、375 で約 0.44 */
+.hero.is-framed { height: auto; min-height: 0; padding: calc(var(--header-h) + var(--s9)) 0 var(--s9); }
+.hero.is-framed .hero-inner { padding-top: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 640px); align-items: end; gap: var(--s6); }
+.hero-frame { margin: 0; aspect-ratio: 4 / 3; }
+.hero-frame img { width: 100%; height: 100%; object-fit: cover; }
+.home-intro { padding-block: var(--s15) 224px; }
+.statement { font-family: var(--font-serif); font-size: var(--fs-h); line-height: var(--lh-h); margin: 0 0 0 56px; max-width: 1280px; }
+.statement.is-ja { font-family: var(--font-sans); font-size: var(--fs-ja-h); line-height: var(--lh-ja-h); font-weight: 400; max-width: 1120px; text-wrap: pretty; }
+.clients-label { font-family: var(--font-serif); font-size: var(--fs-ja-h); line-height: var(--lh-ja-h); margin: var(--s6) 0 0 56px; }
+.home-intro .logo-grid { margin-top: 40px; }
+.home-intro .logo-grid li { aspect-ratio: 214 / 159; }
+@media (min-width: 1024px) { .home-intro .logo-grid { column-gap: 0.82%; } }
+.clients-note { margin: var(--s2) 0 0 56px; }
+.home-intro .center { margin-top: var(--s7); }
+.home-news .news-list { margin-top: var(--s6); }
+@media (max-width: 1023.98px) {
+  .hero-inner h1, .hero-sub { margin-left: 11px; }
+  .hero.is-framed { padding-top: calc(var(--header-h) + var(--s6)); padding-bottom: var(--s6); }
+  .hero.is-framed .hero-inner { grid-template-columns: minmax(0, 1fr); gap: var(--s6); }
+  .statement, .clients-label, .clients-note { margin-left: 0; }
+  .home-intro { padding-block: 80px 120px; }
+}
+
+/* ---------- ロゴセル ---------- */
+.logo-grid { --cols: 5; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); }
+.logo-grid li { aspect-ratio: 8 / 5; display: flex; align-items: center; justify-content: center; }
+.logo-grid img { max-width: 60%; max-height: 45%; width: auto; height: auto; object-fit: contain; }
+.logo-grid .ph { height: 100%; aspect-ratio: auto; background: var(--white); outline: 1px solid var(--line); outline-offset: -1px; }
+.logo-grid .ph::before { font-size: var(--fs-micro); }
+@media (max-width: 1023.98px) { .logo-grid { --cols: 3 !important; } }
+
+/* ---------- Services ---------- */
+.fv-collage { position: relative; height: 1800px; overflow: hidden; } /* 11枚で使う位置は 1〜11（12〜14 は予備） */
+.fv-tiles { position: absolute; inset: 0; z-index: 0; }
+.fv-tile { position: absolute; width: 318px; height: 318px; aspect-ratio: 1 / 1; }
+.fv-tile:nth-child(1)  { left: 11.25%; top: 53px; }
+.fv-tile:nth-child(2)  { left: 42.9%;  top: 0; }
+.fv-tile:nth-child(3)  { left: 66.7%;  top: -60px; }
+.fv-tile:nth-child(4)  { left: 77.7%;  top: 520px; }
+.fv-tile:nth-child(5)  { left: 3.3%;   top: 520px; }
+.fv-tile:nth-child(6)  { left: 27.1%;  top: 640px; }
+.fv-tile:nth-child(7)  { left: 55%;    top: 660px; }
+.fv-tile:nth-child(8)  { left: 42.9%;  top: 993px; }
+.fv-tile:nth-child(9)  { left: 9.7%;   top: 1088px; }
+.fv-tile:nth-child(10) { left: 65.1%;  top: 1157px; }
+.fv-tile:nth-child(11) { left: 33.5%;  top: 1363px; }
+.fv-tile:nth-child(12) { left: 1.8%;   top: 1503px; }
+.fv-tile:nth-child(13) { left: 73.1%;  top: 1466px; }
+.fv-tile:nth-child(14) { left: 44.5%;  top: 1660px; }
+.fv-tile.ph::before { font-size: var(--fs-micro); }
+.fv-collage .fv-title { position: absolute; left: 0; right: 0; top: 432px; margin: 0; text-align: center; font-family: var(--font-serif); font-weight: 400; font-size: var(--fs-fv); line-height: 1; letter-spacing: var(--ls-fv); text-transform: uppercase; z-index: 2; padding-inline: var(--gutter); }
+@media (min-width: 810px) and (max-width: 1023.98px) { .fv-tile { width: 220px; height: 220px; } .fv-collage { height: 1600px; } }
+@media (max-width: 809.98px) {
+  .fv-collage { height: 900px; }
+  .fv-tile { width: 130px; height: 130px; }
+  .fv-tile:nth-child(1)  { left: -13%;  top: 10px; }
+  .fv-tile:nth-child(2)  { left: 36.5%; top: 79px; }
+  .fv-tile:nth-child(3)  { left: 73.6%; top: -20px; }
+  .fv-tile:nth-child(4)  { left: 84.8%; top: 140px; }
+  .fv-tile:nth-child(5)  { left: -20%;  top: 255px; }
+  .fv-tile:nth-child(6)  { left: 19.5%; top: 266px; }
+  .fv-tile:nth-child(7)  { left: 67.5%; top: 294px; }
+  .fv-tile:nth-child(8)  { left: 36.5%; top: 491px; }
+  .fv-tile:nth-child(9)  { left: -10.7%; top: 546px; }
+  .fv-tile:nth-child(10) { left: 73.6%; top: 574px; }
+  .fv-tile:nth-child(11) { left: 29.3%; top: 705px; }
+  .fv-tile:nth-child(12) { left: -15%;  top: 785px; }
+  .fv-tile:nth-child(13) { left: 78%;   top: 764px; }
+  .fv-tile:nth-child(14) { left: 30%;   top: 890px; }
+  .fv-collage .fv-title { top: 440px; }
+  .fv-tile.ph::before { padding: 4px; }
+}
+.svc-intro .lead { margin-top: var(--s3); max-width: none; text-wrap: pretty; }
+.svc-items { list-style: none; margin: var(--s9) 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 440px)); justify-content: center; row-gap: var(--s6); }
+.svc-items a { display: flex; flex-direction: column; align-items: center; text-decoration: none; }
+.svc-icon { width: 200px; height: 200px; }
+.svc-num { display: flex; align-items: center; justify-content: center; font-family: var(--font-latin); font-size: var(--fs-item-xl); line-height: 1; color: var(--muted); }
+.svc-name { margin-top: var(--s1); font-family: var(--font-latin); font-size: var(--fs-item); line-height: var(--lh-item); text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; text-align: center; }
+.svc-block { padding-top: var(--s15); }
+.svc-block > .container { position: relative; padding-top: 33px; }
+.svc-block > .container::before { content: ""; position: absolute; top: 0; left: var(--gutter); right: var(--gutter); border-top: 1px solid var(--line); }
+.svc-grid { display: grid; grid-template-columns: minmax(0, 48%) minmax(0, 39%); justify-content: space-between; align-items: start; }
+.svc-main .h-serif, .svc-main .h-ja { max-width: var(--measure); }
+.svc-main .body-text { margin: var(--s4) 0 0; }
+.svc-tags { list-style: none; margin: calc(var(--lh-h) + var(--s4)) 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px var(--s3); font-size: var(--fs-small); line-height: var(--lh-small); }
+@media (min-width: 1024px) {
+  .svc-grid:has(.svc-main > .h-ja) .svc-tags { margin-top: calc(var(--lh-ja-h) + var(--s4)); }
+  .svc-grid:has(.svc-main .page-title-ja) .svc-tags { margin-top: calc(var(--lh-h) + var(--s1) + var(--lh-small) + var(--s4)); }
+}
+.svc-tags li { padding-left: 12px; position: relative; }
+.svc-tags li::before { content: "・"; position: absolute; left: 0; top: 0; font-size: var(--fs-label); }
+.svc-block .more-line { margin-top: var(--s4); }
+.svc-media { margin-top: var(--s7); max-width: 800px; margin-left: auto; } /* 写真は 800×600。原寸を超えて拡大しない */
+.clients .logo-grid { margin-top: var(--s9); }
+.clients .note { margin-top: var(--s3); }
+.svc-block + .clients { padding-top: var(--section); }
+@media (max-width: 1023.98px) {
+  .svc-items { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: var(--s6); }
+  .svc-icon { width: 110px; height: 110px; }
+  .svc-grid { grid-template-columns: minmax(0, 1fr); }
+  .svc-main .body-text { margin-top: var(--s3); }
+  .svc-tags { grid-template-columns: minmax(0, 1fr); gap: 12px; margin: var(--s3) 0 0 12px; }
+  .svc-block .more-line { margin-top: var(--s3); }
+  .svc-media { margin-top: 40px; }
+  .svc-block { padding-top: var(--s15); }
+  .svc-main .h-serif, .svc-main .h-ja, .svc-main .body-text { max-width: none; }
+  .clients .h-serif { line-height: 43.4px; }
+}
+
+/* ---------- Work（事例一覧） ---------- */
+.work { padding-top: var(--s6); padding-bottom: var(--section); }
+.tabs { margin-bottom: var(--s9); }
+.tab-groups, .tab-items { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px var(--s4); }
+.tab-groups { padding-bottom: var(--s4); border-bottom: 1px solid var(--line); margin-bottom: var(--s4); }
+.tab-groups button, .tab-items button, .tab-items a {
+  display: inline-flex; align-items: center; min-height: 24px; padding: 0; border: 0; background: none; cursor: pointer; text-decoration: none;
+  font-family: var(--font-latin); font-size: var(--fs-tab); line-height: var(--lh-tab); letter-spacing: 0; color: var(--muted); white-space: nowrap;
+}
+.tab-groups button { font-weight: 500; text-transform: uppercase; }
+/* Phone も横スクロールにせず折り返す（右端で語が切れないように） */
+.tab-groups [aria-pressed="true"], .tab-items [aria-pressed="true"], .tab-items [aria-current] { color: var(--ink); }
+.work-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s9) 20px; align-items: start; }
+.work-card:nth-child(6n+1) { grid-column: 1 / 3; }
+.work-card:nth-child(6n+2) { grid-column: 3 / 4; }
+.work-card:nth-child(6n+3), .work-card:nth-child(6n+6) { grid-column: 1 / -1; }
+.work-card:nth-child(6n+4) { grid-column: 1 / 2; }
+.work-card:nth-child(6n+5) { grid-column: 2 / 4; }
+.work-card a { display: block; text-decoration: none; }
+@media (min-width: 1024px) { .work-card:nth-child(6n+2) .tile, .work-card:nth-child(6n+4) .tile { --fs-tile-cur: var(--fs-tile-s); } }
+.work-text { display: block; margin-top: var(--s2); }
+/* 図版が無い間の文字だけのリスト。行の区切りは罫線 */
+.work-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.work-list .work-card { border-bottom: 1px solid var(--line); }
+.work-list a { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: var(--s4); padding-block: var(--s4); }
+.work-list .work-text { margin-top: 0; }
+.work-list .work-title { word-break: auto-phrase; }
+.work-no { font-family: var(--font-latin); font-weight: 500; font-size: var(--fs-small); line-height: var(--lh-small); letter-spacing: var(--ls-label); color: var(--muted); }
+.work-client { display: block; font-family: var(--font-latin); font-size: var(--fs-small); line-height: var(--lh-small); color: var(--muted); }
+.work-title { display: block; margin-top: 4px; font-family: var(--font-latin); font-size: var(--fs-card); line-height: var(--lh-card); }
+.work-desc { display: block; margin-top: var(--s1); font-size: var(--fs-small); line-height: var(--lh-small); max-width: var(--measure); }
+@media (max-width: 1023.98px) {
+  .work-grid { grid-template-columns: minmax(0, 1fr); gap: var(--s6); }
+  .work-card:nth-child(n) { grid-column: 1 / -1; }
+  .work-list a { grid-template-columns: minmax(0, 1fr); gap: var(--s1); padding-block: var(--s3); }
+  .tab-groups button, .tab-items button, .tab-items a { min-height: 44px; }
+}
+
+/* ---------- 記事型 ---------- */
+.article-media { margin-top: var(--s9); }
+.article-media .caption { margin-top: var(--s1); }
+.article-body { padding-top: var(--s9); padding-bottom: calc(var(--section) / 2); }
+.article-box { max-width: var(--measure); border-top: 1px solid var(--line); padding-top: var(--s3); margin-top: var(--s9); }
+.box-title { font-size: var(--fs-item); line-height: var(--lh-item); margin-bottom: var(--s2); }
+.article-share { display: flex; flex-wrap: wrap; gap: var(--s3); margin-top: var(--s6); }
+.article-nav { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--s3); border-top: 1px solid var(--line); padding-top: var(--s3); margin-top: var(--s9); }
+.article-nav .next { text-align: right; }
+.article-nav a { display: block; text-decoration: none; font-size: var(--fs-small); line-height: var(--lh-small); }
+.article-nav .label { margin-bottom: 4px; }
+
+/* ---------- 本文部品（content の Markdown・生HTML） ---------- */
+.prose { max-width: var(--measure); }
+.prose > :first-child { margin-top: 0; }
+.prose h2 { font-size: var(--fs-ja-h); line-height: var(--lh-ja-h); margin: var(--s9) 0 var(--s3); }
+.prose h3 { margin: var(--s6) 0 var(--s2); }
+.prose ul, .prose ol { padding-left: 1.2em; }
+.heading { margin-bottom: var(--s6); }
+.heading .label { margin-bottom: var(--s1); }
+.heading .lead { margin-top: var(--s3); }
+.two-col { display: grid; grid-template-columns: minmax(0, 42%) minmax(0, 48%); justify-content: space-between; gap: var(--s3); }
+.two-col > * { min-width: 0; }
+.grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--s4) 20px; }
+.col-4 { grid-column: span 4; } .col-5 { grid-column: span 5; } .col-6 { grid-column: span 6; }
+.col-7 { grid-column: span 7; } .col-8 { grid-column: span 8; } .col-12 { grid-column: span 12; }
+@media (max-width: 809.98px) {
+  .grid > [class*="col-"] { grid-column: span 12; }
+  .two-col { grid-template-columns: minmax(0, 1fr); }
+}
+.band { background: var(--white); }
+.on-black { background: var(--ink); color: var(--white); }
+.on-black .label, .on-black .note { color: var(--muted); }
+.ruled-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.ruled-grid > * { border-bottom: 1px solid var(--line); padding: var(--s4) var(--s4) var(--s4) 0; min-width: 0; }
+.ruled-grid .span-4 { grid-column: span 4; } .ruled-grid .span-5 { grid-column: span 5; } .ruled-grid .span-6 { grid-column: span 6; }
+.ruled-grid .span-7 { grid-column: span 7; } .ruled-grid .span-8 { grid-column: span 8; } .ruled-grid .span-12 { grid-column: span 12; }
+.ruled-grid .tile-title { margin-bottom: var(--s2); }
+.ruled-grid .tile-text { max-width: var(--measure); }
+@media (max-width: 809.98px) {
+  .ruled-grid > *, .ruled-grid > [class*="span-"] { grid-column: span 12; padding-right: 0; }
+  .ruled-grid > .empty { display: none; }
+}
+.rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.rows > li { border-bottom: 1px solid var(--line); }
+.row { display: grid; grid-template-columns: minmax(120px, 240px) minmax(0, 1fr) auto; gap: var(--s3); align-items: baseline; padding: var(--s3) 0; text-decoration: none; }
+.row .meta { display: flex; flex-wrap: wrap; gap: var(--s1) var(--s2); align-items: baseline; }
+.row .meta .label { margin: 0; }
+.row .title { display: block; font-size: var(--fs-item); line-height: var(--lh-item); font-weight: 500; }
+.row .desc { display: block; margin-top: var(--s1); font-size: var(--fs-small); line-height: var(--lh-small); }
+.row .arrow { font-family: var(--font-latin); }
+.row time { font-family: var(--font-latin); font-size: var(--fs-label); letter-spacing: var(--ls-label); color: var(--muted); }
+@media (max-width: 809.98px) {
+  .row { grid-template-columns: minmax(0, 1fr) auto; }
+  .row .meta { grid-column: 1 / -1; }
+}
+.tag { display: inline-block; font-family: var(--font-latin); font-size: var(--fs-label); line-height: 1.6; letter-spacing: var(--ls-label); color: var(--muted); border: 1px solid var(--line); padding: 2px 8px; }
+.dl { display: grid; grid-template-columns: 240px minmax(0, 1fr); margin: 0; border-top: 1px solid var(--line); }
+.dl dt, .dl dd { margin: 0; padding: 20px 0; border-bottom: 1px solid var(--line); }
+.dl dt { font-weight: 500; padding-right: var(--s3); }
+@media (max-width: 809.98px) {
+  .dl { grid-template-columns: minmax(0, 1fr); }
+  .dl dt { padding-bottom: 0; border-bottom: 0; }
+  .dl dd { padding-top: var(--s1); }
+}
+table { width: 100%; border-collapse: collapse; border-top: 1px solid var(--line); }
+th, td { text-align: left; vertical-align: top; padding: 20px var(--s2) 20px 0; border-bottom: 1px solid var(--line); }
+th { font-weight: 500; width: 240px; }
+.table-wrap { overflow-x: auto; }
+.numbers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s4) 20px; }
+.numbers.cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.numbers .value { font-family: var(--font-serif); font-size: var(--fs-h); line-height: var(--lh-h); white-space: nowrap; }
+.numbers .unit { font-size: var(--fs-body); margin-left: .25em; }
+.numbers .note { margin-top: var(--s1); }
+@media (max-width: 809.98px) { .numbers, .numbers.cols-4 { grid-template-columns: minmax(0, 1fr); } }
+.sample-note { border: 1px solid var(--line); padding: var(--s2) var(--s3); margin-bottom: var(--s6); max-width: var(--measure); }
+
+/* ---------- About ---------- */
+.about-fv { min-height: calc(900px - var(--header-h)); display: flex; align-items: center; text-align: center; padding-block: var(--s6); }
+.about-fv .container { display: flex; flex-direction: column; align-items: center; }
+.about-fv-media { width: 588px; max-width: 100%; }
+.about-fv h1 { margin-top: var(--s6); font-weight: 400; }
+.fv-intro { display: block; font-family: var(--font-latin); font-size: var(--fs-item-l); line-height: 31.2px; }
+.fv-title { display: block; font-family: var(--font-serif); font-weight: 400; font-size: var(--fs-fv); line-height: 1; letter-spacing: var(--ls-fv); text-transform: uppercase; }
+.about-fv .fv-title { margin-top: 28px; }
+.about-why .lead { max-width: none; }
+.why-list { --n: 4; list-style: none; margin: var(--s9) 0 0; padding: 0; display: grid; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); gap: var(--s6) 48px; text-align: center; }
+.why-num { display: block; font-family: var(--font-latin); font-size: var(--fs-xl); line-height: var(--lh-xl-num); color: var(--muted); }
+.why-num::after { content: ""; display: block; width: 40px; margin: 12px auto 0; border-top: 1px solid var(--line); }
+.why-title { margin-top: var(--s7); font-size: var(--fs-xl); line-height: var(--lh-xl); font-weight: 500; }
+.why-text { margin: var(--s3) 0 0; font-size: var(--fs-body); line-height: var(--lh-body); text-align: left; }
+.leader-list { list-style: none; margin: 60px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s9) 49px; }
+.leader-media img { object-position: 50% 15%; }
+.leader-name { margin: var(--s4) 0 0; font-family: var(--font-latin); font-size: var(--fs-xl); line-height: var(--lh-xl); }
+.leader-role { margin: 4px 0 0; font-size: var(--fs-label); line-height: 1.6; }
+.leader-text { margin: var(--s4) 0 0; }
+.leader-quote { margin: var(--s6) 0 0; }
+.leader-text > .body-text { margin: 0; }
+.leader-text > .body-text + .body-text { margin-top: var(--s3); }
+.leader-sign { margin: var(--s6) 0 0; }
+.leader-sign img { width: 179px; height: auto; }
+.leader-list.is-single { grid-template-columns: minmax(0, 1fr); }
+.leader-list.is-single > li { display: grid; grid-template-columns: minmax(0, calc((100% - 98px) / 3)) minmax(0, var(--measure)); grid-template-rows: repeat(5, auto) 1fr; column-gap: 49px; align-items: start; }
+.leader-list.is-single > li > :not(.leader-media) { grid-column: 2; }
+.leader-list.is-single .leader-media { grid-column: 1; grid-row: 1 / 7; }
+.leader-list.is-single .leader-name { margin-top: 0; }
+.profile-dl { margin-top: var(--s9); }
+.offices-head { display: grid; grid-template-columns: minmax(0, 48%) minmax(0, 31%); justify-content: space-between; margin-top: var(--s4); }
+.office-list { list-style: none; margin: 0; padding: 0; }
+.office-city { display: block; font-family: var(--font-latin); font-size: var(--fs-ja-h); line-height: var(--lh-ja-h); }
+.office-addr { display: block; font-size: var(--fs-small); line-height: var(--lh-small); margin-bottom: var(--s2); }
+.office-cap { margin: var(--s2) 0 0; }
+.office-cap .office-addr { margin-bottom: 0; }
+.office-photos { display: grid; grid-template-columns: repeat(3, minmax(0, 415px)); justify-content: space-between; column-gap: 44px; margin-top: var(--s7); }
+.office-cols { list-style: none; margin: var(--s7) 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 44px; border-top: 1px solid var(--line); }
+.office-cols li { padding-top: var(--s3); }
+.office-label { display: block; margin-top: var(--s1); font-size: var(--fs-small); line-height: var(--lh-small); }
+.office-cols .office-addr { margin-bottom: 0; }
+@media (max-width: 1023.98px) {
+  .about-fv { min-height: calc(820px - var(--header-h)); }
+  .why-list { grid-template-columns: minmax(0, 1fr); text-align: left; }
+  .why-num::after { margin-left: 0; }
+  .why-title { margin-top: var(--s2); }
+  .leader-list { grid-template-columns: minmax(0, 1fr); }
+  .leader-list.is-single > li { display: block; }
+  .leader-list.is-single .leader-name { margin-top: var(--s4); }
+  .offices-head { grid-template-columns: minmax(0, 1fr); gap: var(--s4); }
+  .office-photos { grid-template-columns: minmax(0, 1fr); gap: var(--s3); }
+  .office-cols { grid-template-columns: minmax(0, 1fr); }
+  .office-cols li + li { margin-top: var(--s4); border-top: 1px solid var(--line); }
+}
+
+/* ---------- Approach ---------- */
+.approach-fv { min-height: calc(900px - var(--header-h)); display: flex; align-items: center; text-align: center; }
+.approach-fv .container { display: flex; flex-direction: column; align-items: center; }
+.approach-fv h1 { font-weight: 400; }
+.approach-fv .lead { margin-inline: auto; }
+.approach-fv .btn { margin-top: var(--s6); }
+.step-list { list-style: none; margin: 0; padding: 0; }
+.step { display: grid; grid-template-columns: minmax(0, 45%) minmax(0, 42%); justify-content: space-between; align-items: center; margin-top: var(--s15); }
+.step-list > .step:first-child { margin-top: 0; }
+.step-media { max-width: 564px; }
+.step-text .label { margin-bottom: var(--s2); }
+.step-sub { margin: var(--s2) 0 0; font-size: var(--fs-small); line-height: var(--lh-small); color: var(--muted); }
+.step-text .body-text { margin: var(--s3) 0 0; }
+@media (max-width: 1023.98px) {
+  .step { grid-template-columns: minmax(0, 1fr); gap: var(--s4); margin-top: var(--s9); }
+  .approach-fv { min-height: calc(700px - var(--header-h)); }
+}
+
+/* ---------- News ---------- */
+.news { padding-top: var(--s6); padding-bottom: calc(var(--section) / 2); }
+.news-tabs { margin-bottom: var(--s9); }
+.news-tabs .news-archive { margin-left: auto; flex: none; white-space: nowrap; display: flex; gap: var(--s2); align-items: center; font-family: var(--font-latin); font-size: var(--fs-tab); line-height: var(--lh-tab); color: var(--muted); }
+.news-tabs .news-archive a { color: var(--muted); }
+.news-feature { list-style: none; margin: 0 0 var(--s9); padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s6) 48px; }
+.news-feature a, .news-row { display: block; text-decoration: none; }
+.news-meta { display: flex; justify-content: space-between; align-items: baseline; gap: var(--s2); margin-top: var(--s3); }
+.news-meta .label { margin: 0; }
+.news-meta .label, .news-meta time { font-family: var(--font-latin); font-weight: 500; font-size: var(--fs-meta); line-height: var(--lh-meta); letter-spacing: var(--ls-label); text-transform: none; color: var(--muted); }
+.news-source { display: block; margin-top: 4px; font-size: var(--fs-src); line-height: var(--lh-src); color: var(--muted); }
+.news-title { display: block; margin-top: var(--s1); font-size: var(--fs-news); line-height: var(--lh-news); }
+.news-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; }
+.news-list > li { border-top: 1px solid var(--line); padding-block: var(--s4) var(--s6); }
+.news-row { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: var(--s4); align-items: start; }
+.news-row .news-meta { margin-top: 0; }
+.news-row .news-title { font-size: var(--fs-body); line-height: var(--lh-body); }
+.news-thumb { width: 160px; }
+.news-row.is-text { grid-template-columns: minmax(0, 1fr); } /* 画像の無い記事は日付・カテゴリー・題名だけ */
+.pager { list-style: none; display: flex; gap: var(--s3); margin: var(--s6) 0 0; padding: 0; font-family: var(--font-latin); }
+.pager a { display: inline-flex; min-width: 32px; min-height: 32px; align-items: center; justify-content: center; text-decoration: none; color: var(--muted); }
+.pager [aria-current] { color: var(--ink); text-decoration: underline; }
+.news-links { display: flex; flex-wrap: wrap; gap: var(--s3); margin-top: var(--s6); font-family: var(--font-latin); font-size: var(--fs-nav); }
+@media (max-width: 1023.98px) {
+  .news-feature, .news-list { grid-template-columns: minmax(0, 1fr); }
+  .news-row { grid-template-columns: 110px minmax(0, 1fr); gap: var(--s2); }
+  .news-thumb { width: 110px; }
+  .pager a, .news-links a { min-height: 44px; min-width: 44px; }
+}
+
+/* ---------- Careers ---------- */
+.careers-head { padding-top: var(--page-top); }
+.careers-grid { display: grid; grid-template-columns: minmax(0, 643px) minmax(0, 495px); justify-content: space-between; align-items: start; gap: var(--s6); }
+.careers-intro { margin-top: var(--s4); }
+.careers-intro .body-text { margin: 0; font-size: var(--fs-lead); line-height: var(--lh-lead); }
+.careers-intro .body-text + .body-text { margin-top: var(--s2); }
+.careers-media { margin-top: 0; }
+@media (min-width: 1024px) and (max-width: 1439.98px) { .careers-grid { grid-template-columns: minmax(0, 48%) minmax(0, 37%); } }
+.positions { padding-top: var(--section); }
+.positions .lead { font-size: var(--fs-small); line-height: var(--lh-small); max-width: 600px; }
+.position-groups { margin-top: var(--s7); border-top: 1px solid var(--line); }
+.position-group { display: grid; grid-template-columns: minmax(0, 34.2%) minmax(0, 1fr); border-bottom: 1px solid var(--line); padding-block: var(--s4) var(--s6); }
+.position-group .label { margin: 0; padding-top: 14px; }
+.position-group ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s4); }
+.position-group a { font-family: var(--font-latin); font-size: var(--fs-item-xl); line-height: var(--lh-item-xl); text-underline-offset: 10px; }
+.position-sub { display: block; }
+.position-note { display: block; font-size: var(--fs-small); line-height: var(--lh-small); color: var(--muted); }
+@media (max-width: 1023.98px) {
+  .careers-grid { grid-template-columns: minmax(0, 1fr); }
+  .careers-intro .body-text { max-width: none; }
+  .position-group { grid-template-columns: minmax(0, 1fr); gap: var(--s3); }
+  .position-group .label { padding-top: 0; }
+}
+
+/* ---------- Contact ---------- */
+.contact { padding-top: var(--page-top); padding-bottom: 200px; }
+.contact-grid { display: grid; grid-template-columns: minmax(0, 590px) minmax(0, 590px); justify-content: space-between; gap: var(--s6); }
+.contact-lead { margin-top: var(--s3); max-width: none; font-size: var(--fs-lead); line-height: var(--lh-lead); }
+.contact-media { margin: 116px 0 0 48px; width: calc(100% - 48px); max-width: 495px; }
+@media (min-width: 1024px) { .contact-side { position: sticky; top: calc(var(--header-h) + var(--s4)); align-self: start; } } /* 左列の見出し・説明をフォームの終わりまで追従させる */
+@media (min-width: 1024px) and (max-width: 1439.98px) { .contact-grid { grid-template-columns: minmax(0, 41.6%) minmax(0, 41.6%); } }
+@media (max-width: 1023.98px) {
+  .contact { padding-bottom: var(--s15); }
+  .contact-grid { grid-template-columns: minmax(0, 1fr); gap: var(--s9); }
+  .contact-media { display: none; }
+}
+
+/* ---------- フォーム（下線入力・ラジオ・枠線テキストエリア・同意チェック・SEND 右寄せ） ---------- */
+.field { margin: 0 0 var(--s7); }
+.field > label, .field .legend, .f-lab label { display: block; font-size: var(--fs-body); line-height: var(--lh-body); font-weight: 400; margin-bottom: 12px; }
+.field .req { margin-left: var(--s1); font-family: var(--font-latin); font-size: var(--fs-label); letter-spacing: var(--ls-label); color: var(--muted); }
+.field input[type="text"], .field input[type="email"], .field input[type="tel"], .field input[type="url"], .field input[type="date"], .field input[type="number"], .field select {
+  width: 100%; height: 35px; padding: 0; border: 0; border-bottom: 1px solid var(--ink); border-radius: 0; background: transparent; color: var(--ink);
+  font: inherit; font-size: var(--fs-input);
+}
+.field input[type="file"] { width: 100%; font-size: var(--fs-small); padding: var(--s1) 0; }
+.file-pick { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s1) var(--s3); }
+.field input[type="file"].file-input { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; opacity: 0; }
+.file-btn { display: inline-flex; align-items: center; min-height: 44px; cursor: pointer; font-family: var(--font-sans); font-size: var(--fs-body); line-height: var(--lh-body); text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
+.file-input:focus-visible + .file-btn { outline: 2px solid var(--black); outline-offset: 2px; }
+.file-name { font-family: var(--font-sans); font-size: var(--fs-small); line-height: var(--lh-small); color: var(--ink); overflow-wrap: anywhere; }
+.field textarea { display: block; width: 100%; height: 300px; padding: 12px; border: 1px solid var(--muted); border-radius: 0; background: transparent; color: var(--ink); font: inherit; font-size: var(--fs-input); resize: vertical; }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline: 2px solid var(--black); outline-offset: 2px; }
+.field .help { margin: var(--s1) 0 0; font-size: var(--fs-small); line-height: var(--lh-small); color: var(--muted); }
+.field .error { margin: var(--s1) 0 0; font-size: var(--fs-small); line-height: var(--lh-small); color: var(--error); }
+.field.is-invalid input, .field.is-invalid select { border-bottom-color: var(--error); }
+.field.is-invalid textarea { border-color: var(--error); }
+fieldset { border: 0; padding: 0; margin: 0 0 var(--s7); min-width: 0; }
+legend { padding: 0; }
+.choices { display: grid; gap: 16px; }
+.choices.stack { display: grid; }
+.choices label { display: flex; align-items: flex-start; gap: 12px; margin: 0; font-size: var(--fs-small); line-height: 24px; cursor: pointer; }
+.choices .help { display: block; margin: 0; }
+input[type="radio"], input[type="checkbox"] { appearance: none; -webkit-appearance: none; flex: none; width: 24px; height: 24px; margin: 0; border: 1px solid var(--muted); background: var(--white); cursor: pointer; display: inline-grid; place-content: center; }
+input[type="radio"] { border-radius: 50%; }
+input[type="radio"]:checked::before { content: ""; width: 12px; height: 12px; border-radius: 50%; background: var(--ink); }
+input[type="checkbox"]:checked::before { content: ""; width: 12px; height: 7px; border-left: 1px solid var(--ink); border-bottom: 1px solid var(--ink); transform: translateY(-2px) rotate(-45deg); }
+.consent { display: flex; align-items: center; gap: 12px; font-size: var(--fs-small); line-height: var(--lh-small); margin: var(--s4) 0 0; }
+.consent label { word-break: auto-phrase; } /* 行末に「す。」だけが残らないように */
+.contact-form form .note { font-size: var(--fs-small); line-height: var(--lh-small); color: var(--ink); margin: var(--s4) 0 0; }
+.contact-form form > .btn, .contact-form form > button[type="submit"], .form-submit { display: flex; margin: var(--s6) 0 0 auto; min-width: 108px; height: var(--submit-h); }
+.field .inline { display: flex; flex-wrap: wrap; gap: var(--s1) var(--s2); align-items: center; }
+.field .inline select, .field .inline input[type="text"] { width: auto; min-width: 7em; }
+.f-lab { display: flex; align-items: baseline; gap: var(--s1); flex-wrap: wrap; }
+.cf-list { margin: 0; border-top: 1px solid var(--line); }
+.cf-list > div { display: grid; grid-template-columns: 240px minmax(0, 1fr); padding: 20px 0; border-bottom: 1px solid var(--line); }
+.cf-list dt { font-weight: 500; padding-right: var(--s3); }
+.cf-list dd { margin: 0; }
+.rep-item + .rep-item { border-top: 1px solid var(--line); padding-top: var(--s3); margin-top: var(--s3); }
+dialog { border: 1px solid var(--line); padding: var(--s4); max-width: min(90vw, 640px); color: var(--ink); background: var(--white); }
+dialog::backdrop { background: var(--black); opacity: .6; }
+@media (max-width: 1023.98px) {
+  .field > label, .field .legend, .f-lab label { font-size: var(--fs-body); }
+  .field input[type="text"], .field input[type="email"], .field input[type="tel"], .field input[type="url"], .field select { height: 44px; }
+  .field textarea { height: 200px; }
+  .choices label { min-height: 44px; align-items: center; }
+  .contact-form form > .btn, .contact-form form > button[type="submit"], .form-submit { margin-right: 0; }
+  .cf-list > div { grid-template-columns: minmax(0, 1fr); gap: var(--s1); }
+}
+
+/* ---------- 404 ---------- */
+.notfound { padding-block: var(--page-top) var(--section); }
+.nf-code { font-family: var(--font-serif); font-size: var(--fs-nf); line-height: 1; margin: 0 0 var(--s6); }
+.nf-links { list-style: none; margin: var(--s6) 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--s1) var(--s4); }
+
+/* ---------- Phone: タップ領域 44px 以上（検品 r1） ---------- */
+@media (max-width: 809.98px) {
+  .u-link, .more, .lang-switch a, .article-nav a { min-height: 44px; }
+  .consent label { display: flex; align-items: center; min-height: 44px; }
+  .consent label a { padding-block: 12px; }
+  .center .btn, .cta-band .btn { margin-inline: auto; }
+}
