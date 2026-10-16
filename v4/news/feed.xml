@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>B supply ニュース</title>
+  <link href="https://bsupply.jp/news/feed.xml" rel="self"/>
+  <link href="https://bsupply.jp/news/"/>
+  <id>https://bsupply.jp/news/</id>
+  <updated>2026-10-16T10:00:00+09:00</updated>
+  <author><name>株式会社B supply</name></author>
+  <entry>
+    <title>ニュースページを開設しました</title>
+    <link href="https://bsupply.jp/news/2026-10-16-news-page-open.html"/>
+    <id>https://bsupply.jp/news/2026-10-16-news-page-open.html</id>
+    <published>2026-10-16T10:00:00+09:00</published>
+    <updated>2026-10-16T10:00:00+09:00</updated>
+    <category term="notice" label="お知らせ"/>
+    <summary>株式会社B supplyのウェブサイトにニュースページを開設しました。</summary>
+  </entry>
+</feed>

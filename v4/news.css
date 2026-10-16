@@ -1,0 +1,140 @@
+/* ═══ NEWS（ニュース一覧・記事）。news/ のページだけが読み込む ═══
+   v3 の .news〜 の型を移植。色・左右の余白・上余白は現行サイト（styles.css）のトークンに合わせる。
+   書体: 見出し英字 Source Serif 4 400／和文 Noto Sans JP 400・500・700／日付・タブ等 Instrument Sans 400・500 */
+.news-main {
+  --news-serif: "Source Serif 4", "Noto Sans JP", serif;
+  --news-latin: "Instrument Sans", "Noto Sans JP", sans-serif;
+  --news-sans: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+  --news-pad: clamp(1.6rem, 5.5vw, 5.5rem);
+  --news-h: 48px; --news-h-lh: 67.2px;
+  --news-ja-h: 32px; --news-ja-h-lh: 51.2px;
+  --news-meta: 16px; --news-meta-lh: 20.8px;
+  --news-card: 22px; --news-card-lh: 35.2px;
+  --news-text: var(--fs-body); --news-text-lh: 1.85;
+  --news-measure: 640px;
+  display: block;
+  letter-spacing: 0;
+}
+@media (max-width: 1023.98px) {
+  .news-main {
+    --news-h: 32px; --news-h-lh: 41.6px;
+    --news-ja-h: 22px; --news-ja-h-lh: 35.2px;
+    --news-meta: 12px; --news-meta-lh: 15.6px;
+    --news-card: 20px; --news-card-lh: 32px;
+  }
+}
+.news-main a { transition: opacity 0.3s; }
+.news-main a:hover { opacity: 0.6; }
+
+/* 見出し「NEWS／ニュース」 */
+.news-head { padding: clamp(8.5rem, 15vw, 13rem) var(--news-pad) 0; }
+.news-h1 { margin: 0; font-weight: 400; }
+.news-h1-en { display: block; font-family: var(--news-serif); font-weight: 400; font-size: var(--news-h); line-height: var(--news-h-lh); letter-spacing: 0; }
+.news-h1-ja { display: block; margin-top: 8px; font-family: var(--news-sans); font-weight: 500; font-size: 14px; line-height: 21px; letter-spacing: 0.04em; }
+
+/* 一覧 */
+.news { padding: 48px var(--news-pad) clamp(6rem, 12vw, 11rem); }
+.news-tabs { list-style: none; margin: 0 0 72px; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 32px; }
+.news-tabs a {
+  display: inline-flex; align-items: center; min-height: 24px;
+  font-family: var(--news-latin); font-weight: 400; font-size: 16px; line-height: 20.8px; letter-spacing: 0;
+  color: var(--gray); white-space: nowrap;
+}
+.news-tabs a[aria-current] { color: var(--ink); }
+.news-tabs .news-archive {
+  margin-left: auto; flex: none; display: flex; gap: 16px; align-items: center; white-space: nowrap;
+  font-family: var(--news-latin); font-size: 16px; line-height: 20.8px; color: var(--gray);
+}
+
+.news-feature { list-style: none; margin: 0 0 72px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; }
+.news-feature a, .news-row { display: block; }
+.news-media { margin: 0; width: 100%; aspect-ratio: 3 / 2; overflow: hidden; background: var(--line); }
+.news-media img { width: 100%; height: 100%; object-fit: cover; }
+.news-media.is-contain { background: var(--bg-soft); }
+.news-media.is-contain img { object-fit: contain; }
+.news-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-top: 24px; }
+.news-meta .news-cat, .news-meta time, .news-meta .news-date {
+  font-family: var(--news-latin); font-weight: 500; font-size: var(--news-meta); line-height: var(--news-meta-lh);
+  letter-spacing: 0.04em; color: var(--gray);
+}
+.news-title { display: block; margin-top: 8px; font-family: var(--news-sans); font-weight: 400; font-size: var(--news-card); line-height: var(--news-card-lh); }
+
+.news-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; }
+.news-list > li { border-top: 1px solid var(--line); padding: 32px 0 48px; }
+.news-row { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 32px; align-items: start; }
+.news-row.is-text { grid-template-columns: minmax(0, 1fr); }
+.news-row .news-meta { margin-top: 0; }
+.news-row .news-title { font-size: var(--news-text); line-height: var(--news-text-lh); }
+.news-thumb { width: 160px; }
+.news-empty { color: var(--gray); }
+.news-links { margin: 48px 0 0; font-family: var(--news-latin); font-size: 13px; letter-spacing: 0.04em; }
+.news-links a { color: var(--gray); text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
+
+@media (max-width: 1023.98px) {
+  .news-feature, .news-list { grid-template-columns: minmax(0, 1fr); }
+  .news-row { grid-template-columns: 110px minmax(0, 1fr); gap: 16px; }
+  .news-thumb { width: 110px; }
+  .news-tabs a { min-height: 44px; }
+  .news-links a { display: inline-flex; align-items: center; min-height: 44px; }
+}
+
+/* 記事 */
+.news-article-head { padding: clamp(8.5rem, 15vw, 13rem) var(--news-pad) 0; }
+.news-eyebrow { display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: baseline; margin: 0 0 12px; }
+.news-eyebrow .news-cat, .news-eyebrow time, .news-eyebrow .news-date {
+  font-family: var(--news-latin); font-weight: 500; font-size: var(--news-meta); line-height: var(--news-meta-lh);
+  letter-spacing: 0.04em; color: var(--gray);
+}
+.news-article-title {
+  margin: 0; max-width: 960px; font-family: var(--news-sans); font-weight: 500;
+  font-size: var(--news-ja-h); line-height: var(--news-ja-h-lh); letter-spacing: 0;
+  word-break: auto-phrase; text-wrap: pretty;
+}
+.news-lead { margin: 24px 0 0; max-width: var(--news-measure); font-size: var(--news-text); line-height: var(--news-text-lh); }
+.news-article-media { aspect-ratio: 16 / 9; width: auto; margin: 72px var(--news-pad) 0; }
+.news-article-body { padding: 72px var(--news-pad) clamp(6rem, 12vw, 11rem); }
+.news-prose { max-width: var(--news-measure); font-family: var(--news-sans); font-size: var(--news-text); line-height: var(--news-text-lh); }
+.news-prose > * { margin: 0 0 24px; }
+.news-prose > :last-child { margin-bottom: 0; }
+.news-prose h2 { font-weight: 500; font-size: var(--news-ja-h); line-height: var(--news-ja-h-lh); margin: 72px 0 24px; }
+.news-prose h3 { font-weight: 500; font-size: 20px; line-height: 32px; margin: 48px 0 16px; }
+.news-prose ul, .news-prose ol { padding-left: 1.2em; }
+.news-prose a { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
+
+.news-box { max-width: var(--news-measure); border-top: 1px solid var(--line); padding-top: 24px; margin-top: 72px; }
+.news-box-title { margin: 0 0 16px; font-family: var(--news-sans); font-weight: 500; font-size: 20px; line-height: 32px; letter-spacing: 0; }
+.news-box p { margin: 0; font-size: var(--news-text); line-height: var(--news-text-lh); }
+.news-dl { display: grid; grid-template-columns: 240px minmax(0, 1fr); margin: 0; border-top: 1px solid var(--line); }
+.news-dl dt, .news-dl dd { margin: 0; padding: 20px 0; border-bottom: 1px solid var(--line); line-height: 1.75; }
+.news-dl dt { font-weight: 500; padding-right: 24px; }
+@media (max-width: 809.98px) {
+  .news-dl { grid-template-columns: minmax(0, 1fr); }
+  .news-dl dt { padding-bottom: 0; border-bottom: 0; }
+  .news-dl dd { padding-top: 8px; }
+}
+
+.news-nw { white-space: nowrap; }
+.news-share { display: flex; flex-wrap: wrap; gap: 24px; margin: 72px 0 0; }
+.news-share a, .news-share button {
+  display: inline-flex; align-items: center; min-height: 32px; padding: 0; border: 0; background: none; cursor: pointer; color: inherit;
+  font-family: var(--news-latin); font-weight: 500; font-size: 13px; line-height: 1.6; letter-spacing: 0.04em;
+  text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px;
+}
+.news-share button:hover { opacity: 0.6; }
+
+.news-pn { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; border-top: 1px solid var(--line); padding-top: 24px; margin-top: 72px; }
+.news-pn .next { text-align: right; }
+.news-pn a { display: block; font-size: 14px; line-height: 21px; }
+.news-pn-label {
+  display: block; margin-bottom: 4px; font-family: var(--news-latin); font-weight: 500; font-size: 12px; line-height: 1.6;
+  letter-spacing: 0.04em; color: var(--gray);
+}
+.news-back { margin: 48px 0 0; }
+.news-back a {
+  display: inline-flex; align-items: center; min-height: 32px;
+  font-family: var(--news-latin); font-weight: 500; font-size: 13px; line-height: 1.6; letter-spacing: 0.04em;
+  text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px;
+}
+@media (max-width: 809.98px) {
+  .news-pn a, .news-back a, .news-share a, .news-share button { min-height: 44px; }
+}

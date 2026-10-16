@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>サービスラインナップ 3案比較 ｜ B supply（社内プレビュー）</title>
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;family=Source+Serif+4:wght@400&amp;family=Zen+Kurenaido&amp;display=swap" rel="stylesheet"/>
+<link rel="icon" type="image/png" href="./assets/img/logo.png" />
+<link rel="stylesheet" href="./styles.css?v=20261017" />
+<style>
+  .opt-divider {
+    background: var(--ink);
+    color: #fff;
+    padding: clamp(2.4rem, 4.6vw, 4rem) clamp(1.6rem, 5.5vw, 5.5rem);
+    display: flex; align-items: baseline; gap: 1.6rem; flex-wrap: wrap;
+  }
+  .opt-divider b { font-family: var(--en); font-size: clamp(2rem, 4.4vw, 3.4rem); font-weight: 700; }
+  .opt-divider span { font-size: clamp(0.95rem, 1.6vw, 1.15rem); font-weight: 700; letter-spacing: 0.06em; }
+  .opt-divider small { flex-basis: 100%; color: rgba(255,255,255,0.6); font-size: 0.85rem; letter-spacing: 0.05em; }
+  .opt-note {
+    max-width: 56rem;
+    font-size: var(--fs-small);
+    color: var(--gray);
+    border: 1px dashed var(--gray-2);
+    padding: 1.1rem 1.4rem;
+    margin-bottom: clamp(2.4rem, 4.6vw, 3.6rem);
+    line-height: 2;
+  }
+
+  /* ── 案A ── */
+  .ca-cat { border-top: 1px solid var(--ink); padding: clamp(2rem, 4vw, 3.2rem) 0; }
+  .ca-head { display: grid; grid-template-columns: 4rem 1fr; gap: clamp(1rem, 2.4vw, 2.4rem); margin-bottom: 1.6rem; }
+  .ca-no { font-family: var(--en); font-weight: 600; font-size: 0.95rem; color: var(--gray-2); letter-spacing: 0.1em; }
+  .ca-head h3 { font-weight: 900; font-size: clamp(1.5rem, 3vw, 2.3rem); letter-spacing: 0.05em; }
+  .ca-head .ca-en { display: block; font-family: var(--en); font-weight: 600; font-size: 0.82rem; letter-spacing: 0.2em; color: var(--gray-2); margin-top: 0.3rem; }
+  .ca-head p { margin-top: 0.9rem; color: var(--ink-70); font-size: var(--fs-small); max-width: 44rem; line-height: 2; }
+  .ca-subs { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(0.8rem, 1.6vw, 1.3rem); margin-left: clamp(0rem, 5vw, 5rem); }
+  .ca-sub { border: 1px solid var(--line); padding: 1.2rem 1.4rem; background: var(--bg); }
+  .ca-sub b { display: block; font-size: 1rem; font-weight: 700; letter-spacing: 0.03em; }
+  .ca-sub i { display: block; font-style: normal; font-family: var(--en); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.14em; color: var(--gray-2); margin: 0.15rem 0 0.5rem; }
+  .ca-sub p { font-size: 0.83rem; color: var(--gray); line-height: 1.9; }
+  @media (max-width: 760px) { .ca-subs { grid-template-columns: 1fr; margin-left: 0; } }
+
+  /* ── 案C ── */
+  .cc-umbrella { max-width: 56rem; margin-bottom: clamp(2.6rem, 5vw, 4rem); }
+  .cc-umbrella h3 { font-weight: 900; font-size: clamp(1.8rem, 3.8vw, 3rem); letter-spacing: 0.04em; }
+  .cc-umbrella .cc-en { font-family: var(--en); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.2em; color: var(--gray-2); }
+  .cc-umbrella p { margin-top: 1.2rem; color: var(--ink-70); line-height: 2.2; font-size: var(--fs-small); }
+  .cc-matrix { border: 1px solid var(--ink); overflow-x: auto; }
+  .cc-table { width: 100%; border-collapse: collapse; min-width: 860px; }
+  .cc-table th, .cc-table td { border: 1px solid var(--line); padding: 1.1rem 1.2rem; vertical-align: top; text-align: left; }
+  .cc-table thead th { background: var(--ink); color: #fff; border-color: rgba(255,255,255,0.2); }
+  .cc-table thead b { font-weight: 900; font-size: 1.05rem; letter-spacing: 0.1em; display: block; }
+  .cc-table thead i { font-style: normal; font-family: var(--en); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.2em; color: rgba(255,255,255,0.55); }
+  .cc-table thead small { display: block; font-weight: 400; font-size: 0.72rem; color: rgba(255,255,255,0.65); margin-top: 0.3rem; }
+  .cc-theme b { display: block; font-weight: 900; font-size: 1.02rem; letter-spacing: 0.06em; }
+  .cc-theme i { font-style: normal; font-family: var(--en); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.16em; color: var(--gray-2); }
+  .cc-table td ul { list-style: none; }
+  .cc-table td li { font-size: 0.82rem; color: var(--ink-70); padding: 0.18rem 0 0.18rem 1rem; position: relative; line-height: 1.8; }
+  .cc-table td li::before { content: ""; position: absolute; left: 0.1rem; top: 0.75rem; width: 4px; height: 4px; background: var(--ink); }
+  .cc-self { background: var(--bg-soft); }
+  .cc-self li::before { background: var(--gray-2); }
+  .cc-self .cc-badge { display: inline-block; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.14em; background: var(--ink); color: #fff; padding: 0.12rem 0.5rem; margin-bottom: 0.4rem; }
+  .cc-leads { margin-top: clamp(2rem, 4vw, 3rem); display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(1rem, 2vw, 1.6rem); }
+  .cc-lead { border-top: 1px solid var(--ink); padding-top: 1rem; }
+  .cc-lead b { display: block; font-weight: 900; font-size: 0.98rem; margin-bottom: 0.4rem; }
+  .cc-lead p { font-size: 0.83rem; color: var(--gray); line-height: 1.95; }
+  @media (max-width: 700px) { .cc-leads { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body class="subpage">
+
+<header class="site-header light" id="siteHeader">
+  <a class="brand" href="./"><img class="brand-mark" src="./assets/img/logo.png" alt="" />B supply</a>
+  <nav>
+    <a href="./consulting.html">現行のConsultingページへ戻る</a>
+  </nav>
+</header>
+<div class="progress" aria-hidden="true"><i id="progressBar"></i></div>
+
+<main>
+  <section class="page-hero">
+    <p class="sec-label"><i>INTERNAL PREVIEW</i>SERVICE LINEUP <span class="sl-sep">──</span> 3案比較</p>
+    <h1 class="page-title">サービスラインナップ、3つの見せ方。</h1>
+    <p class="sec-lede">下にスクロールすると、案A（階層型）→ 案B（フラット7型）→ 案C（マトリクス型）の順に、実デザインで確認できます。採用する案の記号をお知らせください。</p>
+  </section>
+
+  <!-- ═══════════ 案A ═══════════ -->
+  <div class="opt-divider">
+    <b>A</b><span>階層型 ── 大分類4×サブサービス12（アビーム／ベイカレント型）</span>
+    <small>狙い：抽象層で大手ファームの「構え」を見せ、具体層で実績を検索の受け皿にする ／ リスク：少数精鋭で12個は「全部できるのか」と見られうる</small>
+  </div>
+  <section class="section">
+    <div class="ca-cat">
+      <div class="ca-head">
+        <span class="ca-no">01</span>
+        <div>
+          <h3>戦略<span class="ca-en">STRATEGY</span></h3>
+          <p>環境が変わる速度に、年に一度の計画では追いつかない。B supplyは、意思決定に使える解像度まで戦略を磨き込みます。</p>
+        </div>
+      </div>
+      <div class="ca-subs">
+        <div class="ca-sub"><b>中期経営計画策定</b><i>MID-TERM BUSINESS PLANNING</i><p>数字の積み上げだけの中計は、初年度で形骸化する。投資家にも現場にも通用する、実行可能な計画を設計します。</p></div>
+        <div class="ca-sub"><b>新規事業開発（0→1）</b><i>NEW BUSINESS DEVELOPMENT</i><p>アイデアはあるが、事業になる前に止まる。仮説検証から立ち上げ実務まで、0→1の全工程を伴走します。</p></div>
+        <div class="ca-sub"><b>SaaS・GTM戦略</b><i>SAAS &amp; GO-TO-MARKET</i><p>プロダクトは良いのに、売れる仕組みがない。価格・チャネル・営業設計まで、市場投入の全体を描きます。</p></div>
+        <div class="ca-sub"><b>事業再生</b><i>TURNAROUND</i><p>赤字の原因は、たいてい社内の誰もが薄々知っている。数字と現場の両面から、再生の道筋を引き直します。</p></div>
+      </div>
+    </div>
+    <div class="ca-cat">
+      <div class="ca-head">
+        <span class="ca-no">02</span>
+        <div>
+          <h3>M&amp;A・投資<span class="ca-en">M&amp;A &amp; INVESTMENT</span></h3>
+          <p>買うと決めてから考えるM&amp;Aは、高くつく。戦略・DD・買収後まで、投資の全プロセスに当事者目線で入ります。</p>
+        </div>
+      </div>
+      <div class="ca-subs">
+        <div class="ca-sub"><b>M&amp;A戦略・ビジネスDD</b><i>M&amp;A STRATEGY &amp; BUSINESS DD</i><p>IMの数字は、買い手のために作られている。事業の実態を現場レベルで検証し、買っていい案件かを見極めます。</p></div>
+        <div class="ca-sub"><b>ロールアップ戦略</b><i>ROLL-UP STRATEGY</i><p>1社買うことと、買い続けて統合することは別の技術。連続買収を前提とした設計と実行体制を構築します。</p></div>
+        <div class="ca-sub"><b>承継・PMI支援</b><i>SUCCESSION &amp; PMI</i><p>買収成立はゴールではなく初日。自ら事業承継を経験した当事者として、統合初期の泥臭い実務まで支えます。</p></div>
+      </div>
+    </div>
+    <div class="ca-cat">
+      <div class="ca-head">
+        <span class="ca-no">03</span>
+        <div>
+          <h3>グロース実行<span class="ca-en">GROWTH EXECUTION</span></h3>
+          <p>「戦略はある。動く人がいない」——成長が止まる理由の多くはここにある。私たちは手を動かすところまでやります。</p>
+        </div>
+      </div>
+      <div class="ca-subs">
+        <div class="ca-sub"><b>営業戦略・営業代行</b><i>SALES STRATEGY &amp; OPERATIONS</i><p>営業計画が未達で終わるのは、戦略と現場の間に誰もいないから。設計から商談の最前線まで一体で担います。</p></div>
+        <div class="ca-sub"><b>マーケティング運用代行</b><i>MARKETING OPERATIONS</i><p>施策は打っているが、成果につながっているか誰も説明できない。数字で語れるマーケ運用に組み替えます。</p></div>
+        <div class="ca-sub"><b>採用戦略・採用代行</b><i>RECRUITING STRATEGY &amp; RPO</i><p>採れないのは母集団の問題ではなく、設計の問題であることが多い。要件定義から面接運用まで代行します。</p></div>
+      </div>
+    </div>
+    <div class="ca-cat" style="border-bottom:1px solid var(--ink)">
+      <div class="ca-head">
+        <span class="ca-no">04</span>
+        <div>
+          <h3>経営基盤<span class="ca-en">CORPORATE FOUNDATION</span></h3>
+          <p>感覚で経営できる規模には、限界がある。意思決定を支える数字と機能を、社内に実装します。</p>
+        </div>
+      </div>
+      <div class="ca-subs">
+        <div class="ca-sub"><b>管理会計・KPI構築</b><i>MANAGEMENT ACCOUNTING &amp; KPI</i><p>売上は見えるが、どこで儲かっているかは見えない。意思決定に直結する管理会計とKPIを設計します。</p></div>
+        <div class="ca-sub"><b>経営企画代行</b><i>CORPORATE PLANNING AS A SERVICE</i><p>経営企画を置きたいが、一人分の仕事量ではない。必要な分だけ、経営企画機能そのものを担います。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 案B ═══════════ -->
+  <div class="opt-divider">
+    <b>B</b><span>フラット7型 ── 課題起点カード（プロレド型）</span>
+    <small>狙い：実績16件を嘘なく全カバーする等身大の粒度。全カードで「実行まで」を反復訴求 ／ リスク：独自性は3案中最も低い</small>
+  </div>
+  <section class="section" style="background:var(--bg-soft)">
+    <div class="svc-grid" style="grid-template-columns:repeat(2,1fr);max-width:72rem">
+      <article class="svc-card"><span class="svc-en">CORPORATE &amp; BUSINESS STRATEGY</span><h3>経営・事業戦略</h3><p>戦略が実行されない最大の理由は、作った人が実行しないことにあります。B supplyは自ら事業を経営する当事者として、机上で終わらない戦略を、実行体制とセットで設計します。</p><div class="svc-tags"><span>中期経営計画</span><span>事業戦略</span><span>生成AI市場調査</span><span>事業再生</span></div></article>
+      <article class="svc-card"><span class="svc-en">NEW BUSINESS DEVELOPMENT</span><h3>新規事業 0→1</h3><p>新規事業の失敗の多くは、検証の前に作り込みすぎることから始まります。最小の仮説検証から市場投入、初期グロースまで、0→1の全工程を専任チームで伴走します。</p><div class="svc-tags"><span>事業仮説検証</span><span>GTM戦略</span><span>MVP立ち上げ</span></div></article>
+      <article class="svc-card"><span class="svc-en">M&amp;A &amp; ROLL-UP</span><h3>M&amp;A・ロールアップ</h3><p>デューデリジェンスの結論が「概ね良好」で終わる報告書に、意味はありません。買い手の立場で事業の急所を検証し、買収後の統合・連続買収まで見据えた投資判断を支えます。</p><div class="svc-tags"><span>M&amp;A戦略</span><span>ビジネスDD</span><span>PMI</span><span>事業承継</span></div></article>
+      <article class="svc-card"><span class="svc-en">SALES STRATEGY &amp; OPERATIONS</span><h3>セールス</h3><p>「良い商品なのに売れない」の原因は、ほぼ営業プロセスの設計にあります。営業戦略の策定にとどまらず、商談の最前線に立って受注を作り、再現可能な仕組みとして残します。</p><div class="svc-tags"><span>営業戦略策定</span><span>営業代行</span><span>営業組織構築</span></div></article>
+      <article class="svc-card"><span class="svc-en">MARKETING STRATEGY &amp; OPERATIONS</span><h3>マーケティング</h3><p>広告費は増えているのに、どの施策が効いたのか誰も答えられない——多くの企業のマーケの実態です。戦略から日々の運用まで引き受け、数字で説明できる状態に変えます。</p><div class="svc-tags"><span>マーケ戦略</span><span>運用代行</span><span>EC・D2C</span></div></article>
+      <article class="svc-card"><span class="svc-en">RECRUITING &amp; ORGANIZATION</span><h3>採用・組織</h3><p>事業計画は人が採れる前提で作られ、そして人は計画どおりに採れません。事業から逆算した採用要件の設計から、スカウト・面接の実務代行まで、採用機能を丸ごと担います。</p><div class="svc-tags"><span>採用戦略</span><span>採用代行（RPO）</span><span>組織設計</span></div></article>
+      <article class="svc-card"><span class="svc-en">MANAGEMENT ACCOUNTING &amp; PLANNING</span><h3>経営管理</h3><p>月次決算は締まっているのに、経営の意思決定には使われていない。管理会計・KPIの設計から経営会議の運営まで、「数字で経営する」ための機能を社内に実装し、代行します。</p><div class="svc-tags"><span>管理会計構築</span><span>KPI設計</span><span>経営企画代行</span></div></article>
+    </div>
+  </section>
+
+  <!-- ═══════════ 案C ═══════════ -->
+  <div class="opt-divider">
+    <b>C</b><span>マトリクス型 ── テーマ4×関与の深さ3（独自案・本命）</span>
+    <small>狙い：「代行までやる」差別化が構造そのものになる。予算が小さい企業は「描く」から、リソース不足の企業は「担う」から入れる2方向導線 ／ リスク：実装・コピーの磨き込み難度は最高</small>
+  </div>
+  <section class="section">
+    <div class="cc-umbrella">
+      <span class="cc-en">MANAGEMENT IMPLEMENTATION</span>
+      <h3>経営実装</h3>
+      <p>戦略を描くことと、経営が変わることの間には、長い距離がある。B supplyは戦略の策定から実行の伴走、経営機能の代行までを一体で担い、成果をクライアントの経営に実装する。自ら事業を経営する当事者だから、絵に描いた戦略で終わらせない。</p>
+    </div>
+    <div class="cc-matrix">
+      <table class="cc-table">
+        <thead>
+          <tr>
+            <th style="width:17%"></th>
+            <th style="width:28%"><b>描く</b><i>DESIGN</i><small>戦略・計画の策定</small></th>
+            <th style="width:28%"><b>動かす</b><i>DRIVE</i><small>実行の伴走・立ち上げ</small></th>
+            <th style="width:27%"><b>担う</b><i>DELIVER</i><small>機能そのものの代行</small></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cc-theme"><b>事業と戦略</b><i>BUSINESS &amp; STRATEGY</i></td>
+            <td><ul><li>中期経営計画</li><li>事業戦略</li><li>市場調査（生成AI等）</li></ul></td>
+            <td><ul><li>新規事業0→1の伴走</li><li>事業再生の実行</li></ul></td>
+            <td><ul><li>経営企画代行</li></ul></td>
+          </tr>
+          <tr>
+            <td class="cc-theme"><b>M&amp;Aと投資</b><i>M&amp;A &amp; INVESTMENT</i></td>
+            <td><ul><li>M&amp;A戦略</li><li>ロールアップ設計</li></ul></td>
+            <td><ul><li>ビジネスDD</li><li>PMI伴走</li></ul></td>
+            <td class="cc-self"><span class="cc-badge">自社実践</span><ul><li>承継後の事業経営（革製造事業）</li></ul></td>
+          </tr>
+          <tr>
+            <td class="cc-theme"><b>売上と顧客</b><i>REVENUE &amp; CUSTOMER</i></td>
+            <td><ul><li>GTM戦略</li><li>営業戦略・マーケ戦略</li></ul></td>
+            <td><ul><li>営業立ち上げ</li><li>施策の実行伴走</li></ul></td>
+            <td><ul><li>営業代行</li><li>マーケ運用代行</li></ul></td>
+          </tr>
+          <tr>
+            <td class="cc-theme"><b>組織と数字</b><i>PEOPLE &amp; NUMBERS</i></td>
+            <td><ul><li>採用戦略</li><li>管理会計・KPI設計</li></ul></td>
+            <td><ul><li>KPI運用の定着</li><li>採用プロセス構築</li></ul></td>
+            <td><ul><li>採用代行（RPO）</li></ul></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="cc-leads">
+      <div class="cc-lead"><b>事業と戦略</b><p>立派な戦略資料が、翌月には誰にも開かれなくなる。策定・伴走・代行のどこからでも、経営が実際に変わるところまで入り込みます。</p></div>
+      <div class="cc-lead"><b>M&amp;Aと投資</b><p>M&amp;Aの成否は契約書ではなく、買収後の1年で決まる。自ら事業承継を実行した当事者の目で、投資判断から統合後まで支えます。</p></div>
+      <div class="cc-lead"><b>売上と顧客</b><p>「戦略はできた、あとは現場で」——その引き継ぎの瞬間に、多くの成長戦略は死んでいる。私たちは受注を作るところまで降ります。</p></div>
+      <div class="cc-lead"><b>組織と数字</b><p>人と数字は、経営の両輪でありながら最も後回しにされる。採用と管理会計、どちらも設計から実務代行まで一気通貫で担います。</p></div>
+    </div>
+  </section>
+
+  <section class="finale" style="min-height:auto;padding-top:clamp(3rem,6vw,5rem)">
+    <div class="fin-inner">
+      <p class="sec-label center">DECISION</p>
+      <p style="font-weight:700;font-size:clamp(1.05rem,1.9vw,1.3rem)">採用する案（A / B / C）をチャットでお知らせください。<br>選定後、consulting.html に本実装します。</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer ft2">
+<div class="ft-top">
+<div class="ft-col"><span class="ft-brand"><img alt="" class="ft-mark" src="./assets/img/logo.png"/>B supply</span><p class="ft-tag">想いを紡ぎ、新たな価値を創る</p><a class="ft-cta" href="./contact.html">お問い合わせ<em>→</em></a></div>
+<div class="ft-col"><p class="ft-h">SITEMAP</p><nav class="ft-links"><a href="./">トップ</a><a href="./consulting.html">コンサルティング</a><a href="./manufacturing.html">事業投資・承継</a><a href="./news/">ニュース</a><a href="./recruit.html">採用情報</a><a href="./company.html">会社情報</a><a href="./contact.html">お問い合わせ</a></nav></div>
+<div class="ft-col"><p class="ft-h">COMPANY</p><p class="ft-addr"><b>株式会社B supply</b><br/>本社　大阪府摂津市千里丘6丁目2番24号 エヴァ摂津II<br/>東京支店（革製造工房）　東京都墨田区向島3-13-2 サンタ愛ランド1階</p></div>
+<div class="ft-col"><p class="ft-h">LEGAL</p><nav class="ft-links"><a href="./privacy.html">プライバシーポリシー</a></nav></div>
+</div>
+<div aria-hidden="true" class="ft-word">B supply</div>
+<div class="ft-bottom"><span class="ft-copy">© 2026 B SUPPLY INC.</span><span class="ft-lang"><a href="./en/" lang="en">EN</a><span>/</span><a class="cur" href="./" lang="ja">日本語</a></span></div>
+</footer>
+
+<script src="./app.js?v=20260916c" defer></script>
+</body>
+</html>
