@@ -3276,3 +3276,19 @@ body:has(.msg-layout) main { background: var(--bg-soft); }
 .si-head .sec-label { grid-column: 1 / -1; }
 .si-title { grid-column: 1; }
 .si-count { grid-column: 2; }
+@media (min-width: 901px) {
+  .msgp { padding-left: clamp(3rem, 9vw, 11rem); padding-right: clamp(2rem, 6vw, 7rem); }
+  .msgp-photo { top: clamp(6rem, 9vw, 8rem); right: clamp(1rem, 5vw, 6rem); width: clamp(420px, 40vw, 640px); height: clamp(560px, 46vw, 760px); object-position: 50% 8%;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, rgba(0,0,0,.55) 28%, #000 55%), linear-gradient(to bottom, #000 60%, transparent 100%);
+    -webkit-mask-composite: source-in; mask-image: linear-gradient(to right, transparent 0, rgba(0,0,0,.55) 28%, #000 55%), linear-gradient(to bottom, #000 60%, transparent 100%); mask-composite: intersect; opacity: .9; }
+  .msgp-fade { display: none; }
+  .msgp-in { max-width: min(48rem, 64%); }
+}
+@media (min-width: 901px) {
+  .msgp-photo { -webkit-mask-image: radial-gradient(ellipse 58% 62% at 58% 40%, #000 52%, transparent 100%); mask-image: radial-gradient(ellipse 58% 62% at 58% 40%, #000 52%, transparent 100%); -webkit-mask-composite: source-over; mask-composite: add; right: clamp(0rem, 3vw, 4rem); opacity: .85; }
+  .msgp-in { max-width: min(52rem, 70%); }
+}
+@media (min-width: 901px) {
+  .msgp .msgp-body.msg-body { max-width: 47em; }
+  .msgp-photo { right: clamp(1rem, 6vw, 8rem); }
+}
