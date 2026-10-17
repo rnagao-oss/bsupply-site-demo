@@ -3133,3 +3133,11 @@ main :where(p, li, dd):where(:lang(ja)) { max-width: 40em; }
 .bd-other-ja { margin: .35rem 0 0; }
 html:lang(en) .bd-other-ja { display: none; }
 .bd-after-hero .sec-lede { margin-top: 0; max-width: 46rem; font-size: clamp(1.02rem, 1.4vw, 1.15rem); line-height: 2.05; color: var(--ink); }
+
+/* 代表メッセージ：黒地に白文字 */
+.msg-dark, .message.msg-dark { background: #0f0f0f; color: #fff; }
+.msg-dark .sec-label, .msg-dark .page-title { color: #fff; }
+.msg-dark .msg-body p { color: rgba(255,255,255,.86); }
+.msg-dark .ms-sign { filter: invert(1); }
+.page-hero.msg-dark { margin-bottom: 0; padding-bottom: clamp(2.6rem, 5vw, 4rem); }
+.message.msg-dark { padding-bottom: clamp(5rem, 10vw, 8rem); }
