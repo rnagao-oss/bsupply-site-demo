@@ -2993,3 +2993,5 @@ main :where(p, li, dd):where(:lang(ja)) { max-width: 40em; }
 /* TOMOTAKE と同じ値のオーバーレイ（暗幕のグラデーション＋4pxの網点） */
 .hero-video .hero-shade { background: linear-gradient(rgba(20,20,20,.42) 0%, rgba(20,20,20,.12) 34%, rgba(20,20,20,.8) 100%), linear-gradient(90deg, rgba(20,20,20,.42) 0%, rgba(20,20,20,0) 58%); }
 .hero-mesh { position: absolute; inset: 0; pointer-events: none; background-image: radial-gradient(circle, rgba(0,0,0,.35) .8px, rgba(0,0,0,0) 1.1px); background-size: 4px 4px; }
+
+.hero-mesh { background-image: radial-gradient(circle, rgba(0,0,0,.16) .8px, rgba(0,0,0,0) 1.1px); }
