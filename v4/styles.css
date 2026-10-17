@@ -3189,3 +3189,9 @@ html:lang(en) .hero-en { display: none; }
   .msg-layout { grid-template-columns: 1fr; gap: 2.4rem; }
   .msg-aside-in { position: static; }
 }
+/* 代表メッセージ：白背景に戻す */
+.msg-layout { background: var(--bg); color: var(--ink); }
+.msg-layout .sec-label { color: var(--ink); }
+.msg-layout .page-title { color: var(--ink); }
+.msg-main .msg-body p { color: var(--ink); }
+.msg-layout .ms-sign { filter: none; }
