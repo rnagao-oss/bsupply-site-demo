@@ -3173,3 +3173,19 @@ html:lang(en) .bd-other-ja { display: none; }
 }
 .hero-en { margin: clamp(.9rem, 1.8vw, 1.5rem) 0 0; font-family: var(--en); font-weight: 600; font-size: clamp(1.3rem, 2.6vw, 2.4rem); letter-spacing: -.005em; line-height: 1.2; color: #fff; text-shadow: 0 2px 24px rgba(0,0,0,.35); }
 html:lang(en) .hero-en { display: none; }
+
+/* 代表メッセージ（PC：左に見出し、右に大きめの本文） */
+.msg-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.75fr); gap: clamp(3rem, 7vw, 8rem); padding: clamp(9rem, 14vw, 12rem) clamp(1.6rem, 6vw, 7rem) clamp(6rem, 11vw, 10rem); background: #0f0f0f; color: #fff; }
+.msg-aside-in { position: sticky; top: 130px; }
+.msg-layout .sec-label { color: rgba(255,255,255,.7); }
+.msg-layout .page-title { margin: 1rem 0 0; color: #fff; font-size: clamp(2.2rem, 3.8vw, 3.6rem); }
+.msg-name { margin: 2.6rem 0 0; font-size: .95rem; font-weight: 500; color: #fff; line-height: 1.9; }
+.msg-name span { display: block; font-size: .8rem; color: rgba(255,255,255,.6); }
+.msg-main .msg-body { max-width: 40em; }
+.msg-main .msg-body p { font-size: clamp(1rem, 1.25vw, 1.18rem); line-height: 2.25; color: rgba(255,255,255,.88); letter-spacing: .03em; }
+.msg-main .msg-body p + p { margin-top: 2rem; }
+.msg-main .msg-sign2 { margin-top: 3rem; }
+@media (max-width: 960px) {
+  .msg-layout { grid-template-columns: 1fr; gap: 2.4rem; }
+  .msg-aside-in { position: static; }
+}
