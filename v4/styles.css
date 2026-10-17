@@ -3197,3 +3197,16 @@ html:lang(en) .hero-en { display: none; }
 .msg-layout .ms-sign { filter: none; }
 .msg-layout { background: var(--bg-soft); }
 body:has(.msg-layout) main { background: var(--bg-soft); }
+
+/* 代表メッセージ v3：写真ヒーロー＋左に一言、右に本文（白基調） */
+.msg-hero { height: clamp(380px, 62vh, 640px); }
+.msg-v3 { background: #fff; padding-top: clamp(5rem, 9vw, 8rem); position: relative; }
+.msg-v3::before { content: ""; position: absolute; top: clamp(5rem, 9vw, 8rem); bottom: clamp(6rem, 11vw, 10rem); left: calc(clamp(1.6rem, 6vw, 7rem) + (100% - 2 * clamp(1.6rem, 6vw, 7rem)) * 0.3636 + clamp(1.5rem, 3.5vw, 4rem)); width: 1px; background: var(--line); }
+.msg-kicker { margin: 0; font-family: var(--en); font-size: .76rem; letter-spacing: .16em; color: var(--ink-70); }
+.msg-catch { margin: 1.4rem 0 0; font-weight: 700; font-size: clamp(1.7rem, 2.6vw, 2.4rem); line-height: 1.6; letter-spacing: .04em; color: var(--ink); }
+.msg-catch .line { display: block; }
+.msg-v3 .msg-main .msg-body p:first-child { font-size: clamp(1.1rem, 1.45vw, 1.32rem); font-weight: 500; line-height: 2.1; }
+.msg-photo { margin: 3rem 0; }
+.msg-photo img { width: 100%; aspect-ratio: 16 / 9.5; object-fit: cover; object-position: 50% 32%; display: block; }
+.msg-v3 .msg-sign2 { display: flex; justify-content: flex-end; margin-top: 3.4rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+@media (max-width: 960px) { .msg-v3::before { display: none; } }
