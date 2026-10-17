@@ -3441,3 +3441,13 @@ a.structure .sn-item:hover, .structure a.sn-item:hover { background: #fff; box-s
 .rs-card { border-radius: var(--r) !important; }
 .rc-alt .jb-row { background: #fff; }
 .eq-grid { gap: 10px !important; }
+/* 代表メッセージ：写真を少し小さく本文に寄せ、ぼかしを上下左右で均一に */
+@media (min-width: 901px) {
+  .msgp { --pl: clamp(1.6rem, 6vw, 7rem); --tw: min(46rem, calc((100vw - 2 * var(--pl)) * .58)); --pw: min(44vw, 760px); }
+  .msgp-fade { display: none; }
+  .msgp-photo { left: calc(var(--pl) + var(--tw) - 1rem); right: auto; top: clamp(5rem, 7vw, 6.5rem); width: var(--pw); height: calc(var(--pw) * .95); object-position: 50% 12%; opacity: .8;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 24%, #000 84%, transparent 100%), linear-gradient(to bottom, transparent 0, #000 10%, #000 88%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(to right, transparent 0, #000 24%, #000 84%, transparent 100%), linear-gradient(to bottom, transparent 0, #000 10%, #000 88%, transparent 100%);
+    mask-composite: intersect; }
+}
