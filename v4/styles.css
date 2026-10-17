@@ -3593,3 +3593,5 @@ html:lang(en) .case-meta dt::after { content: ":"; }
   .cv-list { display: grid; }
   .cv-item h3 { white-space: nowrap; width: 19em; }
 }
+.tl-track { grid-auto-rows: 1fr; } .tl-item { height: 100%; box-sizing: border-box; }
+.tl-item { align-content: start; }
