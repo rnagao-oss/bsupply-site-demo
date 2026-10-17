@@ -3595,3 +3595,23 @@ html:lang(en) .case-meta dt::after { content: ":"; }
 }
 .tl-track { grid-auto-rows: 1fr; } .tl-item { height: 100%; box-sizing: border-box; }
 .tl-item { align-content: start; }
+
+/* 会社概要 v3：中央1列・見出しは表の上・全行同じ高さ・十分な間隔 */
+.co-wrap { display: block !important; max-width: 1080px; margin: 0 auto; }
+.co-head { margin-bottom: clamp(1.8rem, 3vw, 2.6rem); }
+.co-head .sec-label { font-size: .8rem; letter-spacing: .14em; }
+.co-title { font-size: clamp(2rem, 3vw, 2.6rem) !important; margin-top: .6rem !important; }
+.co-wrap .co-table { display: grid !important; gap: 12px !important; }
+.co-wrap .co-table > div { display: grid !important; grid-template-columns: 12rem minmax(0, 1fr) !important; align-items: center; min-height: 84px; padding: 0 2.4rem !important; border-radius: 14px; }
+.co-wrap .co-table dt { font-size: 1rem !important; font-weight: 500 !important; color: var(--ink-70) !important; letter-spacing: .04em !important; }
+.co-wrap .co-table dd { font-size: 1.06rem !important; font-weight: 500; color: var(--ink); letter-spacing: .03em; line-height: 1.7; margin: 0; }
+@media (max-width: 760px) {
+  .co-wrap .co-table > div { grid-template-columns: 1fr !important; align-items: start; min-height: 0; padding: 1.1rem 1.4rem !important; row-gap: .3rem; }
+}
+.co-wrap .co-table dt, .co-wrap .co-table dd { line-height: 1.7 !important; max-width: none !important; }
+.co-wrap .co-table > div { grid-template-columns: 10.5rem minmax(0, 1fr) !important; }
+.co-wrap .co-table dd { letter-spacing: .01em !important; }
+/* ヘッダーメニューを一回り大きく */
+.site-header nav, .site-header nav a, .site-header nav .nav-cta, .site-header .lang-sw2 a { font-size: 1.06rem !important; }
+.site-header nav { gap: clamp(1.1rem, 2.2vw, 2.3rem) !important; }
+.site-header nav .nav-cta { padding: .62rem 1.45rem !important; }
