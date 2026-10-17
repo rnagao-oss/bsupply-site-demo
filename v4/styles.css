@@ -3451,3 +3451,33 @@ a.structure .sn-item:hover, .structure a.sn-item:hover { background: #fff; box-s
     mask-image: linear-gradient(to right, transparent 0, #000 24%, #000 84%, transparent 100%), linear-gradient(to bottom, transparent 0, #000 10%, #000 88%, transparent 100%);
     mask-composite: intersect; }
 }
+
+/* Business：カードを中央に（左右の余白を均等に） */
+.bx-layout { display: block; padding-top: clamp(7.5rem, 11vw, 9.5rem); }
+.bx-layout .bx-grid { max-width: 1180px; margin: 0 auto; }
+/* トップ：中小企業の一文は1行で */
+@media (min-width: 1100px) { .wm-note { max-width: none !important; white-space: nowrap; } }
+/* トップ：5事業の循環図 */
+.orbit-wrap { max-width: 640px; }
+.orbit5 .orbit-ring, .orbit5 .orbit-ring2, .orbit5 .orbit-rot { transform-origin: 320px 320px; }
+.orbit5 .orbit-ring { animation-duration: 10s; }
+.orbit5 .orbit-ring2 { animation-duration: 16s; }
+.orbit5 .orbit-rot { animation-duration: 9s; }
+.orbit5 .node-en { font-size: 17px; }
+.orbit5 .node-jp { font-size: 11px; letter-spacing: .06em; }
+.orbit-wrap.in .orbit-node:nth-of-type(4) circle { animation-delay: .6s; }
+.orbit-wrap.in .orbit-node:nth-of-type(5) circle { animation-delay: .8s; }
+/* トップ：5事業カード（3＋2で中央揃え） */
+.structure-notes.sn5 { grid-template-columns: repeat(6, minmax(0, 1fr)); max-width: 1180px; gap: 14px; }
+.sn5 .sn-item { grid-column: span 2; }
+.sn5 .sn-item:nth-child(4) { grid-column: 2 / span 2; }
+.sn5 .sn-item:nth-child(5) { grid-column: 4 / span 2; }
+.sn5 .sn-item em { font-style: normal; }
+html:lang(en) .sn-ja { display: none; }
+@media (max-width: 960px) {
+  .structure-notes.sn5 { grid-template-columns: 1fr 1fr; }
+  .sn5 .sn-item, .sn5 .sn-item:nth-child(4), .sn5 .sn-item:nth-child(5) { grid-column: auto; }
+}
+@media (max-width: 620px) { .structure-notes.sn5 { grid-template-columns: 1fr; } }
+/* 矢印アイコン（線で描く記号）は残す */
+.bx-arrow::before, .si-arrow::before { border-top-width: 1.5px !important; border-right-width: 1.5px !important; }

@@ -542,7 +542,7 @@
     orbitIO.observe(orbitWrap);
   }
   /* 円をタップ→黒く反転→その事業の場所へ遷移 */
-  const NODE_DEST = { consulting: 'consulting.html', valueup: 'manufacturing.html' };
+  const NODE_DEST = { consulting: 'consulting.html', smebpo: 'sme-bpo.html', investment: 'investment.html', brandgrowth: 'brand-growth.html', oem: 'manufacturing.html' };
   document.querySelectorAll('.orbit-node').forEach((node) => {
     node.addEventListener('click', () => {
       node.classList.add('tapped');
