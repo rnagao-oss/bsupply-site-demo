@@ -2973,3 +2973,19 @@ main :where(p, li, dd):where(:lang(ja)) { max-width: 40em; }
 .site-header nav, .site-header nav a, .site-header nav .nav-cta, .site-header .lang-sw2 a { font-size: 0.95rem; }
 .site-header nav a, .site-header .lang-sw2 a { font-weight: 500; letter-spacing: 0.03em; }
 .hero-video .hero-shade { background: linear-gradient(to bottom, rgba(0,0,0,.34), rgba(0,0,0,.30) 40%, rgba(0,0,0,.62)); }
+
+/* BUSINESS ページ（事業の一覧） */
+.bz-list { display: grid; gap: 0; }
+.bz-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(1.6rem, 4vw, 4rem); align-items: center; border-top: 1px solid var(--ink); padding: clamp(1.6rem, 3vw, 2.6rem) 0; transition: background 0.4s var(--ease); }
+.bz-row:last-child { border-bottom: 1px solid var(--ink); }
+.bz-row:hover { background: var(--bg); }
+.bz-img { display: block; aspect-ratio: 3 / 2; overflow: hidden; background: #101010; }
+.bz-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.8s var(--ease); }
+.bz-row:hover .bz-img img { transform: scale(1.04); }
+.bz-body { display: block; }
+.bz-body .sn-no { display: block; margin-bottom: 0.6rem; }
+.bz-body b { display: block; font-family: var(--en); font-weight: 700; font-size: clamp(1.8rem, 3.2vw, 2.6rem); line-height: 1.2; }
+.bz-body em { display: block; margin-top: 0.4rem; font-style: normal; font-weight: 700; color: var(--ink); font-size: var(--fs-body); }
+.bz-body p { margin-top: 1rem; color: var(--ink-70); font-size: var(--fs-body); line-height: 2; }
+.bz-body .sn-link { display: inline-block; margin-top: 1.2rem; }
+@media (max-width: 800px) { .bz-row { grid-template-columns: 1fr; } }
