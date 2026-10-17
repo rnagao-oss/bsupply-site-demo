@@ -3533,3 +3533,21 @@ html:lang(en) .sn-ja { display: none; }
 @media (max-width: 1200px) { .bb-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 760px) { .bb-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 520px) { .bb-grid { grid-template-columns: 1fr; } }
+
+/* 代表メッセージ：本文（約2/3）＋写真（約1/3）を隣接させる2列。写真は小さく本文の右上に */
+@media (min-width: 901px) {
+  .msgp { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); column-gap: clamp(1.5rem, 2.5vw, 3rem); align-items: start;
+    max-width: 1320px; margin: 0 auto; padding-left: clamp(1.6rem, 4vw, 4rem); padding-right: clamp(1.6rem, 4vw, 4rem); min-height: 0; }
+  .msgp-fade { display: none !important; }
+  .msgp-in { grid-column: 1; grid-row: 1; max-width: none !important; }
+  .msgp-in .msgp-body p { max-width: none; }
+  .msgp-photo { grid-column: 2; grid-row: 1; position: sticky !important; top: 120px; left: auto !important; right: auto !important; margin-top: clamp(5rem, 7vw, 6.5rem);
+    width: 100% !important; height: auto !important; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 15%; opacity: .95; filter: none;
+    -webkit-mask-image: radial-gradient(ellipse 60% 62% at 50% 46%, #000 70%, transparent 100%); mask-image: radial-gradient(ellipse 60% 62% at 50% 46%, #000 70%, transparent 100%);
+    -webkit-mask-composite: source-over; mask-composite: add; }
+}
+@media (min-width: 901px) {
+  .msgp .msgp-body.msg-body, .msgp .msgp-body.msg-body p { max-width: none !important; }
+  .msgp .msgp-body p { line-height: 2.2; }
+  .msgp-photo { margin-top: clamp(6.5rem, 8vw, 7.5rem); }
+}
