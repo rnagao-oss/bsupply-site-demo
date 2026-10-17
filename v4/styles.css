@@ -3363,3 +3363,6 @@ body:has(.msg-layout) main { background: var(--bg-soft); }
     clip-path: inset(0 calc(var(--PW) * .42 - (var(--PR) - var(--L))) calc(var(--D) - var(--PH) * .56) 0); }
 }
 .msgp::before { content: none !important; }
+/* 見出し下の装飾バーを撤去 */
+.msgp-title::before, .pq h3::after { content: none !important; }
+.msgp-title { padding-bottom: 0; }
