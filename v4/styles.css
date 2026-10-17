@@ -2947,9 +2947,8 @@ main :where(p, li, dd):where(:lang(ja)) { max-width: 40em; }
 .photo-flow { overflow: hidden; margin: clamp(2rem, 5vw, 4rem) 0; display: grid; gap: 12px; }
 .pf-row { overflow: hidden; }
 .pf-track { display: flex; gap: 12px; width: max-content; animation: pfFlow 110s linear infinite; }
-.pf-row.b .pf-track { animation-name: pfFlowR; animation-duration: 90s; }
-.pf-track img { height: clamp(200px, 28vw, 380px); width: auto; flex: none; display: block; }
-.pf-row.b .pf-track img { height: clamp(150px, 20vw, 270px); }
+.pf-row.b .pf-track { animation-name: pfFlowR; animation-duration: 100s; }
+.pf-track img { height: clamp(180px, 22vw, 320px); aspect-ratio: 3 / 2; width: auto; object-fit: cover; flex: none; display: block; }
 @keyframes pfFlowR { from { transform: translateX(-50%); } to { transform: translateX(0); } }
 @media (prefers-reduced-motion: reduce) { .pf-track { animation: none; overflow-x: auto; } }
 @keyframes pfFlow { from { transform: translateX(0); } to { transform: translateX(-50%); } }
