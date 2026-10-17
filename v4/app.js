@@ -201,13 +201,169 @@
     })(0);
   })();
 
-  /* ── 文字分割（data-split） ── */
+  /* ── 日本語の改行：BudouX で文節の切れ目にだけ改行を許す ──
+     word-break: auto-phrase 対応ブラウザ（Chrome系）は CSS に任せ、非対応（Safari・Firefox）はゼロ幅スペースで文節を区切る。
+     段落の最後の文節（5字前後）は改行させず、行末に1〜2字だけ残るのを防ぐ */
   const IS_JA = (document.documentElement.lang || 'ja').startsWith('ja');
+  const BX = IS_JA && window.budoux ? window.budoux.jaParser : null;
+  const NATIVE_PHRASE = window.CSS && CSS.supports('word-break', 'auto-phrase');
+  const SKIP = '.nowrap, .tok, .char, script, style, svg, .kinetic, [aria-hidden="true"]';
+  const OPEN = '「『（(［[【〈《〔“‘';
+  const CLOSE = '、。，．,.・：:；;！？!?」』）)］]】〉》〕”’ーぁぃぅぇぉっゃゅょゎァィゥェォッャュョヮヵヶ…‥%％';
+  /* 禁則: 開き括弧で終わる・句読点や閉じ括弧で始まる区切りを作らない */
+  const kinsoku = (ph) => {
+    for (let i = 0; i < ph.length - 1; i++) {
+      let m = 0;
+      while (m < ph[i].length && OPEN.includes(ph[i][ph[i].length - 1 - m])) m++;
+      if (m && m < ph[i].length) { ph[i + 1] = ph[i].slice(-m) + ph[i + 1]; ph[i] = ph[i].slice(0, -m); }
+    }
+    for (let i = ph.length - 1; i > 0; i--) {
+      let m = 0;
+      while (m < ph[i].length && CLOSE.includes(ph[i][m])) m++;
+      if (m) { ph[i - 1] += ph[i].slice(0, m); ph[i] = ph[i].slice(m); }
+    }
+    return ph.filter(Boolean);
+  };
+  /* 文節分割（BudouX）＋補正＋禁則 */
+  const phrases = (text) => {
+    const ph = BX.parse(text);
+    /* モデルが語の途中で切る典型（事業と｜して、落と｜し込み、成り｜立つ、もの｜づくり）をつなぐ */
+    const HIRA = /^[\u3040-\u309f]+$/;
+    for (let i = ph.length - 1; i > 0; i--) {
+      const a = ph[i - 1], b = ph[i];
+      const join = (HIRA.test(b) && b.length <= 2 && !/[、。]$/.test(a))
+        || (/と$/.test(a) && /^し/.test(b))
+        || /^[づぢ]/.test(b)
+        || (a.length <= 2 && !HIRA.test(a) && !/[、。・）」』]$/.test(a));
+      if (join) { ph[i - 1] = a + b; ph.splice(i, 1); }
+    }
+    /* 漢字1字だけが文節末に取り残される切れ目（例: 過｜去最多）は、その字を次の文節へ */
+    const KANJI = /[\u4e00-\u9fff々]/;
+    for (let i = 0; i < ph.length - 1; i++) {
+      const a = ph[i], b = ph[i + 1];
+      if (a.length > 1 && KANJI.test(a[a.length - 1]) && !KANJI.test(a[a.length - 2]) && KANJI.test(b[0])) {
+        ph[i] = a.slice(0, -1); ph[i + 1] = a[a.length - 1] + b;
+      }
+    }
+    return kinsoku(ph);
+  };
+  const isFlex = (el) => /flex|grid/.test(getComputedStyle(el).display);
+  const textNodes = (el, all = false) => {
+    const out = [];
+    const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, {
+      acceptNode: (n) => (n.parentElement.closest('script, style') || (!all && (!n.textContent.trim() || n.parentElement.closest(SKIP))) ? 2 : 1),
+    });
+    while (w.nextNode()) out.push(w.currentNode);
+    return out;
+  };
+  /* 社名「B supply」の途中で改行しない */
+  textNodes(document.body, true).forEach((n) => {
+    if (n.textContent.includes('B supply')) n.textContent = n.textContent.replace(/B supply/g, 'B\u00a0supply');
+  });
+  const wlen = (g) => [...g].reduce((n, c) => n + (c.charCodeAt(0) < 0x2000 ? 0.55 : 1), 0);
+  /* 長すぎる文節は「・」「、」と文字種の切れ目で細かくする */
+  const pieces = (g, cap) => (wlen(g) <= cap || g.length < 4 ? [g]
+    : kinsoku(g.split(/(?<=[・、，])/).flatMap((q) => (wlen(q) <= cap ? [q] : q.match(/[0-9A-Za-z\u00a0.,%+\-]+[年月日円件名社%％]?|[\u30a0-\u30ff]+[\u3040-\u309f]*|[\u4e00-\u9fff々]+[\u3040-\u309f]*|[\u3040-\u309f]+|[^]/g) || [q]))));
+  if (BX) {
+    const PHRASE_SEL = 'h1, h2, h3, h4, .hero-sub, .hero-foot, .sec-lede, .mi-statement, .vi-copy, .vi-panel p, .sn-item em, .sn-item p, .msg-body p, .issue-band, .issue-close, .st-line, .tl-quote p, .q-big, .trust-close, .sd-catch, .sd-lead, .cd-lead, .sv-lead, .cp-promise, .wm-note, .fin-sub, .th-sub, .rc-message p, .cst p, .case-main p, .case-issue, .case-work, .case-outcome, .svc-card p, .svc-card2 > p, .rs-card p, .adv p, .bp-card .bp-lead, .tl-item p, .eq-card p, .df-row p, .eg-card > p, .tr-body p, .pv-item p, .iv-point p, .ca-head p, .jd-mission p, .jd-step p, .sd-sol p, .sd-ap p, .cd-block p, .pos-col li, .sc-sol span, .cp-subs dd, .sv-subs, .ft-addr, .ft-tag, .cnav span, figcaption';
+    const BODY_SEL = 'main p, main li, main dd, main dt, .is-t';
+    const OFF = '[data-split], .kinetic, .loader, .site-header, .mobile-menu';
+    const targets = [...document.querySelectorAll(PHRASE_SEL)]
+      .concat([...document.querySelectorAll(BODY_SEL)])
+      .filter((el, i, a) => a.indexOf(el) === i && !el.closest(OFF));
+    targets.forEach((el) => el.classList.add('bx'));
+
+    /* 末尾の文節（5字以上・10字以内になるまで前の文節を足す）の長さ */
+    const tailLen = (ph, first = 1) => {
+      let n = 0;
+      for (let i = ph.length - 1; i >= first && n < 5; i--) {
+        if (n + ph[i].length > 10) break;
+        n += ph[i].length;
+      }
+      return n;
+    };
+
+    if (NATIVE_PHRASE) {
+      /* Chrome系: 改行は CSS の auto-phrase。最後の文節だけ改行しない span で包む */
+      document.querySelectorAll(`${PHRASE_SEL}, main p, main li, main dd`).forEach((el) => {
+        if (el.closest(OFF) || el.querySelector('wbr') || isFlex(el)) return;
+        const nodes = textNodes(el);
+        const last = nodes[nodes.length - 1];
+        if (!last || (last.parentElement !== el && isFlex(last.parentElement))) return;
+        if (!/[぀-ヿ一-鿿]/.test(last.textContent)) return;
+        const t = last.textContent.replace(/\s+$/, '');
+        const n = tailLen(phrases(t), 0);
+        const whole = [...el.textContent.trim()].length;
+        if (!n || whole < 8 || whole - n < 3) return;
+        const keep = document.createElement('span');
+        keep.className = 'nowrap';
+        keep.textContent = t.slice(-n);
+        last.textContent = t.slice(0, -n);
+        last.after(keep);
+        if (!last.textContent && last.previousSibling?.nodeType === 1) last.replaceWith(document.createElement('wbr'));
+      });
+    } else {
+      /* Safari・Firefox: 文節の中の字と字の間に語結合子（U+2060）を入れ、文節の切れ目でだけ改行させる。
+         禁則は通常どおり効く。要素やゼロ幅スペースで区切ると Safari で字間が開くため、文字で結ぶ。末尾の文節は切らない */
+      const JOIN = '\u2060';
+      const isAlnum = (c) => /[0-9A-Za-z]/.test(c || '');
+      targets.forEach((el) => {
+        if (el.querySelector('wbr')) return;
+        const nodes = textNodes(el, true);
+        const full = nodes.map((n) => n.textContent).join('');
+        const cap = Math.max(4, (el.getBoundingClientRect().width / parseFloat(getComputedStyle(el).fontSize)) * 0.6);
+        const ph = phrases(full).flatMap((g) => pieces(g, cap));
+        const end = full.replace(/\s+$/, '').length;
+        const tail = tailLen(ph);
+        const cuts = new Set();
+        let o = 0;
+        ph.slice(0, -1).forEach((g) => { o += g.length; if (end - o >= Math.max(tail, 1)) cuts.add(o); });
+        let off = 0;
+        nodes.forEach((n) => {
+          const t = n.textContent;
+          const start = off;
+          off += t.length;
+          if (n.parentElement.closest(SKIP)) return;
+          let out = '';
+          for (let i = 0; i < t.length; i++) {
+            const g = start + i;
+            const prev = full[g - 1], cur = t[i];
+            if (g > 0 && prev && !/\s/.test(prev) && !/\s/.test(cur)) {
+              if (!cuts.has(g)) out += JOIN;
+              else if (isAlnum(prev) && isAlnum(cur)) out += '\u200b';
+            }
+            out += cur;
+          }
+          if (out !== t) n.textContent = out;
+        });
+      });
+    }
+  }
+
+  /* ── 文字分割（data-split） ── */
   document.querySelectorAll('[data-split]').forEach((el) => {
     el.querySelectorAll(':scope > span.ht-line').length
       ? el.querySelectorAll(':scope > span.ht-line').forEach(splitNode)
       : splitNode(el);
   });
+  /* 見出しの幅に収まらない文節だけ、カタカナ・漢字などの切れ目で分ける（Webフォント読込後にも再確認） */
+  const fitToks = () => document.querySelectorAll('[data-split] .tok').forEach((tok) => {
+    const host = tok.closest('[data-split]');
+    const W = host.getBoundingClientRect().width;
+    if (!W || tok.getBoundingClientRect().width <= W) return;
+    const parts = pieces(tok.textContent, (W / parseFloat(getComputedStyle(host).fontSize)) * 0.9);
+    if (parts.length < 2) return;
+    const chars = [...tok.children];
+    parts.forEach((pt) => {
+      const t = document.createElement('span');
+      t.className = 'tok';
+      chars.splice(0, pt.length).forEach((c) => t.appendChild(c));
+      tok.before(t);
+    });
+    tok.remove();
+  });
+  fitToks();
+  if (document.fonts) document.fonts.ready.then(fitToks);
   function splitNode(node) {
     const NO_START = '、。，．・ー」』）〉》！？!?,.%）]';  /* 行頭禁則文字 */
     const addChars = (tok, text) => {
@@ -235,9 +391,9 @@
             n.replaceChild(frag, c);
             return;
           }
-          /* 文節分割：読点・句点の直後でのみ改行を許す */
-          const phrases = c.textContent.split(/(?<=[、。，！？!?])/);
-          phrases.forEach((ph) => {
+          /* 文節分割：BudouX の文節単位（未読込なら読点・句点の直後）でのみ改行を許す */
+          const phrases_ = BX ? phrases(c.textContent) : c.textContent.split(/(?<=[、。，！？!?])/);
+          phrases_.forEach((ph) => {
             if (!ph) return;
             if (ph.length <= 16) {
               const tok = document.createElement('span');

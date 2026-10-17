@@ -7,9 +7,9 @@
   --news-sans: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
   --news-pad: clamp(1.6rem, 5.5vw, 5.5rem);
   --news-h: 48px; --news-h-lh: 67.2px;
-  --news-ja-h: 32px; --news-ja-h-lh: 51.2px;
-  --news-meta: 16px; --news-meta-lh: 20.8px;
-  --news-card: 22px; --news-card-lh: 35.2px;
+  --news-ja-h: var(--fs-h2s); --news-ja-h-lh: 1.6;
+  --news-meta: var(--fs-small); --news-meta-lh: 1.5;
+  --news-card: var(--fs-h3); --news-card-lh: 1.6;
   --news-text: var(--fs-body); --news-text-lh: 1.85;
   --news-measure: 640px;
   display: block;
@@ -18,9 +18,6 @@
 @media (max-width: 1023.98px) {
   .news-main {
     --news-h: 32px; --news-h-lh: 41.6px;
-    --news-ja-h: 22px; --news-ja-h-lh: 35.2px;
-    --news-meta: 12px; --news-meta-lh: 15.6px;
-    --news-card: 20px; --news-card-lh: 32px;
   }
 }
 .news-main a { transition: opacity 0.3s; }
@@ -30,20 +27,20 @@
 .news-head { padding: clamp(8.5rem, 15vw, 13rem) var(--news-pad) 0; }
 .news-h1 { margin: 0; font-weight: 400; }
 .news-h1-en { display: block; font-family: var(--news-serif); font-weight: 400; font-size: var(--news-h); line-height: var(--news-h-lh); letter-spacing: 0; }
-.news-h1-ja { display: block; margin-top: 8px; font-family: var(--news-sans); font-weight: 500; font-size: 14px; line-height: 21px; letter-spacing: 0.04em; }
+.news-h1-ja { display: block; margin-top: 8px; font-family: var(--news-sans); font-weight: 500; font-size: var(--fs-small); line-height: 1.5; letter-spacing: 0.04em; }
 
 /* 一覧 */
 .news { padding: 48px var(--news-pad) clamp(6rem, 12vw, 11rem); }
 .news-tabs { list-style: none; margin: 0 0 72px; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 32px; }
 .news-tabs a {
   display: inline-flex; align-items: center; min-height: 24px;
-  font-family: var(--news-latin); font-weight: 400; font-size: 16px; line-height: 20.8px; letter-spacing: 0;
+  font-family: var(--news-latin); font-weight: 400; font-size: var(--fs-small); line-height: 1.5; letter-spacing: 0;
   color: var(--gray); white-space: nowrap;
 }
 .news-tabs a[aria-current] { color: var(--ink); }
 .news-tabs .news-archive {
   margin-left: auto; flex: none; display: flex; gap: 16px; align-items: center; white-space: nowrap;
-  font-family: var(--news-latin); font-size: 16px; line-height: 20.8px; color: var(--gray);
+  font-family: var(--news-latin); font-size: var(--fs-small); line-height: 1.5; color: var(--gray);
 }
 
 .news-feature { list-style: none; margin: 0 0 72px; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; }
@@ -67,7 +64,7 @@
 .news-row .news-title { font-size: var(--news-text); line-height: var(--news-text-lh); }
 .news-thumb { width: 160px; }
 .news-empty { color: var(--gray); }
-.news-links { margin: 48px 0 0; font-family: var(--news-latin); font-size: 13px; letter-spacing: 0.04em; }
+.news-links { margin: 48px 0 0; font-family: var(--news-latin); font-size: var(--fs-label); letter-spacing: 0.04em; }
 .news-links a { color: var(--gray); text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
 
 @media (max-width: 1023.98px) {
@@ -97,12 +94,12 @@
 .news-prose > * { margin: 0 0 24px; }
 .news-prose > :last-child { margin-bottom: 0; }
 .news-prose h2 { font-weight: 500; font-size: var(--news-ja-h); line-height: var(--news-ja-h-lh); margin: 72px 0 24px; }
-.news-prose h3 { font-weight: 500; font-size: 20px; line-height: 32px; margin: 48px 0 16px; }
+.news-prose h3 { font-weight: 500; font-size: var(--fs-h3); line-height: 1.6; margin: 48px 0 16px; }
 .news-prose ul, .news-prose ol { padding-left: 1.2em; }
 .news-prose a { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
 
 .news-box { max-width: var(--news-measure); border-top: 1px solid var(--line); padding-top: 24px; margin-top: 72px; }
-.news-box-title { margin: 0 0 16px; font-family: var(--news-sans); font-weight: 500; font-size: 20px; line-height: 32px; letter-spacing: 0; }
+.news-box-title { margin: 0 0 16px; font-family: var(--news-sans); font-weight: 500; font-size: var(--fs-h3); line-height: 1.6; letter-spacing: 0; }
 .news-box p { margin: 0; font-size: var(--news-text); line-height: var(--news-text-lh); }
 .news-dl { display: grid; grid-template-columns: 240px minmax(0, 1fr); margin: 0; border-top: 1px solid var(--line); }
 .news-dl dt, .news-dl dd { margin: 0; padding: 20px 0; border-bottom: 1px solid var(--line); line-height: 1.75; }
@@ -117,22 +114,22 @@
 .news-share { display: flex; flex-wrap: wrap; gap: 24px; margin: 72px 0 0; }
 .news-share a, .news-share button {
   display: inline-flex; align-items: center; min-height: 32px; padding: 0; border: 0; background: none; cursor: pointer; color: inherit;
-  font-family: var(--news-latin); font-weight: 500; font-size: 13px; line-height: 1.6; letter-spacing: 0.04em;
+  font-family: var(--news-latin); font-weight: 500; font-size: var(--fs-label); line-height: 1.6; letter-spacing: 0.04em;
   text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px;
 }
 .news-share button:hover { opacity: 0.6; }
 
 .news-pn { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; border-top: 1px solid var(--line); padding-top: 24px; margin-top: 72px; }
 .news-pn .next { text-align: right; }
-.news-pn a { display: block; font-size: 14px; line-height: 21px; }
+.news-pn a { display: block; font-size: var(--fs-small); line-height: 1.5; }
 .news-pn-label {
-  display: block; margin-bottom: 4px; font-family: var(--news-latin); font-weight: 500; font-size: 12px; line-height: 1.6;
+  display: block; margin-bottom: 4px; font-family: var(--news-latin); font-weight: 500; font-size: var(--fs-label); line-height: 1.6;
   letter-spacing: 0.04em; color: var(--gray);
 }
 .news-back { margin: 48px 0 0; }
 .news-back a {
   display: inline-flex; align-items: center; min-height: 32px;
-  font-family: var(--news-latin); font-weight: 500; font-size: 13px; line-height: 1.6; letter-spacing: 0.04em;
+  font-family: var(--news-latin); font-weight: 500; font-size: var(--fs-label); line-height: 1.6; letter-spacing: 0.04em;
   text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px;
 }
 @media (max-width: 809.98px) {
