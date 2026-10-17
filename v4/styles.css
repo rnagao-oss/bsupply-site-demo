@@ -3748,3 +3748,171 @@ main > .photo-flow:first-child { margin-top: clamp(6.5rem, 9vw, 8rem); }
   .cx-side-shade { inset: 0 0 auto 0 !important; height: 42vh !important; background: linear-gradient(rgba(17,17,17,0) 55%, #111 100%) !important; }
 }
 .cx-opt input { width: 1px; height: 1px; clip-path: inset(50%); }
+
+
+/* ===== 事業ページ図解部品 dg-* ===== */
+/* ── 事業ページ01〜04 図解（dg-*）── */
+.bd-color { --acc:#2B4C7E; --acc-tint:#EEF2F8; --acc-mid:#D0D8E3; --acc-deep:#1F3960; --dg-gap:16px; --dg-arrow-gap:40px; }
+html:lang(en) .dg-sub-en { display:none; }
+
+/* 見出しブロックのリード */
+.bd-sec-head .dg-lead { margin:.9rem 0 0; max-width:46rem; font-size:var(--fs-body); line-height:2; color:var(--ink-70); }
+
+/* 図の外枠 */
+.dg { margin:0; width:100%; }
+.dg-en { display:block; font-family:var(--en); font-size:.75rem; font-weight:600; letter-spacing:.12em; line-height:1.4; color:var(--acc); }
+.dg-box { display:flex; flex-direction:column; background:var(--bg-soft); border-radius:var(--r); padding:clamp(1.4rem, 2.2vw, 1.9rem); }
+.bd-sec-soft .dg-box { background:#fff; }
+.dg-h { margin:.6rem 0 .5rem; font-size:1.125rem; font-weight:700; line-height:1.6; letter-spacing:.03em; color:var(--ink); }
+.dg-p { margin:0; font-size:.9375rem; line-height:1.9; color:var(--ink-70); }
+.dg-link { margin-top:auto; padding-top:1rem; font-size:.875rem; font-weight:700; color:var(--acc); }
+.dg-link::after { content:" →"; }
+.dg-more { margin-top:auto; padding-top:1.2rem; font-family:var(--en); font-size:.75rem; font-weight:600; letter-spacing:.12em; color:var(--ink); }
+
+/* 矢印（塗りの三角。線は使わない）: 横並びのとき要素の左の間隔の中央に置く */
+.dg-arrow-x { position:relative; }
+.dg-arrow-x::before { content:""; position:absolute; top:50%; left:calc(var(--dg-arrow-gap) / -2 - 5px); transform:translateY(-50%);
+  border-top:7px solid transparent; border-bottom:7px solid transparent; border-left:10px solid var(--acc); }
+/* 縦積みのとき: 要素の上の間隔の中央に下向きで置く */
+.dg-arrow-y { position:relative; }
+.dg-arrow-y::before { content:""; position:absolute; left:50%; top:calc(var(--dg-arrow-gap) / -2 - 5px); transform:translateX(-50%);
+  border-left:7px solid transparent; border-right:7px solid transparent; border-top:10px solid var(--acc); }
+
+/* 事例チップ */
+.dg-chips { display:flex; flex-wrap:wrap; gap:.4rem; margin:.5rem 0 0; padding:0; list-style:none; }
+.dg-chip { display:inline-grid; place-items:center; width:2.5rem; height:2.5rem; border-radius:50%; background:var(--acc); color:#fff;
+  font-family:var(--en); font-size:.8125rem; font-weight:600; letter-spacing:.02em; transition:background .2s; }
+.dg-chip:hover { background:var(--acc-deep); }
+
+/* ① dg-cards: 同じ大きさのカード（コンサルの8サービス） */
+.dg-cards { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:var(--dg-gap); }
+.dg-cards .dg-box { color:inherit; transition:background .25s; }
+.dg-cards .dg-box:hover { background:var(--acc-tint); }
+.dg-tag { margin:0 0 .9rem; font-size:.8125rem; font-weight:700; line-height:1.5; color:var(--acc); }
+.dg-cards .dg-h { margin-top:.35rem; }
+
+/* ② dg-depth: 関与の深さの3段 */
+.dg-depth { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:var(--dg-gap); align-items:stretch; margin:0; padding:0; list-style:none; }
+.dg-depth-lv { display:flex; flex-direction:column; border-radius:var(--r); padding:clamp(1.4rem, 2.2vw, 1.9rem); }
+.dg-depth-lv[data-lv="1"] { margin-top:4.8rem; background:var(--acc-tint); }
+.dg-depth-lv[data-lv="2"] { margin-top:2.4rem; background:var(--acc-mid); }
+.dg-depth-lv[data-lv="3"] { margin-top:0; background:var(--acc); }
+.dg-depth-lv[data-lv="3"] .dg-en { color:#D5DBE5; }
+.dg-depth-lv[data-lv="3"] .dg-h, .dg-depth-lv[data-lv="3"] .dg-p, .dg-depth-lv[data-lv="3"] .dg-cases-h { color:#fff; }
+.dg-depth-lv[data-lv="3"] .dg-chip { background:#fff; color:var(--acc); }
+.dg-depth-lv[data-lv="3"] .dg-chip:hover { background:var(--acc-tint); }
+.dg-cases { margin-top:auto; padding-top:1.4rem; }
+.dg-cases-h { margin:0; font-size:.8125rem; font-weight:700; color:var(--ink); }
+
+/* ③ dg-points: 面に置いた項目（コンサルの強み3、投資の2×2、ブランドグロースの2） */
+.dg-points { display:grid; grid-template-columns:repeat(var(--cols,3), minmax(0,1fr)); gap:var(--dg-gap); margin:0; padding:0; list-style:none; }
+.dg-point-no { font-family:var(--en); font-size:clamp(1.6rem, 2.4vw, 2rem); font-weight:500; line-height:1; color:var(--acc); }
+.dg-point-text { margin:.6rem 0 0; font-size:1.02rem; font-weight:500; line-height:1.8; color:var(--ink); }
+
+/* ④ dg-biz: BPOの業務図（2つの帯） */
+.dg-biz { display:grid; gap:var(--dg-gap); }
+.dg-band { background:var(--acc-tint); border-radius:var(--r); padding:clamp(1.4rem, 2.4vw, 2rem); }
+.dg-band-head { display:flex; align-items:baseline; gap:.9rem; margin-bottom:1.2rem; }
+.dg-band-h { margin:0; font-size:1.125rem; font-weight:700; line-height:1.5; }
+.dg-band-steps, .dg-band-cards { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); column-gap:var(--dg-arrow-gap); margin:0; padding:0; list-style:none; }
+.dg-band-steps { margin-bottom:.8rem; }
+.dg-band-step { grid-column:span var(--span,1); }
+.dg-band-step-ja { margin:.2rem 0 0; font-size:.9375rem; font-weight:700; line-height:1.5; }
+.dg-band-cards { row-gap:var(--dg-gap); }
+.dg-band-cards .dg-box { background:#fff; grid-column:span var(--span,1); }
+.dg-stage { display:none; margin:0 0 .4rem; font-size:.8125rem; font-weight:700; color:var(--acc); }
+.dg-box-no { font-family:var(--en); font-size:.875rem; font-weight:600; letter-spacing:.06em; color:var(--acc); }
+
+/* ⑤ dg-flow: 段階フロー（BPO・投資・ブランドグロース） */
+.dg-flow { display:grid; grid-template-columns:repeat(var(--n,4), minmax(0,1fr)); column-gap:var(--dg-arrow-gap); row-gap:var(--dg-arrow-gap); margin:0; padding:0; list-style:none; }
+.dg-flow > li { position:relative; }
+.dg-flow > li.is-goal { background:var(--acc); }
+.dg-flow > li.is-goal .dg-en { color:#D5DBE5; }
+.dg-flow > li.is-goal .dg-h, .dg-flow > li.is-goal .dg-p { color:#fff; }
+
+/* ⑥ dg-compare: 比較表（投資） */
+.dg-compare { max-width:1040px; }
+.dg-compare table { width:100%; border-collapse:separate; border-spacing:8px; table-layout:fixed; margin:-8px; }
+.dg-compare col.c-row { width:22%; }
+.dg-compare thead th { padding:0 1.6rem .4rem; text-align:left; vertical-align:bottom; font-weight:700; font-size:1rem; }
+.dg-compare thead th.is-us { color:var(--acc); font-family:var(--en); font-size:1.125rem; }
+.dg-compare tbody th { padding:1.4rem 0; text-align:left; vertical-align:top; font-size:.9375rem; font-weight:700; }
+.dg-compare tbody td { padding:1.4rem 1.6rem; vertical-align:top; border-radius:10px; background:var(--bg-soft); }
+.dg-compare tbody td.is-us { background:var(--acc-tint); }
+.dg-cmp-who { display:none; margin:0 0 .3rem; font-size:.8125rem; font-weight:700; color:var(--ink-70); }
+.dg-compare td.is-us .dg-cmp-who { color:var(--acc); }
+.dg-cmp-v { margin:0; font-size:1rem; line-height:1.8; }
+.dg-compare td.is-us .dg-cmp-v { font-weight:700; }
+.dg-note { margin:1.2rem 0 0; font-size:var(--fs-small); color:var(--ink-70); }
+
+/* ⑦ dg-sum: 足し算の図（ブランドグロース） */
+.dg-sum { display:grid; grid-template-columns:minmax(0,1fr) var(--dg-arrow-gap) minmax(0,1fr) var(--dg-arrow-gap) minmax(0,.8fr); align-items:stretch; }
+.dg-sum-part { background:var(--acc-tint); border-radius:var(--r); padding:clamp(1.4rem, 2.2vw, 1.9rem); }
+.dg-sum-h { margin:.4rem 0 1rem; font-size:1.0625rem; font-weight:700; line-height:1.5; }
+.dg-sum-list { display:grid; gap:8px; margin:0; padding:0; list-style:none; }
+.dg-sum-list li { background:#fff; border-radius:10px; padding:.85rem 1.1rem; font-size:.9375rem; font-weight:700; line-height:1.6; }
+.dg-sum-op { display:grid; place-items:center; font-family:var(--en); font-size:2rem; font-weight:500; color:var(--acc); }
+.dg-sum-result { display:flex; flex-direction:column; justify-content:center; background:var(--acc); border-radius:var(--r); padding:clamp(1.4rem, 2.2vw, 1.9rem); }
+.dg-sum-result .dg-en { color:#D5DBE5; }
+.dg-sum-result-text { margin:.6rem 0 0; font-size:clamp(1.125rem, 1.6vw, 1.375rem); font-weight:700; line-height:1.6; color:#fff; }
+
+/* ⑧ dg-tags: 業種とテーマ（BPO） */
+.dg-tags { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:clamp(2rem, 4vw, 3.4rem); }
+.dg-tags-h { margin:.4rem 0 1rem; font-size:1rem; font-weight:700; }
+.dg-tags ul { display:flex; flex-wrap:wrap; gap:.6rem; margin:0; padding:0; list-style:none; }
+.dg-tags li { padding:.55rem 1.1rem; border-radius:999px; background:var(--bg-soft); font-size:.92rem; line-height:1.5; }
+
+/* ⑨ dg-timeline: 年表（投資） */
+.dg-timeline { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); column-gap:var(--dg-arrow-gap); row-gap:var(--dg-arrow-gap); margin:clamp(2rem, 4vw, 3rem) 0 0; padding:0; list-style:none; }
+.dg-year { display:block; font-family:var(--en); font-size:clamp(1.5rem, 2.2vw, 1.875rem); font-weight:600; line-height:1.2; color:var(--acc); }
+
+/* ⑩ dg-eco: 事業のつながり（4ページ共通） */
+.dg-eco { display:grid; gap:1.2rem; }
+.dg-eco-row-h { margin:.3rem 0 .9rem; font-size:1rem; font-weight:700; }
+.dg-eco-nodes { display:grid; grid-template-columns:repeat(var(--n,2), minmax(0,1fr)); column-gap:var(--dg-arrow-gap); row-gap:var(--dg-arrow-gap); margin:0; padding:0; list-style:none; }
+.dg-eco-node { display:flex; flex-direction:column; height:100%; background:#fff; border-radius:var(--r); padding:1.3rem 1.5rem; color:var(--ink); transition:background .25s; }
+.dg-eco-node:hover { background:var(--acc-tint); }
+.dg-eco-node[aria-current="page"] { background:var(--acc); color:#fff; }
+.dg-eco-node[aria-current="page"] .dg-en { color:#D5DBE5; }
+.dg-eco-name { margin:.4rem 0 .2rem; font-size:1.0625rem; font-weight:700; line-height:1.5; }
+.dg-eco-role { margin:0; font-size:.875rem; line-height:1.7; color:var(--ink-70); }
+.dg-eco-node[aria-current="page"] .dg-eco-role { color:#fff; }
+.dg-eco-bridge { display:flex; align-items:center; justify-content:center; gap:.7rem; margin:0; font-size:.875rem; color:var(--ink-70); }
+.dg-eco-bridge::before { content:""; border-left:7px solid transparent; border-right:7px solid transparent; border-bottom:10px solid var(--acc); }
+
+/* 960px以下 */
+@media (max-width: 960px) {
+  .dg-cards { grid-template-columns:repeat(2, minmax(0,1fr)); }
+  .dg-depth { grid-template-columns:1fr; }
+  .dg-depth-lv[data-lv] { margin-top:0; }
+  .dg-points { grid-template-columns:repeat(2, minmax(0,1fr)); }
+  .dg-points[style*="--cols:3"] { grid-template-columns:1fr; }
+  .dg-band-steps { display:none; }
+  .dg-stage { display:block; }
+  .dg-band-cards { grid-template-columns:repeat(2, minmax(0,1fr)); column-gap:var(--dg-gap); }
+  .dg-band-cards .dg-box { grid-column:span 1; }
+  .dg-flow { grid-template-columns:repeat(2, minmax(0,1fr)); }
+  .dg-flow > li:nth-child(odd).dg-arrow-x::before { display:none; }   /* 2列のとき、段をまたぐ矢印は出さない */
+  .dg-sum { grid-template-columns:1fr; grid-auto-rows:auto; }
+  .dg-sum-op { height:var(--dg-arrow-gap); }
+}
+/* 600px以下（390幅の確認用） */
+@media (max-width: 600px) {
+  .dg-cards, .dg-points, .dg-band-cards, .dg-flow, .dg-tags, .dg-timeline { grid-template-columns:1fr; }
+  .dg-points { grid-template-columns:1fr !important; }
+  .dg-flow > li.dg-arrow-x::before, .dg-timeline > li.dg-arrow-x::before, .dg-eco-nodes > li.dg-arrow-x::before { display:none; }
+  .dg-flow > li + li, .dg-timeline > li + li { position:relative; }
+  .dg-flow > li + li::after, .dg-timeline > li + li::after { content:""; position:absolute; left:50%; top:calc(var(--dg-arrow-gap) / -2 - 5px); transform:translateX(-50%);
+    border-left:7px solid transparent; border-right:7px solid transparent; border-top:10px solid var(--acc); }
+  .dg-eco-nodes { grid-template-columns:1fr !important; row-gap:var(--dg-gap); }
+  .dg-eco-nodes > li.dg-arrow-x { margin-top:calc(var(--dg-arrow-gap) - var(--dg-gap)); }
+  .dg-eco-nodes > li.dg-arrow-x::after { content:""; position:absolute; left:50%; top:calc(var(--dg-arrow-gap) / -2 - 5px); transform:translateX(-50%);
+    border-left:7px solid transparent; border-right:7px solid transparent; border-top:10px solid var(--acc); }
+  .dg-compare table, .dg-compare tbody, .dg-compare tr, .dg-compare th, .dg-compare td { display:block; width:auto; }
+  .dg-compare table { margin:0; }
+  .dg-compare thead { display:none; }
+  .dg-compare tbody tr + tr { margin-top:1.6rem; }
+  .dg-compare tbody th { padding:0 0 .6rem; }
+  .dg-compare tbody td + td { margin-top:8px; }
+  .dg-cmp-who { display:block; }
+}

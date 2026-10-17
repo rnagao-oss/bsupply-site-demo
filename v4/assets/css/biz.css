@@ -1,0 +1,32 @@
+/* 事業ページ01〜04 共通の補正（図解の矢印・幅・余白） */
+/* 全体の「罫線を消す」規則で border 製の三角形が消えるため、面（clip-path）で描く */
+.bd-color .dg-arrow-x::before { border:0 !important; width:10px; height:14px; background:var(--acc); clip-path:polygon(0 0,100% 50%,0 100%); }
+.bd-color .dg-arrow-y::before { border:0 !important; width:14px; height:10px; background:var(--acc); clip-path:polygon(0 0,100% 0,50% 100%); }
+.bd-color .dg-eco-bridge::before { border:0 !important; width:14px; height:10px; background:var(--acc); clip-path:polygon(50% 0,100% 100%,0 100%); }
+@media (max-width: 600px) {
+  .bd-color .dg-flow > li + li::after, .bd-color .dg-timeline > li + li::after, .bd-color .dg-eco-nodes > li.dg-arrow-x::after { border:0 !important; width:14px; height:10px; background:var(--acc); clip-path:polygon(0 0,100% 0,50% 100%); }
+}
+.bd-color .dg-eco { grid-template-columns: minmax(0, 1fr); }
+.bd-color .dg-eco-bridge { max-width: none; width: 100%; }
+.bd-color .dg-cards { grid-auto-rows: 1fr; }
+.bd-color .dg-depth-lv, .bd-color .dg-points > li { max-width: none; }
+/* 白い節の下余白と、続く淡色の節の上余白が重ならないようにする */
+.bd-color > .bd-sec:not(.bd-sec-soft), .bd-color > .works { padding-bottom: 0; }
+.bd-color .dg-compare { max-width: none; }
+/* 見出しの大きさを4ページでそろえる（コンサルの既存部品 sec-title、事例ブロックの見出し） */
+.bd-color .sec-title, .bd-color .bd-case-body .bd-h2 { font-size: clamp(1.6rem, 2.6vw, 2.2rem); letter-spacing: .03em; line-height: 1.5; }
+/* イントロ直後の余白を、節と節の間の余白（120px）にそろえる */
+.bd-color > .bd-intro { padding-bottom: 0; }
+.bd-color > .bd-intro + .clients2 { margin-top: clamp(4.5rem, 9vw, 7.5rem); }
+.bd-color > .works { padding-top: clamp(4.5rem, 9vw, 7.5rem); }
+/* 淡色の節と黒い問い合わせ帯の間に白い帯を残さない */
+.bd-color > .bd-sec-soft + .bd-cta { margin-top: 0; }
+/* 390幅で事例カードが画面からはみ出さないようにする */
+.bd-color .works .bp-grid { grid-template-columns: minmax(0, 1fr); }
+@media (max-width: 600px) { .bd-color .case-meta { grid-template-columns: 1fr; } }
+/* 3段のフローは960幅でも3列のままにする（2列にすると3枚目だけが次の段に残り、矢印も消えるため） */
+@media (min-width: 601px) and (max-width: 960px) {
+  .bd-color .dg-flow[style*="--n:3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .bd-color .dg-flow[style*="--n:3"] > li.dg-arrow-x::before { display: block; }
+}
+.bd-color .dg-sum-list li { max-width: none; }
