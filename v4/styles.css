@@ -3616,3 +3616,9 @@ html:lang(en) .case-meta dt::after { content: ":"; }
 .site-header nav { gap: clamp(1.1rem, 2.2vw, 2.3rem) !important; }
 .site-header nav .nav-cta { padding: .62rem 1.45rem !important; }
 .fin-alt { background: transparent !important; }
+/* 代表メッセージ：上下のぼかしを同じ幅に */
+@media (min-width: 901px) {
+  .msgp-photo {
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 22%, #000 86%, transparent 100%), linear-gradient(to bottom, transparent 0, #000 10%, #000 90%, transparent 100%) !important;
+    mask-image: linear-gradient(to right, transparent 0, #000 22%, #000 86%, transparent 100%), linear-gradient(to bottom, transparent 0, #000 10%, #000 90%, transparent 100%) !important; }
+}
