@@ -3488,3 +3488,48 @@ html:lang(en) .sn-ja { display: none; }
 .co-wrap .co-table { max-width: none; }
 .co-wrap .co-table > div { grid-template-columns: 11rem minmax(0, 1fr); padding: 1.2rem 1.6rem !important; }
 @media (max-width: 900px) { .co-wrap { grid-template-columns: 1fr; } }
+
+/* ===== Business 案A：大きな見出し＋モザイク（左右の余白を詰める） ===== */
+.ba { padding: clamp(8rem, 12vw, 10.5rem) clamp(1.2rem, 3.2vw, 3.2rem) clamp(5rem, 9vw, 8rem); max-width: 1680px; margin: 0 auto; }
+.ba-head { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); align-items: end; gap: 1rem 4rem; margin-bottom: clamp(2.4rem, 4vw, 3.6rem); }
+.ba-kicker { grid-column: 1 / -1; margin: 0; font-family: var(--en); font-size: .8rem; letter-spacing: .16em; }
+.ba-h1 { margin: 0; font-size: clamp(2rem, 3.6vw, 3.4rem); font-weight: 700; line-height: 1.4; letter-spacing: .03em; }
+.ba-lead { margin: 0; font-size: .98rem; line-height: 2; color: var(--ink-70); }
+.ba-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: repeat(2, clamp(260px, 22vw, 360px)); gap: 12px; }
+.ba-card { position: relative; overflow: hidden; border-radius: 16px; color: #fff; isolation: isolate; background: #111; }
+.ba-1 { grid-row: 1 / span 2; }
+.ba-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; transition: transform 1.1s cubic-bezier(0.19, 1, 0.22, 1); }
+.ba-shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(to bottom, rgba(12,12,12,.35), rgba(12,12,12,0) 35%, rgba(12,12,12,.2) 55%, rgba(12,12,12,.85)); }
+.ba-no { position: absolute; top: 18px; left: 22px; font-family: var(--en); font-size: .8rem; letter-spacing: .1em; opacity: .85; }
+.ba-card .bx-arrow { top: 14px; right: 14px; width: 38px; height: 38px; }
+.ba-body { position: absolute; left: 22px; right: 22px; bottom: 20px; }
+.ba-en { margin: 0; font-family: var(--en); font-size: .8rem; letter-spacing: .1em; opacity: .85; }
+.ba-title { margin: .35rem 0 0; font-size: clamp(1.1rem, 1.5vw, 1.35rem); font-weight: 700; color: #fff; letter-spacing: .03em; }
+.ba-1 .ba-title { font-size: clamp(1.5rem, 2.2vw, 2rem); }
+.ba-text { margin: .8rem 0 0; max-width: 32rem; font-size: .88rem; line-height: 1.9; color: rgba(255,255,255,.88); }
+@media (hover: hover) and (pointer: fine) { .ba-card:hover img { transform: scale(1.05); } .ba-card:hover .bx-arrow { background: #fff; } .ba-card:hover .bx-arrow::before { border-color: #111; } }
+@media (max-width: 1000px) {
+  .ba-head { grid-template-columns: 1fr; }
+  .ba-grid { grid-template-columns: 1fr 1fr; grid-template-rows: none; grid-auto-rows: clamp(220px, 40vw, 320px); }
+  .ba-1 { grid-column: 1 / -1; grid-row: auto; }
+}
+@media (max-width: 600px) { .ba-grid { grid-template-columns: 1fr; } }
+
+/* ===== Business 案B：グレー背景に白い箱を5つ横並び ===== */
+.bb { background: var(--bg-soft); padding: clamp(8rem, 12vw, 10.5rem) clamp(1.2rem, 3vw, 3rem) clamp(5rem, 9vw, 8rem); }
+.bb-head { max-width: 1600px; margin: 0 auto clamp(2.2rem, 4vw, 3.2rem); }
+.bb-head .ba-h1 { margin-top: .6rem; }
+.bb-grid { max-width: 1600px; margin: 0 auto; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+.bb-card { display: flex; flex-direction: column; background: #fff; border-radius: 16px; overflow: hidden; color: var(--ink); transition: transform .3s ease, box-shadow .3s ease; }
+.bb-img { display: block; aspect-ratio: 4 / 3; overflow: hidden; }
+.bb-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .9s cubic-bezier(0.19, 1, 0.22, 1); }
+.bb-body { display: flex; flex-direction: column; flex: 1; padding: 1.3rem 1.3rem 1.4rem; }
+.bb-no { font-family: var(--serif); font-size: 1.9rem; line-height: 1; color: #a9a59c; }
+.bb-en { margin: .7rem 0 0; font-family: var(--serif); font-size: 1.2rem; }
+.bb-title { margin: .3rem 0 0; font-size: .95rem; font-weight: 700; letter-spacing: .03em; }
+.bb-text { margin: .8rem 0 0; font-size: .84rem; line-height: 1.85; color: var(--ink-70); flex: 1; }
+.bb-more { margin-top: 1.1rem; font-family: var(--en); font-size: .74rem; letter-spacing: .14em; }
+@media (hover: hover) and (pointer: fine) { .bb-card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -24px rgba(0,0,0,.25); } .bb-card:hover .bb-img img { transform: scale(1.05); } }
+@media (max-width: 1200px) { .bb-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 760px) { .bb-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .bb-grid { grid-template-columns: 1fr; } }
