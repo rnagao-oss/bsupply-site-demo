@@ -135,3 +135,17 @@
 @media (max-width: 809.98px) {
   .news-pn a, .news-back a, .news-share a, .news-share button { min-height: 44px; }
 }
+
+/* 2026-10-17 tomotakeholdings.com/news/ の構成: 3列のカード */
+.news-cards { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px 28px; }
+.news-card { display: flex; flex-direction: column; height: 100%; border: 1px solid var(--line); background: #fff; text-decoration: none; color: inherit; }
+.news-card .news-media { aspect-ratio: 3 / 2; }
+.news-card .news-body { display: flex; flex-direction: column; flex: 1; padding: 22px 24px 26px; gap: 12px; }
+.news-card .news-meta { display: flex; justify-content: flex-start; gap: 14px; margin: 0; }
+.news-card .news-title { margin: 0; font-weight: 700; font-size: var(--fs-h3); line-height: 1.6; }
+.news-card .news-desc { color: var(--ink-70); font-size: var(--fs-small); line-height: 1.9; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.news-card .news-more { margin-top: auto; padding-top: 6px; display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: var(--fs-small); }
+.news-card .news-more i { font-style: normal; display: inline-flex; width: 26px; height: 26px; align-items: center; justify-content: center; border-radius: 50%; background: var(--ink); color: #fff; font-size: 13px; }
+.news-card:hover .news-title { text-decoration: underline; text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
+@media (max-width: 960px) { .news-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .news-cards { grid-template-columns: minmax(0, 1fr); } }

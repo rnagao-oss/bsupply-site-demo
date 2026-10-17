@@ -568,48 +568,29 @@
     })();
   }
 
-  /* ── 工房シネマ（音声付き） ── */
+  /* ── 工房シネマ（無音・スクロール連動の見出しだけ） ── */
   const atelier = document.getElementById('atelier');
   const atVideo = document.getElementById('atVideo');
-  const atSound = document.getElementById('atSound');
   const captions = [...document.querySelectorAll('.at-caption')];
-  let atPlaying = false;
-  let soundWanted = true;   // 初期状態: 入域時に音声ONを試みる
-  function setSoundUI(on) {
-    atSound.classList.toggle('on', on);
-    atSound.lastChild.textContent = on ? 'SOUND ON' : 'SOUND OFF';
-  }
-  function tryUnmute() {
-    if (!soundWanted) return;
-    atVideo.muted = false;
-    atVideo.volume = 1;
-    const ok = !atVideo.muted;
-    setSoundUI(ok);
-  }
-  if (atSound) atSound.addEventListener('click', () => {
-    soundWanted = atVideo.muted;          // OFF→ON / ON→OFF
-    atVideo.muted = !atVideo.muted;
-    setSoundUI(!atVideo.muted);
-  });
+  let atInView = false;
+  let atTicking = false;
   function updateAtelier() {
+    atTicking = false;
     if (!atelier) return;
     const r = atelier.getBoundingClientRect();
     const total = r.height - innerHeight;
     const t = Math.min(Math.max(-r.top / total, 0), 1);
-    const inView = r.top < innerHeight && r.bottom > 0;
-    if (inView && !atPlaying) {
-      atVideo.play().catch(() => {});
-      atPlaying = true;
-      tryUnmute();
-    }
-    if (!inView && atPlaying) {
-      atVideo.pause();
-      atVideo.muted = true;
-      setSoundUI(false);
-      atPlaying = false;
-    }
     const phase = t < 0.34 ? 0 : t < 0.7 ? 1 : 2;
-    captions.forEach((c, i) => c.classList.toggle('active', i === phase && inView));
+    captions.forEach((c, i) => c.classList.toggle('active', i === phase && atInView));
+  }
+  if (atelier && atVideo) {
+    atVideo.muted = true;
+    new IntersectionObserver((es) => {
+      atInView = es[0].isIntersecting;
+      if (atInView) atVideo.play().catch(() => {});
+      else atVideo.pause();
+      updateAtelier();
+    }, { rootMargin: '200px 0px' }).observe(atelier);
   }
 
   /* ── 世界地図：日本から、世界へ ── */

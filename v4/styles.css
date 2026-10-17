@@ -2904,3 +2904,48 @@ main :where(p, li, dd):where(:lang(ja)) { max-width: 40em; }
 .msg-body p { max-width: none; }
 .msg-body p + p { margin-top: 1.2em; }
 
+
+/* ═══ 2026-10-17 オーナー修正 ═══ */
+/* トップ: 背景動画のヒーロー（tomotakeholdings.com の構成を白黒で再現） */
+.hero-video { background: #000; }
+.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero-shade { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.5); }
+.hero-video .hero-inner { position: relative; z-index: 2; }
+.hero-video .hero-title, .hero-video .hero-sub { color: #fff; text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35); }
+.hero-video .hero-foot { z-index: 2; }
+@media (prefers-reduced-motion: reduce) { .hero-bg { display: none; } .hero-video { background: #000 url("./assets/video/hero-poster.jpg") center / cover; } }
+.hero-logos { background: #fff; border-bottom: 1px solid var(--line); padding: clamp(1.2rem, 2.4vw, 2rem) 0; overflow: hidden; }
+.hero-logos .cl-mq { margin: 0; }
+.hero-logos .cl-track img { filter: grayscale(1); opacity: 0.8; }
+.side-cta {
+  position: fixed; right: 0; top: 50%; transform: translateY(-50%); z-index: 1500;
+  background: #0f0f0e; color: #fff; padding: 1.4rem 0.9rem; border-radius: 6px 0 0 6px;
+  writing-mode: vertical-rl; font-size: var(--fs-small); font-weight: 700; letter-spacing: 0.2em;
+}
+.side-cta:hover { background: #3d3d3b; }
+@media (max-width: 760px) { .side-cta { display: none; } }
+
+/* 提供ソリューション: ラベルと本文のコントラスト */
+.sc-sol { margin-top: 1.6rem; padding-top: 1.1rem; border-top: 1px solid var(--ink); }
+.sc-sol b { color: var(--ink); font-weight: 700; letter-spacing: 0.08em; font-size: var(--fs-small); margin-bottom: 0.6rem; }
+.sc-sol span { color: var(--ink); font-weight: 500; font-size: var(--fs-body); line-height: 1.9; }
+
+/* 製造ページ: 実績を表形式に（会社概要と同じ型） */
+.facts { max-width: 56rem; margin: 0 0 clamp(4rem, 8vw, 6rem); border-top: 1px solid var(--ink); }
+.facts > div { display: grid; grid-template-columns: clamp(7rem, 16vw, 11rem) 1fr; gap: 1.4rem; padding: 1.2rem 0.3rem; border-bottom: 1px solid var(--line); }
+.facts dt { color: var(--gray); font-size: var(--fs-small); }
+.facts dd { margin: 0; color: var(--ink); font-size: var(--fs-body); font-weight: 500; }
+@media (max-width: 600px) { .facts > div { grid-template-columns: 1fr; gap: 0.2rem; } }
+
+/* 工房シネマ: 描画負荷を下げる（フィルターをやめ、暗さは上のスクリムで出す） */
+.at-video { filter: none; }
+.at-scrim { background: linear-gradient(to bottom, rgba(8,8,8,.62), rgba(8,8,8,.38) 45%, rgba(8,8,8,.72)); }
+.at-sticky { contain: paint; transform: translateZ(0); }
+.at-video { will-change: transform; }
+
+/* 会社情報: 横に流れる写真（commercex.co.jp/company/ の構成） */
+.photo-flow { overflow: hidden; margin: clamp(2rem, 5vw, 4rem) 0; }
+.pf-track { display: flex; gap: 12px; width: max-content; animation: pfFlow 80s linear infinite; }
+.pf-track img { height: clamp(200px, 28vw, 380px); width: auto; flex: none; display: block; }
+@keyframes pfFlow { to { transform: translateX(calc(-50% - 6px)); } }
+@media (prefers-reduced-motion: reduce) { .pf-track { animation: none; overflow-x: auto; } }
