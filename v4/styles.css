@@ -3195,3 +3195,5 @@ html:lang(en) .hero-en { display: none; }
 .msg-layout .page-title { color: var(--ink); }
 .msg-main .msg-body p { color: var(--ink); }
 .msg-layout .ms-sign { filter: none; }
+.msg-layout { background: var(--bg-soft); }
+body:has(.msg-layout) main { background: var(--bg-soft); }
