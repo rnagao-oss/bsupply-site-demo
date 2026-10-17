@@ -3551,3 +3551,25 @@ html:lang(en) .sn-ja { display: none; }
   .msgp .msgp-body p { line-height: 2.2; }
   .msgp-photo { margin-top: clamp(6.5rem, 8vw, 7.5rem); }
 }
+/* クライアントロゴ：大きく・見た目の面積をそろえ・行間を広く */
+.cl-band { padding: clamp(2.6rem, 4.5vw, 3.8rem) 0 !important; gap: clamp(2.6rem, 4.6vw, 4rem) !important; }
+.cl-track { gap: clamp(64px, 6.4vw, 104px); }
+.cl-track img { height: var(--h, 40px) !important; max-width: 240px !important; }
+@media (max-width: 760px) { .cl-track img { height: calc(var(--h, 40px) * .72) !important; } .cl-track { gap: 44px; } }
+
+/* 支援事例：分類は「項目名：値」で明示する */
+.case-meta { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: .3rem 1.6rem; margin: 0 0 1rem; }
+.case-meta > div { display: flex; gap: .5rem; align-items: baseline; }
+.case-meta dt { font-size: .74rem; color: var(--ink-70); letter-spacing: .04em; white-space: nowrap; }
+.case-meta dt::after { content: "："; }
+.case-meta dd { margin: 0; font-size: .84rem; font-weight: 700; color: var(--ink); white-space: nowrap; }
+html:lang(en) .case-meta dt::after { content: ":"; }
+@media (max-width: 760px) { .case-meta { grid-template-columns: 1fr; } }
+/* 支援事例：分類は「項目名＋値」で明示する */
+.case-meta { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: .5rem 2rem; margin: 0 0 1.2rem; }
+.case-meta > div { display: grid; gap: .1rem; }
+.case-meta dt { font-size: .72rem; color: var(--ink-70); letter-spacing: .06em; }
+.case-meta dd { margin: 0; font-size: .88rem; font-weight: 700; color: var(--ink); }
+.bp-card .case-meta { grid-column: 1; grid-row: 1 / span 2; grid-template-columns: 1fr; gap: .7rem; margin: 0; padding-top: .15rem; }
+@media (max-width: 760px) { .bp-card .case-meta { grid-row: auto; grid-template-columns: repeat(3, auto); gap: .4rem 1.2rem; margin-bottom: .4rem; } }
+.case-meta dt::after { content: none !important; }
