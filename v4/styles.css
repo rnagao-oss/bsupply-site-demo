@@ -2954,3 +2954,7 @@ main :where(p, li, dd):where(:lang(ja)) { max-width: 40em; }
 @keyframes pfFlow { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 .ft-links a { white-space: nowrap; }
+
+.hero-video .hero-title { font-size: clamp(2.2rem, 5.4vw, 5rem); }
+.hero-video .hero-title .ht-line { display: inline-block; }
+@media (max-width: 760px) { .hero-video .hero-title .ht-line { display: block; } }
