@@ -3292,3 +3292,7 @@ body:has(.msg-layout) main { background: var(--bg-soft); }
   .msgp .msgp-body.msg-body { max-width: 47em; }
   .msgp-photo { right: clamp(1rem, 6vw, 8rem); }
 }
+@media (min-width: 901px) {
+  .msgp-photo { width: clamp(360px, 32vw, 520px); height: clamp(460px, 38vw, 620px); right: clamp(2rem, 8vw, 10rem); top: clamp(7rem, 10vw, 9rem); filter: blur(1.2px) saturate(.9); opacity: .75;
+    -webkit-mask-image: radial-gradient(ellipse 54% 58% at 56% 40%, #000 40%, transparent 100%); mask-image: radial-gradient(ellipse 54% 58% at 56% 40%, #000 40%, transparent 100%); }
+}
