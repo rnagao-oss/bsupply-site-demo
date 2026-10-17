@@ -3742,3 +3742,9 @@ main > .photo-flow:first-child { margin-top: clamp(6.5rem, 9vw, 8rem); }
 .bd-sec:has(.bd-check) { background: var(--bg-soft); padding-bottom: clamp(4.5rem, 9vw, 7.5rem); margin-top: clamp(4.5rem, 9vw, 7.5rem); }
 .bd-check { gap: 16px !important; max-width: none; }
 .bd-check li { background: #fff !important; min-height: 84px; display: flex; align-items: center; padding: 1.1rem 1.6rem !important; }
+/* お問い合わせ：写真は左欄の上部だけに置き、文字は写真に重ねない */
+@media (min-width: 901px) {
+  .cx-side-img { inset: 0 0 auto 0 !important; height: 42vh !important; object-position: 50% 30% !important; }
+  .cx-side-shade { inset: 0 0 auto 0 !important; height: 42vh !important; background: linear-gradient(rgba(17,17,17,0) 55%, #111 100%) !important; }
+}
+.cx-opt input { width: 1px; height: 1px; clip-path: inset(50%); }
