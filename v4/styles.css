@@ -3615,3 +3615,4 @@ html:lang(en) .case-meta dt::after { content: ":"; }
 .site-header nav, .site-header nav a, .site-header nav .nav-cta, .site-header .lang-sw2 a { font-size: 1.06rem !important; }
 .site-header nav { gap: clamp(1.1rem, 2.2vw, 2.3rem) !important; }
 .site-header nav .nav-cta { padding: .62rem 1.45rem !important; }
+.fin-alt { background: transparent !important; }
