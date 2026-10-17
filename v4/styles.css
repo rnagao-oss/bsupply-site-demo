@@ -3713,3 +3713,24 @@ section.company { background: var(--bg-soft) !important; }
 main:has(.jd-spec) > .section { background: var(--bg-soft) !important; }
 main:has(.jd-spec) .jd-persona li, main:has(.jd-spec) .sd-ap, main:has(.jd-spec) .jd-spec > div, main:has(.jd-spec) .jd-step { background: #fff !important; }
 main:has(.jd-spec) > .section { box-shadow: 0 0 0 100vmax var(--bg-soft); clip-path: inset(0 -100vmax); }
+/* 写真3枚は同じサイズに */
+.bd-photos { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+/* 支援事例カード：どのページでも16px間隔 */
+.bp-grid { gap: 16px !important; }
+/* 会社情報の見出しを外したので、写真帯をヘッダーの下から始める */
+main > .photo-flow:first-child { margin-top: clamp(6.5rem, 9vw, 8rem); }
+/* トップ：承継実績の上の余白を詰める */
+.home .investment.section { padding-top: clamp(4rem, 7vw, 6rem) !important; }
+/* 代表メッセージ：ぼかしは写真全体で均一（下だけ濃くしない） */
+@media (min-width: 901px) {
+  .msgp-photo { -webkit-mask-image: none !important; mask-image: none !important; }
+}
+.msgp-photo { filter: blur(1.2px) !important; }
+/* 左右と上の背景だけ白へなじませ、体（下側）には追加のぼかしをかけない */
+@media (min-width: 901px) {
+  .msgp-photo {
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 16%, #000 84%, transparent 100%), linear-gradient(to bottom, transparent 0, #000 12%, #000 100%) !important;
+    -webkit-mask-composite: source-in !important;
+    mask-image: linear-gradient(to right, transparent 0, #000 16%, #000 84%, transparent 100%), linear-gradient(to bottom, transparent 0, #000 12%, #000 100%) !important;
+    mask-composite: intersect !important; }
+}
