@@ -3582,3 +3582,14 @@ html:lang(en) .case-meta dt::after { content: ":"; }
     mask-image: linear-gradient(to right, transparent 0, #000 22%, #000 86%, transparent 100%), linear-gradient(to bottom, transparent 0, #000 8%, #000 74%, transparent 100%) !important;
     mask-composite: intersect !important; }
 }
+/* コアバリュー：英語を和文のすぐ右の列にそろえる（行ごとに右端へ飛ばさない） */
+@media (min-width: 701px) {
+  .cv-item { display: grid !important; grid-template-columns: minmax(0, 26em) minmax(0, 1fr); align-items: baseline; column-gap: clamp(1.5rem, 3vw, 3rem); }
+  .cv-en { justify-self: start; text-align: left; }
+  .cv-item:hover { padding-left: 1.6rem !important; }
+}
+@media (min-width: 701px) {
+  .cv-item { grid-template-columns: max-content minmax(0, 1fr) !important; }
+  .cv-list { display: grid; }
+  .cv-item h3 { white-space: nowrap; width: 19em; }
+}
