@@ -2972,3 +2972,4 @@ main :where(p, li, dd):where(:lang(ja)) { max-width: 40em; }
 /* ヘッダーメニューの文字サイズを統一（リンク・Contact・EN すべて同じ） */
 .site-header nav, .site-header nav a, .site-header nav .nav-cta, .site-header .lang-sw2 a { font-size: 0.95rem; }
 .site-header nav a, .site-header .lang-sw2 a { font-weight: 500; letter-spacing: 0.03em; }
+.hero-video .hero-shade { background: linear-gradient(to bottom, rgba(0,0,0,.34), rgba(0,0,0,.30) 40%, rgba(0,0,0,.62)); }
