@@ -3152,3 +3152,22 @@ html:lang(en) .bd-other-ja { display: none; }
 .bx-body .bx-title { font-size: clamp(1.1rem, 1.55vw, 1.35rem); margin-top: .3rem; }
 .bx-body .bx-text { font-size: .82rem; line-height: 1.85; margin-top: .55rem; }
 @media (max-width: 860px) { .bx-card, .bx-card.bx-wide { aspect-ratio: 4 / 3.6; } }
+
+/* BUSINESS：左に固定の見出し、右にカード（右の余白をなくす） */
+.bx-layout { display: grid; grid-template-columns: minmax(0, 0.82fr) minmax(0, 2.18fr); gap: clamp(2.4rem, 4.5vw, 5rem); padding: clamp(8rem, 13vw, 11rem) clamp(1.6rem, 5.5vw, 5.5rem) clamp(5rem, 9vw, 8rem); align-items: start; }
+.bx-aside-in { position: sticky; top: 112px; }
+.bx-aside .page-title { margin: 0; }
+.bx-aside .sec-lede { margin-top: 1.4rem; font-size: .95rem; line-height: 2; max-width: 24rem; }
+.bx-index { list-style: none; margin: 2.4rem 0 0; padding: 0; border-top: 1px solid var(--ink); max-width: 24rem; }
+.bx-index li { border-bottom: 1px solid var(--line); }
+.bx-index a { display: flex; gap: 1rem; align-items: baseline; padding: .85rem 0; font-size: .92rem; font-weight: 500; color: var(--ink); transition: padding-left .3s var(--ease); }
+.bx-index a span { font-family: var(--en); font-size: .74rem; color: var(--ink-70); letter-spacing: .08em; }
+@media (hover: hover) and (pointer: fine) { .bx-index a:hover { padding-left: .5rem; } }
+.bx-layout .bx-grid { max-width: none; }
+.bx-layout .bx-card { aspect-ratio: 16 / 11; scroll-margin-top: 110px; }
+.bx-layout .bx-card.bx-wide { aspect-ratio: 21 / 9; }
+@media (max-width: 1100px) {
+  .bx-layout { grid-template-columns: 1fr; }
+  .bx-aside-in { position: static; }
+  .bx-index { display: none; }
+}
