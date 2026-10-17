@@ -3734,3 +3734,11 @@ main > .photo-flow:first-child { margin-top: clamp(6.5rem, 9vw, 8rem); }
     mask-image: linear-gradient(to right, transparent 0, #000 16%, #000 84%, transparent 100%), linear-gradient(to bottom, transparent 0, #000 12%, #000 100%) !important;
     mask-composite: intersect !important; }
 }
+/* 事業ページの見出し：ラベルの下に見出しを左揃えで置く（左右に離さない） */
+.bd-sec-head { display: block !important; margin-bottom: clamp(1.8rem, 3vw, 2.6rem) !important; }
+.bd-sec-head .bd-h2 { margin-top: .9rem; font-size: clamp(1.6rem, 2.6vw, 2.2rem); }
+.bd-sec-head .bd-note { margin-top: .8rem; }
+/* 投資：お会いしたい会社 → グレーの面に白いボックス、間隔は縦横16px */
+.bd-sec:has(.bd-check) { background: var(--bg-soft); padding-bottom: clamp(4.5rem, 9vw, 7.5rem); margin-top: clamp(4.5rem, 9vw, 7.5rem); }
+.bd-check { gap: 16px !important; max-width: none; }
+.bd-check li { background: #fff !important; min-height: 84px; display: flex; align-items: center; padding: 1.1rem 1.6rem !important; }
