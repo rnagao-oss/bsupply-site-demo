@@ -3678,3 +3678,13 @@ main:has(.jd-spec) > .section > .sec-head { position: static !important; align-s
 main:has(.jd-spec) .jd-persona li { padding-left: 1.3rem !important; }
 main:has(.jd-spec) .jd-persona li::before { display: none !important; }
 main:has(.jd-spec) .pos-col, main:has(.jd-spec) .pos-col ul, main:has(.jd-spec) .pos-col li { max-width: none !important; width: 100%; box-sizing: border-box; }
+/* トップの事業カード：Business ページと同じ5枚横並び */
+.structure .bb-top { margin-top: clamp(2.6rem, 5vw, 4rem); max-width: 1600px; }
+
+/* カードの並び：同じ行のカードは同じ高さにそろえる（サイト全体） */
+.eq-grid, .sd-appr, .rs-grid, .bd-grid, .jd-steps, .bb-grid, .adv-grid, .data-grid, .cx-opts, .bd-steps { align-items: stretch !important; }
+.eq-card { display: flex !important; flex-direction: column; height: 100%; }
+.eq-card figcaption { flex: 1; }
+.sd-ap, .rs-card, .bd-item, .jd-step, .adv, .data-cell, .bd-step, .cx-opt > span { height: 100%; box-sizing: border-box; }
+.bb-card { height: 100%; }
+.eq-card .eq-img { flex: none; }
