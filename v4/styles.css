@@ -3706,3 +3706,10 @@ main:has(.jd-spec) .pos-col, main:has(.jd-spec) .pos-col ul, main:has(.jd-spec) 
 .orbit-node circle { fill: var(--ink) !important; }
 .orbit-node .node-en, .orbit-node .node-jp { fill: #fff !important; }
 .orbit-node:hover circle { fill: #333 !important; }
+/* 会社概要：グレーの背景に白いボックス（CORE VALUEと統一） */
+section.company { background: var(--bg-soft) !important; }
+.co-wrap .co-table > div { background: #fff !important; }
+/* 求人ページ：グレーの背景に白いボックス */
+main:has(.jd-spec) > .section { background: var(--bg-soft) !important; }
+main:has(.jd-spec) .jd-persona li, main:has(.jd-spec) .sd-ap, main:has(.jd-spec) .jd-spec > div, main:has(.jd-spec) .jd-step { background: #fff !important; }
+main:has(.jd-spec) > .section { box-shadow: 0 0 0 100vmax var(--bg-soft); clip-path: inset(0 -100vmax); }
