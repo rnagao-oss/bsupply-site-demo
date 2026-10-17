@@ -3689,3 +3689,7 @@ main:has(.jd-spec) .pos-col, main:has(.jd-spec) .pos-col ul, main:has(.jd-spec) 
 .bb-card { height: 100%; }
 .eq-card .eq-img { flex: none; }
 .rc-slogan-en { font-family: var(--en); font-weight: 700; font-size: clamp(2.4rem, 4.6vw, 4.2rem) !important; line-height: 1.1 !important; letter-spacing: -.01em; }
+/* 採用：全事業をコンサルティングと同じ「グレーの面＋白いカード」に */
+.rc-div { background: var(--bg-soft) !important; }
+.rc-div + .rc-div { margin-top: 14px; }
+.rc-div .jb-row { background: #fff !important; }
