@@ -3340,3 +3340,104 @@ body:has(.msg-layout) main { background: var(--bg-soft); }
 /* 見出し下の装飾バーを撤去 */
 .msgp-title::before, .pq h3::after { content: none !important; }
 .msgp-title { padding-bottom: 0; }
+
+/* ==========================================================
+   線をなくす（2026-10-18）
+   区切りは「余白・面（背景色）・文字の強弱」で行う。
+   ========================================================== */
+:root { --plate: #f4f3f0; --plate-2: #ecebe7; --r: 14px; }
+
+/* 1) 罫線・区切り線をすべて外す（入力欄も含む。入力欄は面で見せる） */
+body *, body *::before, body *::after { border-top-width: 0 !important; border-bottom-width: 0 !important; border-left-width: 0 !important; border-right-width: 0 !important; }
+hr { display: none !important; }
+
+/* 2) 線として描いていた装飾を撤去 */
+.progress,
+.tl-line, .bd-step::after, .bd-check li::before, .msg-v3::before, .msgp-title::before, .pq h3::after,
+.sec-label::after, .th-label::before, .th-label::after,
+.site-header nav a::after, .sn-link::after, .bd-crumb i, .rs-index::after, .msg-sign::before { display: none !important; content: none !important; }
+.bd-crumb { gap: .9rem; }
+.bd-crumb a::after { content: "/"; margin-left: .9rem; opacity: .55; }
+.bd-check li { padding-left: 0; }
+
+/* 3) 輪郭線で形を作っていたボタン・チップは「面」に置き換える */
+.nav-cta, .site-header.scrolled .nav-cta, .site-header.light .nav-cta { background: var(--ink) !important; color: #fff !important; }
+.site-header:not(.scrolled):not(.light) .nav-cta { background: #fff !important; color: var(--ink) !important; }
+.ft-cta, .fin-alt, .cx-file-btn, .si-tags li, .news-tabs a, .bd-tags li, .tag, .pill { background: var(--plate); }
+.ft-cta:hover { background: var(--ink); color: #fff; }
+.news-tabs a[aria-current] { background: var(--ink); color: #fff; }
+.si-arrow { background: var(--plate); }
+.bx-arrow { background: rgba(255, 255, 255, .22); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.bd-tags li { border-radius: 999px; }
+
+/* 4) 線で区切っていた一覧は、間隔と面で区切る */
+/* サービス一覧（コンサル） */
+.si-head { padding-bottom: 0; margin-bottom: clamp(1.6rem, 3vw, 2.4rem); }
+.si-list { display: grid; gap: 10px; }
+.si-row { background: var(--plate); border-radius: var(--r); padding-left: clamp(1.2rem, 2vw, 1.8rem); padding-right: clamp(1.2rem, 2vw, 1.8rem); }
+.si-row::before { border-radius: var(--r); }
+.si-row:hover .si-tags li { background: rgba(255, 255, 255, .12); }
+/* 事業ページ：見出し行 */
+.bd-sec-head { padding-bottom: 0; }
+.bd-item { background: var(--plate); border-radius: var(--r); padding: clamp(1.4rem, 2.2vw, 2rem); }
+.bd-step { border-radius: var(--r); }
+.bd-check { gap: 10px !important; }
+.bd-check li { background: var(--plate); border-radius: var(--r); padding: 1.1rem 1.4rem; }
+.bd-others-row { gap: 10px; }
+.bd-other, .bd-other:first-child { background: var(--plate); border-radius: var(--r); padding: 1.2rem 1.3rem 1.4rem; }
+.bd-other.is-current { background: var(--ink); color: #fff; }
+.bd-other.is-current .bd-other-no, .bd-other.is-current .bd-other-ja { color: rgba(255, 255, 255, .65); }
+/* Business 目次 */
+.bx-index { display: grid; gap: 6px; }
+.bx-index a { background: var(--plate); border-radius: 10px; padding: .8rem 1rem; }
+/* 3事業（トップ） */
+.sn-item { background: var(--plate); border-radius: var(--r); padding: clamp(1.4rem, 2.2vw, 2rem); }
+a.sn-item:hover { padding-left: clamp(1.4rem, 2.2vw, 2rem); background: var(--plate-2); }
+/* コアバリュー・強み・理由などのカード */
+.cv-item, .adv, .rs-card, .svc-card2, .eq-card figcaption, .pv-item, .iv-point, .eg-card, .tr-case, .bp-card, .case-card, .jb-row, .df-row, .pos-col { border-radius: var(--r); }
+.cv-item, .adv, .rs-card, .pv-item, .iv-point, .jb-row, .df-row { background: var(--plate); padding: clamp(1.3rem, 2.2vw, 2rem); }
+.jb-list { display: grid; gap: 10px; }
+/* 年表 */
+.tl-track { padding-left: 0 !important; display: grid; gap: 10px; }
+.tl-item { background: var(--plate); border-radius: var(--r); padding: clamp(1.2rem, 2vw, 1.7rem); }
+/* 項目表（会社概要・製造の facts など dl） */
+.facts, .cp-table, .co-table, dl.cp-subs { display: grid; gap: 6px; }
+.facts > div, .co-table > div, .cp-table > div, .co-row { background: var(--plate); border-radius: 10px; padding: 1.05rem 1.3rem !important; }
+/* ニュース */
+.news-card, .news-row { border-radius: var(--r); }
+/* フッター */
+.ft-bottom { padding-top: 1.6rem; }
+/* お問い合わせ：入力欄は面で */
+.cx-legend { padding-bottom: 0; }
+.cx-f input, .cx-f textarea, .ct-field input, .ct-field textarea, .ct-field select { background: var(--plate) !important; border-radius: 10px !important; padding: 1.15rem 1rem .75rem !important; }
+.cx-f { padding-top: 0; }
+.cx-l { left: 1rem; top: 1.05rem; }
+.cx-f input:focus + .cx-l, .cx-f input:not(:placeholder-shown) + .cx-l { transform: translateY(-.75rem); font-size: .7rem; }
+.cx-grid { gap: 10px 12px; }
+.cx-f input:focus, .cx-f textarea:focus { background: var(--plate-2) !important; box-shadow: inset 0 0 0 1.5px var(--ink); }
+.cx-opt > span { background: var(--plate); }
+.cx-flow { display: grid; gap: 4px; }
+.cx-flow li { background: rgba(255, 255, 255, .1); border-radius: 10px; padding: .85rem 1rem; }
+.cx-foot { padding-top: 0; }
+/* 代表メッセージ */
+.msgp-sign { margin-top: 2.6rem; }
+/* 線なし：面の色が背景と同化する箇所は白い面にする */
+.mission .cv-item, .cv-block .cv-item, .structure .sn-item, .bd-sec-soft .bd-step, .message .cv-item { background: #fff; }
+a.structure .sn-item:hover, .structure a.sn-item:hover { background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,.06); }
+.cv-list { display: grid; gap: 8px; background: transparent !important; }
+.cv-item { border-radius: var(--r); padding: 1.3rem 1.6rem !important; }
+.si-row .si-tags li { background: #fff; }
+/* 支援事例（コンサル） */
+.bp-list, .works .bp-grid { display: grid; gap: 10px; }
+.bp-card { background: var(--plate); border-radius: var(--r); padding: clamp(1.3rem, 2.2vw, 2rem) clamp(1.3rem, 2.4vw, 2.2rem) !important; }
+.tag-theme, .tag-ind { background: #fff; border-radius: 999px; padding: .2rem .6rem; }
+/* 採用：データの各セル */
+.data-cell { background: var(--plate); border-radius: var(--r); padding: clamp(1.3rem, 2.2vw, 2rem) !important; }
+.data-grid { gap: 10px !important; }
+/* 製造：設備カードの説明 */
+.eq-card figcaption { background: var(--plate); padding: 1.1rem 1.2rem 1.3rem; border-radius: 0 0 var(--r) var(--r); }
+.eq-card { border-radius: var(--r); overflow: hidden; }
+.rs-grid { gap: 10px !important; }
+.rs-card { border-radius: var(--r) !important; }
+.rc-alt .jb-row { background: #fff; }
+.eq-grid { gap: 10px !important; }
