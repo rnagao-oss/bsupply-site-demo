@@ -2995,3 +2995,30 @@ main :where(p, li, dd):where(:lang(ja)) { max-width: 40em; }
 .hero-mesh { position: absolute; inset: 0; pointer-events: none; background-image: radial-gradient(circle, rgba(0,0,0,.35) .8px, rgba(0,0,0,0) 1.1px); background-size: 4px 4px; }
 
 .hero-mesh { background-image: radial-gradient(circle, rgba(0,0,0,.16) .8px, rgba(0,0,0,0) 1.1px); }
+
+/* BUSINESS v2（CommerceX をベンチマークした写真カード 2×2） */
+.bx-section { padding-top: 0; }
+.bx-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(12px, 1.6vw, 20px); }
+.bx-card { position: relative; display: block; overflow: hidden; border-radius: 12px; aspect-ratio: 4 / 3.1; color: #fff; isolation: isolate; background: #111; }
+.bx-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(1.0); transition: transform 1.1s cubic-bezier(0.19, 1, 0.22, 1); z-index: -2; }
+.bx-shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(to bottom, rgba(12,12,12,.55) 0%, rgba(12,12,12,.08) 38%, rgba(12,12,12,.18) 55%, rgba(12,12,12,.82) 100%); transition: background-color .5s; }
+.bx-head { position: absolute; top: clamp(18px, 2.2vw, 28px); left: clamp(20px, 2.4vw, 32px); display: flex; align-items: baseline; gap: .8rem; font-family: var(--en); letter-spacing: .06em; }
+.bx-no { font-size: .8rem; opacity: .7; }
+.bx-en { font-size: .95rem; font-weight: 500; }
+.bx-arrow { position: absolute; top: clamp(14px, 1.9vw, 24px); right: clamp(14px, 1.9vw, 24px); width: 44px; height: 44px; border: 1px solid rgba(255,255,255,.7); border-radius: 50%; transition: background .35s, border-color .35s; }
+.bx-arrow::before { content: ""; position: absolute; left: 50%; top: 50%; width: 9px; height: 9px; border-top: 1.5px solid #fff; border-right: 1.5px solid #fff; transform: translate(-65%, -50%) rotate(45deg); transition: border-color .35s; }
+.bx-body { position: absolute; left: clamp(20px, 2.4vw, 32px); right: clamp(20px, 2.4vw, 32px); bottom: clamp(20px, 2.4vw, 30px); display: block; }
+.bx-eyebrow { display: block; font-size: .82rem; font-weight: 500; letter-spacing: .04em; opacity: .9; }
+.bx-title { display: block; margin-top: .45rem; font-size: clamp(1.35rem, 2.1vw, 1.75rem); font-weight: 700; letter-spacing: .03em; line-height: 1.4; }
+.bx-text { display: block; margin-top: .8rem; font-size: .9rem; line-height: 1.9; opacity: .88; max-width: 34rem; }
+@media (hover: hover) and (pointer: fine) {
+  .bx-card:hover .bx-img { transform: scale(1.05); }
+  .bx-card:hover .bx-arrow { background: #fff; border-color: #fff; }
+  .bx-card:hover .bx-arrow::before { border-color: #111; }
+}
+@media (max-width: 860px) { .bx-grid { grid-template-columns: 1fr; } .bx-card { aspect-ratio: 4 / 4.4; } }
+.bx-body p, .bx-body h2 { margin: 0; color: #fff; }
+.bx-body .bx-title { margin-top: .45rem; }
+.bx-body .bx-text { margin-top: .8rem; }
+.bx-shade { background: linear-gradient(to bottom, rgba(12,12,12,.55) 0%, rgba(12,12,12,.06) 34%, rgba(12,12,12,.35) 52%, rgba(12,12,12,.9) 100%); }
+.bx-card { aspect-ratio: 4 / 3.4; }
