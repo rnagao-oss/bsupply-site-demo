@@ -3699,3 +3699,10 @@ main:has(.jd-spec) .pos-col, main:has(.jd-spec) .pos-col ul, main:has(.jd-spec) 
 .bd-cta-text { max-width: none; }
 /* 代表メッセージ：写真全体に薄いぼかし */
 .msgp-photo { filter: blur(1.2px); }
+/* CORE VALUE英語：イタリック・字間なし */
+.cv-en { font-style: italic; font-weight: 400; letter-spacing: 0; text-transform: none; font-size: clamp(1rem, 1.25vw, 1.15rem); color: var(--ink-70); }
+/* 事業の循環図：大きく、丸は黒・文字は白 */
+.orbit-wrap { max-width: 860px !important; }
+.orbit-node circle { fill: var(--ink) !important; }
+.orbit-node .node-en, .orbit-node .node-jp { fill: #fff !important; }
+.orbit-node:hover circle { fill: #333 !important; }
