@@ -3626,3 +3626,55 @@ html:lang(en) .case-meta dt::after { content: ":"; }
 .cx-ta { display: flex !important; flex-direction: column-reverse; padding-top: 0 !important; }
 .cx-ta .cx-l { position: static !important; transform: none !important; left: auto !important; top: auto !important; margin: 0 0 .7rem; font-size: .9rem !important; }
 .cx-ta textarea { margin-top: 0 !important; }
+
+/* ===== 採用ページ（事業ページとトンマナを統一） ===== */
+.rc-intro .rc-close { font-weight: 700; color: var(--ink); }
+.rc-data { padding-top: clamp(4.5rem, 9vw, 7.5rem); }
+.rc-data .sec-label i, .rc-data .sec-label::after { display: none; }
+.rc-div { padding-top: clamp(4.5rem, 8vw, 7rem); padding-bottom: clamp(4.5rem, 8vw, 7rem); }
+.rc-div.rc-soft { background: var(--bg-soft); }
+.rc-div.rc-soft .jb-row { background: #fff; }
+.rc-div-in { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: clamp(2rem, 5vw, 5rem); align-items: start; }
+.rc-div-l .sec-label { margin: 0; }
+.rc-div-title { margin: .8rem 0 0; font-size: clamp(1.7rem, 2.8vw, 2.4rem); font-weight: 700; letter-spacing: .03em; line-height: 1.4; }
+.rc-div-lede { margin: 1.2rem 0 0; font-size: var(--fs-body); line-height: 2; color: var(--ink); max-width: 34em; }
+.rc-div-meta { display: flex; gap: .8rem; margin: 1.4rem 0 0; font-size: .92rem; }
+.rc-div-meta dt { color: var(--ink-70); }
+.rc-div-meta dd { margin: 0; font-weight: 700; }
+.rc-div .jb-list { gap: 10px; }
+.rc-div .jb-row { min-height: 88px; align-items: center; }
+@media (max-width: 960px) { .rc-div-in { grid-template-columns: 1fr; } }
+
+/* ===== 求人詳細ページ：見出し左・内容右の2列、縦の余白を詰めて中央の幅に ===== */
+main:has(.jd-spec) > .section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.4fr); column-gap: clamp(2rem, 5vw, 5rem); align-items: start;
+  max-width: 1240px; margin: 0 auto; padding-top: clamp(3.4rem, 6vw, 5rem) !important; padding-bottom: clamp(3.4rem, 6vw, 5rem) !important; }
+main:has(.jd-spec) > .section[style*="padding-top:0"]:first-of-type, main:has(.jd-spec) > .section:has(.jd-mission) { padding-top: 0 !important; }
+main:has(.jd-spec) > .section > .sec-head { margin: 0 !important; padding: 0; position: sticky; top: 110px; }
+main:has(.jd-spec) > .section > .sec-head .sec-title { font-size: clamp(1.5rem, 2.2vw, 2rem) !important; margin-top: .5rem; }
+main:has(.jd-spec) > .section > :not(.sec-head) { grid-column: 2; min-width: 0; }
+main:has(.jd-spec) > .section:has(.jd-mission) > .jd-mission, main:has(.jd-spec) > .section:has(.back-link) > * { grid-column: 1 / -1; }
+main:has(.jd-spec) .jd-mission p { max-width: 46em; font-size: 1.05rem; color: var(--ink); }
+main:has(.jd-spec) .page-hero { max-width: 1240px; margin: 0 auto; box-sizing: border-box; padding-bottom: clamp(2rem, 4vw, 3rem); }
+/* 箇条書きは面の行に */
+main:has(.jd-spec) .jd-persona ul { display: grid; gap: 8px; margin: 0; padding: 0; }
+main:has(.jd-spec) .jd-persona li { background: var(--plate); border-radius: 12px; padding: 1rem 1.3rem 1rem 2.6rem; margin: 0; position: relative; }
+main:has(.jd-spec) .jd-persona li::before { left: 1.2rem; }
+main:has(.jd-spec) .jd-persona { max-width: none; }
+/* 魅力・要項・プロセス */
+main:has(.jd-spec) .sd-appr { gap: 10px; }
+main:has(.jd-spec) .sd-ap { background: var(--plate); border-radius: 14px; padding: 1.4rem 1.5rem; }
+main:has(.jd-spec) .jd-spec { display: grid; gap: 8px; max-width: none; }
+main:has(.jd-spec) .jd-spec > div { background: var(--plate); border-radius: 12px; padding: 1.1rem 1.4rem !important; grid-template-columns: 8rem minmax(0, 1fr); align-items: baseline; }
+main:has(.jd-spec) .jd-spec h3 { font-size: .92rem; color: var(--ink-70); font-weight: 500; letter-spacing: .04em; }
+main:has(.jd-spec) .jd-spec p { color: var(--ink); max-width: none; }
+main:has(.jd-spec) .jd-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; max-width: none; }
+main:has(.jd-spec) .jd-step { background: var(--plate); border-radius: 14px; padding: 1.4rem 1.5rem; }
+@media (max-width: 960px) {
+  main:has(.jd-spec) > .section { grid-template-columns: 1fr; }
+  main:has(.jd-spec) > .section > .sec-head { position: static; margin-bottom: 1.4rem !important; }
+  main:has(.jd-spec) > .section > :not(.sec-head) { grid-column: 1; }
+}
+main:has(.jd-spec) > .section > .sec-head { position: static !important; align-self: start; }
+main:has(.jd-spec) .jd-persona li { padding-left: 1.3rem !important; }
+main:has(.jd-spec) .jd-persona li::before { display: none !important; }
+main:has(.jd-spec) .pos-col, main:has(.jd-spec) .pos-col ul, main:has(.jd-spec) .pos-col li { max-width: none !important; width: 100%; box-sizing: border-box; }

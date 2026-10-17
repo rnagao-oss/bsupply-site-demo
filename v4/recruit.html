@@ -10,7 +10,7 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;family=Source+Serif+4:wght@400&amp;family=Zen+Kurenaido&amp;display=swap" rel="stylesheet"/>
 <link href="./assets/img/favicon-48.png?v=3" rel="icon" sizes="48x48" type="image/png"/><link href="./assets/img/favicon-32.png?v=3" rel="icon" sizes="32x32" type="image/png"/><link href="./assets/img/favicon-180.png?v=3" rel="apple-touch-icon"/>
-<link href="./styles.css?v=20261018zi" rel="stylesheet"/>
+<link href="./styles.css?v=20261018zl" rel="stylesheet"/>
 
 
 
@@ -70,20 +70,31 @@
 </nav>
 <div class="mm-lang2"><a href="./en/recruit.html" lang="en">EN</a><a class="cur" href="./recruit.html" lang="ja">日本語</a></div></div>
 <main>
-<h1 class="sr-only">採用情報</h1>
-<!-- トップメッセージ -->
-<section class="rc-message" data-scene="dark">
-<p class="sec-label"><i>—</i>MESSAGE</p>
-<h2 class="rc-slogan" data-split="">「小さなチームで、大きな仕事を」</h2>
-<p>AIをはじめとする最新のテクノロジーを駆使して収益性の高い事業を生み出し、その利益を社員と事業に再投資します。AIの時代だからこそ、手触りのある仕事、心が躍る仕事に向き合います。</p>
-<p>従業員の物心両面の幸福を追求しながら、世の中に価値を生み出し続けます。</p>
-<p class="rc-last">ともに、熱狂しましょう。</p>
+<section class="bd-hero" data-scene="dark" id="hero">
+<img alt="" class="bd-hero-img" src="./assets/img/co/c30.jpg" style="object-position:50% 40%"/>
+<span aria-hidden="true" class="bd-hero-shade"></span>
+<span aria-hidden="true" class="hero-mesh"></span>
+<div class="bd-hero-in">
+<p class="bd-hero-en">RECRUIT</p>
+<h1 class="bd-hero-ja">採用情報</h1>
+<div class="bd-crumb"><a href="./">TOP</a><span>RECRUIT</span></div>
+</div>
 </section>
-<!-- DATA -->
+<section class="section bd-intro rc-intro">
+<div class="bd-intro-l">
+<p class="bd-kicker">MESSAGE</p>
+<h2 class="bd-lead"><span class="line">小さなチームで、</span><span class="line">大きな仕事を。</span></h2>
+</div>
+<div class="bd-intro-r">
+<p>AIをはじめとする最新のテクノロジーを使って収益性の高い事業を生み出し、その利益を社員と事業に再投資します。AIの時代だからこそ、手触りのある仕事、心が躍る仕事に向き合います。</p>
+<p>従業員の物心両面の幸福を追求しながら、世の中に価値を生み出し続けます。</p>
+<p class="rc-close">ともに、熱狂しましょう。</p>
+</div>
+</section>
 <section class="section rc-data">
 <div class="sec-head">
-<p class="sec-label"><i>—</i>DATA</p>
-<h2 class="sec-title" data-split="">Human Resources Data</h2>
+<p class="sec-label">DATA</p>
+<h2 class="sec-title" data-split="">数字で見るB supply</h2>
 </div>
 <div class="data-grid">
 <div class="data-cell">
@@ -126,15 +137,13 @@
 </div>
 <p class="data-asof">2026年10月時点</p>
 </section>
-<!-- コンサルティング事業 -->
-<!-- 革製造事業 -->
-<!-- エントリー -->
-<section class="section rc-division">
-<div class="sec-head">
-<p class="sec-label">CONSULTING DIVISION</p>
-<h2 class="sec-title" data-split="">コンサルティング事業</h2>
-<p class="sec-lede">東証プライム上場企業からシード期のスタートアップ、創業100年を超える老舗企業まで、成長を左右する経営課題に取り組みます。</p>
-<p class="sec-lede">戦略を立てて終わりにせず、経営者のそばで意思決定と実行を支え、成果が出るところまで関わります。勤務地は大阪本社またはフルリモートです。場所に縛られず、仕事そのものに集中できます。</p>
+<section class="section rc-div rc-soft">
+<div class="rc-div-in">
+<div class="rc-div-l">
+<p class="sec-label">CONSULTING</p>
+<h2 class="rc-div-title">コンサルティング事業</h2>
+<p class="rc-div-lede">東証プライム上場企業からシード期のスタートアップ、創業100年を超える老舗企業まで、成長を左右する経営課題に取り組みます。戦略を立てて終わりにせず、経営者のそばで意思決定と実行を支え、成果が出るところまで関わります。</p>
+<dl class="rc-div-meta"><dt>勤務地</dt><dd>大阪本社またはフルリモート</dd></dl>
 </div>
 <div class="jb-list">
 <a class="jb-row" data-div="consulting" data-loc="osaka remote" href="./job-business-designer.html">
@@ -152,66 +161,73 @@
 <span class="jb-arrow">→</span>
 </a>
 </div>
+</div>
 </section>
-<section class="section rc-division rc-alt">
-<div class="sec-head">
-<p class="sec-label">INVESTMENT DIVISION</p>
-<h2 class="sec-title" data-split="">事業投資・承継事業</h2>
-<p class="sec-lede">独自の技術や顧客基盤、事業資産を持つ中小企業に、B supply自身の資本で投資します。投資候補先の探索から投資判断、承継後の経営支援、成長施策の実行までを担う仕事です。</p>
-<p class="sec-lede">投資後は外部のアドバイザーではなく、経営の当事者として事業に携わります。経験と成果に応じて、将来は投資先企業の取締役や執行役員、事業責任者として経営に加わる道もあります。</p>
+<section class="section rc-div">
+<div class="rc-div-in">
+<div class="rc-div-l">
+<p class="sec-label">SMB INVESTMENT</p>
+<h2 class="rc-div-title">中小企業投資事業</h2>
+<p class="rc-div-lede">独自の技術や顧客基盤を持つ中小企業に、B supplyの自己資金で投資します。投資先の探索から投資判断、承継後の経営と成長施策の実行までを担います。外部のアドバイザーではなく、経営の当事者として事業に携わる仕事です。</p>
+<dl class="rc-div-meta"><dt>勤務地</dt><dd>大阪本社またはフルリモート</dd></dl>
 </div>
 <div class="jb-list">
 <a class="jb-row" data-div="investment" data-loc="osaka remote" href="./job-investment-front.html">
 <div class="jb-info">
 <h3>投資フロントメンバー</h3>
-<p class="jb-meta"><span>事業投資・承継事業</span><i>·</i><span>大阪本社またはフルリモート</span></p>
+<p class="jb-meta"><span>中小企業投資事業</span><i>·</i><span>大阪本社またはフルリモート</span></p>
 </div>
 <span class="jb-arrow">→</span>
 </a>
 </div>
+</div>
 </section>
-<section class="section rc-division">
-<div class="sec-head">
-<p class="sec-label">MANUFACTURING DIVISION</p>
-<h2 class="sec-title" data-split="">革製造事業</h2>
-<p class="sec-lede">1966年創業、60年の歴史を持つ革製造工房です。一流ブランドに選ばれ続けてきた品質を、次の世代へ引き継ぐ仲間を募集します。勤務地は<b>墨田区向島工房</b>または<b>都内店舗（表参道）</b>です。職種によってはリモートも可能です。</p>
+<section class="section rc-div rc-soft">
+<div class="rc-div-in">
+<div class="rc-div-l">
+<p class="sec-label">LEATHER OEM</p>
+<h2 class="rc-div-title">革製品OEM事業</h2>
+<p class="rc-div-lede">1966年創業、60年の歴史を持つ革製造工房です。一流ブランドに選ばれ続けてきた品質を、次の世代へ引き継ぐ仲間を募集します。</p>
+<dl class="rc-div-meta"><dt>勤務地</dt><dd>墨田区向島工房／都内店舗（表参道）</dd></dl>
 </div>
 <div class="jb-list">
 <a class="jb-row" data-div="manufacturing" data-loc="atelier" href="./job-craftsman.html">
 <div class="jb-info">
 <h3>革職人</h3>
-<p class="jb-meta"><span>革製造事業</span><i>·</i><span>墨田区向島工房</span></p>
+<p class="jb-meta"><span>革製品OEM事業</span><i>·</i><span>墨田区向島工房</span></p>
 </div>
 <span class="jb-arrow">→</span>
 </a>
 <a class="jb-row" data-div="manufacturing" data-loc="atelier" href="./job-production-manager.html">
 <div class="jb-info">
 <h3>生産管理</h3>
-<p class="jb-meta"><span>革製造事業</span><i>·</i><span>墨田区向島工房</span></p>
+<p class="jb-meta"><span>革製品OEM事業</span><i>·</i><span>墨田区向島工房</span></p>
 </div>
 <span class="jb-arrow">→</span>
 </a>
 <a class="jb-row" data-div="manufacturing" data-loc="atelier store remote" href="./job-marketing.html">
 <div class="jb-info">
 <h3>マーケティング</h3>
-<p class="jb-meta"><span>革製造事業</span><i>·</i><span>墨田区向島工房／都内店舗／リモート</span></p>
+<p class="jb-meta"><span>革製品OEM事業</span><i>·</i><span>墨田区向島工房／都内店舗（表参道）／リモート</span></p>
 </div>
 <span class="jb-arrow">→</span>
 </a>
 <a class="jb-row" data-div="manufacturing" data-loc="atelier" href="./job-inspection-cutting.html">
 <div class="jb-info">
 <h3>検品・裁断スタッフ（パート社員）</h3>
-<p class="jb-meta"><span>革製造事業</span><i>·</i><span>墨田区向島工房</span><i>·</i><span>パート社員</span></p>
+<p class="jb-meta"><span>革製品OEM事業</span><i>·</i><span>墨田区向島工房</span><i>·</i><span>パート社員</span></p>
 </div>
 <span class="jb-arrow">→</span>
 </a>
 </div>
-</section><section class="finale">
-<div class="fin-inner">
-<p class="sec-label center">ENTRY</p>
-<a class="fin-mail" href="./apply.html">応募はこちら<em>→</em></a>
-<p class="fin-sub">応募前のご質問やカジュアル面談のご希望は、<a href="./contact.html">お問い合わせフォーム</a>（種別「その他」）からご連絡ください。「まず話を聞いてみたい」という段階でも構いません。</p>
-<a class="fin-alt" href="./company.html">会社情報を見る<em>→</em></a>
+</div>
+</section>
+<section class="bd-cta" data-scene="dark">
+<div class="bd-cta-in">
+<p class="sec-label">ENTRY</p>
+<h2 class="bd-cta-title">応募はこちらから</h2>
+<p class="bd-cta-text">応募前のご質問やカジュアル面談のご希望は、お問い合わせフォーム（種別「その他」）からご連絡ください。「まず話を聞いてみたい」という段階でもかまいません。</p>
+<a class="bd-cta-btn" href="./apply.html">応募する<i aria-hidden="true"></i></a>
 </div>
 </section>
 </main>
