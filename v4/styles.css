@@ -3362,3 +3362,4 @@ body:has(.msg-layout) main { background: var(--bg-soft); }
   .msgp::before { width: var(--D); height: var(--D); right: calc(var(--PR) - var(--PW) * .42); top: calc(var(--PT) + var(--PH) * .44);
     clip-path: inset(0 calc(var(--PW) * .42 - (var(--PR) - var(--L))) calc(var(--D) - var(--PH) * .56) 0); }
 }
+.msgp::before { content: none !important; }
