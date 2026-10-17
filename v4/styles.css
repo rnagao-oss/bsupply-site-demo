@@ -3141,3 +3141,14 @@ html:lang(en) .bd-other-ja { display: none; }
 .msg-dark .ms-sign { filter: invert(1); }
 .page-hero.msg-dark { margin-bottom: 0; padding-bottom: clamp(2.6rem, 5vw, 4rem); }
 .message.msg-dark { padding-bottom: clamp(5rem, 10vw, 8rem); }
+/* Business カードを CommerceX 程度の大きさに */
+.bx-grid { max-width: 1080px; gap: 14px; }
+.bx-card { aspect-ratio: 16 / 10.5; border-radius: 10px; }
+.bx-card.bx-wide { aspect-ratio: 21 / 8; }
+.bx-head { top: 18px; left: 22px; }
+.bx-arrow { top: 14px; right: 14px; width: 38px; height: 38px; }
+.bx-body { left: 22px; right: 22px; bottom: 20px; }
+.bx-eyebrow { font-size: .76rem; }
+.bx-body .bx-title { font-size: clamp(1.1rem, 1.55vw, 1.35rem); margin-top: .3rem; }
+.bx-body .bx-text { font-size: .82rem; line-height: 1.85; margin-top: .55rem; }
+@media (max-width: 860px) { .bx-card, .bx-card.bx-wide { aspect-ratio: 4 / 3.6; } }
