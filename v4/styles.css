@@ -1494,7 +1494,7 @@ a.sn-item:hover .sn-link::after { transform: scaleX(1); }
   stroke-dashoffset: 339.3;
   transition: stroke-dashoffset 1.6s cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
 }
-.data-cell.in .donut-f { stroke-dashoffset: 101.8; } /* 女性 70.0% */
+.data-cell.in .donut-f { stroke-dashoffset: 92.5; } /* 女性 72.7%（8/11） */
 .donut-num {
   font-family: var(--en);
   font-size: 30px;
