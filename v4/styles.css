@@ -3210,3 +3210,36 @@ body:has(.msg-layout) main { background: var(--bg-soft); }
 .msg-photo img { width: 100%; aspect-ratio: 16 / 9.5; object-fit: cover; object-position: 50% 32%; display: block; }
 .msg-v3 .msg-sign2 { display: flex; justify-content: flex-end; margin-top: 3.4rem; padding-top: 2rem; border-top: 1px solid var(--line); }
 @media (max-width: 960px) { .msg-v3::before { display: none; } }
+
+/* 代表メッセージ：右に人物、左へ白くぼかした背景 */
+.msgp { position: relative; overflow: hidden; background: #fff; padding: clamp(8.5rem, 13vw, 11rem) clamp(1.6rem, 6vw, 7rem) clamp(6rem, 10vw, 9rem); min-height: 100vh; }
+.msgp-photo { position: absolute; top: 0; right: 0; width: 64%; height: 100%; object-fit: cover; object-position: 50% 18%; z-index: 0; }
+.msgp-fade { position: absolute; inset: 0; z-index: 1; background:
+  linear-gradient(90deg, #fff 0%, #fff 36%, rgba(255,255,255,.9) 46%, rgba(255,255,255,.55) 58%, rgba(255,255,255,.12) 74%, rgba(255,255,255,0) 86%),
+  linear-gradient(0deg, rgba(255,255,255,.35), rgba(255,255,255,.35)); }
+.msgp-in { position: relative; z-index: 2; max-width: min(46rem, 58%); }
+.msgp-title { display: flex; align-items: center; gap: .8rem; margin: 0; font-size: clamp(1.8rem, 2.6vw, 2.4rem); font-weight: 700; letter-spacing: .04em; color: var(--ink); }
+.msgp-title::after { content: none; }
+.msgp-mark { width: 1.35em; height: 1.35em; object-fit: contain; }
+.msgp-in .msgp-title + .msgp-body { margin-top: 0; }
+.msgp-title { padding-bottom: 1.4rem; position: relative; }
+.msgp-title::before { content: ""; position: absolute; left: 0; bottom: 0; width: 3.4rem; height: 2px; background: var(--ink); }
+.msgp-body { margin-top: 2.6rem !important; }
+.msgp-body p { font-size: clamp(.98rem, 1.12vw, 1.08rem); line-height: 2.15; color: var(--ink); letter-spacing: .03em; }
+.msgp-body p + p { margin-top: 1.4rem; }
+.msgp-sign { display: flex; align-items: center; justify-content: flex-end; gap: 1.4rem; margin-top: 3rem; }
+.msgp-sign span { font-size: .92rem; letter-spacing: .06em; color: var(--ink); }
+.msgp-sign .ms-sign { width: clamp(180px, 18vw, 240px); height: auto; filter: none; }
+@media (max-width: 900px) {
+  .msgp { padding-top: 0; min-height: 0; }
+  .msgp-photo { position: relative; width: calc(100% + 2 * clamp(1.6rem, 6vw, 7rem)); margin: 0 calc(-1 * clamp(1.6rem, 6vw, 7rem)); height: 70vw; max-height: 520px; display: block; }
+  .msgp-fade { inset: auto 0 auto 0; top: calc(70vw - 30vw); height: 30vw; max-height: 200px; background: linear-gradient(rgba(255,255,255,0), #fff); }
+  .msgp-in { max-width: none; margin-top: 2rem; }
+}
+@media (min-width: 901px) {
+  .msgp-photo { height: clamp(720px, 58vw, 1000px); width: 60%; object-position: 50% 12%; }
+  .msgp-fade { background:
+    linear-gradient(90deg, #fff 0%, #fff 38%, rgba(255,255,255,.9) 48%, rgba(255,255,255,.5) 60%, rgba(255,255,255,.1) 76%, rgba(255,255,255,0) 88%),
+    linear-gradient(180deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) calc(clamp(720px, 58vw, 1000px) - 260px), #fff clamp(720px, 58vw, 1000px)),
+    linear-gradient(0deg, rgba(255,255,255,.3), rgba(255,255,255,.3)); }
+}
