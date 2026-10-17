@@ -2968,3 +2968,7 @@ main :where(p, li, dd):where(:lang(ja)) { max-width: 40em; }
 
 .rs-index span, .rs-card:hover .rs-index span { font-size: clamp(2rem, 3.4vw, 2.8rem); font-weight: 500; letter-spacing: 0.02em; line-height: 1; color: var(--ink); }
 .rs-index { margin-bottom: 0.4rem; }
+
+/* ヘッダーメニューの文字サイズを統一（リンク・Contact・EN すべて同じ） */
+.site-header nav, .site-header nav a, .site-header nav .nav-cta, .site-header .lang-sw2 a { font-size: 0.95rem; }
+.site-header nav a, .site-header .lang-sw2 a { font-weight: 500; letter-spacing: 0.03em; }
