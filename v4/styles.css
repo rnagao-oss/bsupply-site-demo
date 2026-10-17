@@ -2958,3 +2958,10 @@ main :where(p, li, dd):where(:lang(ja)) { max-width: 40em; }
 .hero-video .hero-title { font-size: clamp(2.2rem, 5.4vw, 5rem); }
 .hero-video .hero-title .ht-line { display: inline-block; }
 @media (max-width: 760px) { .hero-video .hero-title .ht-line { display: block; } }
+
+/* 2026-10-17 沿革の右に動画（トップと同じ自動再生ループ） */
+.tl-split { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 5rem); align-items: stretch; }
+.tl-split .tl-block { max-width: none; }
+.tl-media { position: relative; overflow: hidden; min-height: 26rem; background: #101010; }
+.tl-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+@media (max-width: 900px) { .tl-split { grid-template-columns: 1fr; } .tl-media { min-height: 0; aspect-ratio: 4 / 5; } }
