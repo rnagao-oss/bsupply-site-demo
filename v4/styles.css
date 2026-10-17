@@ -3693,3 +3693,9 @@ main:has(.jd-spec) .pos-col, main:has(.jd-spec) .pos-col ul, main:has(.jd-spec) 
 .rc-div { background: var(--bg-soft) !important; }
 .rc-div + .rc-div { margin-top: 14px; }
 .rc-div .jb-row { background: #fff !important; }
+/* 縦に積むボックスの間隔を全ページ16pxに統一 */
+.cv-list, .si-list, .jb-list, .rc-div .jb-list, .tl-track, .bp-list, .works .bp-grid, .co-wrap .co-table { gap: 16px !important; }
+/* 末尾CTAの説明文は折り返さず横に流す */
+.bd-cta-text { max-width: none; }
+/* 代表メッセージ：写真全体に薄いぼかし */
+.msgp-photo { filter: blur(1.2px); }
