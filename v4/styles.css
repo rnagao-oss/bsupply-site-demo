@@ -3171,3 +3171,5 @@ html:lang(en) .bd-other-ja { display: none; }
   .bx-aside-in { position: static; }
   .bx-index { display: none; }
 }
+.hero-en { margin: clamp(.9rem, 1.8vw, 1.5rem) 0 0; font-family: var(--en); font-weight: 600; font-size: clamp(1.3rem, 2.6vw, 2.4rem); letter-spacing: -.005em; line-height: 1.2; color: #fff; text-shadow: 0 2px 24px rgba(0,0,0,.35); }
+html:lang(en) .hero-en { display: none; }
