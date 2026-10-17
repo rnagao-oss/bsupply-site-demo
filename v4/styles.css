@@ -3573,3 +3573,12 @@ html:lang(en) .case-meta dt::after { content: ":"; }
 .bp-card .case-meta { grid-column: 1; grid-row: 1 / span 2; grid-template-columns: 1fr; gap: .7rem; margin: 0; padding-top: .15rem; }
 @media (max-width: 760px) { .bp-card .case-meta { grid-row: auto; grid-template-columns: repeat(3, auto); gap: .4rem 1.2rem; margin-bottom: .4rem; } }
 .case-meta dt::after { content: none !important; }
+/* 代表メッセージ：写真を中くらいに（縦長）、ぼかしは以前の白いフェードを四辺に */
+@media (min-width: 901px) {
+  .msgp { grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr) !important; }
+  .msgp-photo { aspect-ratio: 4 / 5 !important; object-position: 50% 8% !important; opacity: .9 !important; margin-top: clamp(4.5rem, 6vw, 5.5rem) !important;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 22%, #000 86%, transparent 100%), linear-gradient(to bottom, transparent 0, #000 8%, #000 74%, transparent 100%) !important;
+    -webkit-mask-composite: source-in !important;
+    mask-image: linear-gradient(to right, transparent 0, #000 22%, #000 86%, transparent 100%), linear-gradient(to bottom, transparent 0, #000 8%, #000 74%, transparent 100%) !important;
+    mask-composite: intersect !important; }
+}
