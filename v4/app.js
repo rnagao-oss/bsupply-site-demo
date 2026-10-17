@@ -580,7 +580,7 @@
     const r = atelier.getBoundingClientRect();
     const total = r.height - innerHeight;
     const t = Math.min(Math.max(-r.top / total, 0), 1);
-    const phase = t < 0.34 ? 0 : t < 0.7 ? 1 : 2;
+    const phase = t < 0.5 ? 0 : 1;
     captions.forEach((c, i) => c.classList.toggle('active', i === phase && atInView));
   }
   if (atelier && atVideo) {
