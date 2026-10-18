@@ -1,8 +1,7 @@
 /* p3-brand-growth.css — brand-growth ページだけの調整（biz3.css の後に読み込む） */
 
-/* 導入と写真3枚は一つのまとまりとして見せる（白が2節続くため、間の余白を詰める） */
-.b3 #intro { padding-bottom: 0; }
-.b3 #photos { padding-top: clamp(3rem, 5vw, 4.5rem); }
+/* 導入と写真3枚は同じ余白トークンで整え、写真側の密度で一続きに見せる */
+.b3 #intro, .b3 #photos { padding-block: var(--b3-sec); }
 
 /* 取り組みの2タイルは事例の下に置く */
 .b3 #case .b3-grid { margin-top: clamp(2.5rem, 4vw, 3.5rem); }
@@ -32,7 +31,7 @@
   .b3 #approach .b3-flow { gap: 1.6rem; }
   .b3 #approach .b3-flow::before { left: 35px; top: 36px; bottom: 36px; }
   .b3 #approach .b3-flow > li { display: grid; grid-template-columns: 72px minmax(0, 1fr); column-gap: 1.25rem; align-items: start; text-align: left; }
-  .b3 #approach .b3-flow-no { grid-row: 1 / span 2; width: 72px; margin: 0; font-size: .66rem; }
+  .b3 #approach .b3-flow-no { grid-row: 1 / span 2; width: 72px; margin: 0; font-size: .72rem; }
   .b3 #approach .b3-flow-h { margin: .85rem 0 .45rem; }
   .b3 #approach .b3-flow-p { max-width: none; }
 }

@@ -22,6 +22,56 @@
     targets.forEach(show);
   }
 
+  /* BPOの価格だけを0から数える（本文の文字列はHTMLに保持する） */
+  document.querySelectorAll('.b3 [data-count]').forEach((counter) => {
+    if (reduce) return;
+    const match = counter.textContent.match(/^(.*?)(\d+)(.*)$/);
+    if (!match) return;
+    const [, before, raw, after] = match;
+    const end = Number(raw);
+    const start = () => {
+      const began = performance.now();
+      const tick = (now) => {
+        const progress = Math.min(1, (now - began) / 1200);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        counter.textContent = `${before}${Math.round(end * eased)}${after}`;
+        if (progress < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+    if ('IntersectionObserver' in window) {
+      const countObserver = new IntersectionObserver((entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+        countObserver.disconnect();
+        start();
+      }, { threshold: .6 });
+      countObserver.observe(counter);
+    } else start();
+  });
+
+  /* FAQ：detailsの標準操作を保ちつつ、高さだけを補間する */
+  if (!reduce) document.querySelectorAll('.b3 .b3-faq details').forEach((details) => {
+    const summary = details.querySelector('summary');
+    if (!summary) return;
+    let animation;
+    summary.addEventListener('click', (event) => {
+      event.preventDefault();
+      if (animation) animation.cancel();
+      const startHeight = `${details.offsetHeight}px`;
+      if (!details.open) details.open = true;
+      const endHeight = details.open && startHeight !== `${summary.offsetHeight}px`
+        ? `${summary.offsetHeight}px`
+        : `${summary.offsetHeight + (details.querySelector('p')?.offsetHeight || 0)}px`;
+      const closing = endHeight === `${summary.offsetHeight}px`;
+      animation = details.animate({ height: [startHeight, endHeight] }, { duration: 360, easing: 'cubic-bezier(.19,1,.22,1)' });
+      animation.onfinish = () => {
+        details.open = !closing;
+        details.style.height = '';
+        animation = null;
+      };
+    });
+  });
+
   /* ロゴ帯：2段とも同じ向き・同じ速度（px/s）で流す */
   const PXPS = () => Math.max(24, innerWidth / 34);
   document.querySelectorAll('.b3 .b3-mq-track').forEach((track) => {
