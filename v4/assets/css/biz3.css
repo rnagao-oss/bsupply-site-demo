@@ -195,14 +195,13 @@ html.js .in .b3-cmp-col.is-us, html.js .b3-cmp-col.is-us.in { transform: none; o
 
 /* ---------- ピラミッド＋条件 ---------- */
 .b3-ov { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; }
-.b3-pyr-stack { position: relative; display: grid; gap: 6px; justify-items: center; }
-.b3-pyr-lv { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; height: 92px; background: #fff; }
+.b3-pyr-stack { position: relative; }
+.b3-pyr-shape { display: grid; grid-template-rows: 1fr 1fr 1.32fr; row-gap: 6px; height: clamp(260px, 26vw, 330px); clip-path: polygon(22% 0, 78% 0, 100% 100%, 0 100%); }
+.b3-pyr-lv { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; background: #fff; }
 .b3-pyr-lv p { font-weight: 700; font-size: .95rem; }
 .b3-pyr-num { margin-top: .25rem; font-weight: 500; font-size: .8rem; color: var(--b3-muted); }
-.b3-pyr-lv.lv1 { width: 34%; clip-path: polygon(30% 0, 70% 0, 100% 100%, 0 100%); }
-.b3-pyr-lv.lv2 { width: 66%; clip-path: polygon(16% 0, 84% 0, 100% 100%, 0 100%); }
-.b3-pyr-lv.lv3 { width: 100%; height: 128px; clip-path: polygon(11% 0, 89% 0, 100% 100%, 0 100%); background: var(--b3-soft-2); }
-.b3-pyr-band { position: absolute; right: -2%; bottom: 124px; transform: translateY(50%); padding: .75rem 1.1rem; border-radius: 10px; background: var(--b3-ink); color: #fff; }
+.b3-pyr-lv.lv3 { background: var(--b3-soft-2); }
+.b3-pyr-band { position: absolute; right: -2%; bottom: 39.8%; transform: translateY(50%); padding: .75rem 1.1rem; border-radius: 10px; background: var(--b3-ink); color: #fff; }
 .b3-pyr-band-h { font: 500 .7rem/1 var(--b3-en); letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.7); }
 .b3-pyr-band-p { margin-top: .3rem; font-weight: 700; font-size: .95rem; }
 .b3-terms { display: grid; gap: 10px; }
@@ -472,3 +471,29 @@ html:lang(en) .b3-mission-copy h1 { font-family: var(--b3-en); font-weight: 500;
 @keyframes b3HeroZoom { from { transform: scale(1.08); } to { transform: scale(1.04); } }
 @media (max-width: 600px) { .b3 .bd-hero { min-height: 72svh; } .b3 .bd-hero-ja { font-size: clamp(1.9rem, 8.4vw, 4.3rem); } }
 @media (prefers-reduced-motion: reduce) { .b3 .bd-hero-img { animation: none; transform: none; } }
+
+/* 比較表（投資）：黒地に7項目。自社の列だけ明るい面 */
+.b3-vs { display: grid; grid-template-columns: minmax(12rem, .95fr) repeat(3, minmax(0, 1fr)); column-gap: 6px; row-gap: 6px; margin-top: clamp(2rem, 3.5vw, 3rem); }
+.b3-vs-head, .b3-vs-row { display: grid; grid-template-columns: subgrid; grid-column: 1 / -1; column-gap: 6px; }
+.b3-vs-th { display: flex; flex-direction: column; justify-content: flex-end; gap: .4rem; padding: 0 1.4rem 1.1rem; color: rgba(255,255,255,.62); }
+.b3-vs-th strong { font-size: 1.05rem; font-weight: 600; }
+.b3-vs-th.is-us { color: #fff; }
+.b3-vs-th.is-us strong { font-size: 1.35rem; font-weight: 700; }
+.b3-vs-tag { font: 500 .66rem/1 var(--b3-en); letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.55); }
+.b3-vs-item { display: flex; align-items: center; gap: 1.1rem; padding: 1.2rem 1.2rem 1.2rem 0; }
+.b3-vs-no { font: 500 1.7rem/1 var(--b3-en); letter-spacing: -.02em; color: rgba(255,255,255,.32); }
+.b3-vs-item p { font-size: .98rem; font-weight: 700; line-height: 1.5; }
+.b3-vs-cell { display: flex; align-items: center; padding: 1.2rem 1.4rem; border-radius: 10px; background: rgba(255,255,255,.045); color: rgba(255,255,255,.72); }
+.b3-vs-cell p { font-size: .9rem; line-height: 1.8; }
+.b3-vs-cell.is-us { background: rgba(255,255,255,.11); color: #fff; }
+.b3-vs-cell.is-us p { font-weight: 600; }
+.b3-sec--dark .b3-note { color: rgba(255,255,255,.5); }
+@media (max-width: 960px) {
+  .b3-vs { grid-template-columns: 1fr; row-gap: 1.6rem; }
+  .b3-vs-head { display: none; }
+  .b3-vs-row { grid-template-columns: 1fr; row-gap: 6px; }
+  .b3-vs-item { padding: 0 0 .4rem; }
+  .b3-vs-cell { flex-direction: column; align-items: flex-start; gap: .35rem; padding: 1rem 1.2rem; }
+  .b3-vs-cell::before { content: attr(data-col); font-size: .72rem; font-weight: 600; letter-spacing: .06em; color: rgba(255,255,255,.55); }
+  .b3-vs-cell.is-us::before { color: rgba(255,255,255,.8); }
+}

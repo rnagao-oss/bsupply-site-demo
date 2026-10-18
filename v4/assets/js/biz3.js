@@ -54,6 +54,7 @@
     if (!ctx) return;
     let width = 0, height = 0, pointerX = -1000, pointerY = -1000, frame = 0;
     const cell = 13;
+    const strength = parseFloat(canvas.dataset.strength) || 1;
     const draw = (time) => {
       ctx.clearRect(0, 0, width, height);
       const drift = Math.sin(time * .00035) * .12;
@@ -61,7 +62,7 @@
         for (let x = cell / 2; x < width; x += cell) {
           const ripple = Math.max(0, 1 - Math.hypot(x - pointerX, y - pointerY) / 230);
           const field = (Math.sin(x * .018 + time * .00025) + Math.cos(y * .022 - time * .00022)) * .09;
-          const alpha = Math.max(.025, Math.min(.23, .07 + field + drift + ripple * .17));
+          const alpha = Math.max(.025, Math.min(.23, .07 + field + drift + ripple * .17)) * strength;
           const size = 1 + alpha * 10;
           ctx.fillStyle = `rgba(255,255,255,${alpha})`;
           ctx.fillRect(x - size / 2, y - size / 2, size, size);

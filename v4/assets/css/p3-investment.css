@@ -7,7 +7,6 @@
 }
 
 /* 導入と「もう一つの選択肢」は同じ白い面として続ける */
-.b3 #position { padding-top: clamp(1.5rem, 3vw, 3rem); }
 
 /* 第1号案件：本文とテキストリンクの間隔。リンク全体のホバーで写真をわずかに寄せ、矢印を進める */
 .b3 .b3-case-hero .b3-btn--text { margin-top: 1.8rem; }
