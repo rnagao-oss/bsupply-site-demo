@@ -1218,3 +1218,21 @@ body.subpage:has(.bz-mission-hero) .site-header:not(.scrolled) {
 .bz .facts > div { display: flex !important; flex-direction: column; align-items: flex-start; justify-content: space-between; gap: 1.2rem; min-height: 11rem; }
 .bz .facts dd { width: 100%; font-size: clamp(1.4rem, 2vw, 2rem) !important; line-height: 1.35; text-align: left !important; word-break: auto-phrase; }
 .bz .clients2 .cl-track { flex-wrap: nowrap !important; width: max-content; }
+
+/* 支援事例の行：タイトル／3項目／VIEW MORE。項目は内容に合わせた列幅で、値は折り返す */
+.bz .bp-card { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1.6fr) auto !important; column-gap: clamp(1.5rem, 3.5vw, 3.5rem) !important; align-items: center; min-height: 0; padding: clamp(1.6rem, 2.4vw, 2.2rem) clamp(1.6rem, 2.8vw, 2.6rem) !important; }
+.bz .bp-card h3 { grid-column: 1 !important; grid-row: 1 !important; margin: 0; font-size: clamp(1.05rem, 1.4vw, 1.3rem) !important; line-height: 1.6; word-break: auto-phrase; }
+.bz .bp-card .case-meta { grid-column: 2 !important; grid-row: 1 !important; margin: 0 !important; display: grid !important; grid-template-columns: minmax(6.5rem, .9fr) minmax(10rem, 1.4fr) minmax(6rem, .8fr) !important; column-gap: 1.6rem !important; row-gap: .3rem; }
+.bz .bp-card .case-meta > div { display: flex !important; flex-direction: column; gap: .35rem; min-width: 0; }
+.bz .bp-card .case-meta dt { margin: 0; font-size: .72rem; letter-spacing: .04em; color: var(--bz-muted); }
+.bz .bp-card .case-meta dt::after { content: none !important; }
+.bz .bp-card .case-meta dd { white-space: normal !important; overflow-wrap: anywhere; font-size: .9rem; line-height: 1.5; }
+.bz .bp-card .bp-more { grid-column: 3 !important; grid-row: 1 !important; white-space: nowrap; }
+@media (max-width: 1100px) {
+  .bz .bp-card { grid-template-columns: minmax(0, 1fr) auto !important; row-gap: 1.1rem; }
+  .bz .bp-card .case-meta { grid-column: 1 / -1 !important; grid-row: 2 !important; }
+  .bz .bp-card .bp-more { grid-column: 2 !important; }
+}
+@media (max-width: 600px) {
+  .bz .bp-card .case-meta { grid-template-columns: 1fr !important; row-gap: .8rem; }
+}
