@@ -14,7 +14,7 @@
 }
 
 /* 歩み（白いタイル＋写真）と数字の帯を、同じ12pxの目地で一つの面として組む */
-.b3 .b3-tl-split { gap: 12px; }
+.b3 .b3-tl-split { gap: clamp(2rem, 4vw, 3.5rem); }
 .b3 .b3-tl { gap: 12px; }
 .b3 .b3-tl-split + .b3-facts { margin-top: 12px; }
 /* 写真は左の列の高さに合わせる（写真の元の高さで行を押し広げない） */

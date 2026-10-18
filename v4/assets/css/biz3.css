@@ -672,3 +672,35 @@ html:lang(en) .b3-tile--ink .b3-lp-price strong { font-size: clamp(1.5rem, 1.9vw
 .b3-py-brk-s { font-size: 11px; fill: var(--b3-muted); }
 .b3-py-callout { font-size: 13px; font-weight: 700; }
 .b3-py-callout-s { font-size: 10px; }
+
+/* 式（ブランドグロース）：箱を使わず、大きな文字で「持つもの ＋ 加えるもの ＝ 目標」 */
+.b3-fx { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1.1fr) auto minmax(0, 1.2fr); align-items: center; gap: clamp(1.2rem, 3vw, 3rem); margin: clamp(2.5rem, 4vw, 3.5rem) 0 0; }
+.b3-fx-kicker { margin-bottom: 1.1rem; font-size: .78rem; font-weight: 600; letter-spacing: .08em; color: var(--b3-muted); }
+.b3-fx-list { display: grid; gap: .35rem; }
+.b3-fx-line { display: flex; align-items: baseline; gap: .8rem; }
+.b3-fx-no { flex: none; font: 500 .72rem/1 var(--b3-en); letter-spacing: .1em; color: var(--b3-faint); }
+.b3-fx-mask { display: block; overflow: hidden; padding-bottom: .08em; }
+.b3-fx-word { display: block; font-size: clamp(1.5rem, 2.3vw, 2.3rem); font-weight: 700; line-height: 1.35; letter-spacing: -.02em; }
+.b3-fx-op { font: 200 clamp(2.6rem, 4vw, 4rem)/1 var(--b3-en); color: var(--b3-faint); }
+.b3-fx-col--goal { padding: clamp(1.6rem, 2.6vw, 2.6rem) clamp(1.6rem, 2.6vw, 2.6rem) clamp(1.8rem, 2.8vw, 2.8rem); border-radius: var(--b3-r); background: var(--b3-ink); color: #fff; }
+.b3-fx-col--goal .b3-fx-kicker { color: rgba(255,255,255,.55); }
+.b3-fx-goal { font-family: var(--b3-mincho); font-size: clamp(1.7rem, 2.6vw, 2.6rem); font-weight: 500; line-height: 1.45; letter-spacing: .06em; }
+.b3-fx-ch { display: inline-block; }
+.b3-fx-seg { display: block; white-space: nowrap; }
+/* 出現：行は下からせり上がり、記号はふわりと拡大、目標は1文字ずつにじみが晴れる */
+html.js .b3-fx .b3-fx-word { transform: translateY(110%); transition: transform .9s var(--b3-ease); transition-delay: calc(var(--i) * 90ms); }
+html.js .b3-fx.in .b3-fx-word { transform: none; }
+html.js .b3-fx .b3-fx-no { opacity: 0; transition: opacity .6s; transition-delay: calc(var(--i) * 90ms + .3s); }
+html.js .b3-fx.in .b3-fx-no { opacity: 1; }
+html.js .b3-fx .b3-fx-op { opacity: 0; transform: scale(.6); transition: opacity .7s, transform .9s var(--b3-ease); transition-delay: calc(var(--i) * 90ms); }
+html.js .b3-fx.in .b3-fx-op { opacity: 1; transform: none; }
+html.js .b3-fx .b3-fx-ch { opacity: 0; filter: blur(6px); transform: translateY(.3em); transition: opacity .7s, filter .9s, transform .9s var(--b3-ease); transition-delay: calc(.7s + var(--i) * 45ms); }
+html.js .b3-fx.in .b3-fx-ch { opacity: 1; filter: blur(0); transform: none; }
+@media (hover: hover) { .b3-fx-line:hover .b3-fx-word { letter-spacing: 0; } .b3-fx-word { transition: letter-spacing .4s var(--b3-ease); } }
+@media (max-width: 960px) {
+  .b3-fx { grid-template-columns: 1fr; gap: 1.2rem; }
+  .b3-fx-op { justify-self: start; padding-left: 1.6rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html.js .b3-fx .b3-fx-word, html.js .b3-fx .b3-fx-op, html.js .b3-fx .b3-fx-ch, html.js .b3-fx .b3-fx-no { opacity: 1; transform: none; filter: none; transition: none; }
+}
