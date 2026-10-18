@@ -1273,3 +1273,17 @@ body.subpage:has(.bz-mission-hero) .site-header:not(.scrolled) {
   .bz .bz-unit-core { position: relative !important; inset: auto !important; transform: none !important; margin: 0 auto 1rem !important; display: grid; place-content: center; }
   .bz .bz-units { overflow: hidden; }
 }
+
+/* 周りの円の縁をオレンジに／中央の円と周りの円を線でつなぐ */
+.bz .bz-unit { clip-path: none !important; border-radius: 50%; box-shadow: inset 0 0 0 1.5px rgba(255, 122, 36, .85); z-index: 2; }
+.bz .bz-unit:hover { box-shadow: inset 0 0 0 2px #ff7a24; }
+.bz .bz-links { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; overflow: visible; pointer-events: none; }
+.bz .bz-links line { stroke: rgba(255, 122, 36, .7); stroke-width: 1.5; vector-effect: non-scaling-stroke; stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 1s cubic-bezier(.22, 1, .36, 1); }
+.bz .bz-units.is-in .bz-links line { stroke-dashoffset: 0; }
+.bz .bz-units.is-in .bz-links line:nth-child(2) { transition-delay: .08s; } .bz .bz-units.is-in .bz-links line:nth-child(3) { transition-delay: .16s; }
+.bz .bz-units.is-in .bz-links line:nth-child(4) { transition-delay: .24s; } .bz .bz-units.is-in .bz-links line:nth-child(5) { transition-delay: .32s; }
+.bz .bz-units.is-in .bz-links line:nth-child(6) { transition-delay: .4s; }
+@media (prefers-reduced-motion: reduce) { .bz .bz-links line { stroke-dashoffset: 0; transition: none; } }
+@media (max-width: 600px) { .bz .bz-links { display: none; } }
+.bz .bz-unit { box-shadow: inset 0 0 0 1.5px rgba(255, 122, 36, .9) !important; }
+.bz .bz-unit:hover { box-shadow: inset 0 0 0 2px #ff7a24 !important; }
