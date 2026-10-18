@@ -25,11 +25,6 @@
   const units = document.querySelector('.bz-units');
   if (units) requestAnimationFrame(() => units.classList.add('is-in'));
 
-  const logoBand = document.querySelector('.bz .cl-band');
-  if (logoBand && !logoBand.dataset.looped) {
-    Array.from(logoBand.children).forEach((row) => logoBand.append(row.cloneNode(true)));
-    logoBand.dataset.looped = 'true';
-  }
 
   const dither = document.querySelector('.bz-dither');
   if (dither) initDither(dither, reduce);
