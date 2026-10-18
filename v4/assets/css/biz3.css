@@ -631,12 +631,25 @@ html:lang(en) .b3-tile--ink .b3-lp-price strong { font-size: clamp(1.5rem, 1.9vw
 .b3-nyc-legend p { margin: 0; }
 .b3-nyc-legend .b3-mk { position: relative; width: 16px; height: 16px; }
 @media (max-width: 960px) {
-  .b3-nyc { grid-template-columns: 1fr; gap: 10px; }
-  .b3-nyc-labels { display: none; }
-  .b3-nyc-col { grid-row: auto; grid-template-rows: none; }
-  .b3-nyc-c { flex-direction: column; align-items: flex-start; text-align: left; gap: .3rem; }
-  .b3-nyc-c::before { content: attr(data-row); font-size: .72rem; font-weight: 600; letter-spacing: .06em; color: rgba(255,255,255,.5); }
-  .b3-nyc-c p { display: inline; }
+  /* NYC と同じく、スマホでも3列を横に並べたまま縮める（縦に積まない） */
+  .b3-nyc { grid-template-columns: 4.6rem repeat(3, minmax(0, 1fr)); grid-template-rows: auto repeat(7, minmax(4.4rem, auto)); gap: 5px; margin-inline: calc(-1 * var(--b3-gutter) + 10px); }
+  .b3-nyc-col { border-radius: 12px; }
+  .b3-nyc-h { min-height: 3.6rem; padding: .7rem .3rem; border-radius: 12px 12px 0 0; }
+  .b3-nyc-h strong { font-size: .78rem; line-height: 1.3; }
+  .b3-nyc-col.is-us .b3-nyc-h strong { font-size: .9rem; }
+  .b3-nyc-tag { display: none; }
+  .b3-nyc-l { gap: .3rem; min-height: 4.4rem; padding: .4rem .2rem .4rem 0; font-size: .7rem; line-height: 1.4; }
+  .b3-nyc-no { display: none; }
+  .b3-nyc-c { flex-direction: column; justify-content: center; gap: .3rem; min-height: 4.4rem; padding: .55rem .3rem; }
+  .b3-nyc-c p { font-size: .66rem; line-height: 1.45; overflow-wrap: break-word; }
+  .b3-nyc-l { overflow-wrap: break-word; }
+  .b3-nyc-c .nowrap, .b3-nyc-l .nowrap { white-space: normal; }
+  .b3-nyc .b3-mk { width: 13px; height: 13px; }
+  .b3-nyc .b3-mk-a::after { inset: 3.5px; }
+  .b3-nyc .b3-mk-d::before, .b3-nyc .b3-mk-d::after { width: 13px; }
+  .b3-nyc-col .b3-nyc-c:last-child { border-radius: 0 0 12px 12px; }
+  .b3-nyc-legend { justify-content: flex-start; gap: .4rem 1rem; }
+  .b3-nyc-legend > div { font-size: .72rem; }
 }
 
 /* 概要（投資）：統計3面 ＋ 投資領域の表 */
