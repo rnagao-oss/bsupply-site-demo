@@ -3916,3 +3916,9 @@ html:lang(en) .dg-sub-en { display:none; }
   .dg-compare tbody td + td { margin-top:8px; }
   .dg-cmp-who { display:block; }
 }
+
+/* 事例ページ：スマホでは企業規模などの値を折り返し、横にはみ出さない */
+@media (max-width: 600px) {
+  .case-meta { grid-template-columns: repeat(3, minmax(0, auto)); gap: .5rem 1.2rem; }
+  .case-meta dd { white-space: normal; }
+}
