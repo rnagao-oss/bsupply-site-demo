@@ -591,3 +591,45 @@ html.js .in .b3-tb-col.is-us { transform: none; opacity: 1; }
 html:lang(en) .b3-mix-center strong { font-size: .8rem; line-height: 1.35; }
 html:lang(en) .b3-tile--ink .b3-lp-price { flex-wrap: wrap; }
 html:lang(en) .b3-tile--ink .b3-lp-price strong { font-size: clamp(1.5rem, 1.9vw, 1.9rem); }
+
+/* 比較表（投資・NYC型）：3本の列カード。黒地。記号は語の後ろ */
+.b3-nyc { display: grid; grid-template-columns: minmax(12rem, .9fr) repeat(3, minmax(0, 1fr)); grid-template-rows: auto repeat(7, minmax(5.2rem, auto)); gap: 12px; margin-top: clamp(2rem, 3.5vw, 3rem); }
+.b3-nyc-col { display: grid; grid-row: 1 / -1; grid-template-rows: subgrid; border-radius: 16px; background: rgba(255,255,255,.05); }
+.b3-nyc-labels { background: none; }
+.b3-nyc-h { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .3rem; min-height: 5.6rem; padding: 1.2rem 1rem; border-radius: 16px 16px 0 0; background: rgba(255,255,255,.1); text-align: center; }
+.b3-nyc-labels .b3-nyc-h { background: none; }
+.b3-nyc-h strong { font-size: 1.1rem; font-weight: 700; color: #fff; }
+.b3-nyc-tag { font-size: .7rem; letter-spacing: .08em; color: rgba(255,255,255,.65); }
+.b3-nyc-col.is-us { background: rgba(255,255,255,.1); }
+.b3-nyc-col.is-us .b3-nyc-h { background: #fff; color: var(--b3-ink); }
+.b3-nyc-col.is-us .b3-nyc-h strong { font-size: 1.35rem; color: var(--b3-ink); }
+.b3-nyc-col.is-us .b3-nyc-tag { color: var(--b3-muted); }
+.b3-nyc-l { display: flex; align-items: center; gap: .9rem; min-height: 5.2rem; padding: .8rem 0; font-size: .95rem; font-weight: 700; }
+.b3-nyc-no { font: 500 1.4rem/1 var(--b3-en); color: rgba(255,255,255,.35); }
+.b3-nyc-c { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .55rem; min-height: 5.2rem; padding: .9rem 1.1rem; text-align: center; color: rgba(255,255,255,.72); }
+.b3-nyc-c p { font-size: .88rem; line-height: 1.6; }
+.b3-nyc-col.is-us .b3-nyc-c { color: #fff; }
+.b3-nyc-col.is-us .b3-nyc-c p { font-weight: 700; }
+.b3-nyc-col:not(.b3-nyc-labels) .b3-nyc-c:nth-child(odd) { background: rgba(255,255,255,.03); }
+.b3-nyc-col .b3-nyc-c:last-child { border-radius: 0 0 16px 16px; }
+.b3-nyc .b3-mk { width: 16px; height: 16px; }
+.b3-nyc .b3-mk-a, .b3-nyc-legend .b3-mk-a { box-shadow: inset 0 0 0 2px #fff; }
+.b3-nyc .b3-mk-a::after, .b3-nyc-legend .b3-mk-a::after { inset: 4.5px; box-shadow: inset 0 0 0 2px #fff; }
+.b3-nyc .b3-mk-b, .b3-nyc-legend .b3-mk-b { box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.55); }
+.b3-nyc .b3-mk-c, .b3-nyc-legend .b3-mk-c { background: rgba(255,255,255,.55); }
+.b3-nyc .b3-mk-c::before { background: #1f1f1e; }
+.b3-nyc-col.is-us .b3-mk-c::before { background: #2a2a29; }
+.b3-nyc-legend .b3-mk-c::before { background: var(--b3-dark); }
+.b3-nyc .b3-mk-d::before, .b3-nyc .b3-mk-d::after, .b3-nyc-legend .b3-mk-d::before, .b3-nyc-legend .b3-mk-d::after { background: rgba(255,255,255,.55); width: 17px; }
+.b3-nyc-legend { display: flex; flex-wrap: wrap; gap: .5rem 1.6rem; justify-content: flex-end; margin-top: 1.4rem; }
+.b3-nyc-legend > div { display: flex; align-items: center; gap: .45rem; font-size: .8rem; color: rgba(255,255,255,.55); }
+.b3-nyc-legend p { margin: 0; }
+.b3-nyc-legend .b3-mk { position: relative; width: 16px; height: 16px; }
+@media (max-width: 960px) {
+  .b3-nyc { grid-template-columns: 1fr; gap: 10px; }
+  .b3-nyc-labels { display: none; }
+  .b3-nyc-col { grid-row: auto; grid-template-rows: none; }
+  .b3-nyc-c { flex-direction: column; align-items: flex-start; text-align: left; gap: .3rem; }
+  .b3-nyc-c::before { content: attr(data-row); font-size: .72rem; font-weight: 600; letter-spacing: .06em; color: rgba(255,255,255,.5); }
+  .b3-nyc-c p { display: inline; }
+}
