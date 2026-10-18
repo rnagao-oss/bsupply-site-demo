@@ -1,0 +1,59 @@
+/* p3-consulting.css — consulting.html だけの調整。biz3.css の後に読み込む。色はトークンのみ、線は書かない。 */
+
+/* ヒーロー：文字列と円図の間隔（961px→96px、1280px→107px、1440px→120px）。見出しは列幅に収める */
+@media (min-width: 961px) {
+  .b3 .b3-mission-in { gap: clamp(6rem, 8.4vw, 7.5rem); }
+  .b3 .b3-mission-copy h1 { font-size: clamp(2.4rem, 3.85vw, 3.9rem); }
+}
+
+/* ヒーロー：ユニット円は不透明にし、格子の点と接続線の端が中に透けないようにする */
+.b3 .b3-unit { background: var(--b3-dark-2); }
+.b3 .b3-unit:hover { background: var(--b3-dark-3); }
+
+/* 961〜1180px：列が狭く円が約127pxになり、10字の項目が縁に触れるため円を広げる */
+@media (min-width: 961px) and (max-width: 1180px) {
+  .b3 .b3-unit { width: 33%; padding: .8rem .4rem; }
+  .b3 .b3-unit-items { font-feature-settings: "palt"; }
+}
+
+/* パンくずの区切りは線ではなく点 */
+.b3 .b3-crumb i { width: 3px; height: 3px; border-radius: 50%; }
+
+/* OUR CLIENTS：白地に灰色の帯を置かない。ホバーは停止のみ（ロゴを灰色にしない） */
+.b3 .b3-mq-wrap { background: transparent; border-radius: 0; padding: 0; }
+.b3 .b3-mq-wrap:hover .b3-mq-track img { opacity: 1; filter: none; }
+
+/* OUR SERVICES：番号の濃さ。和名は文節で折り返す */
+.b3 .b3-row-no { color: var(--b3-muted); }
+.b3 .b3-row-ja { word-break: auto-phrase; }
+
+/* CASE STUDIES：ラベルの可読性。カードは同じ高さ */
+.b3 .b3-cases { grid-auto-rows: 1fr; }
+.b3 .b3-case-meta dt { color: rgba(255,255,255,.62); font-size: .72rem; }
+
+/* FAQ：質問文を文節で折り返す */
+.b3 .b3-faq summary { word-break: auto-phrase; }
+
+/* 問い合わせ帯：見出しが約1000px以上で1行に収まる幅 */
+.b3 .b3-cta-in { width: min(100%, 56rem); }
+
+/* ≤1100px：biz3.css 末尾の .b3-case が @media 内の規則を上書きするため、ここで2列に戻す */
+@media (max-width: 1100px) {
+  .b3 .b3-case { grid-template-columns: minmax(0, 1fr) auto; }
+  .b3 .b3-case-more { justify-self: end; }
+  .b3 .b3-case-meta { max-width: 46rem; }
+}
+
+@media (max-width: 600px) {
+  /* ヒーロー：6ユニットは縁オレンジの円のまま2列に並べる（長方形の枠線にしない）。接続線は描かない */
+  .b3 .b3-units { grid-template-columns: repeat(2, minmax(0, 160px)); justify-content: center; gap: 12px; }
+  .b3 .b3-unit { aspect-ratio: 1; border-radius: 50%; place-content: center; text-align: center; padding: 1rem .8rem; }
+  .b3 .b3-links { display: none; }
+  /* OUR SERVICES：本文列を約219pxにして語の途中で折れないようにする */
+  .b3 .b3-row { grid-template-columns: 2.2rem minmax(0, 1fr) 2.6rem; column-gap: .7rem; padding: 1.2rem 1rem; }
+  /* CASE STUDIES：見出しを全幅に、VIEW MORE は右端 */
+  .b3 .b3-case { grid-template-columns: minmax(0, 1fr); row-gap: .9rem; }
+  .b3 .b3-case-h { grid-column: 1; grid-row: 1; }
+  .b3 .b3-case-meta { grid-column: 1; grid-row: 2; max-width: none; }
+  .b3 .b3-case-more { grid-column: 1; grid-row: 3; justify-self: end; }
+}

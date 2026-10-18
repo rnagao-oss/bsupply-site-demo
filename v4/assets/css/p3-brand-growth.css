@@ -1,0 +1,38 @@
+/* p3-brand-growth.css — brand-growth ページだけの調整（biz3.css の後に読み込む） */
+
+/* 導入と写真3枚は一つのまとまりとして見せる（白が2節続くため、間の余白を詰める） */
+.b3 #intro { padding-bottom: 0; }
+.b3 #photos { padding-top: clamp(3rem, 5vw, 4.5rem); }
+
+/* 取り組みの2タイルは事例の下に置く */
+.b3 #case .b3-grid { margin-top: clamp(2.5rem, 4vw, 3.5rem); }
+
+/* 事例リンク全体のホバー：写真をわずかに寄せ、矢印を進める */
+.b3 .b3-case-hero .b3-photo img { transition: transform 1.6s var(--b3-ease); }
+@media (hover: hover) {
+  .b3 .b3-case-hero:hover .b3-photo img { transform: scale(1.04); }
+  .b3 .b3-case-hero:hover .b3-btn--text::after { transform: translateX(4px); }
+}
+
+/* 問い合わせ帯：見出し「ブランドの承継や成長について、ご相談ください」を PC 幅で1行に収める */
+.b3 .b3-cta-in { width: min(100%, 56rem); }
+
+/* 写真3枚：タブレット幅でも3列のまま（2＋1の片寄りを避ける） */
+@media (max-width: 960px) and (min-width: 601px) {
+  .b3 #photos .b3-photos { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* 事例：タブレット幅では写真と本文を横並びのまま（写真が全幅で大きくなりすぎない） */
+@media (max-width: 960px) and (min-width: 701px) {
+  .b3 #case .b3-case-hero { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+}
+
+/* 進め方：スマートフォン幅では丸を左、文字を右に置き、線は丸の列だけを通す（文字と線が重ならない） */
+@media (max-width: 600px) {
+  .b3 #approach .b3-flow { gap: 1.6rem; }
+  .b3 #approach .b3-flow::before { left: 35px; top: 36px; bottom: 36px; }
+  .b3 #approach .b3-flow > li { display: grid; grid-template-columns: 72px minmax(0, 1fr); column-gap: 1.25rem; align-items: start; text-align: left; }
+  .b3 #approach .b3-flow-no { grid-row: 1 / span 2; width: 72px; margin: 0; font-size: .66rem; }
+  .b3 #approach .b3-flow-h { margin: .85rem 0 .45rem; }
+  .b3 #approach .b3-flow-p { max-width: none; }
+}

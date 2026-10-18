@@ -1,0 +1,31 @@
+/* p3-sme-bpo.css — sme-bpo.html だけの調整（biz3.css の後に読み込む） */
+
+/* styles.css の汎用ルール（li の max-width 40em・a の色の継承）を打ち消す */
+.b3 :where(li, dd, dt) { max-width: none; }
+.b3 a.b3-btn { color: #fff; }
+.b3 a.b3-btn--light, .b3 a.b3-btn--ghost { color: var(--b3-ink); }
+
+/* ヒーローの見出し：app.js が末尾の文節を span.nowrap で包むため、入れ子の span は行にしない */
+.b3 .b3-lp h1 span span { display: inline; }
+@media (max-width: 600px) {
+  .b3 .b3-lp h1 { font-size: clamp(1.7rem, 8vw, 2.3rem); }
+  .b3 .b3-feature .b3-icon { display: none; }
+}
+
+/* ご利用までの流れ：文節モデルが「うかが｜い、」で切るため、1行目が「…うかがい、」で収まる幅にする */
+.b3 .b3-flow-p { max-width: 18em; }
+@media (max-width: 1100px) and (min-width: 961px) {
+  .b3 .b3-flow-p { max-width: 14em; }
+}
+
+/* 比較表：subgrid が効くように行を定義する（見出し1行＋項目5行） */
+.b3 .b3-cmp { grid-template-rows: auto repeat(5, minmax(4.6rem, auto)); }
+@media (max-width: 960px) {
+  .b3 .b3-cmp-labels { position: sticky; left: 0; z-index: 2; background: var(--b3-paper); }
+}
+
+/* 業務一覧の8枚目（黒いタイル）：価格をタイルの幅に収め、ボタンを下に揃える */
+.b3 .b3-tile--ink .b3-lp-price { margin-top: .2rem; }
+.b3 .b3-tile--ink .b3-lp-price strong { font-size: clamp(1.9rem, 2.5vw, 2.5rem); }
+.b3 .b3-tile--ink .b3-lp-price span { color: rgba(255,255,255,.7); }
+.b3 .b3-tile--ink .b3-btn { align-self: flex-start; margin-top: auto; }

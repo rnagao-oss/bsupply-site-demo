@@ -1,0 +1,44 @@
+/* p3-manufacturing.css — manufacturing ページだけの調整（biz3.css の後に読み込む） */
+
+/* 導入の下に置く声明：同じ節内で大きく間を取る */
+.b3 .b3-intro + .b3-statement { margin-top: clamp(4.5rem, 8vw, 7.5rem); }
+.b3 .b3-statement p { word-break: auto-phrase; }
+
+/* HISTORY：英字ラベルだけの見出しなので、下の余白を詰める */
+.b3 #history .b3-head { margin-bottom: clamp(1.6rem, 2.6vw, 2.4rem); }
+.b3 #history .b3-head .b3-label { margin-bottom: 0; }
+
+/* 導入：左は英字の小見出しだけなので、本文の列を広く取る（1行40字前後）。960px以下は biz3 の1列に任せる */
+@media (min-width: 961px) {
+  .b3 #intro .b3-intro { grid-template-columns: minmax(0, .75fr) minmax(0, 1.45fr); }
+}
+
+/* 歩み（白いタイル＋写真）と数字の帯を、同じ12pxの目地で一つの面として組む */
+.b3 .b3-tl-split { gap: 12px; }
+.b3 .b3-tl { gap: 12px; }
+.b3 .b3-tl-split + .b3-facts { margin-top: 12px; }
+/* 写真は左の列の高さに合わせる（写真の元の高さで行を押し広げない） */
+.b3 .b3-tl-media { position: relative; }
+.b3 .b3-tl-media img { position: absolute; inset: 0; object-position: 50% 35%; }
+/* 数字：「1966年（創業60年）」「東京都墨田区の工房。」が1行に収まる字級 */
+.b3 .b3-fact dd { font-size: clamp(1.15rem, 1.6vw, 1.5rem); }
+
+/* 見出しの2行（革製品OEMで／選ばれ続ける6つの理由） */
+.b3 .b3-title .line { display: block; }
+
+/* 製造設備：12マスをそろえ、先頭の黒いタイルにリードを置く */
+.b3 .b3-eq { grid-auto-rows: 1fr; }
+.b3 .b3-eq-lead { justify-content: flex-end; }
+.b3 .b3-eq-lead .b3-tile-p { font-size: clamp(1rem, 1.1vw, 1.06rem); line-height: 2; color: rgba(255,255,255,.86); }
+
+/* 問い合わせ帯の二つ目のリンク（日本語） */
+.b3 .b3-cta-alt { margin-top: 1.8rem; font-family: var(--b3-jp); font-size: .9rem; font-weight: 500; letter-spacing: .06em; text-transform: none; color: rgba(255,255,255,.78); }
+
+@media (max-width: 960px) {
+  .b3 .b3-tl-media { aspect-ratio: 4 / 3; }
+}
+@media (max-width: 600px) {
+  /* 1列では高さをそろえる必要がないので、各タイルは中身の高さに */
+  .b3 .b3-eq, .b3 .b3-grid { grid-auto-rows: auto; }
+  .b3 .b3-fact { min-height: 0; gap: .7rem; }
+}
