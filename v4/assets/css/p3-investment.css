@@ -23,3 +23,101 @@
 @media (max-width: 420px) {
   .b3 .b3-cta .b3-cta-title { font-size: 1.5rem; }
 }
+
+/* ── オレンジを要所に（永尾さん承認 2026-10-18）。ラベルは少し大きく ── */
+.b3 .b3-label, .b3 .b3-kicker { color: var(--b3-acc); }
+.b3 .b3-label { font-size: .95rem; letter-spacing: .16em; font-weight: 600; }
+.b3 .b3-kicker { font-size: .9rem; }
+.b3 .b3-ch-bar.hi { fill: var(--b3-acc); }
+.b3 .b3-ch-val.hi { fill: #d9560a; }
+.b3 .b3-ch-stats dd { color: #d9560a; }
+.b3 #b4d .b3-tile-no { color: var(--b3-acc); }
+.b3 #case .b3-timeline > li::before { background: var(--b3-acc); }
+.b3 .b3-cta a.b3-btn--light { background: var(--b3-acc); color: #fff; }
+
+/* ── 概要（ISSUE）：数字を大きく読みやすく ── */
+.b3 .b3-ch-val { font-size: 14px; }
+.b3 .b3-ch-x { font-size: 12.5px; }
+.b3 .b3-ch-svg--tight .b3-ch-val { font-size: 13px; }
+.b3 .b3-ch-svg--tight .b3-ch-x { font-size: 11px; }
+.b3 .b3-ch-seg { font-size: 12.5px; }
+.b3 .b3-ch-segv { font-size: 16px; }
+.b3 .b3-ch-stats dd { font-size: 1.6rem; }
+.b3 .b3-ch-stats dt { font-size: .8rem; }
+.b3 .b3-ch-p { font-size: .9rem; }
+.b3 .b3-ch-src { font-size: .74rem; }
+
+/* ── 企業の構成と投資領域：左右を同じ白いカード・同じ高さにそろえる ── */
+.b3 .b3-vx { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
+.b3 .b3-vx-card { display: flex; flex-direction: column; margin: 0; padding: clamp(1.6rem, 2.6vw, 2.4rem); border-radius: var(--b3-r); background: #fff; }
+.b3 .b3-vx-cap { margin-bottom: 1.2rem; }
+.b3 .b3-vx-h { font-size: clamp(1.2rem, 1.7vw, 1.5rem); font-weight: 700; line-height: 1.4; }
+.b3 .b3-vx-sub { margin-top: .25rem; font-size: .8rem; letter-spacing: .08em; color: var(--b3-muted); }
+.b3 .b3-vx-fig .b3-py { margin: auto 0; }
+.b3 .b3-vx-fig .b3-ch-src { margin-top: 1rem; }
+.b3 .b3-vx-list { flex: 1; display: grid; grid-auto-rows: 1fr; }
+.b3 .b3-vx-list > div { display: grid; grid-template-columns: 8.6rem minmax(0, 1fr); align-items: center; gap: 1.2rem; min-height: 4.6rem; padding: .8rem 0; box-shadow: 0 -1px 0 var(--b3-soft-2); }
+.b3 .b3-vx-list > div:first-child { box-shadow: none; }
+.b3 .b3-vx-list dt { display: flex; align-items: baseline; gap: .7rem; font-size: .9rem; font-weight: 600; color: var(--b3-muted); }
+.b3 .b3-vx-no { font: 500 1.05rem/1 var(--b3-en); color: var(--b3-acc); }
+.b3 .b3-vx-list dd { font-size: clamp(1rem, 1.2vw, 1.1rem); font-weight: 700; line-height: 1.7; }
+.b3 .b3-py path { stroke: var(--b3-acc); }
+.b3 .b3-py-brk { fill: #d9560a; }
+@media (max-width: 960px) {
+  .b3 .b3-vx { grid-template-columns: 1fr; }
+  .b3 .b3-vx-list > div { grid-template-columns: 6.4rem minmax(0, 1fr); gap: .8rem; }
+}
+
+/* ── 比較表（B supplyの特徴）：どの端末でも崩れない行ごとの構造。行に線、B supply 列はオレンジで強調 ── */
+.b3 .b3-vt { margin-top: clamp(2rem, 3.5vw, 3rem); }
+.b3 .b3-vt-row { display: grid; grid-template-columns: minmax(11rem, .9fr) repeat(3, minmax(0, 1fr)); column-gap: 6px; }
+.b3 .b3-vt-l { display: flex; align-items: center; gap: .9rem; padding: 1.1rem 1rem 1.1rem 0; font-size: .95rem; font-weight: 700; box-shadow: 0 1px 0 rgba(255,255,255,.16); }
+.b3 .b3-vt-head .b3-vt-l { box-shadow: none; }
+.b3 .b3-vt-no { font: 500 1.4rem/1 var(--b3-en); color: var(--b3-acc); }
+.b3 .b3-vt-c { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .55rem; min-height: 5rem; padding: .9rem 1.1rem; text-align: center; color: rgba(255,255,255,.76); background: rgba(255,255,255,.04); box-shadow: 0 1px 0 rgba(255,255,255,.16); }
+.b3 .b3-vt-c p { font-size: .92rem; line-height: 1.6; overflow-wrap: break-word; }
+.b3 .b3-vt-c .nowrap { white-space: normal; }
+.b3 .b3-vt-th { min-height: 4.4rem; border-radius: 12px 12px 0 0; background: rgba(255,255,255,.12); color: #fff; box-shadow: none; }
+.b3 .b3-vt-th strong { font-size: 1.05rem; font-weight: 700; }
+.b3 .b3-vt-c.is-us { color: #fff; background: rgba(255,106,26,.14); box-shadow: inset 2px 0 0 var(--b3-acc), inset -2px 0 0 var(--b3-acc), 0 1px 0 rgba(255,106,26,.4); }
+.b3 .b3-vt-c.is-us p { font-weight: 700; }
+.b3 .b3-vt-th.is-us { background: var(--b3-acc); color: var(--b3-ink); box-shadow: none; }
+.b3 .b3-vt-th.is-us strong { font-size: 1.3rem; }
+.b3 .b3-vt-row:last-child .b3-vt-c { box-shadow: 0 1px 0 rgba(255,255,255,.16); }
+.b3 .b3-vt-row:last-child .b3-vt-c.is-us { border-radius: 0 0 12px 12px; box-shadow: inset 2px 0 0 var(--b3-acc), inset -2px 0 0 var(--b3-acc), inset 0 -2px 0 var(--b3-acc); }
+.b3 .b3-vt .b3-mk { width: 16px; height: 16px; }
+.b3 .b3-vt .b3-mk-a { box-shadow: inset 0 0 0 2px rgba(255,255,255,.9); }
+.b3 .b3-vt .b3-mk-a::after { inset: 4.5px; box-shadow: inset 0 0 0 2px rgba(255,255,255,.9); }
+.b3 .b3-vt .b3-mk-b { box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.55); }
+.b3 .b3-vt .b3-mk-c { background: rgba(255,255,255,.6); }
+.b3 .b3-vt .b3-mk-c::before { background: #222221; }
+.b3 .b3-vt .b3-mk-d::before, .b3 .b3-vt .b3-mk-d::after { width: 17px; background: rgba(255,255,255,.6); }
+.b3 .b3-vt-c.is-us .b3-mk-a { box-shadow: inset 0 0 0 2px var(--b3-acc); }
+.b3 .b3-vt-c.is-us .b3-mk-a::after { box-shadow: inset 0 0 0 2px var(--b3-acc); }
+@media (max-width: 960px) {
+  .b3 .b3-vt { margin-inline: calc(-1 * var(--b3-gutter) + 10px); }
+  .b3 .b3-vt-row { grid-template-columns: 4.4rem repeat(3, minmax(0, 1fr)); column-gap: 3px; }
+  .b3 .b3-vt-l { padding: .5rem .2rem .5rem 0; font-size: .7rem; line-height: 1.4; overflow-wrap: break-word; }
+  .b3 .b3-vt-no { display: none; }
+  .b3 .b3-vt-c { flex-direction: column; justify-content: center; gap: .3rem; min-height: 4.4rem; padding: .55rem .3rem; }
+  .b3 .b3-vt-c p { font-size: .66rem; line-height: 1.45; }
+  .b3 .b3-vt-th { min-height: 3.4rem; border-radius: 10px 10px 0 0; padding: .6rem .2rem; }
+  .b3 .b3-vt-th strong { font-size: .78rem; line-height: 1.3; }
+  .b3 .b3-vt-th.is-us strong { font-size: .9rem; }
+  .b3 .b3-vt .b3-mk { width: 13px; height: 13px; }
+  .b3 .b3-vt .b3-mk-a::after { inset: 3.5px; }
+  .b3 .b3-vt .b3-mk-d::before, .b3 .b3-vt .b3-mk-d::after { width: 13px; }
+}
+
+/* ピラミッド：スマホでは文字を大きくした専用版に切り替える */
+.b3 .b3-py--sm, .b3 .b3-vx-note { display: none; }
+.b3 .b3-pys-name { font-size: 27px; font-weight: 700; }
+.b3 .b3-pys-en { font-size: 14px; letter-spacing: .08em; }
+.b3 .b3-pys-num { font-size: 32px; font-weight: 700; letter-spacing: -.01em; fill: var(--b3-ink); }
+.b3 .b3-pys-sub { font-size: 16px; fill: var(--b3-muted); }
+.b3 .b3-vx-note { margin-top: .8rem; padding-left: .9rem; font-size: .84rem; line-height: 1.8; box-shadow: inset 3px 0 0 var(--b3-acc); }
+@media (max-width: 600px) {
+  .b3 .b3-py--lg { display: none; }
+  .b3 .b3-py--sm { display: block; margin: auto 0; }
+  .b3 .b3-vx-note { display: block; }
+}

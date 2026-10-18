@@ -30,8 +30,6 @@
 .b3 .b3-eq { grid-auto-rows: 1fr; }
 .b3 .b3-eq-card h3 { font-size: 1.08rem; }
 .b3 .b3-eq-card p { font-size: .95rem; }
-.b3 .b3-eq-lead { justify-content: flex-end; }
-.b3 .b3-eq-lead .b3-tile-p { font-size: clamp(1rem, 1.1vw, 1.06rem); line-height: 2; color: rgba(255,255,255,.86); }
 
 /* 問い合わせ帯の二つ目のリンク（日本語） */
 .b3 .b3-cta-alt { margin-top: 1.8rem; font-family: var(--b3-jp); font-size: .9rem; font-weight: 500; letter-spacing: .06em; text-transform: none; color: rgba(255,255,255,.78); }
@@ -43,4 +41,14 @@
   /* 1列では高さをそろえる必要がないので、各タイルは中身の高さに */
   .b3 .b3-eq, .b3 .b3-grid { grid-auto-rows: auto; }
   .b3 .b3-fact { min-height: 0; gap: .7rem; }
+}
+
+/* 製造設備：写真カード11枚。最終行の2枚は幅を広げ、右端に空きができないようにする */
+@media (min-width: 961px) {
+  .b3 .b3-eq { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .b3 .b3-eq > .b3-eq-card { grid-column: span 2; }
+  .b3 .b3-eq > .b3-eq-card:nth-last-child(-n+2) { grid-column: span 3; }
+}
+@media (max-width: 960px) and (min-width: 601px) {
+  .b3 .b3-eq > .b3-eq-card:last-child { grid-column: 1 / -1; }
 }
