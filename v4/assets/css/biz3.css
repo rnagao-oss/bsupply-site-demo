@@ -704,3 +704,51 @@ html.js .b3-fx.in .b3-fx-ch { opacity: 1; filter: blur(0); transform: none; }
 @media (prefers-reduced-motion: reduce) {
   html.js .b3-fx .b3-fx-word, html.js .b3-fx .b3-fx-op, html.js .b3-fx .b3-fx-ch, html.js .b3-fx .b3-fx-no { opacity: 1; transform: none; filter: none; transition: none; }
 }
+
+/* BPO 強化：アイコン・バッジ・チップ帯・お悩み・料金の考え方・FAQのQ・ホバー */
+.b3-i { width: 1.5rem; height: 1.5rem; flex: none; }
+.b3-i path { fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.b3-i--lg { width: 2rem; height: 2rem; }
+.b3-lp-visual { position: relative; overflow: visible; }
+.b3-lp-visual img { border-radius: var(--b3-r); }
+.b3-lp-badge { position: absolute; left: -1.2rem; bottom: 1.6rem; display: flex; align-items: center; gap: .8rem; padding: .9rem 1.2rem .9rem 1rem; border-radius: 999px; background: var(--b3-ink); color: #fff; box-shadow: 0 18px 40px -22px rgba(15,15,14,.55); }
+.b3-lp-badge span { display: grid; line-height: 1.3; }
+.b3-lp-badge em { font-style: normal; font-weight: 700; font-size: .95rem; }
+.b3-lp-badge small { font-size: .7rem; color: rgba(255,255,255,.7); }
+html.js .b3-lp-badge { opacity: 0; transform: translateY(10px); transition: opacity .8s .9s, transform .9s var(--b3-ease) .9s; }
+html.js .b3-lp.in .b3-lp-badge, html.js .in .b3-lp-badge, html.js body:not(.x) .b3-lp-badge.show { opacity: 1; transform: none; }
+.b3-mq-wrap--chips { padding: 0 0 clamp(1rem, 2vw, 1.5rem); background: var(--b3-paper); --b3-mq-dur: 60s; }
+.b3-mq-wrap--chips .b3-mq-track { gap: 10px; }
+.b3-chip { display: inline-flex; align-items: center; gap: .55rem; margin: 0; padding: .75rem 1.2rem .75rem 1rem; border-radius: 999px; background: var(--b3-soft); font-size: .9rem; font-weight: 600; white-space: nowrap; }
+.b3-chip .b3-i { width: 1.2rem; height: 1.2rem; }
+.b3-pain { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.b3-pain-item { display: flex; flex-direction: column; gap: 1.1rem; padding: clamp(1.6rem, 2.4vw, 2.2rem); border-radius: var(--b3-r); background: #fff; }
+.b3-pain-ic { display: grid; place-items: center; width: 3.2rem; height: 3.2rem; border-radius: 50%; background: var(--b3-ink); color: #fff; }
+.b3-pain-item p { font-size: 1.02rem; font-weight: 700; line-height: 1.7; }
+.b3-pain-lead { margin-top: clamp(1.6rem, 2.6vw, 2.4rem); font-size: clamp(1.05rem, 1.5vw, 1.3rem); font-weight: 700; text-align: center; }
+.b3-ft-ic { display: grid; place-items: center; width: 3.4rem; height: 3.4rem; margin-top: 1.2rem; border-radius: 12px; background: var(--b3-soft); }
+.b3-ft-ic + h3 { margin-top: .9rem; }
+.b3-price-points { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
+.b3-price-points li { display: flex; align-items: flex-start; gap: 1rem; padding: 1.3rem 1.4rem; border-radius: var(--b3-r); background: var(--b3-soft); }
+.b3-pp-ic { display: grid; place-items: center; flex: none; width: 2.6rem; height: 2.6rem; border-radius: 50%; background: #fff; }
+.b3-pp-h { font-weight: 700; font-size: .98rem; }
+.b3-pp-p { margin-top: .3rem; font-size: .86rem; line-height: 1.75; color: var(--b3-ink-2); }
+.b3-faq--q summary { padding-left: clamp(1.2rem, 2vw, 1.6rem); }
+.b3-faq--q summary::before { content: "Q"; flex: none; display: grid; place-items: center; width: 1.9rem; height: 1.9rem; margin-right: .9rem; border-radius: 50%; background: var(--b3-ink); color: #fff; font: 700 .8rem/1 var(--b3-en); }
+.b3-faq--q summary { justify-content: flex-start; }
+.b3-faq--q summary::after { margin-left: auto; }
+/* 組み合わせの輪：出現時に描かれる */
+@property --b3-mp { syntax: "<percentage>"; inherits: false; initial-value: 0%; }
+.b3-mix-ring { --b3-mp: 100%; background: conic-gradient(var(--b3-ink) 0 min(45%, var(--b3-mp)), #6f6f6a min(45%, var(--b3-mp)) min(75%, var(--b3-mp)), var(--b3-soft-2) min(75%, var(--b3-mp)) var(--b3-mp), transparent var(--b3-mp) 100%); transition: --b3-mp 1.6s var(--b3-ease) .2s; }
+html.js .b3-mix:not(.in) .b3-mix-ring { --b3-mp: 0%; }
+/* ホバー */
+@media (hover: hover) {
+  #tasks .b3-tile, .b3-pain-item, .b3-ft-item { transition: transform .4s var(--b3-ease), box-shadow .4s; }
+  #tasks .b3-tile:hover, .b3-pain-item:hover { transform: translateY(-4px); box-shadow: 0 22px 40px -30px rgba(15,15,14,.35); }
+  .b3-tools li { transition: background .3s, color .3s; }
+  .b3-tools li:hover { background: var(--b3-ink); color: #fff; }
+}
+@media (max-width: 960px) {
+  .b3-pain, .b3-price-points { grid-template-columns: 1fr; }
+  .b3-lp-badge { left: .8rem; bottom: .8rem; }
+}

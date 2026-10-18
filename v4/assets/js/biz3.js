@@ -4,7 +4,7 @@
   document.documentElement.classList.add('js');
 
   /* 出現：.b3-reveal / .b3-stagger / .b3-flow / .b3-cmp-wrap / .b3-photos に in を付ける */
-  const targets = document.querySelectorAll('.b3 .b3-reveal, .b3 .b3-stagger, .b3 .b3-flow, .b3 .b3-cmp-wrap, .b3 .b3-photos, .b3 .b3-photo, .b3 .b3-feature, .b3 .b3-mission');
+  const targets = document.querySelectorAll('.b3 .b3-reveal, .b3 .b3-stagger, .b3 .b3-flow, .b3 .b3-cmp-wrap, .b3 .b3-photos, .b3 .b3-photo, .b3 .b3-feature, .b3 .b3-mission, .b3 .b3-mix');
   document.querySelectorAll('.b3 .b3-stagger').forEach((list) => {
     Array.from(list.children).forEach((child, i) => child.style.setProperty('--i', i));
   });
@@ -16,6 +16,8 @@
     targets.forEach((el) => io.observe(el));
     const mission = document.querySelector('.b3-mission');
     if (mission) requestAnimationFrame(() => requestAnimationFrame(() => show(mission)));
+    const lp = document.querySelector('.b3-lp');
+    if (lp) requestAnimationFrame(() => requestAnimationFrame(() => show(lp)));
   } else {
     targets.forEach(show);
   }
