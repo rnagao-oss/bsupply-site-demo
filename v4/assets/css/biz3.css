@@ -655,10 +655,20 @@ html:lang(en) .b3-tile--ink .b3-lp-price strong { font-size: clamp(1.5rem, 1.9vw
 .b3-ch-stats dt { font-size: .72rem; color: var(--b3-muted); }
 .b3-ch-stats dd { margin-top: .15rem; font-size: 1.35rem; font-weight: 700; letter-spacing: -.01em; }
 .b3-ch-src { font-size: .7rem; line-height: 1.6; color: var(--b3-muted); }
-.b3-ov-terms { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.4fr); gap: clamp(2rem, 5vw, 5rem); align-items: start; margin-top: clamp(3rem, 5vw, 4.5rem); }
+.b3-ov-terms { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 5rem); align-items: start; margin-top: clamp(3rem, 5vw, 4.5rem); }
 .b3-ov-terms-h { display: grid; gap: .6rem; }
 .b3-ov-terms .b3-terms > div { padding: 1rem 0; }
 @media (max-width: 960px) {
   .b3-ch-grid { grid-template-columns: 1fr; }
   .b3-ov-terms { grid-template-columns: 1fr; gap: 1.5rem; }
 }
+.b3-py-wrap { margin: 0; display: grid; gap: .8rem; }
+.b3-py { width: 100%; height: auto; font-family: inherit; }
+.b3-py-name { font-size: 15px; font-weight: 700; }
+.b3-py-en { font-size: 10px; letter-spacing: .08em; }
+.b3-py-num { font-size: 20px; font-weight: 700; letter-spacing: -.01em; fill: var(--b3-ink); }
+.b3-py-sub { font-size: 11px; fill: var(--b3-muted); }
+.b3-py-brk { font-size: 13px; font-weight: 700; fill: var(--b3-ink); }
+.b3-py-brk-s { font-size: 11px; fill: var(--b3-muted); }
+.b3-py-callout { font-size: 13px; font-weight: 700; }
+.b3-py-callout-s { font-size: 10px; }
