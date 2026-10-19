@@ -3987,7 +3987,8 @@ html:lang(en) .dg-sub-en { display:none; }
 
 /* footer: tinted plate and darker type for contrast */
 .footer.ft2 { background: #f4f3f0; }
-.ft2 .ft-h { font-weight: 700; letter-spacing: .1em; }
+.ft2 .ft-h { font-weight: 700; letter-spacing: .1em; padding-bottom: .75rem; margin-bottom: 1.3rem; box-shadow: 0 1px 0 var(--ink); }
+.ft2 .ft-addr b { font-weight: 400; }
 .ft2 .ft-links a, .ft2 .ft-addr { color: var(--ink-70); }
 .ft2 .ft-links a:hover { color: var(--ink); }
 .ft2 .ft-bottom, .ft2 .ft-copy, .ft2 .ft-lang a { color: var(--ink-70); }
