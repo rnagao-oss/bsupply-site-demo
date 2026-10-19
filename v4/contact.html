@@ -128,6 +128,12 @@
 <button class="pv-close" id="privacyClose" type="button">閉じる</button>
 </dialog>
 <script>
+(function () {
+  var map = { consulting: 'コンサルティング', bpo: '中小企業BPO', succession: '事業承継', oem: '革製品OEM', other: 'その他' };
+  var v = map[new URLSearchParams(location.search).get('type')];
+  var r = v && document.querySelector('input[name="お問い合わせ種別"][value="' + v + '"]');
+  if (r) r.checked = true;
+})();
 document.getElementById('privacyOpen').addEventListener('click', function (e) { e.preventDefault(); document.getElementById('privacyDlg').showModal(); });
 document.getElementById('privacyClose').addEventListener('click', function () { document.getElementById('privacyDlg').close(); });
 </script>
