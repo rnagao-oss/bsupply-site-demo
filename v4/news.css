@@ -245,3 +245,9 @@
 .news-prose .news-drivers li { max-width: none; width: 100%; }
 .news-sheet .news-contact dd a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #9a9892; overflow-wrap: anywhere; }
 @media (hover: hover) { .news-sheet .news-contact dd a:hover { text-decoration-color: var(--ink); } }
+
+/* Driver一覧（PC）：番号・名称・説明の縦位置をそろえ、左右の余白を整える */
+@media (min-width: 761px) {
+  .news-drivers li { grid-template-columns: 12rem minmax(0, 1fr); gap: 0 44px; padding: 30px 0; align-items: start; }
+  .news-drivers li > p { padding-top: 25px; max-width: 34em; text-wrap: balance; }
+}
