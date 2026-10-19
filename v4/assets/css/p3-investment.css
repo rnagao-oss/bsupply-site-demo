@@ -43,7 +43,9 @@
 .b3 .b3-ch-seg { font-size: 12.5px; }
 .b3 .b3-ch-segv { font-size: 16px; }
 .b3 .b3-ch-stats dd { font-size: 1.6rem; }
-.b3 .b3-ch-stats dt { font-size: .8rem; }
+.b3 .b3-ch-stats dt { font-size: .8rem; line-height: 1.5; }
+.b3 .b3-ch-stats > div { display: flex; flex-direction: column; justify-content: space-between; gap: .6rem; }
+.b3 .b3-ch-stats dd { margin-top: auto; line-height: 1.2; }
 .b3 .b3-ch-p { font-size: .9rem; }
 .b3 .b3-ch-src { font-size: .74rem; }
 
