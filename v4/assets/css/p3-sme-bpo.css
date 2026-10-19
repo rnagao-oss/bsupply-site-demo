@@ -315,3 +315,14 @@ html.js .b3 .in .b3-line-art path, html.js .b3 .in .b3-line-art circle, html.js 
 .b3 .b3-ft-copy h3 { margin-top: 0; }
 
 .b3 #tools { padding-top: 0; }
+
+/* 導入：左に英字ラベル、右に「リード（大）→ 補足（小）」の1つの縦軸で組む */
+.b3 #intro .b3-intro { align-items: start; }
+.b3 #intro .b3-kicker { margin: .75rem 0 0; }
+.b3 #intro .b3-intro .b3-body { max-width: none; padding-bottom: 0; }
+.b3 .b3-intro-lead { margin: 0 0 clamp(1.4rem, 2.2vw, 2rem); font: 500 clamp(1.45rem, 2.55vw, 2.4rem)/1.6 var(--b3-jp); letter-spacing: .02em; color: var(--b3-ink); word-break: auto-phrase; text-wrap: balance; }
+.b3 .b3-intro-lead .line { display: block; }
+.b3 #intro .b3-intro .b3-body p:not(.b3-intro-lead) { max-width: 40rem; font-size: 1rem; line-height: 2.05; color: var(--b3-ink-2); }
+@media (min-width: 961px) {
+  .b3 #intro .b3-intro { grid-template-columns: minmax(0, .75fr) minmax(0, 1.45fr); }
+}
