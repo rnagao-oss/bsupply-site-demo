@@ -144,3 +144,34 @@
   .b3 #b4d .b3-b4d-grid .b3-tile-p { font-size: .72rem; }
 }
 .b3 .b3-ib { display: inline-block; }
+
+/* B4D（スマホ）：本文は文節ごとに折り返し、語の途中で切らない。中央の円とは、上下の余白で重ならないようにして本文の幅を確保する。2段の高さはそろえる */
+@media (max-width: 760px) {
+  .b3 #b4d .b3-b4d-grid { grid-auto-rows: 1fr; }
+  .b3 #b4d .b3-b4d-grid .b3-tile:nth-child(odd) { padding-right: .9rem !important; }
+  .b3 #b4d .b3-b4d-grid .b3-tile:nth-child(even) { padding-left: .9rem !important; }
+  .b3 #b4d .b3-b4d-grid .b3-tile:nth-child(-n+2) { padding-bottom: 3.2rem !important; }
+  .b3 #b4d .b3-b4d-grid .b3-tile:nth-child(n+3) { padding-top: 3rem !important; }
+}
+
+/* B4D の円：登場（円が広がり、B4D が1字ずつせり上がる）と、4つの力の順送り（カードが浮き、円の下段の語が入れ替わる）。動きは JS が有効なときだけ */
+.b3 #b4d .b3-b4d-grid .b3-tile { transition: background-color .6s var(--b3-ease), transform .6s var(--b3-ease); }
+.b3 #b4d .b3-b4d-grid .b3-tile.is-on { background: rgba(255,255,255,.13); transform: translateY(-3px); }
+.b3 #b4d .b3-b4d-grid .b3-tile.is-on .b3-b4d-name { color: #ffb48a; }
+.b3 #b4d .b3-b4d-core-en { overflow: hidden; padding-bottom: .12em; }
+.b3 #b4d .b3-b4d-core-ja { overflow: hidden; }
+.b3 #b4d .b4d-word { display: inline-block; }
+.b3 #b4d .b4d-swap { animation: b4dSwap .55s var(--b3-ease) both; }
+@keyframes b4dSwap { from { transform: translateY(110%); opacity: 0; } to { transform: none; opacity: 1; } }
+.b3 #b4d .b4d-ready .b3-b4d-core { transform: translate(-50%, -50%) scale(.55); opacity: 0; transition: transform .9s var(--b3-ease), opacity .6s; }
+.b3 #b4d .b4d-ready.is-in .b3-b4d-core { transform: translate(-50%, -50%); opacity: 1; }
+.b3 #b4d .b4d-ch { display: inline-block; }
+.b3 #b4d .b4d-ready .b4d-ch { transform: translateY(105%); transition: transform .8s var(--b3-ease) calc(.35s + var(--k) * .1s); }
+.b3 #b4d .b4d-ready.is-in .b4d-ch { transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .b3 #b4d .b4d-ready .b3-b4d-core, .b3 #b4d .b4d-ready .b4d-ch { transform: none; opacity: 1; transition: none; }
+  .b3 #b4d .b4d-ready .b3-b4d-core { transform: translate(-50%, -50%); }
+}
+@media (max-width: 760px) {
+  .b3 #b4d .b3-b4d-grid .b3-tile:nth-child(-n+2) { padding-bottom: 3.5rem !important; }
+}
