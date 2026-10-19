@@ -97,11 +97,12 @@
 .b3 .b3-vt-c.is-us .b3-mk-a::after { box-shadow: inset 0 0 0 2px var(--b3-acc); }
 @media (max-width: 960px) {
   .b3 .b3-vt { margin-inline: calc(-1 * var(--b3-gutter) + 10px); }
-  .b3 .b3-vt { grid-template-columns: 4.4rem repeat(3, minmax(0, 1fr)); column-gap: 3px; }
-  .b3 .b3-vt-l { padding: .5rem .2rem .5rem 0; font-size: .7rem; line-height: 1.4; overflow-wrap: break-word; }
+  .b3 .b3-vt { grid-template-columns: 4.8rem repeat(3, minmax(0, 1fr)); column-gap: 3px; }
+  .b3 .b3-vt-l { min-width: 0; padding: .5rem .2rem .5rem 0; font-size: .68rem; line-height: 1.4; word-break: normal; overflow-wrap: anywhere; }
   .b3 .b3-vt-no { display: none; }
   .b3 .b3-vt-c { gap: .3rem; min-height: 4.4rem; padding: .55rem .3rem; }
-  .b3 .b3-vt-c p { font-size: .66rem; line-height: 1.45; }
+  .b3 .b3-vt-c { min-width: 0; }
+  .b3 .b3-vt-c p { align-self: stretch; min-width: 0; font-size: .66rem; line-height: 1.45; word-break: normal; line-break: auto; overflow-wrap: anywhere; }
   .b3 .b3-vt-th { min-height: 3.4rem; border-radius: 10px 10px 0 0; padding: .6rem .2rem; }
   .b3 .b3-vt-th strong { font-size: .78rem; line-height: 1.3; }
   .b3 .b3-vt-th.is-us strong { font-size: .9rem; }
