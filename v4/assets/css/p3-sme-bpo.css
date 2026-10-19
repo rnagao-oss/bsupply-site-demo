@@ -227,3 +227,46 @@ html.js .b3 .in .b3-line-art path, html.js .b3 .in .b3-line-art circle, html.js 
 .b3 .b3-label, .b3 .b3-kicker { color: var(--b3-acc); }
 .b3 .b3-label { font-size: .95rem; letter-spacing: .16em; font-weight: 600; }
 .b3 .b3-kicker { font-size: .9rem; }
+
+/* ── 比較表：投資ページの「B supplyの特徴」と同じ構造・配色（4列版） ── */
+.b3 .b3-vt { margin-top: clamp(2rem, 3.5vw, 3rem); display: grid; grid-template-columns: minmax(12.4rem, 1fr) repeat(4, minmax(0, 1.05fr)); grid-template-rows: auto; grid-auto-rows: 1fr; column-gap: 6px; }
+.b3 .b3-vt-row { display: contents; }
+.b3 .b3-vt-l { display: flex; align-items: center; gap: .9rem; padding: 1.1rem 1rem 1.1rem 0; font-size: .95rem; font-weight: 700; box-shadow: 0 1px 0 rgba(255,255,255,.16); }
+.b3 .b3-vt-head .b3-vt-l { box-shadow: none; }
+.b3 .b3-vt-no { font: 500 1.4rem/1 var(--b3-en); color: var(--b3-acc); }
+.b3 .b3-vt-c { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .55rem; min-height: 5rem; padding: .9rem 1.1rem; text-align: center; color: rgba(255,255,255,.76); background: rgba(255,255,255,.04); box-shadow: 0 1px 0 rgba(255,255,255,.16); }
+.b3 .b3-vt-c .b3-mk { order: -1; flex: none; }
+.b3 .b3-vt-c p { font-size: .92rem; line-height: 1.6; overflow-wrap: break-word; }
+.b3 .b3-vt-th { min-height: 4.4rem; border-radius: 12px 12px 0 0; background: rgba(255,255,255,.12); color: #fff; box-shadow: none; }
+.b3 .b3-vt-th strong { font-size: 1.05rem; font-weight: 700; }
+.b3 .b3-vt-c.is-us { color: #fff; background: rgba(255,106,26,.14); box-shadow: inset 2px 0 0 var(--b3-acc), inset -2px 0 0 var(--b3-acc), 0 1px 0 rgba(255,106,26,.4); }
+.b3 .b3-vt-c.is-us p { font-weight: 700; }
+.b3 .b3-vt-th.is-us { background: var(--b3-acc); color: var(--b3-ink); box-shadow: none; }
+.b3 .b3-vt-th.is-us strong { font-size: 1.3rem; }
+.b3 .b3-vt-row:last-child .b3-vt-c.is-us { border-radius: 0 0 12px 12px; box-shadow: inset 2px 0 0 var(--b3-acc), inset -2px 0 0 var(--b3-acc), inset 0 -2px 0 var(--b3-acc); }
+.b3 .b3-vt .b3-mk, .b3 .b3-tb-legend .b3-mk { width: 16px; height: 16px; }
+.b3 .b3-vt .b3-mk-a, .b3 .b3-tb-legend .b3-mk-a { box-shadow: inset 0 0 0 2px rgba(255,255,255,.9); }
+.b3 .b3-vt .b3-mk-a::after, .b3 .b3-tb-legend .b3-mk-a::after { inset: 4.5px; box-shadow: inset 0 0 0 2px rgba(255,255,255,.9); }
+.b3 .b3-vt .b3-mk-b, .b3 .b3-tb-legend .b3-mk-b { box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.55); }
+.b3 .b3-vt .b3-mk-c, .b3 .b3-tb-legend .b3-mk-c { background: rgba(255,255,255,.6); }
+.b3 .b3-vt .b3-mk-c::before, .b3 .b3-tb-legend .b3-mk-c::before { background: #222221; }
+.b3 .b3-vt .b3-mk-d::before, .b3 .b3-vt .b3-mk-d::after, .b3 .b3-tb-legend .b3-mk-d::before, .b3 .b3-tb-legend .b3-mk-d::after { width: 17px; background: rgba(255,255,255,.6); }
+.b3 .b3-vt-c.is-us .b3-mk-a { box-shadow: inset 0 0 0 2px var(--b3-acc); }
+.b3 .b3-vt-c.is-us .b3-mk-a::after { box-shadow: inset 0 0 0 2px var(--b3-acc); }
+.b3 #comparison .b3-tb-legend > div { color: rgba(255,255,255,.7); }
+@media (max-width: 960px) {
+  .b3 .b3-vt { margin-inline: calc(-1 * var(--b3-gutter) + 10px); grid-template-columns: 4.4rem repeat(4, minmax(0, 1fr)); column-gap: 3px; }
+  .b3 .b3-vt-c { overflow: hidden; }
+  .b3 .b3-vt-c p br { display: none; }
+  .b3 .b3-vt-l { min-width: 0; padding: .5rem .2rem .5rem 0; font-size: .62rem; line-height: 1.4; word-break: normal; overflow-wrap: anywhere; }
+  .b3 .b3-vt-no { display: none; }
+  .b3 .b3-vt-c { gap: .3rem; min-height: 4.6rem; padding: .55rem .25rem; min-width: 0; }
+  .b3 .b3-vt-c p { align-self: stretch; min-width: 0; max-width: 100%; font-size: .58rem; line-height: 1.45; word-break: normal; line-break: auto; overflow-wrap: anywhere; }
+  .b3 .b3-vt-th { min-height: 3.4rem; border-radius: 10px 10px 0 0; padding: .6rem .2rem; }
+  .b3 .b3-vt-th strong { font-size: .68rem; line-height: 1.3; }
+  .b3 .b3-vt-th.is-us strong { font-size: .8rem; }
+  .b3 .b3-vt .b3-mk { width: 12px; height: 12px; }
+  .b3 .b3-vt .b3-mk-a::after { inset: 3px; }
+  .b3 .b3-vt .b3-mk-d::before, .b3 .b3-vt .b3-mk-d::after { width: 12px; }
+}
+.b3 .b3-vt-c .nowrap, .b3 .b3-vt-c p .nowrap { white-space: normal; }
