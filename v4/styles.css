@@ -4038,3 +4038,8 @@ html:lang(en) .dg-sub-en { display:none; }
 @media (max-width: 760px) {
   .hero-video { height: calc(100vw * 2.25); min-height: 0; }
 }
+
+/* PCのトップ：動画（4列×2段＝8コマ、16:9）を切らずに全体表示し、8コマを同じ大きさにそろえる（縦長タブレットは対象外） */
+@media (min-width: 761px) and (min-aspect-ratio: 4/5) {
+  .hero-video { height: calc(100vw * 9 / 16); min-height: 0; }
+}
