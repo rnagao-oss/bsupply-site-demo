@@ -247,3 +247,14 @@
 @media (max-width: 760px) {
   .news-drivers li { gap: 8px; padding: 26px 0; }
 }
+.news-bullets { list-style: none; margin: 0; padding: 0; }
+.news-bullets li { position: relative; padding-left: 1.1em; }
+.news-bullets li + li { margin-top: .15em; }
+.news-bullets li::before { content: ""; position: absolute; left: .15em; top: .85em; width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
+@media (max-width: 760px) {
+  .news-sheet .news-dl { grid-template-columns: 7.1rem minmax(0, 1fr); }
+  .news-sheet .news-dl dd { padding-right: 10px; }
+  .news-bullets li { padding-left: .9em; white-space: nowrap; }
+  .news-bullets li::before { left: .1em; }
+}
+.news-contact dd a { white-space: nowrap; }

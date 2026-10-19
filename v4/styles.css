@@ -4043,3 +4043,7 @@ html:lang(en) .dg-sub-en { display:none; }
 @media (min-width: 761px) and (min-aspect-ratio: 4/5) {
   .hero-video { height: calc(100vw * 9 / 16); min-height: 0; }
 }
+.co-bullets { list-style: none; margin: 0; padding: 0; }
+.co-bullets li { position: relative; padding-left: 1.1em; }
+.co-bullets li + li { margin-top: .2em; }
+.co-bullets li::before { content: ""; position: absolute; left: .15em; top: .88em; width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
