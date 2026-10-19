@@ -71,3 +71,6 @@
   .b3 #intro .b3-statement { display: grid; grid-template-columns: minmax(0, .75fr) minmax(0, 1.45fr); column-gap: clamp(2.5rem, 6vw, 7rem); }
   .b3 #intro .b3-statement > p { grid-column: 2; }
 }
+
+/* ヒーロー：4枚の写真が見えるよう、左と下の暗幕を弱める */
+.b3 #hero .bd-hero-shade { background: linear-gradient(90deg, rgba(15,15,14,.5), rgba(15,15,14,.04) 62%), linear-gradient(0deg, rgba(15,15,14,.5), transparent 42%); }
