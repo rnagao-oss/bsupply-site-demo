@@ -326,3 +326,6 @@ html.js .b3 .in .b3-line-art path, html.js .b3 .in .b3-line-art circle, html.js 
 @media (min-width: 961px) {
   .b3 #intro .b3-intro { grid-template-columns: minmax(0, .75fr) minmax(0, 1.45fr); }
 }
+
+/* 末尾のお問い合わせ帯：CONTACT ラベルは他ページと同じグレー */
+.b3 .b3-cta .b3-label { color: rgba(255,255,255,.62); }

@@ -2170,7 +2170,7 @@ body.menu-open .brand-mark { filter: none; }
 
 /* 黒フィナーレ */
 .finale.fin-dark { background: #000; }
-.fin-dark .sec-label { color: rgba(255, 255, 255, 0.88); }
+.fin-dark .sec-label { color: rgba(255, 255, 255, 0.62); }
 .fin-dark .sec-label i { color: rgba(255, 255, 255, 0.85); }
 .fin-dark .fin-note { color: rgba(255, 255, 255, 0.85); }
 .fin-dark .fin-mail { color: #fff; }

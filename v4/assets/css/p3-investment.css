@@ -196,3 +196,6 @@
 @media (min-width: 761px) {
   .b3 #position .b3-lede { max-width: none; white-space: nowrap; }
 }
+
+/* 末尾のお問い合わせ帯：CONTACT ラベルは他ページと同じグレー */
+.b3 .b3-cta .b3-label { color: rgba(255,255,255,.62); }
