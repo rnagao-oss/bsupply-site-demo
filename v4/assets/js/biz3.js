@@ -73,7 +73,7 @@
   });
 
   /* ロゴ帯：2段とも同じ向き・同じ速度（px/s）で流す */
-  const PXPS = () => Math.max(24, innerWidth / 34);
+  const PXPS = () => (innerWidth <= 960 ? 56 : Math.max(24, innerWidth / 34));
   document.querySelectorAll('.b3 .b3-mq-track').forEach((track) => {
     if (!track.dataset.looped) { track.innerHTML += track.innerHTML; track.dataset.looped = '1'; }
     const sync = () => {

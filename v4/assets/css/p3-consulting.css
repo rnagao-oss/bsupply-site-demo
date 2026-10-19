@@ -45,17 +45,6 @@
 }
 
 @media (max-width: 600px) {
-  /* ヒーロー：6ユニットは縁オレンジの円のまま2列に並べ、列幅いっぱいに広げて文字を大きくする。接続線は描かない */
-  .b3 .b3-units { grid-template-columns: repeat(2, minmax(0, 1fr)); justify-content: center; gap: 8px; overflow: visible; }
-  .b3 .b3-unit { aspect-ratio: 1; border-radius: 50%; place-content: center; text-align: center; padding: .5rem .2rem; }
-  .b3 .b3-unit-en { margin-bottom: .5rem; font-size: 14px; line-height: 1.3; }
-  .b3 .b3-unit-items { gap: .25rem; font-size: 12px; line-height: 1.4; color: rgba(255,255,255,.88); font-feature-settings: "palt"; }
-  .b3 .b3-unit-items li { white-space: nowrap; }
-  .b3 .b3-unit-core { width: 14rem; }
-  .b3 .b3-core-t { font-size: 16px; }
-  /* OUR CLIENTS：スマホは流れを速くする */
-  .b3 .b3-mq-wrap { --b3-mq-dur: 26s; }
-  .b3 .b3-links { display: none; }
   /* OUR SERVICES：本文列を約219pxにして語の途中で折れないようにする */
   .b3 .b3-row { grid-template-columns: 2.2rem minmax(0, 1fr) 2.6rem; column-gap: .7rem; padding: 1.2rem 1rem; }
   /* CASE STUDIES：見出しを全幅に、VIEW MORE は右端 */
@@ -64,3 +53,29 @@
   .b3 .b3-case-meta { grid-column: 1; grid-row: 2; max-width: none; }
   .b3 .b3-case-more { grid-column: 1; grid-row: 3; justify-self: end; }
 }
+
+/* ヒーロー（960px以下）：デスクトップと同じ「中央の円のまわりに6つの円」。幅に比例して縮め、縦長に伸ばして円どうしが重ならないようにする */
+@media (max-width: 960px) {
+  .b3 .b3-units { display: block; position: relative; width: min(100%, 520px); aspect-ratio: 35 / 62; margin-inline: auto; overflow: visible; }
+  .b3 .b3-unit, .b3 .b3-unit-core { position: absolute; display: grid; place-content: center; margin: 0; aspect-ratio: 1; border-radius: 50%; text-align: center; grid-column: auto; }
+  .b3 .b3-unit-core { inset: 50% auto auto 50%; width: 36%; transform: translate(-50%, -50%) !important; opacity: 1; }
+  .b3 .b3-core-t { font-size: clamp(12.5px, 3.5vw, 20px); }
+  .b3 .b3-unit { inset: var(--y) auto auto var(--x); width: 40%; padding: 0; opacity: 0; transform: translate(-50%, -50%) scale(.6) !important; }
+  .b3 .b3-mission.in .b3-unit { opacity: 1; transform: translate(-50%, -50%) scale(1) !important; }
+  .b3 .b3-unit:nth-of-type(1) { --x: 50%; --y: 12.4%; }
+  .b3 .b3-unit:nth-of-type(2) { --x: 78%; --y: 32%; }
+  .b3 .b3-unit:nth-of-type(3) { --x: 78%; --y: 68%; }
+  .b3 .b3-unit:nth-of-type(4) { --x: 50%; --y: 87.6%; }
+  .b3 .b3-unit:nth-of-type(5) { --x: 22%; --y: 68%; }
+  .b3 .b3-unit:nth-of-type(6) { --x: 22%; --y: 32%; }
+  .b3 .b3-unit-en { margin-bottom: .45em; font-size: clamp(10.5px, 3.2vw, 16.5px); line-height: 1.25; }
+  .b3 .b3-unit-items { gap: .2em; font-size: clamp(8.6px, 2.65vw, 14px); line-height: 1.4; color: rgba(255,255,255,.86); font-feature-settings: "palt"; }
+  .b3 .b3-unit-items li { white-space: nowrap; }
+  .b3 .b3-links-sm { display: block; position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+  .b3 .b3-links-sm line { stroke: rgba(255,122,36,.7); stroke-width: 1.5; vector-effect: non-scaling-stroke; stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 1s var(--b3-ease); }
+  .b3 .b3-mission.in .b3-links-sm line { stroke-dashoffset: 0; }
+  .b3 .b3-mission.in .b3-links-sm line:nth-child(2) { transition-delay: .08s; } .b3 .b3-mission.in .b3-links-sm line:nth-child(3) { transition-delay: .16s; }
+  .b3 .b3-mission.in .b3-links-sm line:nth-child(4) { transition-delay: .24s; } .b3 .b3-mission.in .b3-links-sm line:nth-child(5) { transition-delay: .32s; }
+  .b3 .b3-mission.in .b3-links-sm line:nth-child(6) { transition-delay: .4s; }
+}
+@media (min-width: 961px) { .b3 .b3-links-sm { display: none; } }
