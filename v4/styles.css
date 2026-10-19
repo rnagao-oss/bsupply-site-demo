@@ -3974,3 +3974,21 @@ html:lang(en) .dg-sub-en { display:none; }
 .mm-lang2 { position: static !important; margin-top: auto; padding-top: 1.4rem; border-top: 1px solid var(--line); gap: .9rem !important; justify-content: flex-start; align-items: center; }
 .mobile-menu .mm-lang2 a { font-family: var(--en) !important; font-size: .95rem !important; letter-spacing: .12em !important; padding: .3rem 0 !important; }
 .mobile-menu .mm-lang2 a + a::before { content: "/"; margin-right: .9rem; color: var(--gray); font-weight: 400; }
+
+/* company overview: stack label above value on phones so values keep full width */
+@media (max-width: 760px) {
+  .co-wrap .co-table > div { grid-template-columns: 1fr !important; row-gap: .35rem !important; padding: 1.1rem 1.4rem !important; }
+  .co-wrap .co-table dt { font-size: .82rem !important; }
+  .co-wrap .co-table dd { font-size: 1rem !important; }
+}
+
+/* message portrait: lighter blur so the face stays readable */
+.msgp-photo { filter: blur(.45px) !important; }
+
+/* footer: tinted plate and darker type for contrast */
+.footer.ft2 { background: #f4f3f0; }
+.ft2 .ft-h { font-weight: 700; letter-spacing: .1em; }
+.ft2 .ft-links a, .ft2 .ft-addr { color: var(--ink-70); }
+.ft2 .ft-links a:hover { color: var(--ink); }
+.ft2 .ft-bottom, .ft2 .ft-copy, .ft2 .ft-lang a { color: var(--ink-70); }
+.ft2 .ft-lang a.cur { color: var(--ink); }

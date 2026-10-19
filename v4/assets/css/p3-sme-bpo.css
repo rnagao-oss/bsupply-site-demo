@@ -98,7 +98,9 @@ html.js .b3 .in .b3-line-art path, html.js .b3 .in .b3-line-art circle, html.js 
 /* 業務一覧・輪・ツール */
 .b3 #tasks .b3-grid { grid-auto-rows: 1fr; }
 .b3 #tasks .b3-tile { min-height: 22rem; }
-.b3 .b3-mix-center::after { content: ""; width: .7rem; aspect-ratio: 1; margin: .4rem auto 0; border-radius: 50%; background: var(--b3-acc); }
+.b3 .b3-mix-center { padding: 0 !important; gap: .25rem; }
+.b3 .b3-mix-center span { font-size: .68rem; white-space: nowrap; }
+.b3 .b3-mix-center strong { font-size: .84rem; white-space: nowrap; }
 .b3 .b3-tools { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); }
 .b3 .b3-tools li { display: grid; place-items: center; min-height: 4rem; padding-inline: .8rem; text-align: center; }
 
