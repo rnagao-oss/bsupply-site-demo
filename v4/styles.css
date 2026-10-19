@@ -4007,3 +4007,10 @@ html:lang(en) .dg-sub-en { display:none; }
   .bd-hero--rc .bd-hero-img { object-position: 30% 40%; }
   .bd-hero--rc .bd-hero-shade { background: linear-gradient(rgba(20,20,20,.5) 0%, rgba(20,20,20,0) 26%, rgba(20,20,20,0) 46%, rgba(20,20,20,.72) 100%); }
 }
+
+/* スマホのトップ：ヒーローを明るく（暗幕を弱める） */
+@media (max-width: 760px) {
+  .hero-video .hero-shade { background: linear-gradient(rgba(20,20,20,.3) 0%, rgba(20,20,20,.06) 30%, rgba(20,20,20,.5) 100%), linear-gradient(90deg, rgba(20,20,20,.3) 0%, rgba(20,20,20,0) 70%); }
+  .hero-video .hero-mesh { background-image: radial-gradient(circle, rgba(0,0,0,.1) .8px, rgba(0,0,0,0) 1.1px); }
+  .hero-video .hero-title, .hero-video .hero-en { text-shadow: 0 1px 3px rgba(0,0,0,.45), 0 2px 22px rgba(0,0,0,.5); }
+}
