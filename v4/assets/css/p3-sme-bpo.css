@@ -222,3 +222,8 @@ html.js .b3 .in .b3-line-art path, html.js .b3 .in .b3-line-art circle, html.js 
   .b3 #flow .b3-flow-no { grid-column: 1; grid-row: 1 / span 3; }
   .b3 #flow .b3-flow-art { grid-column: 2; grid-row: 1; margin: 0 0 .65rem; }
 }
+
+/* セクション見出しのラベルは投資ページと同じ大きさ・色にそろえる */
+.b3 .b3-label, .b3 .b3-kicker { color: var(--b3-acc); }
+.b3 .b3-label { font-size: .95rem; letter-spacing: .16em; font-weight: 600; }
+.b3 .b3-kicker { font-size: .9rem; }
