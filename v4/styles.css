@@ -4002,7 +4002,6 @@ html:lang(en) .dg-sub-en { display:none; }
 /* recruit hero: bright table-discussion photo, shade only under the title */
 .bd-hero--rc .bd-hero-img { filter: none; object-position: 50% 38%; }
 .bd-hero--rc .bd-hero-shade { background: linear-gradient(rgba(20,20,20,.52) 0%, rgba(20,20,20,0) 30%, rgba(20,20,20,0) 52%, rgba(20,20,20,.62) 100%); }
-.bd-hero--rc .hero-mesh { opacity: .25; }
 @media (max-width: 760px) {
   .bd-hero--rc { height: clamp(420px, 66vh, 560px); }
   .bd-hero--rc .bd-hero-img { object-position: 30% 40%; }
