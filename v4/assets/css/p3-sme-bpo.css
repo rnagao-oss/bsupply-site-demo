@@ -331,3 +331,9 @@ html.js .b3 .in .b3-line-art path, html.js .b3 .in .b3-line-art circle, html.js 
   .b3 .b3-ft-sum { grid-template-columns: 1fr; }
   .b3 .b3-ft-sum a { padding-bottom: clamp(3rem, 8vw, 3.4rem); }
 }
+
+/* PRICE：3つの条件は枠とアイコンを使わず、明朝の見出しと本文だけで並べる */
+.b3 .b3-price-points { gap: clamp(2rem, 4vw, 4rem); margin-top: clamp(2.5rem, 4.5vw, 4rem); padding-inline: clamp(1.8rem, 3.2vw, 3rem); }
+.b3 .b3-price-points li { display: block; padding: 0; border-radius: 0; background: none; }
+.b3 .b3-pp-h { font-family: var(--b3-mincho); font-size: clamp(1.4rem, 2.2vw, 1.9rem); font-weight: 500; line-height: 1.4; letter-spacing: .04em; }
+.b3 .b3-pp-p { margin-top: .9rem; max-width: 22em; font-size: .92rem; line-height: 1.9; }
