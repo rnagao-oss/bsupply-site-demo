@@ -68,14 +68,18 @@ html.js .b3 .b3-mx.in .b3-mx-x { transform: none; opacity: 1; transition: transf
 html.js .b3 .b3-mx .b3-mx-mk { stroke-dasharray: 1; stroke-dashoffset: 1; }
 html.js .b3 .b3-mx.in .b3-mx-mk { stroke-dashoffset: 0; transition: stroke-dashoffset 1.3s var(--b3-ease) calc(.9s + var(--d, 0) * 1s); }
 @media (max-width: 960px) {
-  .b3 .b3-mx { grid-template-columns: 1fr; margin-top: 2rem; }
-  .b3 .b3-mx-lines, .b3 .b3-mx-dot { display: none; }
-  .b3 .b3-mx-cap, .b3 .b3-mx-col--a .b3-mx-cap, .b3 .b3-mx-col--b .b3-mx-cap { height: auto; margin-bottom: .6rem; padding: 0; justify-content: flex-start; }
-  .b3 .b3-mx-list { grid-auto-rows: auto; }
-  .b3 .b3-mx-item, .b3 .b3-mx-col--a .b3-mx-item { display: flex; justify-content: flex-start; text-align: left; padding-block: .7rem; }
-  .b3 .b3-mx-jp { font-size: 1.15rem; }
-  .b3 .b3-mx-core { padding: 1.4rem 0; place-items: start; }
-  .b3 .b3-mx-x { width: 3.4rem; font-size: 2rem; }
+  .b3 .b3-mx { grid-template-columns: minmax(0, 1fr) clamp(5.2rem, 23vw, 10rem) minmax(0, 1fr); margin-top: 1.8rem; }
+  .b3 .b3-mx-cap { height: 2rem; margin-bottom: .9rem; }
+  .b3 .b3-mx-col--a .b3-mx-cap { padding-right: calc(7px + .5rem); }
+  .b3 .b3-mx-col--b .b3-mx-cap { padding-left: calc(7px + .5rem); }
+  .b3 .b3-mx-cap span { padding: .42rem .8rem; font-size: .68rem; letter-spacing: 0; white-space: nowrap; }
+  .b3 .b3-mx-list { grid-auto-rows: 4.7rem; }
+  .b3 .b3-mx-item { gap: .5rem; }
+  .b3 .b3-mx-jp { font-size: clamp(.8rem, 3.2vw, 1.2rem); line-height: 1.5; letter-spacing: 0; }
+  .b3 .b3-mx-dot { width: 7px; height: 7px; }
+  .b3 .b3-mx-core { padding-top: 2.9rem; }
+  .b3 .b3-mx-x { width: 2.7rem; font-size: 1.6rem; }
+  .b3 .b3-mx-ln { stroke-width: 1.5; stroke-dasharray: .1 7; }
 }
 @media (prefers-reduced-motion: reduce) {
   html.js .b3 .b3-mx .b3-mx-jp, html.js .b3 .b3-mx .b3-mx-x, html.js .b3 .b3-mx .b3-mx-dot { transform: none !important; opacity: 1 !important; transition: none !important; }

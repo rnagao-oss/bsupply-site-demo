@@ -52,3 +52,6 @@
 @media (max-width: 960px) and (min-width: 601px) {
   .b3 .b3-eq > .b3-eq-card:last-child { grid-column: 1 / -1; }
 }
+
+/* 設備カードの番号：事業カード（BUSINESS）の番号と同じ書体・大きさ */
+.b3 .b3-eq-no { font: 500 clamp(2.6rem, 5vw, 3.6rem)/.9 var(--b3-en); letter-spacing: -.06em; color: var(--b3-ink); }

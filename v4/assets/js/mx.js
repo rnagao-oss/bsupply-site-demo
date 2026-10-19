@@ -6,7 +6,7 @@
   const colA = Array.from(root.querySelectorAll('.b3-mx-col--a .b3-mx-item'));
   const colB = Array.from(root.querySelectorAll('.b3-mx-col--b .b3-mx-item'));
   const ns = 'http://www.w3.org/2000/svg';
-  const desktop = matchMedia('(min-width: 961px)');
+  const desktop = { matches: true, addEventListener() {} };
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   let lines = [];
   let travelers = [];

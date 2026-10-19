@@ -1,0 +1,6 @@
+/* 代表メッセージ：スマホでは顔をヘッダーの下に置き、体が見える縦長の切り出しにする */
+@media (max-width: 900px) {
+  .msgp { --mp-h: min(112vw, 520px); padding-top: 4.8rem; }
+  .msgp-photo { height: var(--mp-h); max-height: none; object-position: 54% 0%; -webkit-mask-image: linear-gradient(to right, transparent 0, #000 10%, #000 80%, transparent 90%); mask-image: linear-gradient(to right, transparent 0, #000 10%, #000 80%, transparent 90%); }
+  .msgp-fade { top: calc(4.8rem + var(--mp-h) - 28vw); height: 28vw; max-height: 200px; }
+}
