@@ -4033,3 +4033,8 @@ html:lang(en) .dg-sub-en { display:none; }
   .orbit5 .node-jp { font-size: 14px; }
   .orbit5 .orbit-node .node-jp { transform: translateY(4px); }
 }
+
+/* スマホのトップ：動画（4段×2列のタイル）を切らずに全体表示し、どのタイルも同じ大きさにする（960×2160＝縦横比4:9） */
+@media (max-width: 760px) {
+  .hero-video { height: calc(100vw * 2.25); min-height: 0; }
+}
