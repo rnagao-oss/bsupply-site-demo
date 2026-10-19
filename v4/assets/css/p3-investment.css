@@ -135,3 +135,12 @@
   .b3 .b3-bar-tag { justify-self: start; margin: -1px 0 2px -8px; padding: .5rem .9rem; border-radius: 16px 0 12px 0; background: var(--b3-acc); color: var(--b3-ink); font-size: .8rem; font-weight: 700; letter-spacing: .04em; line-height: 1.2; }
   .b3 .b3-bar-grp .b3-bar-v { color: #ffb48a; }
 }
+
+/* B4D：各カードの見出し（和文の1行）を本文と区別する。見出しは白の太字で大きく、本文は一段暗くして小さく */
+.b3 #b4d .b3-b4d-ja { color: #fff; font-size: 1.05rem; line-height: 1.5; }
+.b3 #b4d .b3-tile-p { color: rgba(255,255,255,.62); }
+@media (max-width: 760px) {
+  .b3 #b4d .b3-b4d-ja { margin-bottom: .35rem; font-size: .9rem; }
+  .b3 #b4d .b3-b4d-grid .b3-tile-p { font-size: .72rem; }
+}
+.b3 .b3-ib { display: inline-block; }
