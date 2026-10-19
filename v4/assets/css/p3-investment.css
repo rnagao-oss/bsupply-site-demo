@@ -33,7 +33,7 @@
 .b3 .b3-ch-stats dd { color: #d9560a; }
 .b3 #b4d .b3-tile-no { color: var(--b3-acc); }
 .b3 #case .b3-timeline > li::before { background: var(--b3-acc); }
-.b3 .b3-cta a.b3-btn--light { background: var(--b3-acc); color: #fff; }
+.b3 .b3-cta a.b3-btn--light { background: #fff; color: var(--b3-ink); }
 
 /* ── 概要（ISSUE）：数字を大きく読みやすく ── */
 .b3 .b3-ch-val { font-size: 14px; }
@@ -191,4 +191,8 @@
 }
 @media (max-width: 760px) {
   .b3 #b4d .b3-b4d-ja { text-wrap: wrap; font-size: .86rem; }
+}
+
+@media (min-width: 761px) {
+  .b3 #position .b3-lede { max-width: none; white-space: nowrap; }
 }

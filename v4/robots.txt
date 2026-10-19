@@ -1,7 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /thanks.html
-Disallow: /en/thanks.html
 
 Sitemap: https://bsupply.jp/sitemap.xml
 Sitemap: https://bsupply.jp/news-sitemap.xml

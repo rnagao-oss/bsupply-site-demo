@@ -83,10 +83,10 @@ html.js .b3 .in .b3-line-art path, html.js .b3 .in .b3-line-art circle, html.js 
 .b3 .b3-domain-body ul { font-size: .95rem; line-height: 1.9; }
 @media (hover: hover) { .b3 .b3-domain-card:hover { transform: translateY(-4px); } }
 
-/* 黒い価格帯：相談ボタンだけをオレンジにする */
+/* 黒い価格帯：相談ボタンは白地 */
 .b3 .b3-price-band .b3-lp-price strong { color: var(--b3-acc); }
-.b3 .b3-price-band a.b3-btn--accent { background: var(--b3-acc); color: #fff; }
-.b3 .b3-price-band a.b3-btn--accent::after { background: #fff; color: var(--b3-acc); }
+.b3 .b3-price-band a.b3-btn--accent { background: #fff; color: var(--b3-ink); }
+.b3 .b3-price-band a.b3-btn--accent::after { background: var(--b3-ink); color: #fff; }
 
 /* 比較表：自社列は白地に濃い縁、見出しをオレンジにする */
 .b3 .b3-tb-col.is-us .b3-tb-h { background: #fff; color: var(--b3-acc); box-shadow: 0 1px 0 var(--b3-soft-2); }
@@ -116,9 +116,10 @@ html.js .b3 .in .b3-line-art path, html.js .b3 .in .b3-line-art circle, html.js 
 .b3 .b3-faq details { overflow: hidden; }
 .b3 .b3-faq details > p { will-change: height; }
 
-/* 最下部CTAのBPOだけ相談導線をオレンジにする */
-.b3 .b3-cta .b3-btn--accent { background: var(--b3-acc); color: #fff; }
-.b3 .b3-cta .b3-btn--accent::after { background: #fff; color: var(--b3-acc); }
+/* 最下部CTAの相談ボタンは白地 */
+.b3 .b3-cta .b3-btn--accent { background: #fff; color: var(--b3-ink); }
+.b3 .b3-cta .b3-btn--accent::after { background: var(--b3-ink); color: #fff; }
+.b3 .b3-lp a.b3-consult { background: #fff; color: var(--b3-ink); box-shadow: inset 0 0 0 2px var(--b3-ink); }
 
 @media (max-width: 600px) {
   .b3 .b3-lp { padding-top: 7rem; }
@@ -312,3 +313,5 @@ html.js .b3 .in .b3-line-art path, html.js .b3 .in .b3-line-art circle, html.js 
 .b3 .b3-task-list li:first-child { padding-top: 0; }
 .b3 .b3-task-list li::before { content: ""; flex: none; width: .9rem; height: 2px; background: var(--b3-acc); }
 .b3 .b3-ft-copy h3 { margin-top: 0; }
+
+.b3 #tools { padding-top: 0; }
