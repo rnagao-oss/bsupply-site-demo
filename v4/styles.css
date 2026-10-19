@@ -4050,3 +4050,6 @@ html:lang(en) .dg-sub-en { display:none; }
   .msgp { padding-top: 6.3rem !important; }
   .msgp .msgp-body { margin-top: 1.6rem !important; }
 }
+@media (max-width: 900px) {
+  .msgp-photo { filter: none !important; -webkit-filter: none !important; }
+}
