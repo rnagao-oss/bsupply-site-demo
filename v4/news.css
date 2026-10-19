@@ -219,3 +219,10 @@
   .news-inline-fig { max-width: none; }
   .news-quote { padding-left: 16px; }
 }
+
+/* 改行位置：本文は読みやすい行長に抑え、見出し・タイトルは行の長さをそろえる */
+.news-sheet .news-prose > p, .news-sheet .news-prose .news-quote p { max-width: 38em; line-break: strict; text-wrap: pretty; }
+.news-article-title { text-wrap: balance; line-break: strict; }
+.news-sheet .news-prose h2, .news-sheet .news-box-title { text-wrap: balance; line-break: strict; }
+.news-drivers li > p, .news-sheet .news-dl dd { line-break: strict; text-wrap: pretty; }
+@media (min-width: 761px) { .news-article-title .tp { white-space: nowrap; } }
