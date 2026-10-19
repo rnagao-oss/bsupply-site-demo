@@ -180,3 +180,7 @@
 @media (max-width: 760px) {
   .b3 #b4d .b3-b4d-grid .b3-tile:nth-child(-n+2) { padding-bottom: 3.5rem !important; }
 }
+
+@media (min-width: 761px) {
+  .b3 #b4d .b3-lede { max-width: none; white-space: nowrap; }
+}

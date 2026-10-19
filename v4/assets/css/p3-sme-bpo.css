@@ -280,3 +280,25 @@ html.js .b3 .in .b3-line-art path, html.js .b3 .in .b3-line-art circle, html.js 
 .b3 .b3-tile--ink .b3-tile-en,
 .b3 .b3-tile--ink .b3-lp-price span,
 .b3 .b3-tile--ink .b3-tile-p { color: #fff; }
+
+/* Feature 02: process loop */
+.b3 .b3-ft-loop { align-self: center; padding: clamp(1.6rem, 2.6vw, 2.4rem) clamp(1.4rem, 2.4vw, 2.2rem); border-radius: var(--b3-r); background: var(--b3-ink); color: #fff; }
+.b3 .b3-loop-h { margin: 0 0 1.7rem; font-size: .85rem; font-weight: 700; letter-spacing: .08em; color: #fff; }
+.b3 .b3-loop { position: relative; display: grid; }
+.b3 .b3-loop::after { content: "毎月くり返す"; position: absolute; right: .95rem; top: 50%; transform: translateY(-50%); writing-mode: vertical-rl; font-size: .8rem; font-weight: 700; letter-spacing: .24em; color: var(--b3-acc); }
+.b3 .b3-loop li { position: relative; padding: 0 3.8rem 1.8rem 2.3rem;
+  background:
+    linear-gradient(var(--b3-acc), var(--b3-acc)) right 0 top 0 / 2px 100% no-repeat,
+    linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.4)) left .4rem top 1.3rem / 2px calc(100% - 1.15rem) no-repeat; }
+.b3 .b3-loop li:first-child { background:
+    linear-gradient(var(--b3-acc), var(--b3-acc)) right 0 top .78rem / 2px calc(100% - .78rem) no-repeat,
+    linear-gradient(var(--b3-acc), var(--b3-acc)) right 0 top .78rem / 1.5rem 2px no-repeat,
+    linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,.4)) left .4rem top 1.3rem / 2px calc(100% - 1.15rem) no-repeat; }
+.b3 .b3-loop li:last-child { padding-bottom: 0; background:
+    linear-gradient(var(--b3-acc), var(--b3-acc)) right 0 top 0 / 2px .8rem no-repeat,
+    linear-gradient(var(--b3-acc), var(--b3-acc)) right 0 top .78rem / 1.5rem 2px no-repeat; }
+.b3 .b3-loop li::before { content: ""; position: absolute; left: 0; top: .33rem; width: .9rem; height: .9rem; border-radius: 50%; background: var(--b3-ink); box-shadow: inset 0 0 0 2px #fff; }
+.b3 .b3-loop li:last-child::before { background: var(--b3-acc); box-shadow: none; }
+.b3 .b3-loop li:first-child::after { content: ""; position: absolute; right: 1.35rem; top: calc(.78rem - 5px); width: 8px; height: 12px; background: var(--b3-acc); clip-path: polygon(100% 0, 0 50%, 100% 100%); }
+.b3 .b3-loop b { display: block; font-size: 1.1rem; font-weight: 700; line-height: 1.5; }
+.b3 .b3-loop li > span { display: block; margin-top: .1rem; font-size: .92rem; font-weight: 400; line-height: 1.7; color: #fff; }
