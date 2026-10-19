@@ -4112,3 +4112,4 @@ html:lang(en) .dg-sub-en { display:none; }
 .sec-label.in .lm-c { animation: lmUp .9s cubic-bezier(.2, .8, .2, 1) forwards; animation-delay: calc(.12s + var(--i) * 60ms); }
 @keyframes lmUp { to { transform: none; } }
 @media (prefers-reduced-motion: reduce) { .lm-c { transform: none; animation: none !important; } }
+.pk:has(+ .pk-s) { margin-right: .6em; }

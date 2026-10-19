@@ -1,4 +1,4 @@
-/* mx.js — 承継する会社の強み × B supplyの強み：全組み合わせを点線で順に結び、線上を光の粒が流れる */
+/* mx.js — 承継する会社の強み × B supplyの強み：全組み合わせを点線で結び、線上を光の粒が最初から流れる */
 (() => {
   const root = document.querySelector('[data-mx]');
   if (!root) return;
@@ -53,7 +53,7 @@
         p.setAttribute('class', 'b3-mx-ln');
         p.setAttribute('mask', `url(#${id})`);
         svg.appendChild(p);
-        lines.push({ el: p, len: p.getTotalLength(), start: 3600 + Number(delay) * 400, dur: 4200 + ((i * 5 + j) % 5) * 700, off: ((i * 5 + j) * 0.37) % 1 });
+        lines.push({ el: p, len: p.getTotalLength(), start: 0, dur: 4200 + ((i * 5 + j) % 5) * 700, off: ((i * 5 + j) * 0.37) % 1 });
       });
     });
     if (!reduce) {
@@ -71,8 +71,7 @@
   const tick = (now) => {
     requestAnimationFrame(tick);
     if (!visible || !travelers.length) return;
-    const t0 = tick.t0 || (tick.t0 = now);
-    const el = now - t0;
+    const el = now;
     lines.forEach((l, k) => {
       const c = travelers[k];
       if (el < l.start) return;
