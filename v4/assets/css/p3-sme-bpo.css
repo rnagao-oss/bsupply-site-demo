@@ -270,3 +270,6 @@ html.js .b3 .in .b3-line-art path, html.js .b3 .in .b3-line-art circle, html.js 
   .b3 .b3-vt .b3-mk-d::before, .b3 .b3-vt .b3-mk-d::after { width: 12px; }
 }
 .b3 .b3-vt-c .nowrap, .b3 .b3-vt-c p .nowrap { white-space: normal; }
+
+/* ヒーローが明るいので、ページ最上部でもロゴを白抜きにしない */
+.site-header:not(.scrolled) .brand-mark { filter: none; }
