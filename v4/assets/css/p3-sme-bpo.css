@@ -337,3 +337,11 @@ html.js .b3 .in .b3-line-art path, html.js .b3 .in .b3-line-art circle, html.js 
 .b3 .b3-price-points li { display: block; padding: 0; border-radius: 0; background: none; }
 .b3 .b3-pp-h { font-family: var(--b3-mincho); font-size: clamp(1.4rem, 2.2vw, 1.9rem); font-weight: 500; line-height: 1.4; letter-spacing: .04em; }
 .b3 .b3-pp-p { margin-top: .9rem; max-width: 22em; font-size: .92rem; line-height: 1.9; }
+
+/* FEATURES 1つ目：右列に置くものがないため、見出しと本文を左右に並べて行幅を使い切る（担当領域の例は下に全幅） */
+@media (min-width: 961px) {
+  .b3 #ft-1 .b3-ft-copy { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); column-gap: clamp(2.5rem, 5vw, 5rem); align-items: start; }
+  .b3 #ft-1 .b3-ft-copy h3 { margin: 0; }
+  .b3 #ft-1 .b3-ft-description { margin-top: .35rem; }
+  .b3 #ft-1 .b3-domain-examples { margin-top: clamp(3rem, 5vw, 4.5rem); }
+}
