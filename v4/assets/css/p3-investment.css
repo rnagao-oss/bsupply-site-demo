@@ -184,3 +184,11 @@
 @media (min-width: 761px) {
   .b3 #b4d .b3-lede { max-width: none; white-space: nowrap; }
 }
+
+@media (max-width: 760px) {
+  .b3 #b4d .b3-b4d-grid .b3-tile-p, .b3 #b4d .b3-b4d-ja { text-wrap: balance; }
+  .b3 #b4d .b3-b4d-name { font-size: min(.95rem, 3.7vw); }
+}
+@media (max-width: 760px) {
+  .b3 #b4d .b3-b4d-ja { text-wrap: wrap; font-size: .86rem; }
+}
