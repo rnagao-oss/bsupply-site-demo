@@ -16,3 +16,12 @@
 @media (prefers-reduced-motion: reduce) {
   .bb-card .bb-more::after, .bb-card .bb-more .vm-ch { animation: none !important; }
 }
+
+/* BPOカード：写真の代わりにヒーローの文言パネル */
+.bb-img.bb-typo { container-type: inline-size; display: flex; flex-direction: column; justify-content: center; gap: .9rem; padding: 0 7%; background: #f4f2ee; font-family: "Noto Sans JP", sans-serif; color: #0f0f0e; }
+.bb-typo b { font-size: 4.6cqw; font-weight: 700; line-height: 1.4; color: #ff6a1a; letter-spacing: 0; }
+.bb-typo strong { font-size: 10.4cqw; font-weight: 700; line-height: 1.15; letter-spacing: 0; }
+.bb-typo .bb-typo-price { font-size: 5.2cqw; font-weight: 700; line-height: 1.3; }
+.bb-typo .bb-typo-price em { font-style: normal; font-size: 9.6cqw; color: #ff6a1a; margin-right: .15em; }
+.bb-typo .bb-typo-sub { font-size: 5.2cqw; font-weight: 700; line-height: 1.4; }
+.bb-card:hover .bb-typo { transform: none; }
