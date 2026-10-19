@@ -130,6 +130,7 @@ img, video, svg { display: block; max-width: 100%; }
 .nav-cta:hover { background: var(--ink); border-color: var(--ink); color: #fff !important; }
 .site-header.scrolled .nav-cta:hover, .site-header.light .nav-cta:hover { background: var(--ink); color: #fff !important; }
 .nav-cta::after { display: none !important; }
+.site-header nav a { white-space: nowrap; }
 @media (max-width: 960px) { .site-header nav a:not(.nav-cta) { display: none; } }
 
 /* ═══ HERO ═══ */
@@ -3931,3 +3932,15 @@ html:lang(en) .dg-sub-en { display:none; }
 /* 採用：スローガン本文を大きく、結びの一文はさらに大きく */
 .rc-intro .bd-intro-r p { font-size: clamp(1.1rem, 1.4vw, 1.25rem); }
 .rc-intro .bd-intro-r .rc-close { margin-top: 2.4rem; font-size: clamp(1.7rem, 3vw, 2.7rem); line-height: 1.5; letter-spacing: .02em; }
+
+/* header nav: keep 7 links + Contact on one line between 961px and 1240px */
+@media (min-width: 961px) and (max-width: 1240px) {
+  .site-header nav, .site-header nav a, .site-header nav .nav-cta, .site-header .lang-sw2 a { font-size: 0.9rem !important; }
+  .site-header nav { gap: 0.9rem !important; }
+  .site-header nav .nav-cta { padding: 0.5rem 1.1rem !important; }
+}
+@media (min-width: 961px) and (max-width: 1100px) {
+  .site-header nav, .site-header nav a, .site-header nav .nav-cta, .site-header .lang-sw2 a { font-size: 0.8rem !important; }
+  .site-header nav { gap: 0.55rem !important; }
+  .site-header nav .nav-cta { padding: 0.4rem 0.8rem !important; }
+}
