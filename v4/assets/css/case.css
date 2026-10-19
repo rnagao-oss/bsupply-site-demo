@@ -39,7 +39,7 @@
 .cs-wins li { display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start; padding: clamp(1.4rem, 2.2vw, 1.9rem); border-radius: 16px; background: rgba(255,255,255,.08); }
 .cs-wins li::before { content: "✓"; display: grid; place-items: center; width: 1.9rem; aspect-ratio: 1; border-radius: 50%; background: var(--cs-acc); color: var(--cs-ink); font: 700 .95rem/1 sans-serif; }
 .cs-wins p { color: rgba(255,255,255,.92); }
-.cs-wins li:first-child p { font-weight: 700; }
+.cs-wins li p { font-weight: 700; }
 
 .cs-tail .cd-svcs { margin-top: 0; }
 @media (max-width: 860px) {
