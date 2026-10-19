@@ -1,5 +1,0 @@
-.b3 .b3-b4d-use { background: #fff; display: grid; align-content: start; gap: .7rem; padding: clamp(1.6rem, 2.6vw, 2.4rem); }
-.b3 .b3-b4d-use .b3-tile-h { margin: 0; font-size: clamp(1.25rem, 1.8vw, 1.5rem); }
-.b3 .b3-b4d-use .b3-btn--text { margin-top: 1rem; }
-.b3 .b3-b4d-more { margin-top: clamp(2rem, 3.4vw, 3rem); }
-.b3 #use { background: var(--b3-soft); }

@@ -184,7 +184,3 @@
 @media (min-width: 761px) {
   .b3 #b4d .b3-lede { max-width: none; white-space: nowrap; }
 }
-
-.b3 .b3-b4d-more { margin-top: clamp(2rem, 3.4vw, 3rem); }
-.b3 #b4d .b3-grid .b3-tile { align-content: start; gap: .4rem; }
-.b3 .b3-sec--dark a.b3-btn--light { color: var(--b3-ink); }
