@@ -3922,3 +3922,8 @@ html:lang(en) .dg-sub-en { display:none; }
   .case-meta { grid-template-columns: repeat(3, minmax(0, auto)); gap: .5rem 1.2rem; }
   .case-meta dd { white-space: normal; }
 }
+
+/* お問い合わせ：種別カードの番号は外す。流れの番号は丸にして読みやすくする */
+.cx-opt > span { grid-template-columns: 1fr; }
+.cx-flow li { align-items: center; gap: .9rem; }
+.cx-flow span { display: grid; place-items: center; flex: none; width: 1.7rem; aspect-ratio: 1; border-radius: 50%; background: #fff; color: #0f0f0e; font: 700 .78rem/1 var(--en); letter-spacing: 0; }
