@@ -3927,3 +3927,7 @@ html:lang(en) .dg-sub-en { display:none; }
 .cx-opt > span { grid-template-columns: 1fr; }
 .cx-flow li { align-items: center; gap: .9rem; }
 .cx-flow span { display: grid; place-items: center; flex: none; width: 1.7rem; aspect-ratio: 1; border-radius: 50%; background: #fff; color: #0f0f0e; font: 700 .78rem/1 var(--en); letter-spacing: 0; }
+
+/* 採用：スローガン本文を大きく、結びの一文はさらに大きく */
+.rc-intro .bd-intro-r p { font-size: clamp(1.1rem, 1.4vw, 1.25rem); }
+.rc-intro .bd-intro-r .rc-close { margin-top: 2.4rem; font-size: clamp(1.7rem, 3vw, 2.7rem); line-height: 1.5; letter-spacing: .02em; }
