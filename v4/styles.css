@@ -4020,3 +4020,16 @@ html:lang(en) .dg-sub-en { display:none; }
   .hero-video .hero-shade { background: linear-gradient(rgba(20,20,20,.34) 0%, rgba(20,20,20,.08) 34%, rgba(20,20,20,.66) 100%), linear-gradient(90deg, rgba(20,20,20,.34) 0%, rgba(20,20,20,0) 58%); }
   .hero-video .hero-mesh { background-image: radial-gradient(circle, rgba(0,0,0,.12) .8px, rgba(0,0,0,0) 1.1px); }
 }
+
+/* スマホのトップ：MISSIONとCORE VALUEの間の余白を詰める（約200px→約88px） */
+@media (max-width: 760px) {
+  .mission .cv-block { margin-top: 32px; padding-top: 56px; }
+}
+
+/* スマホのBUSINESS循環図：丸と文字を大きくする（半径74→96、隣の丸と重ならない範囲） */
+@media (max-width: 760px) {
+  .orbit5 .orbit-node circle { r: 96px; }
+  .orbit5 .node-en { font-size: 22px; }
+  .orbit5 .node-jp { font-size: 14px; }
+  .orbit5 .orbit-node .node-jp { transform: translateY(4px); }
+}
