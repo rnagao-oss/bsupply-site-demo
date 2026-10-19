@@ -3,7 +3,7 @@
 .bb-card .bb-body { align-items: flex-start; }
 .bb-card .bb-body .bb-text { margin-bottom: 1.4rem; }
 .bb-card .bb-more .vm-t { display: inline-flex; white-space: nowrap; }
-.bb-card .bb-more::after { content: "→"; display: grid; place-items: center; flex: none; width: 2.4rem; aspect-ratio: 1; border-radius: 50%; background: #f57c24; color: #fff; font: 700 .9rem/1 sans-serif; letter-spacing: 0; transform: none; transition: transform .45s cubic-bezier(.19, 1, .22, 1); animation: vmNudge 3.6s ease-in-out infinite; animation-delay: calc(var(--vm, 0) * .5s + 1.2s); }
+.bb-card .bb-more::after { content: "→"; display: grid; place-items: center; flex: none; width: 2.4rem; aspect-ratio: 1; border-radius: 50%; background: #0f0f0e; color: #fff; font: 700 .9rem/1 sans-serif; letter-spacing: 0; transform: none; transition: transform .45s cubic-bezier(.19, 1, .22, 1); animation: vmNudge 3.6s ease-in-out infinite; animation-delay: calc(var(--vm, 0) * .5s + 1.2s); }
 .bb-card .bb-more .vm-ch { display: inline-block; animation: vmGlow 3.6s ease-in-out infinite; animation-delay: calc(var(--vm, 0) * .5s + var(--c) * .07s); }
 .bb-card .bb-more .vm-sp { width: .45em; }
 @keyframes vmGlow { 0%, 22%, 100% { color: #6b6b68; transform: none; } 8% { color: #0f0f0e; transform: translateY(-2px); } }
