@@ -4095,3 +4095,20 @@ html:lang(en) .dg-sub-en { display:none; }
 .pk { display: inline-block; }
 :has(> .pk) { text-wrap: balance; }
 :has(> .pk), .b3-lede:has(> .b3-ib) { word-spacing: .4em; }
+
+/* お問い合わせボタン：ヘッダー・フッター・サイド固定を白背景＋黒枠に統一 */
+.site-header.scrolled .nav-cta, .site-header.light .nav-cta, .site-header:not(.scrolled):not(.light) .nav-cta { background: #fff !important; color: var(--ink) !important; box-shadow: inset 0 0 0 1.5px var(--ink); }
+.site-header:not(.scrolled):not(.light) .nav-cta { box-shadow: none; }
+.site-header.scrolled .nav-cta:hover, .site-header.light .nav-cta:hover { background: var(--ink) !important; color: #fff !important; }
+.ft-cta { background: #fff; box-shadow: inset 0 0 0 1px var(--ink); }
+.ft-cta:hover { background: var(--ink); color: #fff; }
+.side-cta { background: #fff; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--ink); }
+.side-cta:hover { background: var(--ink); color: #fff; }
+
+/* トップ MISSION / CORE VALUE のラベル：1字ずつせり上がる */
+.lm-m { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .14em; margin-bottom: -.14em; }
+.lm-c { display: inline-block; transform: translateY(118%); }
+.lm-w { display: inline-block; white-space: nowrap; }
+.sec-label.in .lm-c { animation: lmUp .9s cubic-bezier(.2, .8, .2, 1) forwards; animation-delay: calc(.12s + var(--i) * 60ms); }
+@keyframes lmUp { to { transform: none; } }
+@media (prefers-reduced-motion: reduce) { .lm-c { transform: none; animation: none !important; } }
