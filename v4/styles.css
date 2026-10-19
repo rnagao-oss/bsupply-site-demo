@@ -4088,3 +4088,5 @@ html:lang(en) .dg-sub-en { display:none; }
   .cx-side-shade { inset: 0 0 auto 0 !important; height: min(80vw, 360px) !important; background: linear-gradient(rgba(17,17,17,0) 55%, #111 100%) !important; }
   .cx-side-in { min-height: 0; padding-top: min(80vw, 360px) !important; padding-bottom: 2.8rem; }
 }
+.cx-opt > span { display: flex !important; flex-direction: column; justify-content: center; min-height: 4.6rem; }
+.cx-opt > span::before { top: 50%; transform: translateY(-50%); }
