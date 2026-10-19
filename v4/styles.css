@@ -3966,3 +3966,11 @@ html:lang(en) .dg-sub-en { display:none; }
 /* nav labels in capitals; smaller footer wordmark */
 .site-header nav > a, .mobile-menu nav > a, .ft2 .ft-links a { text-transform: uppercase !important; letter-spacing: .06em; }
 .ft-word { font-size: clamp(1.4rem, 3.4vw, 2.9rem) !important; margin: clamp(1.6rem, 3.5vw, 2.6rem) 0 1rem !important; }
+
+/* mobile menu: list starts below the header, language switch sits at the bottom */
+.mobile-menu { flex-direction: column !important; align-items: stretch !important; justify-content: flex-start !important; padding-top: clamp(6rem, 18vw, 7rem) !important; padding-bottom: max(1.6rem, env(safe-area-inset-bottom)) !important; overflow-y: auto; }
+.mobile-menu nav { flex: 0 0 auto; }
+.mobile-menu nav > a { padding: .95rem .2rem !important; font-size: clamp(1.05rem, 4vw, 1.3rem) !important; }
+.mm-lang2 { position: static !important; margin-top: auto; padding-top: 1.4rem; border-top: 1px solid var(--line); gap: .9rem !important; justify-content: flex-start; align-items: center; }
+.mobile-menu .mm-lang2 a { font-family: var(--en) !important; font-size: .95rem !important; letter-spacing: .12em !important; padding: .3rem 0 !important; }
+.mobile-menu .mm-lang2 a + a::before { content: "/"; margin-right: .9rem; color: var(--gray); font-weight: 400; }
