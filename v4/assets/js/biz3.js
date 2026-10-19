@@ -78,7 +78,7 @@
     if (!track.dataset.looped) { track.innerHTML += track.innerHTML; track.dataset.looped = '1'; }
     const sync = () => {
       const half = track.scrollWidth / 2;
-      if (half > 0) track.style.setProperty('--b3-mq-dur', `${Math.max(1, half / PXPS()).toFixed(1)}s`);
+      if (half > 0) track.style.setProperty('--b3-mq-dur', `${Math.max(1, half / (PXPS() * (track.closest('.b3-mq-wrap--chips') ? 1 : 1.6))).toFixed(1)}s`);
     };
     sync();
     if ('ResizeObserver' in window) new ResizeObserver(sync).observe(track);
