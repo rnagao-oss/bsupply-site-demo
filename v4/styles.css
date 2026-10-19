@@ -4014,3 +4014,9 @@ html:lang(en) .dg-sub-en { display:none; }
   .hero-video .hero-mesh { background-image: radial-gradient(circle, rgba(0,0,0,.1) .8px, rgba(0,0,0,0) 1.1px); }
   .hero-video .hero-title, .hero-video .hero-en { text-shadow: 0 1px 3px rgba(0,0,0,.45), 0 2px 22px rgba(0,0,0,.5); }
 }
+
+/* デスクトップのトップ：ヒーローの暗幕を少しだけ弱める */
+@media (min-width: 761px) {
+  .hero-video .hero-shade { background: linear-gradient(rgba(20,20,20,.34) 0%, rgba(20,20,20,.08) 34%, rgba(20,20,20,.66) 100%), linear-gradient(90deg, rgba(20,20,20,.34) 0%, rgba(20,20,20,0) 58%); }
+  .hero-video .hero-mesh { background-image: radial-gradient(circle, rgba(0,0,0,.12) .8px, rgba(0,0,0,0) 1.1px); }
+}
