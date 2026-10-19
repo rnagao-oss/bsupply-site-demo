@@ -6,6 +6,12 @@
   .b3 .b3-mission-copy h1 { font-size: clamp(2.4rem, 3.85vw, 3.9rem); }
 }
 
+/* ヒーロー：本文の左端をヘッダーのロゴ、円図の右端を Contact ボタンに揃える（中央1280px幅をやめ、ヘッダーと同じ左右余白にする） */
+.b3 .b3-mission { padding-inline: clamp(1.4rem, 4vw, 3.2rem); }
+@media (min-width: 961px) {
+  .b3 .b3-mission-in, .b3 .b3-mission .b3-crumb { width: min(100%, 1800px); }
+}
+
 /* ヒーロー：ユニット円は不透明にし、格子の点と接続線の端が中に透けないようにする */
 .b3 .b3-unit { background: var(--b3-dark-2); }
 .b3 .b3-unit:hover { background: var(--b3-dark-3); }

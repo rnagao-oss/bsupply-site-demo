@@ -26,8 +26,8 @@
 /* 見出しの2行（革製品OEMで／選ばれ続ける6つの理由） */
 .b3 .b3-title .line { display: block; }
 
-/* 製造設備：12マスをそろえ、先頭の黒いタイルにリードを置く */
-.b3 .b3-eq { grid-auto-rows: 1fr; }
+/* 製造設備：行の高さは各行の中身に合わせる（1frだと最終行の大きな写真に引きずられ、上の行のカード下に余白ができる） */
+.b3 .b3-eq { grid-auto-rows: auto; }
 .b3 .b3-eq-card h3 { font-size: 1.08rem; }
 .b3 .b3-eq-card p { font-size: .95rem; }
 
