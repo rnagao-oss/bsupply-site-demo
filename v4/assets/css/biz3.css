@@ -430,6 +430,9 @@ html.js .in .b3-icon path { stroke-dashoffset: 0; }
 
 /* ---------- B4D（黒い面・中央の白い円・4枚） ---------- */
 .b3-b4d { position: relative; }
+.b3-b4d-abbr { margin-bottom: .9rem; text-align: right; font: 500 .8rem/1.5 var(--b3-en); letter-spacing: .06em; color: rgba(255,255,255,.78); }
+.b3-b4d-abbr strong { font-weight: 700; color: #fff; }
+.b3-b4d-abbr span { margin-left: .7rem; letter-spacing: .12em; text-transform: uppercase; font-size: .7rem; color: rgba(255,255,255,.5); }
 .b3-b4d-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .b3-b4d-grid .b3-tile { min-height: 15rem; }
 .b3-b4d-grid .b3-tile:nth-child(odd) { padding-right: clamp(5rem, 9vw, 8rem); }
@@ -440,6 +443,7 @@ html.js .in .b3-icon path { stroke-dashoffset: 0; }
 .b3-b4d-name { font: 600 clamp(1.4rem, 2.1vw, 1.9rem)/1.15 var(--b3-en); letter-spacing: -.01em; }
 .b3-b4d-ja { font-weight: 700; font-size: .95rem; color: rgba(255,255,255,.85); }
 @media (max-width: 760px) {
+  .b3-b4d-abbr span { display: block; margin: 0; }
   .b3-b4d-grid { gap: 8px; }
   .b3-b4d-grid .b3-tile { gap: .55rem; padding: 1rem .85rem 1.1rem !important; min-height: 0; }
   .b3-b4d-grid .b3-tile:nth-child(odd) { padding-right: 2.3rem !important; }
