@@ -1,15 +1,16 @@
-/* mx.js — 承継する会社の強み × B supplyの強み：全組み合わせの曲線を引き、選んだ項目の線だけを強調する */
+/* mx.js — 承継する会社の強み × B supplyの強み：全組み合わせを点線で順に結び、線上を光の粒が流れる */
 (() => {
   const root = document.querySelector('[data-mx]');
   if (!root) return;
   const svg = root.querySelector('.b3-mx-lines');
   const colA = Array.from(root.querySelectorAll('.b3-mx-col--a .b3-mx-item'));
   const colB = Array.from(root.querySelectorAll('.b3-mx-col--b .b3-mx-item'));
-  const all = colA.concat(colB);
   const ns = 'http://www.w3.org/2000/svg';
   const desktop = matchMedia('(min-width: 961px)');
-  let paths = [];
-  let current = null;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let lines = [];
+  let travelers = [];
+  let visible = false;
 
   const center = (item, box) => {
     const r = item.querySelector('.b3-mx-dot').getBoundingClientRect();
@@ -18,52 +19,70 @@
 
   const build = () => {
     svg.replaceChildren();
-    paths = [];
+    lines = [];
+    travelers = [];
     if (!desktop.matches) return;
     const box = root.getBoundingClientRect();
     svg.setAttribute('viewBox', `0 0 ${box.width} ${box.height}`);
+    const defs = document.createElementNS(ns, 'defs');
+    svg.appendChild(defs);
     colA.forEach((a, i) => {
       const [x1, y1] = center(a, box);
       colB.forEach((b, j) => {
         const [x2, y2] = center(b, box);
         const mx = (x1 + x2) / 2;
+        const d = `M${x1} ${y1}C${mx} ${y1} ${mx} ${y2} ${x2} ${y2}`;
+        const id = `mxm${i}${j}`;
+        const delay = (i * 0.28 + j * 0.06).toFixed(2);
+
+        const mask = document.createElementNS(ns, 'mask');
+        mask.setAttribute('id', id);
+        mask.setAttribute('maskUnits', 'userSpaceOnUse');
+        mask.setAttribute('x', 0); mask.setAttribute('y', 0);
+        mask.setAttribute('width', box.width); mask.setAttribute('height', box.height);
+        const mk = document.createElementNS(ns, 'path');
+        mk.setAttribute('d', d);
+        mk.setAttribute('pathLength', '1');
+        mk.setAttribute('class', 'b3-mx-mk');
+        mk.style.setProperty('--d', delay);
+        mask.appendChild(mk);
+        defs.appendChild(mask);
+
         const p = document.createElementNS(ns, 'path');
-        p.setAttribute('d', `M${x1} ${y1}C${mx} ${y1} ${mx} ${y2} ${x2} ${y2}`);
-        p.setAttribute('pathLength', '1');
+        p.setAttribute('d', d);
         p.setAttribute('class', 'b3-mx-ln');
-        p.style.setProperty('--d', i * 5 + j);
+        p.setAttribute('mask', `url(#${id})`);
         svg.appendChild(p);
-        paths.push({ el: p, a: i, b: j });
+        lines.push({ el: p, len: p.getTotalLength(), start: 3600 + Number(delay) * 400, dur: 4200 + ((i * 5 + j) % 5) * 700, off: ((i * 5 + j) * 0.37) % 1 });
       });
     });
-    if (current) activate(current[0], current[1]);
+    if (!reduce) {
+      lines.forEach(() => {
+        const c = document.createElementNS(ns, 'circle');
+        c.setAttribute('r', 3);
+        c.setAttribute('class', 'b3-mx-tr');
+        c.style.opacity = 0;
+        svg.appendChild(c);
+        travelers.push(c);
+      });
+    }
   };
 
-  const clear = () => {
-    current = null;
-    all.forEach((el) => el.classList.remove('is-on', 'is-dim'));
-    paths.forEach((p) => p.el.classList.remove('is-on', 'is-dim'));
+  const tick = (now) => {
+    requestAnimationFrame(tick);
+    if (!visible || !travelers.length) return;
+    const t0 = tick.t0 || (tick.t0 = now);
+    const el = now - t0;
+    lines.forEach((l, k) => {
+      const c = travelers[k];
+      if (el < l.start) return;
+      const t = (((el - l.start) / l.dur) + l.off) % 1;
+      const pt = l.el.getPointAtLength(t * l.len);
+      c.setAttribute('cx', pt.x);
+      c.setAttribute('cy', pt.y);
+      c.style.opacity = Math.sin(t * Math.PI) * 0.95;
+    });
   };
-
-  const activate = (side, idx) => {
-    if (!desktop.matches) return;
-    clear();
-    current = [side, idx];
-    const own = side === 'a' ? colA : colB;
-    own.forEach((el, k) => el.classList.add(k === idx ? 'is-on' : 'is-dim'));
-    const hit = paths.filter((p) => p[side] === idx);
-    paths.forEach((p) => p.el.classList.add(p[side] === idx ? 'is-on' : 'is-dim'));
-    hit.forEach((p) => svg.appendChild(p.el));
-  };
-
-  const bind = (items, side) => items.forEach((el, idx) => {
-    el.addEventListener('pointerenter', () => activate(side, idx));
-    el.addEventListener('pointerleave', clear);
-    el.addEventListener('focus', () => activate(side, idx));
-    el.addEventListener('blur', clear);
-  });
-  bind(colA, 'a');
-  bind(colB, 'b');
 
   build();
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(build);
@@ -71,8 +90,11 @@
   desktop.addEventListener('change', build);
 
   const show = () => root.classList.add('in');
-  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { show(); io.disconnect(); } }), { rootMargin: '0px 0px -12% 0px', threshold: 0.15 });
-    io.observe(root);
+  if ('IntersectionObserver' in window && !reduce) {
+    new IntersectionObserver((es) => es.forEach((e) => {
+      visible = e.isIntersecting;
+      if (visible) show();
+    }), { rootMargin: '0px 0px -12% 0px', threshold: 0.15 }).observe(root);
+    requestAnimationFrame(tick);
   } else show();
 })();
