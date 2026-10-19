@@ -67,7 +67,11 @@
 .b3 .b3-py-brk { fill: #d9560a; }
 @media (max-width: 960px) {
   .b3 .b3-vx { grid-template-columns: 1fr; }
-  .b3 .b3-vx-list > div { grid-template-columns: 6.4rem minmax(0, 1fr); gap: .8rem; }
+  .b3 .b3-vx-list { grid-auto-rows: auto; }
+  .b3 .b3-vx-list > div { grid-template-columns: 1fr; align-items: start; gap: .4rem; min-height: 0; padding: 1.15rem 0; }
+  .b3 .b3-vx-list dt { font-size: .82rem; }
+  .b3 .b3-vx-list dd { font-size: 1.05rem; line-height: 1.7; }
+  .b3 .vx-ph { display: inline-block; }
 }
 
 /* ── 比較表（B supplyの特徴）：どの端末でも崩れない行ごとの構造。行に線、B supply 列はオレンジで強調 ── */
