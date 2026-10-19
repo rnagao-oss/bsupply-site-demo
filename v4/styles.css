@@ -3944,3 +3944,18 @@ html:lang(en) .dg-sub-en { display:none; }
   .site-header nav { gap: 0.55rem !important; }
   .site-header nav .nav-cta { padding: 0.4rem 0.8rem !important; }
 }
+
+/* 代表メッセージ（スマホ）：見出し → 本文 → 写真 → 署名の順にする */
+@media (max-width: 900px) {
+  .msgp { display: flex; flex-direction: column; padding-top: clamp(6.5rem, 22vw, 8rem); }
+  .msgp-in { display: contents; }
+  .msgp-title { order: 1; }
+  .msgp-body { order: 2; }
+  .msgp-photo { order: 3; position: static; width: 100%; max-width: 340px; height: auto; aspect-ratio: 4 / 5; margin: 2.6rem auto 0; object-fit: cover; object-position: 50% 10%;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 16%, #000 84%, transparent 100%), linear-gradient(to bottom, transparent 0, #000 8%, #000 82%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(to right, transparent 0, #000 16%, #000 84%, transparent 100%), linear-gradient(to bottom, transparent 0, #000 8%, #000 82%, transparent 100%);
+    mask-composite: intersect; }
+  .msgp-fade { display: none; }
+  .msgp-sign { order: 4; }
+}
