@@ -2,6 +2,13 @@
 (() => {
   const ease = (t) => 1 - Math.pow(1 - t, 3);
 
+  /* ── ページ内リンク：該当箇所へ瞬時に移動（読み込み後のレイアウト変化にも追従） ── */
+  if (location.hash.length > 1) {
+    const jump = () => document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView({ behavior: 'instant', block: 'start' });
+    jump();
+    addEventListener('load', () => { jump(); setTimeout(jump, 400); }, { once: true });
+  }
+
   /* ── LOADING：ブラシサークル→白黒反転→対角ワイプ（トップのみ） ── */
   const loader = document.getElementById('loader');
   if (loader && matchMedia('(prefers-reduced-motion: reduce)').matches) {
