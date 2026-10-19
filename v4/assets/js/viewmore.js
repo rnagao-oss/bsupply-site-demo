@@ -4,7 +4,9 @@
     const text = el.textContent.trim();
     el.setAttribute('aria-label', text);
     el.style.setProperty('--vm', i);
-    el.replaceChildren(...Array.from(text).map((ch, k) => {
+    const t = document.createElement('span');
+    t.className = 'vm-t';
+    t.append(...Array.from(text).map((ch, k) => {
       const s = document.createElement('span');
       s.setAttribute('aria-hidden', 'true');
       s.className = ch === ' ' ? 'vm-ch vm-sp' : 'vm-ch';
@@ -12,5 +14,6 @@
       s.textContent = ch === ' ' ? ' ' : ch;
       return s;
     }));
+    el.replaceChildren(t);
   });
 })();

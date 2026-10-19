@@ -53,5 +53,5 @@
   .b3 .b3-eq > .b3-eq-card:last-child { grid-column: 1 / -1; }
 }
 
-/* 設備カードの番号：事業カード（BUSINESS）の番号と同じ書体・大きさ */
-.b3 .b3-eq-no { font: 500 clamp(2.6rem, 5vw, 3.6rem)/.9 var(--b3-en); letter-spacing: -.06em; color: var(--b3-ink); }
+/* 設備カードの番号：事業カード（BUSINESS）の番号と同じ書体・大きさ・色 */
+.b3 .b3-eq-no { font: 400 1.9rem/1 var(--serif, "Source Serif 4", serif); letter-spacing: 0; color: #a9a59c; }
