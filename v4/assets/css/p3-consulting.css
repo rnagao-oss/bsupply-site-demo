@@ -6,10 +6,10 @@
   .b3 .b3-mission-copy h1 { font-size: clamp(2.4rem, 3.85vw, 3.9rem); }
 }
 
-/* ヒーロー：本文の左端をヘッダーのロゴ、円図の右端を Contact ボタンに揃える（中央1280px幅をやめ、ヘッダーと同じ左右余白にする） */
+/* ヒーロー：左右の余白をヘッダーと同じにしたうえで、1280px幅との中間まで内側に戻す（1585px幅で本文の左端がロゴより約50px内側、円図の右端がContactより約50px内側） */
 .b3 .b3-mission { padding-inline: clamp(1.4rem, 4vw, 3.2rem); }
 @media (min-width: 961px) {
-  .b3 .b3-mission-in, .b3 .b3-mission .b3-crumb { width: min(100%, 1800px); }
+  .b3 .b3-mission-in, .b3 .b3-mission .b3-crumb { width: min(100%, calc((100% + 1280px) / 2)); }
 }
 
 /* ヒーロー：ユニット円は不透明にし、格子の点と接続線の端が中に透けないようにする */
