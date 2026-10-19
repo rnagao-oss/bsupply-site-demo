@@ -1,3 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  <url>
+    <loc>https://bsupply.jp/news/2026-10-19-succession-sumida.html</loc>
+    <news:news>
+      <news:publication><news:name>B supply</news:name><news:language>ja</news:language></news:publication>
+      <news:publication_date>2026-10-19T12:00:00+09:00</news:publication_date>
+      <news:title>B supply、東京・墨田区の革製品製造事業を承継　職人と雇用を引き継ぎます</news:title>
+    </news:news>
+  </url>
 </urlset>
