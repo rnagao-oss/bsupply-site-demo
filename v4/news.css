@@ -172,3 +172,25 @@
   .news-tabs a { flex: none; }
   .news-tabs .news-archive { margin-left: 12px; }
 }
+
+/* 記事内：概要表・B4Dの4つのDriver・代表コメント・問い合わせ先 */
+.news-prose h2 { word-break: auto-phrase; text-wrap: balance; }
+.news-prose > .news-dl { margin-bottom: 0; }
+.news-prose .news-dl dt { color: var(--ink-70); font-size: var(--fs-small); padding-top: 22px; }
+.news-prose .news-dl dd { padding: 18px 0; }
+.news-prose .news-drivers { list-style: none; margin: 32px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.news-drivers li { background: var(--plate, #f4f3f0); padding: 28px 24px 26px; display: flex; flex-direction: column; gap: 6px; }
+.news-drivers .no { font-family: var(--news-latin); font-size: var(--fs-small); letter-spacing: .08em; color: var(--gray); }
+.news-prose .news-drivers h3 { margin: 4px 0 0; font-family: var(--news-latin); font-weight: 500; font-size: 1.25rem; line-height: 1.35; letter-spacing: 0; }
+.news-drivers .sub { margin: 0 0 10px; font-size: var(--fs-small); font-weight: 700; line-height: 1.6; }
+.news-drivers li p:last-child { margin: 0; font-size: .9375rem; line-height: 1.8; }
+.news-quote { margin: 40px 0 0; padding: 4px 0 4px 28px; border-left: 2px solid var(--ink); }
+.news-quote p { margin: 0 0 16px; }
+.news-quote footer { margin-top: 20px; font-size: var(--fs-small); color: var(--ink-70); letter-spacing: .04em; }
+.news-box-title { font-size: 1rem; }
+.news-box p { font-size: .9375rem; }
+@media (max-width: 620px) {
+  .news-prose .news-drivers { grid-template-columns: minmax(0, 1fr); }
+  .news-drivers li { padding: 24px 20px; }
+  .news-quote { padding-left: 20px; }
+}
