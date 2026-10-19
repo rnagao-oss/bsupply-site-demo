@@ -318,3 +318,16 @@ html.js .b3 .in .b3-line-art path, html.js .b3 .in .b3-line-art circle, html.js 
 
 /* 末尾のお問い合わせ帯：CONTACT ラベルは他ページと同じグレー */
 .b3 .b3-cta .b3-label { color: rgba(255,255,255,.62); }
+
+/* FEATURES：3つの特徴を先にボックスで並べ、各ボックスから詳細へ移動する */
+.b3 .b3-ft-sum { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: clamp(3.5rem, 6vw, 5rem); }
+.b3 .b3-ft-sum a { position: relative; display: flex; flex-direction: column; gap: .8rem; height: 100%; padding: clamp(1.4rem, 2.2vw, 2rem) clamp(1.3rem, 2vw, 1.8rem) clamp(3.2rem, 4vw, 3.6rem); border-radius: var(--b3-r); background: #fff; color: var(--b3-ink); }
+.b3 .b3-ft-sum h3 { font-size: clamp(1.05rem, 1.5vw, 1.25rem); font-weight: 700; line-height: 1.5; }
+.b3 .b3-ft-sum p { font-size: .92rem; line-height: 1.85; color: var(--b3-ink-2); }
+.b3 .b3-ft-sum i { position: absolute; right: clamp(1.3rem, 2vw, 1.8rem); bottom: 1.2rem; font: 500 1rem/1 var(--b3-en); font-style: normal; color: var(--b3-muted); transition: transform .5s var(--b3-ease); }
+@media (hover: hover) and (pointer: fine) { .b3 .b3-ft-sum a:hover i { transform: translateY(4px); } }
+.b3 .b3-ft-item { scroll-margin-top: 6rem; }
+@media (max-width: 860px) {
+  .b3 .b3-ft-sum { grid-template-columns: 1fr; }
+  .b3 .b3-ft-sum a { padding-bottom: clamp(3rem, 8vw, 3.4rem); }
+}
