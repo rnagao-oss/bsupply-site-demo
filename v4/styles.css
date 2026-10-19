@@ -4059,3 +4059,6 @@ html:lang(en) .dg-sub-en { display:none; }
   .co-wrap .co-table dd { font-size: .94rem !important; }
   .co-wrap .co-table > div:has(.co-bullets) { padding-top: 1.15rem !important; padding-bottom: 1.15rem !important; }
 }
+@media (max-width: 760px) {
+  .msgp-photo { -webkit-mask-image: linear-gradient(to right, transparent 0, #000 10%, #000 94%, transparent 100%) !important; mask-image: linear-gradient(to right, transparent 0, #000 10%, #000 94%, transparent 100%) !important; }
+}
