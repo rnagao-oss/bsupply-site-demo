@@ -4053,3 +4053,9 @@ html:lang(en) .dg-sub-en { display:none; }
 @media (max-width: 900px) {
   .msgp-photo { filter: none !important; -webkit-filter: none !important; }
 }
+@media (max-width: 760px) {
+  .co-wrap .co-table > div { grid-template-columns: 5.6rem minmax(0, 1fr) !important; column-gap: .9rem !important; row-gap: 0 !important; align-items: center !important; padding: 1.15rem 1.2rem !important; }
+  .co-wrap .co-table dt { font-size: .8rem !important; line-height: 1.6 !important; }
+  .co-wrap .co-table dd { font-size: .94rem !important; }
+  .co-wrap .co-table > div:has(.co-bullets) { padding-top: 1.15rem !important; padding-bottom: 1.15rem !important; }
+}
