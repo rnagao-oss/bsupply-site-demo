@@ -302,3 +302,11 @@ html.js .b3 .in .b3-line-art path, html.js .b3 .in .b3-line-art circle, html.js 
 .b3 .b3-loop li:first-child::after { content: ""; position: absolute; right: 1.35rem; top: calc(.78rem - 5px); width: 8px; height: 12px; background: var(--b3-acc); clip-path: polygon(100% 0, 0 50%, 100% 100%); }
 .b3 .b3-loop b { display: block; font-size: 1.1rem; font-weight: 700; line-height: 1.5; }
 .b3 .b3-loop li > span { display: block; margin-top: .1rem; font-size: .92rem; font-weight: 400; line-height: 1.7; color: #fff; }
+
+/* Feature 03: task list on dark card */
+.b3 .b3-task-list li { display: flex; align-items: center; gap: .9rem; padding: 1rem 0; font-size: .98rem; font-weight: 700; line-height: 1.6; color: #fff;
+  background: linear-gradient(rgba(255,255,255,.22), rgba(255,255,255,.22)) left bottom / 100% 1px no-repeat; }
+.b3 .b3-task-list li:last-child { background: none; padding-bottom: 0; }
+.b3 .b3-task-list li:first-child { padding-top: 0; }
+.b3 .b3-task-list li::before { content: ""; flex: none; width: .9rem; height: 2px; background: var(--b3-acc); }
+.b3 .b3-ft-copy h3 { margin-top: 0; }
