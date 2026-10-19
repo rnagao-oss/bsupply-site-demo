@@ -1,19 +1,14 @@
-/* VIEW MORE：事業カード下の導線。灰色の大文字＋黒い丸の矢印。カードに乗せると丸が左へ伸びて黒い帯になり、文字が白に反転する（スマホは画面中央に来たとき1回だけ再生） */
-.bb-card .bb-more { position: relative; isolation: isolate; display: inline-flex; align-items: center; gap: .9rem; align-self: flex-start; margin-top: auto; padding: 0; background: none; color: #6b6b68; font: 700 .72rem/1 var(--en, "Instrument Sans", sans-serif); letter-spacing: .14em; white-space: nowrap; transition: color .35s ease .05s; }
+/* VIEW MORE：事業カード下の導線。黒い帯＋白文字＋矢印を常時表示し、カードに乗せると矢印が少し進む */
+.bb-card .bb-more { position: relative; isolation: isolate; display: inline-flex; align-items: center; gap: .9rem; align-self: flex-start; margin-top: auto; padding: 0 0 0 1.5rem; background: none; color: #fff; font: 700 .72rem/1 var(--en, "Instrument Sans", sans-serif); letter-spacing: .14em; white-space: nowrap; }
 .bb-card .bb-body { align-items: flex-start; }
 .bb-card .bb-body .bb-text { margin-bottom: 1.4rem; }
-.bb-card .bb-more::before { content: ""; position: absolute; z-index: -1; top: 0; right: 0; bottom: 0; width: 2.4rem; border-radius: 999px; background: #0f0f0e; transition: width .6s cubic-bezier(.19, 1, .22, 1); }
+.bb-card .bb-more::before { content: ""; position: absolute; z-index: -1; inset: 0; border-radius: 999px; background: #0f0f0e; }
 .bb-card .bb-more::after { content: "→"; display: grid; place-items: center; flex: none; width: 2.4rem; aspect-ratio: 1; color: #fff; font: 700 .9rem/1 sans-serif; letter-spacing: 0; transition: transform .6s cubic-bezier(.19, 1, .22, 1); }
 @media (hover: hover) and (pointer: fine) {
-  .bb-card:hover .bb-more { color: #fff; }
-  .bb-card:hover .bb-more::before { width: calc(100% + 1.1rem); }
-  .bb-card:hover .bb-more::after { transform: translateX(3px); }
+  .bb-card:hover .bb-more::after { transform: translateX(4px); }
 }
-.bb-card .bb-more.vm-on { color: #fff; }
-.bb-card .bb-more.vm-on::before { width: calc(100% + 1.1rem); }
-.bb-card .bb-more.vm-on::after { transform: translateX(3px); }
 @media (prefers-reduced-motion: reduce) {
-  .bb-card .bb-more, .bb-card .bb-more::before, .bb-card .bb-more::after { transition: none; }
+  .bb-card .bb-more::after { transition: none; }
 }
 
 /* BPOカード：写真の代わりにヒーローの文言パネル */
