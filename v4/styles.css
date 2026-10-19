@@ -3993,3 +3993,8 @@ html:lang(en) .dg-sub-en { display:none; }
 .ft2 .ft-links a:hover { color: var(--ink); }
 .ft2 .ft-bottom, .ft2 .ft-copy, .ft2 .ft-lang a { color: var(--ink-70); }
 .ft2 .ft-lang a.cur { color: var(--ink); }
+
+/* footer address: company name, then one block per office (label above, address on two fixed lines) */
+.ft2 .ft-addr .ad { display: block; margin-top: 1.1rem; line-height: 1.7; }
+.ft2 .ft-addr .ad i { display: block; font-style: normal; font-size: .78rem; letter-spacing: .08em; font-weight: 700; color: var(--ink); margin-bottom: .2rem; }
+.ft2 .ft-addr .ad .nowrap { white-space: nowrap; }
