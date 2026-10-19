@@ -3998,3 +3998,13 @@ html:lang(en) .dg-sub-en { display:none; }
 .ft2 .ft-addr .ad { display: block; margin-top: 1.1rem; line-height: 1.7; }
 .ft2 .ft-addr .ad i { display: block; font-style: normal; font-size: .78rem; letter-spacing: .08em; font-weight: 700; color: var(--ink); margin-bottom: .2rem; }
 .ft2 .ft-addr .ad .nowrap { white-space: nowrap; }
+
+/* recruit hero: brighter photo, lighter shade, crop that keeps the colour book and hands in frame */
+.bd-hero--rc .bd-hero-img { filter: brightness(1.45) contrast(.94) saturate(1.05); object-position: 58% 40%; }
+.bd-hero--rc .bd-hero-shade { background: linear-gradient(rgba(20,20,20,.22) 0%, rgba(20,20,20,0) 30%, rgba(20,20,20,.12) 55%, rgba(20,20,20,.66) 100%); }
+.bd-hero--rc .hero-mesh { opacity: .35; }
+@media (max-width: 760px) {
+  .bd-hero--rc { height: clamp(420px, 66vh, 560px); }
+  .bd-hero--rc .bd-hero-img { object-position: 46% 42%; }
+  .bd-hero--rc .bd-hero-shade { background: linear-gradient(rgba(20,20,20,.22) 0%, rgba(20,20,20,0) 28%, rgba(20,20,20,.1) 46%, rgba(20,20,20,.74) 100%); }
+}
