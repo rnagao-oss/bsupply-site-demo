@@ -4044,6 +4044,5 @@ html:lang(en) .dg-sub-en { display:none; }
   .hero-video { height: calc(100vw * 9 / 16); min-height: 0; }
 }
 .co-bullets { list-style: none; margin: 0; padding: 0; }
-.co-bullets li { position: relative; padding-left: 1.1em; }
 .co-bullets li + li { margin-top: .2em; }
-.co-bullets li::before { content: ""; position: absolute; left: .15em; top: .88em; width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
+.co-wrap .co-table > div:has(.co-bullets) { padding-top: 1.2rem !important; padding-bottom: 1.2rem !important; }
