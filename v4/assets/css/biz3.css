@@ -440,9 +440,17 @@ html.js .in .b3-icon path { stroke-dashoffset: 0; }
 .b3-b4d-name { font: 600 clamp(1.4rem, 2.1vw, 1.9rem)/1.15 var(--b3-en); letter-spacing: -.01em; }
 .b3-b4d-ja { font-weight: 700; font-size: .95rem; color: rgba(255,255,255,.85); }
 @media (max-width: 760px) {
-  .b3-b4d-grid { grid-template-columns: 1fr; }
-  .b3-b4d-grid .b3-tile { padding: 1.6rem !important; min-height: 0; }
-  .b3-b4d-core { position: relative; left: auto; top: auto; transform: none; margin: 0 auto 16px; }
+  .b3-b4d-grid { gap: 8px; }
+  .b3-b4d-grid .b3-tile { gap: .55rem; padding: 1rem .85rem 1.1rem !important; min-height: 0; }
+  .b3-b4d-grid .b3-tile:nth-child(odd) { padding-right: 2.3rem !important; }
+  .b3-b4d-grid .b3-tile:nth-child(even) { padding-left: 2.3rem !important; }
+  .b3-b4d-grid .b3-tile-no { font-size: 1.5rem; }
+  .b3-b4d-name { font-size: 1.05rem; line-height: 1.2; overflow-wrap: anywhere; }
+  .b3-b4d-ja { font-size: .74rem; line-height: 1.5; }
+  .b3-b4d-grid .b3-tile-p { font-size: .72rem; line-height: 1.75; }
+  .b3-b4d-core { width: 74px; box-shadow: 0 0 0 5px var(--b3-dark); }
+  .b3-b4d-core-en { font-size: 1.15rem; }
+  .b3-b4d-core-ja { margin-top: .25rem; font-size: .5rem; letter-spacing: .08em; }
 }
 /* 足し算の図をグレーの面に置くとき：部品は白、項目はグレー */
 .b3-sec--soft .b3-sum-part { background: #fff; }

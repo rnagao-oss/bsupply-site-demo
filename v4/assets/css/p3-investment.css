@@ -69,12 +69,13 @@
 }
 
 /* ── 比較表（B supplyの特徴）：どの端末でも崩れない行ごとの構造。行に線、B supply 列はオレンジで強調 ── */
-.b3 .b3-vt { margin-top: clamp(2rem, 3.5vw, 3rem); }
-.b3 .b3-vt-row { display: grid; grid-template-columns: minmax(11rem, .9fr) repeat(3, minmax(0, 1fr)); column-gap: 6px; }
+.b3 .b3-vt { margin-top: clamp(2rem, 3.5vw, 3rem); display: grid; grid-template-columns: minmax(11rem, .9fr) repeat(3, minmax(0, 1fr)); grid-template-rows: auto; grid-auto-rows: 1fr; column-gap: 6px; }
+.b3 .b3-vt-row { display: contents; }
 .b3 .b3-vt-l { display: flex; align-items: center; gap: .9rem; padding: 1.1rem 1rem 1.1rem 0; font-size: .95rem; font-weight: 700; box-shadow: 0 1px 0 rgba(255,255,255,.16); }
 .b3 .b3-vt-head .b3-vt-l { box-shadow: none; }
 .b3 .b3-vt-no { font: 500 1.4rem/1 var(--b3-en); color: var(--b3-acc); }
-.b3 .b3-vt-c { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .55rem; min-height: 5rem; padding: .9rem 1.1rem; text-align: center; color: rgba(255,255,255,.76); background: rgba(255,255,255,.04); box-shadow: 0 1px 0 rgba(255,255,255,.16); }
+.b3 .b3-vt-c { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .55rem; min-height: 5rem; padding: .9rem 1.1rem; text-align: center; color: rgba(255,255,255,.76); background: rgba(255,255,255,.04); box-shadow: 0 1px 0 rgba(255,255,255,.16); }
+.b3 .b3-vt-c .b3-mk { order: -1; flex: none; }
 .b3 .b3-vt-c p { font-size: .92rem; line-height: 1.6; overflow-wrap: break-word; }
 .b3 .b3-vt-c .nowrap { white-space: normal; }
 .b3 .b3-vt-th { min-height: 4.4rem; border-radius: 12px 12px 0 0; background: rgba(255,255,255,.12); color: #fff; box-shadow: none; }
@@ -96,10 +97,10 @@
 .b3 .b3-vt-c.is-us .b3-mk-a::after { box-shadow: inset 0 0 0 2px var(--b3-acc); }
 @media (max-width: 960px) {
   .b3 .b3-vt { margin-inline: calc(-1 * var(--b3-gutter) + 10px); }
-  .b3 .b3-vt-row { grid-template-columns: 4.4rem repeat(3, minmax(0, 1fr)); column-gap: 3px; }
+  .b3 .b3-vt { grid-template-columns: 4.4rem repeat(3, minmax(0, 1fr)); column-gap: 3px; }
   .b3 .b3-vt-l { padding: .5rem .2rem .5rem 0; font-size: .7rem; line-height: 1.4; overflow-wrap: break-word; }
   .b3 .b3-vt-no { display: none; }
-  .b3 .b3-vt-c { flex-direction: column; justify-content: center; gap: .3rem; min-height: 4.4rem; padding: .55rem .3rem; }
+  .b3 .b3-vt-c { gap: .3rem; min-height: 4.4rem; padding: .55rem .3rem; }
   .b3 .b3-vt-c p { font-size: .66rem; line-height: 1.45; }
   .b3 .b3-vt-th { min-height: 3.4rem; border-radius: 10px 10px 0 0; padding: .6rem .2rem; }
   .b3 .b3-vt-th strong { font-size: .78rem; line-height: 1.3; }
