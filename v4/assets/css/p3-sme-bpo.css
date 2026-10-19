@@ -273,3 +273,10 @@ html.js .b3 .in .b3-line-art path, html.js .b3 .in .b3-line-art circle, html.js 
 
 /* ヒーローが明るいので、ページ最上部でもロゴを白抜きにしない */
 .site-header:not(.scrolled) .brand-mark { filter: none; }
+
+.b3 .b3-price-band .b3-tile-en,
+.b3 .b3-price-band .b3-lp-price span,
+.b3 .b3-price-band p.b3-tile-p,
+.b3 .b3-tile--ink .b3-tile-en,
+.b3 .b3-tile--ink .b3-lp-price span,
+.b3 .b3-tile--ink .b3-tile-p { color: #fff; }
