@@ -172,7 +172,7 @@ body:has(.b3) .site-header nav { gap: clamp(1rem, 1.7vw, 1.7rem); }
 .b3 .b3-vt-row { display: contents; }
 .b3 .b3-vt-l { display: flex; align-items: center; gap: .9rem; padding: 1.1rem 1rem 1.1rem 0; font-size: .95rem; font-weight: 700; box-shadow: 0 1px 0 rgba(255,255,255,.16); }
 .b3 .b3-vt-head .b3-vt-l { box-shadow: none; }
-.b3 .b3-vt-no { font: 500 1.4rem/1 var(--b3-en); color: rgba(255,255,255,.55); }
+.b3 .b3-vt-no { font: 500 .72rem/1 var(--b3-en); letter-spacing: .1em; font-variant-numeric: tabular-nums; color: rgba(255,255,255,.55); }
 .b3 .b3-vt-c { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .55rem; min-height: 5rem; padding: .9rem 1.1rem; text-align: center; color: rgba(255,255,255,.76); background: rgba(255,255,255,.04); box-shadow: 0 1px 0 rgba(255,255,255,.16); }
 .b3 .b3-vt-c .b3-mk { order: -1; flex: none; }
 .b3 .b3-vt-c p { font-size: .92rem; line-height: 1.6; overflow-wrap: break-word; }
