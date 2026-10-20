@@ -60,7 +60,6 @@
 .b3 .b3-vx-list > div { display: grid; grid-template-columns: 8.6rem minmax(0, 1fr); align-items: center; gap: 1.2rem; min-height: 4.6rem; padding: .8rem 0; box-shadow: 0 -1px 0 var(--b3-soft-2); }
 .b3 .b3-vx-list > div:first-child { box-shadow: none; }
 .b3 .b3-vx-list dt { display: flex; align-items: baseline; gap: .7rem; font-size: .9rem; font-weight: 600; color: var(--b3-muted); }
-.b3 .b3-vx-no { font: 500 .72rem/1 var(--b3-en); letter-spacing: .1em; font-variant-numeric: tabular-nums; color: var(--b3-muted); }
 .b3 .b3-vx-list dd { font-size: clamp(1rem, 1.2vw, 1.1rem); font-weight: 700; line-height: 1.7; }
 .b3 .b3-py path { stroke: var(--b3-acc); }
 .b3 .b3-py-brk { fill: #d9560a; }
@@ -78,7 +77,6 @@
 .b3 .b3-vt-row { display: contents; }
 .b3 .b3-vt-l { display: flex; align-items: center; gap: .9rem; padding: 1.1rem 1rem 1.1rem 0; font-size: .95rem; font-weight: 700; box-shadow: 0 1px 0 rgba(255,255,255,.16); }
 .b3 .b3-vt-head .b3-vt-l { box-shadow: none; }
-.b3 .b3-vt-no { font: 500 .72rem/1 var(--b3-en); letter-spacing: .1em; font-variant-numeric: tabular-nums; color: rgba(255,255,255,.55); }
 .b3 .b3-vt-c { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .55rem; min-height: 5rem; padding: .9rem 1.1rem; text-align: center; color: rgba(255,255,255,.76); background: rgba(255,255,255,.04); box-shadow: 0 1px 0 rgba(255,255,255,.16); }
 .b3 .b3-vt-c .b3-mk { order: -1; flex: none; }
 .b3 .b3-vt-c p { font-size: .92rem; line-height: 1.6; overflow-wrap: break-word; }
@@ -104,7 +102,6 @@
   .b3 .b3-vt { margin-inline: calc(-1 * var(--b3-gutter) + 10px); }
   .b3 .b3-vt { grid-template-columns: 4.8rem repeat(3, minmax(0, 1fr)); column-gap: 3px; }
   .b3 .b3-vt-l { min-width: 0; padding: .5rem .2rem .5rem 0; font-size: .68rem; line-height: 1.4; word-break: normal; overflow-wrap: anywhere; }
-  .b3 .b3-vt-no { display: none; }
   .b3 .b3-vt-c { gap: .3rem; min-height: 4.4rem; padding: .55rem .3rem; }
   .b3 .b3-vt-c { min-width: 0; }
   .b3 .b3-vt-c p { align-self: stretch; min-width: 0; font-size: .66rem; line-height: 1.45; word-break: normal; line-break: auto; overflow-wrap: anywhere; }

@@ -30,7 +30,6 @@
 .b3 .b3-mq-wrap:hover .b3-mq-track img { opacity: 1; filter: none; }
 
 /* OUR SERVICES：番号の濃さ。和名は文節で折り返す */
-.b3 .b3-row-no { color: var(--b3-muted); }
 .b3 .b3-row-ja { word-break: auto-phrase; }
 
 /* CASE STUDIES：ラベルの可読性。カードは同じ高さ */
@@ -52,7 +51,7 @@
 
 @media (max-width: 600px) {
   /* OUR SERVICES：本文列を約219pxにして語の途中で折れないようにする */
-  .b3 .b3-row { grid-template-columns: 2.2rem minmax(0, 1fr) 2.6rem; column-gap: .7rem; padding: 1.2rem 1rem; }
+  .b3 .b3-row { grid-template-columns: minmax(0, 1fr) 2.6rem; column-gap: .7rem; padding: 1.2rem 1rem; }
   /* CASE STUDIES：見出しを全幅に、VIEW MORE は右端 */
   .b3 .b3-case { grid-template-columns: minmax(0, 1fr); row-gap: .9rem; }
   .b3 .b3-case-h { grid-column: 1; grid-row: 1; }

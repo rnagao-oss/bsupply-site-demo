@@ -3526,8 +3526,7 @@ html:lang(en) .sn-ja { display: none; }
 .bb-img { display: block; aspect-ratio: 4 / 3; overflow: hidden; }
 .bb-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .9s cubic-bezier(0.19, 1, 0.22, 1); }
 .bb-body { display: flex; flex-direction: column; flex: 1; padding: 1.3rem 1.3rem 1.4rem; }
-.bb-no { font: 500 .72rem/1 var(--en); letter-spacing: .1em; font-variant-numeric: tabular-nums; color: #6f6e69; }
-.bb-en { margin: .7rem 0 0; font-family: var(--serif); font-size: 1.2rem; }
+.bb-en { margin: 0; font-family: var(--serif); font-size: 1.2rem; }
 .bb-title { margin: .3rem 0 0; font-size: .95rem; font-weight: 700; letter-spacing: .03em; }
 .bb-text { margin: .8rem 0 0; font-size: .84rem; line-height: 1.85; color: var(--ink-70); flex: 1; }
 .bb-more { margin-top: 1.1rem; font-family: var(--en); font-size: .74rem; letter-spacing: .14em; }
