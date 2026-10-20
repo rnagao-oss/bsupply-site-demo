@@ -281,17 +281,22 @@ html.js .b3 #flow .b3-flow.in > li:nth-child(5) .b3-flow-ic svg path { transitio
 .b3 .b3-cycle-c text { font-size: 18px; font-weight: 700; letter-spacing: .08em; fill: #fff; }
 .b3 .b3-cycle-list, .b3 .b3-cycle-foot { display: none; }
 
-/* 黒い図解：AIと人の分担 */
-.b3 .b3-split { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.2rem, 2.4vw, 2.4rem); margin-top: clamp(.8rem, 1.6vw, 1.4rem); min-height: 0; }
-.b3 .b3-split-col { display: flex; flex-direction: column; min-width: 0; }
-.b3 .b3-split-col + .b3-split-col { padding-left: clamp(1.2rem, 2.4vw, 2.4rem); background: linear-gradient(rgba(255,255,255,.22), rgba(255,255,255,.22)) left top / 1px 100% no-repeat; }
-.b3 .b3-split-g { font-size: clamp(2.2rem, 3.6vw, 3.2rem); font-weight: 700; line-height: 1; letter-spacing: -.03em; color: #fff; }
-.b3 .b3-split-g--en { font-family: var(--b3-en); font-weight: 500; }
-.b3 .b3-split-l { margin-top: .5rem; font-size: .9rem; font-weight: 700; color: rgba(255,255,255,.85); }
-.b3 .b3-split-col .b3-task-list { margin-top: auto; padding-top: 1rem; }
+/* 黒い図解：AIと人の分担（左右を同じ幅にし、行の高さを subgrid でそろえる） */
+.b3 .b3-split { --b3-split-pad: clamp(1.2rem, 2.4vw, 2.4rem); flex: 1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-rows: auto auto minmax(1rem, 1fr) repeat(4, auto); margin-top: clamp(.8rem, 1.6vw, 1.4rem); min-height: 0; }
+.b3 .b3-split-col { display: grid; grid-row: 1 / -1; grid-template-rows: subgrid; min-width: 0; }
+.b3 .b3-split-col:first-child { padding-right: var(--b3-split-pad); }
+.b3 .b3-split-col + .b3-split-col { padding-left: var(--b3-split-pad); background: linear-gradient(rgba(255,255,255,.22), rgba(255,255,255,.22)) left top / 1px 100% no-repeat; }
+.b3 .b3-split-g { grid-row: 1; font-size: clamp(2.2rem, 3.6vw, 3.2rem); font-weight: 700; line-height: 1; letter-spacing: -.03em; color: #fff; }
+.b3 .b3-split-g--en { font-family: var(--b3-en); font-weight: 600; }
+.b3 .b3-split-g:not(.b3-split-g--en) { font-size: clamp(2rem, 3.3vw, 2.95rem); }
+.b3 .b3-split-l { grid-row: 2; margin-top: .5rem; font-size: .9rem; font-weight: 700; color: rgba(255,255,255,.85); }
+.b3 .b3-split-col .b3-task-list { display: contents; }
 .b3 .b3-task-list li { padding: .85rem 0; font-size: .98rem; font-weight: 500; line-height: 1.6; color: #fff;
   background: linear-gradient(rgba(255,255,255,.22), rgba(255,255,255,.22)) left top / 100% 1px no-repeat; }
-.b3 .b3-task-list li:last-child { padding-bottom: 0; }
+.b3 .b3-task-list li:nth-child(1) { grid-row: 4; }
+.b3 .b3-task-list li:nth-child(2) { grid-row: 5; }
+.b3 .b3-task-list li:nth-child(3) { grid-row: 6; }
+.b3 .b3-task-list li:nth-child(4) { grid-row: 7; padding-bottom: 0; }
 
 /* FEATURES：3つの特徴をアイコン付きのカードで並べ、各カードから詳細へ移動する */
 .b3 .b3-ft-sum { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: clamp(3.5rem, 6vw, 5rem); }
@@ -331,11 +336,10 @@ html.js .b3 #flow .b3-flow.in > li:nth-child(5) .b3-flow-ic svg path { transitio
   .b3 .b3-cycle-t text { font-size: 29px; }
   .b3 .b3-cycle-t text.s { font-size: 17px; }
   .b3 .b3-cycle-c text { font-size: 21px; }
-  .b3 .b3-split { gap: 1rem; margin-top: .6rem; }
-  .b3 .b3-split-col + .b3-split-col { padding-left: 1rem; }
+  .b3 .b3-split { --b3-split-pad: .9rem; margin-top: .6rem; }
   .b3 .b3-split-g { font-size: 2.2rem; }
+  .b3 .b3-split-g:not(.b3-split-g--en) { font-size: 2rem; }
   .b3 .b3-split-l { font-size: .8rem; }
-  .b3 .b3-split-col .b3-task-list { margin-top: .9rem; padding-top: 0; }
   .b3 .b3-task-list li { padding: .65rem 0; font-size: .86rem; line-height: 1.55; }
 }
 
