@@ -83,7 +83,17 @@
 <!-- ═══ HERO ═══ -->
 <section class="hero hero-video" data-scene="dark" id="hero">
 <video autoplay="" class="hero-bg" id="heroBg" loop="" muted="" playsinline="" poster="./assets/video/hero-tiles-poster.jpg" preload="auto"></video>
-<script>(function(){var v=document.getElementById('heroBg'),m=matchMedia('(max-aspect-ratio: 4/5)').matches,p='./assets/video/hero-tiles'+(m?'-m':'');v.poster=p+'-poster.jpg';v.src=p+'.mp4';v.play&&v.play().catch(function(){});})();</script>
+<script>(function(){var v=document.getElementById('heroBg'),m=matchMedia('(max-aspect-ratio: 4/5)').matches,p='./assets/video/hero-tiles'+(m?'-m':'');v.poster=p+'-poster.jpg';v.muted=true;v.defaultMuted=true;v.src=p+'.mp4?v=2';
+function go(){if(!v.paused)return;var r=v.play();r&&r.catch&&r.catch(function(){});}
+go();
+['loadedmetadata','canplay'].forEach(function(e){v.addEventListener(e,go);});
+document.addEventListener('visibilitychange',function(){if(!document.hidden)go();});
+/* 低電力モード・省データモードで自動再生が止まった場合は最初の操作で再生する */
+var ev=['touchend','pointerdown','click','scroll','keydown'];
+function once(){go();}
+ev.forEach(function(e){addEventListener(e,once,{passive:true});});
+v.addEventListener('playing',function(){ev.forEach(function(e){removeEventListener(e,once);});});
+})();</script>
 <div aria-hidden="true" class="hero-shade"></div>
 <span aria-hidden="true" class="hero-mesh"></span>
 <div class="hero-inner">
