@@ -121,7 +121,7 @@ html.js .b3 :is(.in > *, .in) .b3-ico svg .d { opacity: 1; }
 .b3 .b3-pain > li .b3-ico { background: #fff; }
 .b3 .b3-pain > li p { margin: 0; }
 .b3 .b3-pain-copy { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 6rem); align-items: start; }
-.b3 .b3-pain-copy .b3-body { font-size: 1rem; line-height: 2; color: var(--b3-ink-2); }
+.b3 .b3-pain-copy .b3-body { font-size: 1.05rem; line-height: 2; color: var(--b3-ink-2); }
 .b3 .b3-pain-copy p + p { margin-top: 1.3rem; }
 .b3 .b3-pain-copy .b3-pain-lead { margin: 0; padding: clamp(1.4rem, 2vw, 1.8rem) 0 0; text-align: left; font-size: clamp(1.15rem, 1.6vw, 1.45rem); font-weight: 700; line-height: 1.7; background: linear-gradient(var(--b3-ink), var(--b3-ink)) left top / 100% 2px no-repeat; }
 @media (hover: hover) and (pointer: fine) {
@@ -132,9 +132,12 @@ html.js .b3 :is(.in > *, .in) .b3-ico svg .d { opacity: 1; }
 
 /* 特徴：写真と黒い図解を同じ比率で並べる */
 .b3 .b3-ft { gap: clamp(4rem, 7vw, 6rem); }
-.b3 .b3-ft-item { min-height: 0; padding: 0; background: transparent; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 4rem; align-items: center; }
+.b3 .b3-ft-item { min-height: 0; padding: 0; background: transparent; grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); gap: clamp(2.5rem, 4vw, 4rem); align-items: center; }
+.b3 .b3-ft-item:nth-child(even) { grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr); }
 .b3 .b3-ft-item:nth-child(even) .b3-ft-copy { order: -1; }
 .b3 .b3-ft-visual { width: 100%; aspect-ratio: 4 / 3; border-radius: var(--b3-r); overflow: hidden; }
+.b3 .b3-ft-copy p { font-size: 1.02rem; line-height: 2; }
+.b3 .b3-ft-points { gap: .65rem; margin-top: 1.5rem; font-size: .98rem; line-height: 1.8; }
 .b3 .b3-ft-photo img { width: 100%; height: 100%; object-fit: cover; }
 .b3 .b3-ft-copy h3 { margin: 0 0 1.2rem; font-size: clamp(1.5rem, 2.3vw, 2rem); line-height: 1.5; }
 .b3 .b3-ft-copy h3 > span { display: block; }
@@ -199,12 +202,12 @@ html.js .b3 #flow .b3-flow.in > li:nth-child(5) .b3-flow-ic svg path { transitio
   html.js .b3 #flow .b3-flow-ic svg path { stroke-dashoffset: 0 !important; transition: none !important; }
 }
 .b3 #flow .b3-flow-h { font-size: clamp(1rem, 1.35vw, 1.2rem); }
-.b3 #flow .b3-flow-p { max-width: 18em; font-size: .95rem; }
+.b3 #flow .b3-flow-p { max-width: 18em; font-size: .98rem; line-height: 1.9; }
 
 /* FAQとお問い合わせ */
 .b3 #faq .b3-faq { max-width: 900px; margin-inline: auto; }
 .b3 .b3-faq details { overflow: hidden; }
-.b3 .b3-faq details > p { will-change: height; }
+.b3 .b3-faq details > p { will-change: height; font-size: 1rem; line-height: 2; }
 
 @media (max-width: 1100px) and (min-width: 961px) {
   .b3 #flow .b3-flow-p { max-width: 14em; }
@@ -213,7 +216,7 @@ html.js .b3 #flow .b3-flow.in > li:nth-child(5) .b3-flow-ic svg path { transitio
   .b3 .b3-ft-item, .b3 .b3-task-row, .b3 .b3-price-band, .b3 .b3-pain-copy { grid-template-columns: minmax(0, 1fr); }
   .b3 .b3-pain-grid { gap: 2.4rem; }
   .b3 .b3-pain-copy { gap: 1.6rem; }
-  .b3 .b3-ft-item { gap: 1.8rem; }
+  .b3 .b3-ft-item, .b3 .b3-ft-item:nth-child(even) { grid-template-columns: minmax(0, 1fr); gap: 1.8rem; }
   .b3 .b3-ft-item:nth-child(even) .b3-ft-copy { order: 0; }
   .b3 .b3-task-row { gap: .7rem; }
   .b3 #flow .b3-flow { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
@@ -270,12 +273,12 @@ html.js .b3 #flow .b3-flow.in > li:nth-child(5) .b3-flow-ic svg path { transitio
 
 
 /* 黒い図解：仕組みづくりの循環図 */
-.b3 .b3-loop-h { margin: 0 0 .6rem; font-size: .85rem; font-weight: 700; letter-spacing: .08em; color: #fff; }
+.b3 .b3-loop-h { margin: 0 0 .6rem; font-size: .92rem; font-weight: 700; letter-spacing: .08em; color: #fff; }
 .b3 .b3-ft-cycle { justify-content: flex-start; }
 .b3 .b3-cycle-svg { flex: 1; width: 100%; min-height: 0; height: auto; font-family: var(--b3-jp); }
-.b3 .b3-cycle-t text { font-size: 20px; font-weight: 700; fill: #fff; }
-.b3 .b3-cycle-t text.s { font-size: 13px; font-weight: 400; fill: rgba(255,255,255,.72); }
-.b3 .b3-cycle-c text { font-size: 15px; font-weight: 700; letter-spacing: .08em; fill: #fff; }
+.b3 .b3-cycle-t text { font-size: 24px; font-weight: 700; fill: #fff; }
+.b3 .b3-cycle-t text.s { font-size: 15px; font-weight: 400; fill: rgba(255,255,255,.78); }
+.b3 .b3-cycle-c text { font-size: 18px; font-weight: 700; letter-spacing: .08em; fill: #fff; }
 .b3 .b3-cycle-list, .b3 .b3-cycle-foot { display: none; }
 
 /* 黒い図解：AIと人の分担 */
@@ -284,9 +287,9 @@ html.js .b3 #flow .b3-flow.in > li:nth-child(5) .b3-flow-ic svg path { transitio
 .b3 .b3-split-col + .b3-split-col { padding-left: clamp(1.2rem, 2.4vw, 2.4rem); background: linear-gradient(rgba(255,255,255,.22), rgba(255,255,255,.22)) left top / 1px 100% no-repeat; }
 .b3 .b3-split-g { font-size: clamp(2.2rem, 3.6vw, 3.2rem); font-weight: 700; line-height: 1; letter-spacing: -.03em; color: #fff; }
 .b3 .b3-split-g--en { font-family: var(--b3-en); font-weight: 500; }
-.b3 .b3-split-l { margin-top: .45rem; font-size: .82rem; font-weight: 700; color: rgba(255,255,255,.8); }
+.b3 .b3-split-l { margin-top: .5rem; font-size: .9rem; font-weight: 700; color: rgba(255,255,255,.85); }
 .b3 .b3-split-col .b3-task-list { margin-top: auto; padding-top: 1rem; }
-.b3 .b3-task-list li { padding: .7rem 0; font-size: .86rem; font-weight: 400; line-height: 1.55; color: #fff;
+.b3 .b3-task-list li { padding: .85rem 0; font-size: .98rem; font-weight: 500; line-height: 1.6; color: #fff;
   background: linear-gradient(rgba(255,255,255,.22), rgba(255,255,255,.22)) left top / 100% 1px no-repeat; }
 .b3 .b3-task-list li:last-child { padding-bottom: 0; }
 
@@ -296,7 +299,7 @@ html.js .b3 #flow .b3-flow.in > li:nth-child(5) .b3-flow-ic svg path { transitio
 .b3 .b3-ft-sum .b3-ico { margin-bottom: .3rem; }
 .b3 .b3-ft-sum h3 { font-size: clamp(1.1rem, 1.5vw, 1.3rem); font-weight: 700; line-height: 1.5; letter-spacing: .005em; }
 .b3 .b3-ft-sum h3 .nowrap { display: inline; white-space: normal; }
-.b3 .b3-ft-sum p { font-size: .93rem; line-height: 1.9; color: var(--b3-ink-2); }
+.b3 .b3-ft-sum p { font-size: .98rem; line-height: 1.9; color: var(--b3-ink-2); }
 .b3 .b3-ft-more { display: inline-flex; align-items: center; gap: .55rem; margin-top: auto; padding-top: 1.2rem; font-size: .84rem; font-weight: 700; letter-spacing: .04em; color: var(--b3-ink); }
 .b3 .b3-ft-more i { position: relative; display: block; width: 1.5rem; height: 1.5rem; border-radius: 50%; background: var(--b3-ink); overflow: hidden; }
 .b3 .b3-ft-more i::before, .b3 .b3-ft-more i::after { content: "↓"; position: absolute; inset: 0; display: grid; place-items: center; font: 500 .8rem/1 var(--b3-en); color: #fff; transition: transform .55s var(--b3-ease); }
@@ -318,27 +321,22 @@ html.js .b3 #flow .b3-flow.in > li:nth-child(5) .b3-flow-ic svg path { transitio
 .b3 .b3-price-points li { display: block; padding: 0; border-radius: 0; background: none; }
 .b3 .b3-price-points .b3-ico { width: 3.2rem; height: 3.2rem; margin-bottom: 1.3rem; }
 .b3 .b3-pp-h { font-family: var(--b3-mincho); font-size: clamp(1.4rem, 2.2vw, 1.9rem); font-weight: 500; line-height: 1.4; letter-spacing: .04em; }
-.b3 .b3-pp-p { margin-top: .9rem; max-width: 22em; font-size: .92rem; line-height: 1.9; }
+.b3 .b3-pp-p { margin-top: .9rem; max-width: 22em; font-size: .98rem; line-height: 1.9; }
 
 @media (max-width: 600px) {
-  .b3 .b3-ft-loop, .b3 .b3-ft-tasks { padding: 1.2rem 1rem; }
+  .b3 .b3-ft-loop, .b3 .b3-ft-tasks { margin-inline: calc(-1 * var(--b3-gutter) + 8px); width: auto; padding: 1.2rem .9rem 1.3rem; }
   .b3 #ft-2 .b3-ft-loop, .b3 #ft-3 .b3-ft-loop { aspect-ratio: auto; }
-  .b3 .b3-loop-h { margin-bottom: .8rem; font-size: .8rem; }
-  .b3 .b3-cycle-svg { display: none; }
-  .b3 .b3-cycle-list { display: grid; }
-  .b3 .b3-cycle-list li { position: relative; padding: .7rem 0 .7rem 1.4rem; background: linear-gradient(rgba(255,255,255,.22), rgba(255,255,255,.22)) left top / 100% 1px no-repeat; }
-  .b3 .b3-cycle-list li:first-child { padding-top: 0; background: none; }
-  .b3 .b3-cycle-list li::before { content: ""; position: absolute; left: 0; top: 1.15rem; width: .55rem; height: .55rem; border-radius: 50%; background: #fff; }
-  .b3 .b3-cycle-list li:first-child::before { top: .45rem; }
-  .b3 .b3-cycle-list b { display: block; font-size: .92rem; font-weight: 700; color: #fff; }
-  .b3 .b3-cycle-list li > span { display: block; margin-top: .1rem; font-size: .78rem; line-height: 1.5; color: rgba(255,255,255,.72); }
-  .b3 .b3-cycle-foot { display: block; margin-top: 1rem; padding-top: .8rem; font-size: .8rem; font-weight: 700; color: #fff; background: linear-gradient(#fff, #fff) left top / 100% 1px no-repeat; }
-  .b3 .b3-split { grid-template-columns: 1fr; gap: 1.4rem; margin-top: .4rem; }
-  .b3 .b3-split-col + .b3-split-col { padding-left: 0; padding-top: 1.4rem; background: linear-gradient(rgba(255,255,255,.22), rgba(255,255,255,.22)) left top / 100% 1px no-repeat; }
-  .b3 .b3-split-g { font-size: 2rem; }
-  .b3 .b3-split-col .b3-task-list { margin-top: .6rem; padding-top: 0; }
-  .b3 .b3-task-list li { padding: .55rem 0; font-size: .82rem; }
-  .b3 .b3-task-list li:first-child { padding-top: 0; background: none; }
+  .b3 .b3-loop-h { margin-bottom: .6rem; font-size: .85rem; }
+  .b3 .b3-cycle-svg { margin-inline: -.5rem; width: calc(100% + 1rem); }
+  .b3 .b3-cycle-t text { font-size: 29px; }
+  .b3 .b3-cycle-t text.s { font-size: 17px; }
+  .b3 .b3-cycle-c text { font-size: 21px; }
+  .b3 .b3-split { gap: 1rem; margin-top: .6rem; }
+  .b3 .b3-split-col + .b3-split-col { padding-left: 1rem; }
+  .b3 .b3-split-g { font-size: 2.2rem; }
+  .b3 .b3-split-l { font-size: .8rem; }
+  .b3 .b3-split-col .b3-task-list { margin-top: .9rem; padding-top: 0; }
+  .b3 .b3-task-list li { padding: .65rem 0; font-size: .86rem; line-height: 1.55; }
 }
 
 /* 業務一覧と対応ツール：画面幅 */
