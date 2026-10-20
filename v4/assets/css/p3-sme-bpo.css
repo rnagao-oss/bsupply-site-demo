@@ -129,15 +129,17 @@ body:has(.b3) .site-header nav { gap: clamp(1rem, 1.7vw, 1.7rem); }
 .b3 .b3-price-band p.b3-tile-p { color: #fff; }
 
 /* 業務一覧と対応ツール */
-.b3 .b3-task-table { margin-top: clamp(.5rem, 1.5vw, 1.5rem); background: linear-gradient(var(--b3-ink), var(--b3-ink)) left top / 100% 1px no-repeat; }
-.b3 .b3-task-row { display: grid; grid-template-columns: 15rem minmax(0, 1fr); gap: 2rem; padding: clamp(1.4rem, 2vw, 1.9rem) 0; background: linear-gradient(var(--b3-soft-2), var(--b3-soft-2)) left bottom / 100% 1px no-repeat; }
+.b3 #tasks { --b3-tcol: 16rem; --b3-tsep: 1.5rem; }
+.b3 .b3-task-table { margin-top: clamp(.8rem, 2vw, 2rem); background: linear-gradient(var(--b3-ink), var(--b3-ink)) left top / 100% 1px no-repeat; }
+.b3 .b3-task-row { display: grid; grid-template-columns: var(--b3-tcol) minmax(0, 1fr); gap: 2.5rem; align-items: start; padding: clamp(1.8rem, 2.6vw, 2.5rem) 0; background: linear-gradient(rgba(15, 15, 14, .14), rgba(15, 15, 14, .14)) left bottom / 100% 1px no-repeat; }
 .b3 .b3-task-row:last-child { background-image: linear-gradient(var(--b3-ink), var(--b3-ink)); }
-.b3 .b3-task-row dt { font-size: clamp(1.1rem, 1.4vw, 1.25rem); font-weight: 700; line-height: 1.4; letter-spacing: -.01em; }
-.b3 .b3-task-en { display: block; margin-bottom: .5rem; font: 500 .68rem/1 var(--b3-en); letter-spacing: .18em; color: var(--b3-muted); }
-.b3 .b3-task-row dd ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .6rem 2rem; font-size: .93rem; line-height: 1.7; color: var(--b3-ink-2); }
-.b3 .b3-task-row dd li { position: relative; padding-left: 1.1rem; }
-.b3 .b3-task-row dd li::before { content: ""; position: absolute; left: 0; top: .8em; width: .45rem; height: 1px; background: var(--b3-ink); }
-.b3 .b3-tools-head { display: grid; grid-template-columns: 15rem minmax(0, 1fr); gap: 2rem; align-items: baseline; margin-top: clamp(3.5rem, 6vw, 5.5rem); }
+.b3 .b3-task-row dt { font-size: clamp(1.35rem, 1.8vw, 1.7rem); font-weight: 700; line-height: 1.25; letter-spacing: -.015em; color: var(--b3-ink); }
+.b3 .b3-task-en { display: block; margin-bottom: .6rem; font: 500 .66rem/1 var(--b3-en); letter-spacing: .2em; color: var(--b3-muted); }
+.b3 .b3-task-row dd { margin: 0; padding-top: .35rem; overflow: hidden; }
+.b3 .b3-task-row dd ul { display: flex; flex-wrap: wrap; row-gap: .55rem; margin-left: calc(var(--b3-tsep) * -1); font-size: 1.02rem; line-height: 1.75; letter-spacing: .005em; color: var(--b3-ink-2); }
+.b3 .b3-task-row dd li { position: relative; padding: 0 var(--b3-tsep); }
+.b3 .b3-task-row dd li::before { content: ""; position: absolute; left: 0; top: .32em; bottom: .32em; width: 1px; background: rgba(15, 15, 14, .22); }
+.b3 .b3-tools-head { display: grid; grid-template-columns: var(--b3-tcol) minmax(0, 1fr); gap: 2.5rem; align-items: baseline; margin-top: clamp(3.5rem, 6vw, 5.5rem); }
 .b3 .b3-tools-h { margin: 0; font-size: clamp(1.1rem, 1.4vw, 1.25rem); font-weight: 700; letter-spacing: -.01em; color: var(--b3-ink); }
 .b3 .b3-tools-lede { margin: 0; font-size: .95rem; line-height: 1.9; color: var(--b3-ink-2); }
 .b3 .b3-tools { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1px; margin-top: 1.6rem; padding: 1px; background: var(--b3-soft-2); color: var(--b3-ink); }
@@ -282,13 +284,15 @@ body:has(.b3) .site-header nav { gap: clamp(1rem, 1.7vw, 1.7rem); }
 
 /* 業務一覧と対応ツール：画面幅 */
 @media (max-width: 960px) {
-  .b3 .b3-task-row { gap: .9rem; }
-  .b3 .b3-task-row dd ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .b3 .b3-task-row { gap: 1rem; padding: clamp(1.4rem, 4vw, 1.9rem) 0; }
+  .b3 .b3-task-row dd { padding-top: 0; }
   .b3 .b3-tools-head { grid-template-columns: minmax(0, 1fr); gap: .6rem; }
   .b3 .b3-tools { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 @media (max-width: 600px) {
-  .b3 .b3-task-row dd ul { grid-template-columns: minmax(0, 1fr); gap: .45rem; }
+  .b3 #tasks { --b3-tsep: 1.1rem; }
+  .b3 .b3-task-row dt { font-size: 1.3rem; }
+  .b3 .b3-task-row dd ul { row-gap: .4rem; font-size: .95rem; line-height: 1.7; }
   .b3 .b3-tools { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .b3 .b3-tools li { min-height: 5rem; padding: .9rem 1rem; font-size: .88rem; }
 }
