@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 
 <html data-root="." lang="ja">
-<head>
-<meta name="robots" content="noindex,nofollow"/>
+<head><meta name="robots" content="noindex,nofollow"/>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>ページが見つかりません ｜ 株式会社B supply</title>
@@ -22,11 +21,11 @@
   if (last.indexOf('.') !== -1) return; /* 新形式（拡張子付き）URLは404を表示 */
   var root = '/'; /* 英語版は廃止。/en/ 配下は日本語版へ */
   var rules = [
-    [/^\/(company|about|profile|corporate|gaiyou|outline)/i, 'company.html'],
-    [/^\/(contact|inquiry|otoiawase)/i, 'contact.html'],
-    [/^\/(recruit|career|jobs?|saiyo)/i, 'recruit.html'],
-    [/^\/(service|consult)/i, 'consulting.html'],
-    [/^\/(manufactur|factory|leather|craft)/i, 'manufacturing.html'],
+    [/^\/(company|about|profile|corporate|gaiyou|outline)/i, 'company'],
+    [/^\/(contact|inquiry|otoiawase)/i, 'contact'],
+    [/^\/(recruit|career|jobs?|saiyo)/i, 'recruit'],
+    [/^\/(service|consult)/i, 'consulting'],
+    [/^\/(manufactur|factory|leather|craft)/i, 'manufacturing'],
   ];
   for (var i = 0; i < rules.length; i++) {
     if (rules[i][0].test(path)) { location.replace(root + rules[i][1]); return; }
@@ -42,24 +41,24 @@
 <a class="brand" href="./"><img alt="" class="brand-mark" src="./assets/img/logo.png"/>B supply</a>
 <nav>
 <a href="./">TOP</a>
-<a href="./company.html">Company</a>
-<a href="./business.html">Business</a><a href="./investment.html#b4d">B4D Program</a>
-<a href="./message.html">Message</a>
+<a href="./company">Company</a>
+<a href="./business">Business</a><a href="./investment#b4d">B4D Program</a>
+<a href="./message">Message</a>
 <a href="./news/">News</a>
-<a href="./recruit.html">Recruit</a>
-<a class="nav-cta" href="./contact.html">Contact</a>
+<a href="./recruit">Recruit</a>
+<a class="nav-cta" href="./contact">Contact</a>
 </nav>
 <button aria-label="メニュー" class="menu-btn" id="menuBtn" type="button"><i></i><i></i></button>
 </header>
 <div class="mobile-menu" id="mobileMenu">
 <nav>
 <a href="./">TOP</a>
-<a href="./company.html">Company</a>
-<a href="./business.html">Business</a><a href="./investment.html#b4d">B4D Program</a>
-<a href="./message.html">Message</a>
+<a href="./company">Company</a>
+<a href="./business">Business</a><a href="./investment#b4d">B4D Program</a>
+<a href="./message">Message</a>
 <a href="./news/">News</a>
-<a href="./recruit.html">Recruit</a>
-<a href="./contact.html">Contact</a>
+<a href="./recruit">Recruit</a>
+<a href="./contact">Contact</a>
 </nav>
 </div>
 <main>
@@ -69,11 +68,11 @@
 <h1 class="th-title"><span class="line">ページが</span><span class="line">見つかりません</span></h1>
 <p class="th-sub">お探しのページは、URLが変わったか削除された可能性があります。</p>
 <a class="th-back" href="./">トップへ戻る<i>→</i></a>
-<nav class="th-links"><a href="./business.html">Business</a><a href="./investment.html#b4d">B4D Program</a><a href="./recruit.html">Recruit</a></nav>
+<nav class="th-links"><a href="./business">Business</a><a href="./investment#b4d">B4D Program</a><a href="./recruit">Recruit</a></nav>
 </div>
 </section>
 </main>
 <script defer="" src="./assets/js/budoux.min.js?v=0.9.3"></script>
-<script defer="" src="./app.js?v=20261019q"></script>
+<script defer="" src="./app.js?v=20261020r"></script>
 </body>
 </html>

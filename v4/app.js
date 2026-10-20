@@ -549,7 +549,7 @@
     orbitIO.observe(orbitWrap);
   }
   /* 円をタップ→黒く反転→その事業の場所へ遷移 */
-  const NODE_DEST = { consulting: 'consulting.html', smebpo: 'sme-bpo.html', investment: 'investment.html', brandgrowth: 'brand-growth.html', oem: 'manufacturing.html' };
+  const NODE_DEST = { consulting: 'consulting', smebpo: 'sme-bpo', investment: 'investment', brandgrowth: 'brand-growth', oem: 'manufacturing' };
   document.querySelectorAll('.orbit-node').forEach((node) => {
     node.addEventListener('click', () => {
       node.classList.add('tapped');
@@ -824,7 +824,7 @@
       const fd = new FormData(ctForm);
       const att = fd.get('attachment');
       if (att && att.size === 0) fd.delete('attachment');
-      const dest = ctForm.querySelector('input[name="_next"]')?.value || './thanks.html';
+      const dest = ctForm.querySelector('input[name="_next"]')?.value || './thanks';
       fetch(ctForm.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
         method: 'POST', body: fd, headers: { Accept: 'application/json' },
       })
