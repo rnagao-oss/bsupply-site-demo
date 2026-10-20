@@ -43,7 +43,7 @@
 .b3 .b3-mx-col--b .b3-mx-cap { padding-left: calc(7px + .9rem); }
 .b3 .b3-mx-cap span { display: inline-block; padding: .5rem 1.1rem; border-radius: 999px; font-size: .95rem; font-weight: 700; letter-spacing: .06em; line-height: 1.2; }
 .b3 .b3-mx-col--a .b3-mx-cap span { background: var(--b3-ink); color: #fff; }
-.b3 .b3-mx-col--b .b3-mx-cap span { background: #ff6a1a; color: var(--b3-ink); }
+.b3 .b3-mx-col--b .b3-mx-cap span { background: #ff6a1a; color: #fff; }
 .b3 .b3-mx-list { display: grid; grid-auto-rows: 5rem; }
 .b3 .b3-mx-item { display: flex; align-items: center; gap: .9rem; }
 .b3 .b3-mx-col--a .b3-mx-item { display: grid; grid-template-columns: minmax(0, 1fr) auto; text-align: right; }
