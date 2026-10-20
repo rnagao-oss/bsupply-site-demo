@@ -13,7 +13,6 @@
 .cs-tail { background: #fff; padding-top: clamp(2.5rem, 5vw, 4rem); padding-bottom: clamp(3rem, 6vw, 5rem); }
 
 .cs-h { display: flex; align-items: center; gap: 1.1rem; margin-bottom: clamp(1.8rem, 3vw, 2.6rem); }
-.cs-no { display: grid; place-items: center; flex: none; width: 3.2rem; aspect-ratio: 1; border-radius: 50%; background: var(--cs-acc); color: var(--cs-ink); font: 700 1.05rem/1 var(--en, sans-serif); letter-spacing: .02em; }
 .cs-en { margin: 0; font: 500 .78rem/1 var(--en, sans-serif); letter-spacing: .24em; color: #6f6e69; }
 .cs-impact .cs-en { color: rgba(255,255,255,.6); }
 .cs-h h2 { margin: .45rem 0 0; font-size: clamp(1.5rem, 2.4vw, 2rem); font-weight: 700; letter-spacing: .04em; line-height: 1.2; }
@@ -32,7 +31,6 @@
 .cs-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(2.2rem, 3.6vw, 3.4rem); counter-reset: st; }
 .cs-steps li { position: relative; display: grid; align-content: start; gap: 1rem; padding: clamp(1.6rem, 2.4vw, 2.2rem); border-radius: 16px; background: #fff; }
 .cs-steps li:not(:last-child)::after { content: "→"; position: absolute; top: 50%; right: calc(-1 * clamp(2.2rem, 3.6vw, 3.4rem) / 2); transform: translate(50%, -50%); display: grid; place-items: center; width: 2.2rem; aspect-ratio: 1; border-radius: 50%; background: var(--cs-ink); color: #fff; font: 700 1rem/1 sans-serif; }
-.cs-step-no { font: 500 2.2rem/1 var(--en, sans-serif); letter-spacing: -.02em; color: var(--cs-acc); }
 .cs-steps h3 { font-size: clamp(1.1rem, 1.4vw, 1.3rem); font-weight: 700; line-height: 1.5; }
 .cs-steps p { font-size: clamp(.92rem, 1vw, .98rem); line-height: 1.95; color: #3d3d3b; }
 

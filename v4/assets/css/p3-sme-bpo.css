@@ -140,8 +140,8 @@ body:has(.b3) .site-header nav { gap: clamp(1rem, 1.7vw, 1.7rem); }
 
 /* 流れ：丸の中心を線で結ぶ */
 .b3 #flow .b3-flow { gap: clamp(.8rem, 1.8vw, 1.6rem); }
-.b3 #flow .b3-flow::before { top: 33px; }
-.b3 #flow .b3-flow-no { width: 66px; margin-bottom: 1.2rem; box-shadow: 0 0 0 7px var(--b3-soft); }
+.b3 #flow .b3-flow::before { top: 6px; }
+.b3 #flow .b3-flow > li::before { margin-bottom: 1.2rem; box-shadow: 0 0 0 6px var(--b3-soft); }
 .b3 #flow .b3-flow-h { font-size: clamp(1rem, 1.35vw, 1.2rem); }
 .b3 #flow .b3-flow-p { max-width: 18em; font-size: .95rem; }
 
@@ -160,9 +160,9 @@ body:has(.b3) .site-header nav { gap: clamp(1rem, 1.7vw, 1.7rem); }
   .b3 .b3-ft-item:nth-child(even) .b3-ft-copy { order: 0; }
   .b3 .b3-task-row { gap: .7rem; }
   .b3 #flow .b3-flow { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
-  .b3 #flow .b3-flow::before { display: block; top: 32px; bottom: 32px; left: 32px; right: auto; width: 2px; height: auto; }
-  .b3 #flow .b3-flow > li { display: grid; grid-template-columns: 64px minmax(0, 1fr); grid-template-rows: auto auto; column-gap: 1rem; text-align: left; align-items: start; }
-  .b3 #flow .b3-flow-no { grid-column: 1; grid-row: 1 / span 2; width: 64px; margin: 0; }
+  .b3 #flow .b3-flow::before { display: block; top: 15px; bottom: 15px; left: 6px; right: auto; width: 2px; height: auto; }
+  .b3 #flow .b3-flow > li { display: grid; grid-template-columns: 14px minmax(0, 1fr); grid-template-rows: auto auto; column-gap: 1rem; text-align: left; align-items: start; }
+  .b3 #flow .b3-flow > li::before { grid-column: 1; grid-row: 1 / span 2; margin: 8px 0 0; }
   .b3 #flow .b3-flow-h { grid-column: 2; grid-row: 1; margin-bottom: .45rem; }
   .b3 #flow .b3-flow-p { grid-column: 2; grid-row: 2; max-width: none; }
 }

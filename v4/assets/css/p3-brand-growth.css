@@ -29,10 +29,10 @@
 /* 進め方：スマートフォン幅では丸を左、文字を右に置き、線は丸の列だけを通す（文字と線が重ならない） */
 @media (max-width: 600px) {
   .b3 #approach .b3-flow { gap: 1.6rem; }
-  .b3 #approach .b3-flow::before { left: 35px; top: 36px; bottom: 36px; }
-  .b3 #approach .b3-flow > li { display: grid; grid-template-columns: 72px minmax(0, 1fr); column-gap: 1.25rem; align-items: start; text-align: left; }
-  .b3 #approach .b3-flow-no { grid-row: 1 / span 2; width: 72px; margin: 0; font-size: .72rem; }
-  .b3 #approach .b3-flow-h { margin: .85rem 0 .45rem; }
+  .b3 #approach .b3-flow::before { left: 6px; top: 15px; bottom: 15px; }
+  .b3 #approach .b3-flow > li { display: grid; grid-template-columns: 14px minmax(0, 1fr); column-gap: 1rem; align-items: start; text-align: left; }
+  .b3 #approach .b3-flow > li::before { grid-row: 1 / span 2; margin: 8px 0 0; }
+  .b3 #approach .b3-flow-h { margin: 0 0 .45rem; }
   .b3 #approach .b3-flow-p { max-width: none; }
 }
 
