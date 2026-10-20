@@ -87,7 +87,8 @@ html.js .b3 .b3-mx.in .b3-mx-mk { stroke-dashoffset: 0; }
   .b3 .b3-mx-core { padding-top: 2.9rem; }
   .b3 .b3-mx-x { width: 2.7rem; }
   .b3 .b3-mx-xs path { stroke-width: 2.4; }
-  .b3 .b3-mx-ln { stroke-width: 1.5; stroke-dasharray: .1 7; }
+  .b3 .b3-mx-ln { stroke-width: 1.6; stroke-dasharray: .1 6; stroke-opacity: .8; }
+  .b3 .b3-mx-tr { r: 2.6px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html.js .b3 .b3-mx .b3-mx-jp, html.js .b3 .b3-mx .b3-mx-x, html.js .b3 .b3-mx .b3-mx-dot { transform: none !important; opacity: 1 !important; transition: none !important; }
