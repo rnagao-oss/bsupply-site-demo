@@ -149,8 +149,6 @@ body:has(.b3) .site-header nav { gap: clamp(1rem, 1.7vw, 1.7rem); }
 .b3 #faq .b3-faq { max-width: 900px; margin-inline: auto; }
 .b3 .b3-faq details { overflow: hidden; }
 .b3 .b3-faq details > p { will-change: height; }
-.b3 .b3-cta .b3-btn--accent { background: var(--b3-acc); color: var(--b3-ink); }
-.b3 .b3-cta .b3-btn--accent::after { background: var(--b3-ink); color: #fff; }
 
 @media (max-width: 1100px) and (min-width: 961px) {
   .b3 #flow .b3-flow-p { max-width: 14em; }
