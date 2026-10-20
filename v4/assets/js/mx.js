@@ -7,6 +7,7 @@
   const colB = Array.from(root.querySelectorAll('.b3-mx-col--b .b3-mx-item'));
   const ns = 'http://www.w3.org/2000/svg';
   const desktop = { matches: true, addEventListener() {} };
+  const narrow = matchMedia('(max-width: 960px)');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   let lines = [];
   let travelers = [];
@@ -26,14 +27,24 @@
     svg.setAttribute('viewBox', `0 0 ${box.width} ${box.height}`);
     const defs = document.createElementNS(ns, 'defs');
     svg.appendChild(defs);
-    colA.forEach((a, i) => {
-      const [x1, y1] = center(a, box);
-      colB.forEach((b, j) => {
-        const [x2, y2] = center(b, box);
+    // スマートフォン幅: 全組み合わせではなく、左の資産→中央の×→右の強化、と中央で結ぶ
+    const pairs = [];
+    if (narrow.matches) {
+      const xr = root.querySelector('.b3-mx-x').getBoundingClientRect();
+      const hub = [xr.left + xr.width / 2 - box.left, xr.top + xr.height / 2 - box.top];
+      colA.forEach((a, i) => pairs.push({ from: center(a, box), to: hub, delay: i * 0.14 }));
+      colB.forEach((b, j) => pairs.push({ from: hub, to: center(b, box), delay: 0.9 + j * 0.14 }));
+    } else {
+      colA.forEach((a, i) => colB.forEach((b, j) => pairs.push({ from: center(a, box), to: center(b, box), delay: i * 0.28 + j * 0.06 })));
+    }
+    pairs.forEach((pr, k) => {
+      const [x1, y1] = pr.from;
+      {
+        const [x2, y2] = pr.to;
         const mx = (x1 + x2) / 2;
         const d = `M${x1} ${y1}C${mx} ${y1} ${mx} ${y2} ${x2} ${y2}`;
-        const id = `mxm${i}${j}`;
-        const delay = (i * 0.28 + j * 0.06).toFixed(2);
+        const id = `mxm${k}`;
+        const delay = pr.delay.toFixed(2);
 
         const mask = document.createElementNS(ns, 'mask');
         mask.setAttribute('id', id);
@@ -53,8 +64,8 @@
         p.setAttribute('class', 'b3-mx-ln');
         p.setAttribute('mask', `url(#${id})`);
         svg.appendChild(p);
-        lines.push({ el: p, len: p.getTotalLength(), start: 0, dur: 4200 + ((i * 5 + j) % 5) * 700, off: ((i * 5 + j) * 0.37) % 1 });
-      });
+        lines.push({ el: p, len: p.getTotalLength(), start: 0, dur: 4200 + (k % 5) * 700, off: (k * 0.37) % 1 });
+      }
     });
     if (!reduce) {
       lines.forEach(() => {
@@ -87,6 +98,7 @@
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(build);
   if ('ResizeObserver' in window) new ResizeObserver(build).observe(root);
   desktop.addEventListener('change', build);
+  narrow.addEventListener('change', build);
 
   const show = () => root.classList.add('in');
   if ('IntersectionObserver' in window && !reduce) {
