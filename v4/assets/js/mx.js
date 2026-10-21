@@ -64,8 +64,8 @@
         p.setAttribute('class', 'b3-mx-ln');
         p.setAttribute('mask', `url(#${id})`);
         svg.appendChild(p);
-        // PC幅は1本に左右1粒ずつ（両端から中央へ、同時に到着）。スマホ幅は線が×で終わるので端から×へ1粒
-        const segs = narrow.matches ? [[0, 1]] : [[0, .5], [1, .5]];
+        // PC幅は1本に1粒。線ごとに左端または右端から出て中央の×へ向かう。スマホ幅は線が×で終わるので端から×へ1粒
+        const segs = narrow.matches ? [[0, 1]] : [k % 2 ? [1, .5] : [0, .5]];
         const dur = narrow.matches ? 1500 + (k % 5) * 250 : 1900 + (k % 5) * 300;
         lines.push({ el: p, len: p.getTotalLength(), start: 0, dur, off: (k * 0.37) % 1, segs, tr: [] });
       }
