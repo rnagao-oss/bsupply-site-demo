@@ -64,7 +64,7 @@
   .b3 .b3-units { display: block; position: relative; width: min(100%, 520px); aspect-ratio: 35 / 62; margin-inline: auto; overflow: visible; }
   .b3 .b3-unit, .b3 .b3-unit-core { position: absolute; display: grid; place-content: center; margin: 0; aspect-ratio: 1; border-radius: 50%; text-align: center; grid-column: auto; }
   .b3 .b3-unit-core { inset: 50% auto auto 50%; width: 36%; transform: translate(-50%, -50%) !important; opacity: 1; }
-  .b3 .b3-core-t { font-size: clamp(12.5px, 3.5vw, 20px); }
+  .b3 .b3-core-t { font-size: clamp(11px, 2.8vw, 16px); }  /* 9字の行が円の幅の8割以内に収まる大きさ */
   .b3 .b3-unit { inset: var(--y) auto auto var(--x); width: 40%; padding: 0; opacity: 0; transform: translate(-50%, -50%) scale(.6) !important; }
   .b3 .b3-mission.in .b3-unit { opacity: 1; transform: translate(-50%, -50%) scale(1) !important; }
   .b3 .b3-unit:nth-of-type(1) { --x: 50%; --y: 12.4%; }

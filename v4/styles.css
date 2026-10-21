@@ -2877,6 +2877,9 @@ body.menu-open .brand-mark { filter: none; }
 /* 2行指定（span.line）は各行をブロックに。PCは各行を1行で、スマホは行の中で文節折り返し */
 .line { display: block; }
 @media (min-width: 1024px) { .line:lang(ja) { white-space: nowrap; } }
+/* スマホ幅だけで効く改行（行の中の区切りを指定したいとき） */
+.br-sp { display: none; }
+@media (max-width: 1023px) { .br-sp { display: inline; } }
 .line:not(:lang(ja)) { text-wrap: balance; }   /* 英語は1行に収まらない行があるため、各行の中で折り返す */
 .vi-copy { max-width: 56rem; }      /* VISION の各行（約41字）が1行に収まる幅 */
 .at-caption { max-width: 60rem; }   /* 工房シネマの見出し（各行15字前後）が1行に収まる幅 */
