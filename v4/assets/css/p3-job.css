@@ -1,0 +1,52 @@
+/* p3-job.css — 求人詳細ページだけの調整（biz3.css の後に読み込む） */
+
+/* ヒーロー：英字の小さなラベル、職種名を大見出し、その下に事業と勤務地 */
+.b3 .jd-hero .bd-hero-ja { max-width: 16em; }
+.b3 .jd-hero .bd-hero-ja.is-en { font-family: var(--b3-en); font-weight: 600; letter-spacing: -.02em; }
+.b3 .jd-hero-sub { margin-top: 1.4rem; font-size: clamp(.95rem, 1.3vw, 1.15rem); font-weight: 500; letter-spacing: .04em; color: rgba(255,255,255,.85); }
+.b3 .jd-hero-sub i { font-style: normal; margin: 0 .7em; opacity: .55; }
+
+/* 導入：見出しは本文より少し控えめに */
+.b3 .jd-intro .b3-lead { font-size: clamp(1.55rem, 2.6vw, 2.3rem); }
+.b3 .jd-intro .b3-body { padding-top: .3rem; }
+
+/* 仕事の内容：左に項目名、右に箇条書き */
+.b3 .jd-rows { border-top: 1px solid rgba(15,15,14,.12); }
+.b3 .jd-row { display: grid; grid-template-columns: minmax(0, 17rem) minmax(0, 1fr); gap: clamp(1.4rem, 4vw, 5rem); padding: clamp(2rem, 3.4vw, 3rem) 0; border-bottom: 1px solid rgba(15,15,14,.12); }
+.b3 .jd-row-h { font-size: clamp(1.2rem, 1.7vw, 1.5rem); font-weight: 700; line-height: 1.4; }
+.b3 .jd-row-h small { display: block; margin-bottom: .7rem; font: 500 .72rem/1 var(--b3-en); letter-spacing: .16em; text-transform: uppercase; color: var(--b3-muted); }
+.b3 .jd-list { display: grid; gap: .85rem; }
+.b3 .jd-list li { position: relative; padding-left: 1.5rem; font-size: clamp(.98rem, 1.1vw, 1.05rem); line-height: 1.9; }
+.b3 .jd-list li::before { content: ""; position: absolute; left: 0; top: .82em; width: .5rem; height: .5rem; border-radius: 50%; background: var(--b3-acc); }
+
+/* このポジションの魅力：2列のカード */
+.b3 .jd-hl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 2vw, 1.6rem); }
+.b3 .jd-hl li { padding: clamp(1.7rem, 2.8vw, 2.6rem); border-radius: var(--b3-r); background: var(--b3-soft); }
+.b3 .jd-hl h3 { font-size: clamp(1.15rem, 1.6vw, 1.4rem); font-weight: 700; line-height: 1.5; }
+.b3 .jd-hl p { margin-top: .9rem; font-size: .96rem; line-height: 1.95; color: var(--b3-ink-2); }
+
+/* 募集要項：罫線の表 */
+.b3 .jd-terms { border-top: 1px solid rgba(15,15,14,.12); }
+.b3 .jd-terms > div { display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr); gap: 1.5rem; padding: 1.25rem 0; border-bottom: 1px solid rgba(15,15,14,.12); }
+.b3 .jd-terms dt { font-weight: 700; font-size: .95rem; line-height: 1.9; }
+.b3 .jd-terms dd { font-size: .98rem; line-height: 1.9; color: var(--b3-ink-2); }
+
+/* 選考の流れの注記と戻るリンク */
+.b3 .jd-process-note { margin-top: clamp(2rem, 3.4vw, 3rem); font-size: .9rem; line-height: 1.9; color: var(--b3-muted); }
+.b3 .jd-back { margin-top: clamp(3rem, 5vw, 4.5rem); }
+
+@media (max-width: 960px) {
+  .b3 .jd-row { grid-template-columns: 1fr; gap: 1.1rem; }
+  .b3 .jd-hl { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .b3 .jd-terms > div { grid-template-columns: 1fr; gap: .25rem; padding: 1rem 0; }
+  /* 選考の流れ：スマートフォン幅では丸を左、文字を右に置き、線は丸の列だけを通す */
+  .b3 #process .b3-flow { gap: 1.6rem; }
+  .b3 #process .b3-flow::before { left: 6px; top: 15px; bottom: 15px; }
+  .b3 #process .b3-flow > li { display: grid; grid-template-columns: 14px minmax(0, 1fr); column-gap: 1rem; align-items: start; text-align: left; }
+  .b3 #process .b3-flow > li::before { grid-row: 1 / span 2; margin: 8px 0 0; }
+  .b3 #process .b3-flow-h { margin: 0 0 .45rem; }
+  .b3 #process .b3-flow-p { max-width: none; }
+  .b3 .jd-hero-sub i { display: block; height: 0; margin: 0; overflow: hidden; }
+}
