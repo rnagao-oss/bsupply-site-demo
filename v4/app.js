@@ -816,7 +816,7 @@
   if (ctForm) {
     ctForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const btn = ctForm.querySelector('.ct-submit');
+      const btn = ctForm.querySelector('.cx-submit');
       if (btn.dataset.busy) return;
       btn.dataset.busy = '1';
       const orig = btn.innerHTML;
