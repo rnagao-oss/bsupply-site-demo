@@ -1568,7 +1568,9 @@ a.sn-item:hover .sn-link::after { transform: scaleX(1); }
 }
 
 
-/* ═══ アンビエントドット（全ページ共通・IP風） ═══ */
+/* ═══ アンビエントドット（全ページ共通・IP風） ═══ *//* MISSION 本文を見出しとの釣り合いで大きく（D-6） */
+@media (min-width: 701px) { .mi-statement { font-size: clamp(1.25rem, .55rem + 1.5vw, 1.75rem); line-height: 2.1; letter-spacing: .04em; } }
+
 .ambient-dots {
   position: fixed; inset: 0;
   width: 100%; height: 100%;
@@ -1713,11 +1715,11 @@ body.menu-open .mobile-menu a { opacity: 1; transform: none; }
   color: rgba(255, 255, 255, 0.88);
 }
 .issue-src {
-  margin-top: clamp(1.8rem, 3vw, 2.6rem);
-  font-size: var(--fs-small);
-  line-height: 2;
-  letter-spacing: 0.04em;
-  color: rgba(255, 255, 255, 0.85);
+  margin-top: clamp(1.6rem, 2.6vw, 2.2rem);
+  font-size: 0.8125rem;
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.6);
 }
 @media (max-width: 860px) { .issue-grid { grid-template-columns: repeat(2, 1fr); row-gap: 2rem; } }
 
@@ -2292,6 +2294,10 @@ body.menu-open .brand-mark { filter: none; }
 .sd-sol h3 { font-weight: 700; font-size: var(--fs-h3); letter-spacing: 0.04em; }
 .sd-sol p { color: var(--ink-70); font-size: var(--fs-body); line-height: 2; }
 @media (max-width: 700px) { .sd-sol { grid-template-columns: 1fr; gap: 0.4rem; } }
+/* サービス詳細：ソリューションを2列に（D-7） */
+.sd-sols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1.4rem, 2.6vw, 2.4rem) clamp(2rem, 4vw, 4rem); border-top: 0; }
+.sd-sol { grid-template-columns: minmax(0, 1fr); gap: .7rem; border-top: 1px solid var(--ink); border-bottom: 0; padding: 1.3rem 0 0; }
+@media (max-width: 760px) { .sd-sols { grid-template-columns: minmax(0, 1fr); } }
 .sd-appr { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(1.4rem, 2.6vw, 2.4rem); }
 .sd-ap { border-top: 1px solid var(--ink); padding-top: 1.3rem; }
 .sd-ap h3 { font-weight: 700; font-size: var(--fs-h3); letter-spacing: 0.04em; }
@@ -2957,6 +2963,17 @@ main :where(p, li, dd):where(:lang(ja)) { max-width: 40em; }
 @keyframes pfFlowR { from { transform: translateX(-50%); } to { transform: translateX(0); } }
 @media (prefers-reduced-motion: reduce) { .pf-track { animation: none; overflow-x: auto; } }
 @keyframes pfFlow { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+/* 会社情報：写真は流さず、幅に収まる枚数を並べる（D-11） */
+.photo-flow { width: calc(100% - 2 * clamp(1.6rem, 5.5vw, 5.5rem)); margin-inline: auto; overflow: visible; }
+.pf-row { overflow: visible; }
+.pf-track { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; width: auto; animation: none !important; transform: none !important; }
+.pf-track img { width: 100%; height: auto; aspect-ratio: 3 / 2; }
+.pf-track img:nth-child(n+4) { display: none; }
+@media (max-width: 600px) {
+  .pf-track { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .pf-track img:nth-child(n+3) { display: none; }
+  .photo-flow { gap: 8px; }
+}
 
 .ft-links a { white-space: nowrap; }
 
@@ -3595,7 +3612,7 @@ html:lang(en) .case-meta dt::after { content: ":"; }
 @media (min-width: 701px) {
   .cv-item { grid-template-columns: max-content minmax(0, 1fr) !important; }
   .cv-list { display: grid; }
-  .cv-item h3 { white-space: nowrap; width: 19em; }
+  .cv-item h3 { white-space: nowrap; width: 21em; }
 }
 .tl-track { grid-auto-rows: 1fr; } .tl-item { height: 100%; box-sizing: border-box; }
 .tl-item { align-content: start; }
@@ -3633,7 +3650,7 @@ html:lang(en) .case-meta dt::after { content: ":"; }
 
 /* ===== 採用ページ（事業ページとトンマナを統一） ===== */
 .rc-intro .rc-close { font-weight: 700; color: var(--ink); }
-.rc-data { padding-top: clamp(4.5rem, 9vw, 7.5rem); }
+.rc-data { padding-top: 0; }
 .rc-data .sec-label i, .rc-data .sec-label::after { display: none; }
 .rc-div { padding-top: clamp(4.5rem, 8vw, 7rem); padding-bottom: clamp(4.5rem, 8vw, 7rem); }
 .rc-div.rc-soft { background: var(--bg-soft); }
@@ -3701,6 +3718,26 @@ main:has(.jd-spec) .pos-col, main:has(.jd-spec) .pos-col ul, main:has(.jd-spec) 
 .cv-list, .si-list, .jb-list, .rc-div .jb-list, .tl-track, .bp-list, .works .bp-grid, .co-wrap .co-table { gap: 16px !important; }
 /* 末尾CTAの説明文は折り返さず横に流す */
 .bd-cta-text { max-width: none; }
+/* 下部の問い合わせ帯を事業ページの型（黒面・中央・丸ボタン）に（D-4） */
+.finale, .finale.fin-dark { position: relative; isolation: isolate; min-height: 0; background: #141413; color: #fff; text-align: center; border-top: 0; padding: clamp(5rem, 9vw, 8rem) clamp(1.25rem, 4.2vw, 4.5rem); }
+.finale::before { content: ""; position: absolute; inset: 0; z-index: -1; background-image: radial-gradient(rgba(255, 255, 255, .075) .55px, transparent 1px); background-size: 12px 12px; }
+.finale .fin-inner { width: min(100%, 48rem); margin-inline: auto; display: flex; flex-direction: column; align-items: center; }
+.finale .sec-label, .finale .sec-label.center, .home .finale .sec-label { justify-content: center; color: rgba(255, 255, 255, .62); font-family: var(--en); font-size: .72rem; letter-spacing: .16em; line-height: 1; margin-bottom: 1.2rem; }
+.finale .fin-mail {
+  display: inline-flex; align-items: center; gap: 1rem; min-height: 3.4rem; padding: 0 .5rem 0 1.7rem; border-radius: 999px;
+  background: #fff; color: var(--ink); font-family: var(--jp); font-size: .95rem; font-weight: 700; letter-spacing: .02em; line-height: 1; text-decoration: none; margin-top: .6rem;
+}
+.finale .fin-mail em { display: inline-grid; place-items: center; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--ink); color: #fff; font-size: .95rem; transition: transform .45s var(--ease); }
+.finale .fin-mail:hover em { transform: translateX(3px); }
+.finale .fin-sub { max-width: 36em; margin-top: 1.6rem; font-size: .98rem; line-height: 1.95; color: rgba(255, 255, 255, .78); }
+.finale .fin-alt { margin-top: 1.4rem; color: #fff; }
+.bd-cta { position: relative; isolation: isolate; background: #141413; text-align: center; }
+.bd-cta::before { content: ""; position: absolute; inset: 0; z-index: -1; background-image: radial-gradient(rgba(255, 255, 255, .075) .55px, transparent 1px); background-size: 12px 12px; }
+.bd-cta .bd-cta-in { width: min(100%, 48rem); margin-inline: auto; display: flex; flex-direction: column; align-items: center; padding: clamp(5rem, 9vw, 8rem) clamp(1.25rem, 4.2vw, 4.5rem); }
+.bd-cta .sec-label { justify-content: center; font-size: .72rem; letter-spacing: .16em; line-height: 1; margin-bottom: 1.2rem; color: rgba(255, 255, 255, .62); }
+.bd-cta .bd-cta-text { max-width: 36em; font-size: .98rem; line-height: 1.95; color: rgba(255, 255, 255, .78); }
+.bd-cta .bd-cta-btn { gap: 1rem; min-height: 3.4rem; margin-top: 2.2rem; padding: 0 .5rem 0 1.7rem; font-size: .95rem; letter-spacing: .02em; }
+.bd-cta .bd-cta-btn i { width: 2.4rem; height: 2.4rem; }
 /* 代表メッセージ：写真全体に薄いぼかし */
 .msgp-photo { filter: blur(1.2px); }
 /* CORE VALUE英語：イタリック・字間なし */
@@ -3725,6 +3762,8 @@ main:has(.jd-spec) > .section { box-shadow: 0 0 0 100vmax var(--bg-soft); clip-p
 main > .photo-flow:first-child { margin-top: clamp(6.5rem, 9vw, 8rem); }
 /* トップ：承継実績の上の余白を詰める */
 .home .investment.section { padding-top: clamp(4rem, 7vw, 6rem) !important; }
+/* CORE VALUE（灰）と ISSUE（黒）を白い帯なしで接する（D-5） */
+.home .vision.section { padding-top: 0; }
 /* 代表メッセージ：ぼかしは写真全体で均一（下だけ濃くしない） */
 @media (min-width: 901px) {
   .msgp-photo { -webkit-mask-image: none !important; mask-image: none !important; }
@@ -4004,6 +4043,9 @@ html:lang(en) .dg-sub-en { display:none; }
 
 /* recruit hero: bright table-discussion photo, shade only under the title */
 .bd-hero--rc .bd-hero-img { filter: none; object-position: 50% 38%; }
+/* 採用トップ：黒帯を文字に合わせた高さに（D-3） */
+.bd-hero.bd-hero--rc { height: auto; }
+.bd-hero--rc .bd-hero-in { position: relative; left: auto; right: auto; bottom: auto; padding: clamp(7rem, 11vw, 9rem) clamp(1.6rem, 5.5vw, 5.5rem) clamp(2.5rem, 4vw, 3.5rem); }
 .bd-hero--rc .bd-hero-shade { background: linear-gradient(rgba(20,20,20,.52) 0%, rgba(20,20,20,0) 30%, rgba(20,20,20,0) 52%, rgba(20,20,20,.62) 100%); }
 @media (max-width: 760px) {
   .bd-hero--rc { height: clamp(420px, 66vh, 560px); }
@@ -4098,6 +4140,8 @@ html:lang(en) .dg-sub-en { display:none; }
 .pk { display: inline-block; }
 :has(> .pk) { text-wrap: balance; }
 :has(> .pk), .b3-lede:has(> .b3-ib) { word-spacing: .4em; }
+/* 句の中の半角スペース（「B supply」など）は字間を広げない（D-14） */
+.pk { word-spacing: normal; }
 
 /* お問い合わせボタン：ヘッダー・フッター・サイド固定を白背景＋黒枠に統一 */
 .site-header.scrolled .nav-cta, .site-header.light .nav-cta, .site-header:not(.scrolled):not(.light) .nav-cta { background: #fff !important; color: var(--ink) !important; box-shadow: inset 0 0 0 1.5px var(--ink); }
