@@ -3651,6 +3651,8 @@ html:lang(en) .case-meta dt::after { content: ":"; }
 /* ===== 採用ページ（事業ページとトンマナを統一） ===== */
 .rc-intro .rc-close { font-weight: 700; color: var(--ink); }
 .rc-data { padding-top: 0; }
+/* 採用トップ：スローガンを外したので、黒い帯の直後に余白を置く */
+.bd-hero + .rc-data { padding-top: clamp(4.5rem, 9vw, 7.5rem); }
 .rc-data .sec-label i, .rc-data .sec-label::after { display: none; }
 .rc-div { padding-top: clamp(4.5rem, 8vw, 7rem); padding-bottom: clamp(4.5rem, 8vw, 7rem); }
 .rc-div.rc-soft { background: var(--bg-soft); }
