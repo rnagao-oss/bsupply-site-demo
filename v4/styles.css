@@ -1793,6 +1793,10 @@ body.menu-open .mobile-menu a { opacity: 1; transform: none; }
   margin-top: 0.4rem;
 }
 @media (max-width: 760px) { .tr-case { grid-template-columns: 1fr; } }
+/* 承継実績が2件以上のとき、カードの間をあける */
+.tr-case + .tr-case { margin-top: clamp(1.2rem, 2.4vw, 2rem); }
+/* 正方形の写真を切らずに見せる */
+.tr-photo--sq { aspect-ratio: 1 / 1; }
 
 
 /* ═══ MESSAGE：代表メッセージ ═══ */

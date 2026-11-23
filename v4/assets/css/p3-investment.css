@@ -194,3 +194,6 @@
 
 /* 末尾のお問い合わせ帯：CONTACT ラベルは他ページと同じグレー */
 .b3 .b3-cta .b3-label { color: rgba(255,255,255,.62); }
+
+/* 事例の2件目：1件目の年表との間をあける */
+.b3 #case .b3-timeline + .b3-case-hero { margin-top: clamp(3.5rem, 7vw, 6rem); }

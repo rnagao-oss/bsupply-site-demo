@@ -105,3 +105,13 @@ html.js .b3 .b3-mx.in .b3-mx-mk { stroke-dashoffset: 0; }
 
 /* 強みの図の導入文：幅の上限を外し、PCでは折り返さず1行で読める長さにする */
 .b3 #framework .b3-lede { max-width: none; }
+
+/* 事例（BROOKLYN MUSEUM）：主写真は正方形のまま見せ、下に写真3枚と公式サイトへのリンクを置く */
+.b3 #case .b3-case-hero .b3-photo { aspect-ratio: 1 / 1; }
+.b3 #case .b3-case-hero .b3-btn--text { margin-top: 1.8rem; }
+.b3 #case .b3-photos { margin-top: clamp(2.5rem, 4vw, 3.5rem); }
+.b3 #case .b3-photos .b3-photo { aspect-ratio: 1 / 1; }
+.b3 #case .b3-case-out { margin-top: clamp(1.6rem, 3vw, 2.4rem); }
+@media (max-width: 960px) and (min-width: 601px) {
+  .b3 #case .b3-photos { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
