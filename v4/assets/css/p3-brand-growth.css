@@ -107,7 +107,9 @@ html.js .b3 .b3-mx.in .b3-mx-mk { stroke-dashoffset: 0; }
 .b3 #framework .b3-lede { max-width: none; }
 
 /* 事例（BROOKLYN MUSEUM）：主写真は正方形のまま見せ、下に写真3枚と公式サイトへのリンクを置く */
-.b3 #case .b3-case-hero .b3-photo { aspect-ratio: 1 / 1; }
+.b3 #case .b3-case-hero { grid-template-columns: minmax(0, .8fr) minmax(0, 1fr); }
+@media (max-width: 960px) { .b3 #case .b3-case-hero { grid-template-columns: 1fr; } }
+.b3 #case .b3-case-hero .b3-photo { aspect-ratio: 1 / 1; width: 100%; max-width: 30rem; justify-self: center; }
 .b3 #case .b3-case-hero .b3-btn--text { margin-top: 1.8rem; }
 .b3 #case .b3-photos { margin-top: clamp(2.5rem, 4vw, 3.5rem); }
 .b3 #case .b3-photos .b3-photo { aspect-ratio: 1 / 1; }

@@ -231,8 +231,8 @@ html.js .in .b3-cmp-col.is-us, html.js .b3-cmp-col.is-us.in { transform: none; o
 .b3-photo { overflow: hidden; border-radius: var(--b3-r); aspect-ratio: 4 / 3.1; background: var(--b3-soft-2); }
 .b3-photo img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.06); transition: transform 1.6s var(--b3-ease); }
 .b3-photo.in img, .in .b3-photo img { transform: none; }
-.b3-case-hero { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; color: inherit; }
-.b3-case-hero .b3-photo { aspect-ratio: 1533 / 1468; width: 100%; max-width: 30rem; justify-self: center; }
+.b3-case-hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; color: inherit; }
+.b3-case-hero .b3-photo { aspect-ratio: 4 / 3; }
 .b3-case-hero .b3-title { margin: .9rem 0 1.1rem; }
 .b3-case-hero .b3-body { font-size: .98rem; line-height: 2; }
 .b3-eq { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
